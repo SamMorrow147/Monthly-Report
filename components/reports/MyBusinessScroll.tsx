@@ -20,6 +20,16 @@ import {
 } from "@/lib/report-story";
 import { VisitorMap } from "@/components/reports/VisitorMap";
 
+function isAppleBrowser(): boolean {
+  if (typeof navigator === "undefined") return false;
+  const ua = navigator.userAgent;
+  const iOS =
+    /iP(ad|hone|od)/.test(ua) ||
+    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  const safari = /^((?!chrome|android|crios|fxios).)*safari/i.test(ua);
+  return iOS || safari;
+}
+
 export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
   const accent = reportAccent(report.highlightColor);
   const chapters = useMemo(() => storyChapters(report), [report]);
@@ -31,8 +41,11 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
 
   const scrollerRef = useRef<HTMLDivElement>(null);
   const indexRef = useRef(0);
+  const animatingRef = useRef(false);
+  const appleRef = useRef(false);
   const [active, setActive] = useState(0);
   const [copied, setCopied] = useState(false);
+  const [apple, setApple] = useState(false);
 
   const goTo = useCallback((index: number, behavior: ScrollBehavior = "smooth") => {
     const root = scrollerRef.current;
@@ -40,13 +53,20 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
     const next = Math.max(0, Math.min(chapters.length - 1, index));
     indexRef.current = next;
     setActive(next);
-    root.scrollTo({ top: next * root.clientHeight, behavior });
+    animatingRef.current = true;
+    const motion = appleRef.current && behavior === "smooth" ? "auto" : behavior;
+    root.scrollTo({ top: next * root.clientHeight, behavior: motion });
+    window.setTimeout(() => {
+      animatingRef.current = false;
+    }, motion === "auto" ? 50 : 700);
   }, [chapters.length]);
 
   useEffect(() => {
     const root = scrollerRef.current;
     if (!root) return;
 
+    appleRef.current = isAppleBrowser();
+    setApple(appleRef.current);
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
 
@@ -54,56 +74,49 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
       "(prefers-reduced-motion: reduce)"
     ).matches;
 
-    let animating = false;
     let gestureLocked = false;
     let wheelQuiet: number | null = null;
-    let touchStartY = 0;
-    let unlockTimer: number | null = null;
-
-    const releaseAfter = (ms: number) => {
-      if (unlockTimer) window.clearTimeout(unlockTimer);
-      unlockTimer = window.setTimeout(() => {
-        animating = false;
-      }, ms);
-    };
+    let scrollQuiet: number | null = null;
 
     const step = (dir: 1 | -1) => {
-      if (animating) return;
+      if (animatingRef.current) return;
       const next = indexRef.current + dir;
       if (next < 0 || next >= chapters.length) return;
-      animating = true;
       goTo(next, reduced ? "auto" : "smooth");
-      releaseAfter(reduced ? 80 : 820);
+    };
+
+    const snapNearest = () => {
+      if (animatingRef.current) return;
+      const idx = Math.round(root.scrollTop / Math.max(1, root.clientHeight));
+      const next = Math.max(0, Math.min(chapters.length - 1, idx));
+      const target = next * root.clientHeight;
+      indexRef.current = next;
+      setActive(next);
+      if (Math.abs(root.scrollTop - target) > 12) {
+        animatingRef.current = true;
+        root.scrollTo({ top: target, behavior: reduced ? "auto" : "smooth" });
+        window.setTimeout(() => {
+          animatingRef.current = false;
+        }, 500);
+      }
     };
 
     const onWheel = (e: WheelEvent) => {
-      if (reduced) return;
+      if (reduced || appleRef.current) return;
       e.preventDefault();
-      if (animating || gestureLocked) return;
+      if (animatingRef.current || gestureLocked) {
+        if (wheelQuiet) window.clearTimeout(wheelQuiet);
+        wheelQuiet = window.setTimeout(() => {
+          gestureLocked = false;
+        }, 220);
+        return;
+      }
       if (Math.abs(e.deltaY) < 10) return;
-
       gestureLocked = true;
       step(e.deltaY > 0 ? 1 : -1);
-
-      if (wheelQuiet) window.clearTimeout(wheelQuiet);
       wheelQuiet = window.setTimeout(() => {
         gestureLocked = false;
       }, 220);
-    };
-
-    const onWheelKeepLock = (e: WheelEvent) => {
-      if (reduced) return;
-      if (!gestureLocked) return;
-      e.preventDefault();
-      if (wheelQuiet) window.clearTimeout(wheelQuiet);
-      wheelQuiet = window.setTimeout(() => {
-        gestureLocked = false;
-      }, 220);
-    };
-
-    const handleWheel = (e: WheelEvent) => {
-      if (gestureLocked || animating) onWheelKeepLock(e);
-      else onWheel(e);
     };
 
     const onKey = (e: KeyboardEvent) => {
@@ -117,44 +130,29 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
       }
     };
 
-    const onTouchStart = (e: TouchEvent) => {
-      touchStartY = e.touches[0].clientY;
-    };
-
-    const onTouchMove = (e: TouchEvent) => {
-      if (reduced) return;
-      e.preventDefault();
-    };
-
-    const onTouchEnd = (e: TouchEvent) => {
-      if (reduced) return;
-      const dy = touchStartY - e.changedTouches[0].clientY;
-      if (Math.abs(dy) < 48) {
-        goTo(indexRef.current, "auto");
-        return;
-      }
-      step(dy > 0 ? 1 : -1);
+    const onScroll = () => {
+      if (animatingRef.current) return;
+      if (scrollQuiet) window.clearTimeout(scrollQuiet);
+      scrollQuiet = window.setTimeout(snapNearest, 90);
     };
 
     const onResize = () => {
       goTo(indexRef.current, "auto");
     };
 
-    root.addEventListener("wheel", handleWheel, { passive: false });
-    root.addEventListener("touchstart", onTouchStart, { passive: true });
-    root.addEventListener("touchmove", onTouchMove, { passive: false });
-    root.addEventListener("touchend", onTouchEnd, { passive: true });
+    if (!appleRef.current) {
+      root.addEventListener("wheel", onWheel, { passive: false });
+    }
+    root.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("keydown", onKey);
     window.addEventListener("resize", onResize);
 
     return () => {
       document.body.style.overflow = prevOverflow;
       if (wheelQuiet) window.clearTimeout(wheelQuiet);
-      if (unlockTimer) window.clearTimeout(unlockTimer);
-      root.removeEventListener("wheel", handleWheel);
-      root.removeEventListener("touchstart", onTouchStart);
-      root.removeEventListener("touchmove", onTouchMove);
-      root.removeEventListener("touchend", onTouchEnd);
+      if (scrollQuiet) window.clearTimeout(scrollQuiet);
+      root.removeEventListener("wheel", onWheel);
+      root.removeEventListener("scroll", onScroll);
       window.removeEventListener("keydown", onKey);
       window.removeEventListener("resize", onResize);
     };
@@ -176,14 +174,16 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
     <div className="fixed inset-0 bg-[#0a0e1a] text-white">
       <div
         ref={scrollerRef}
-        className="mybiz-scroller h-[100dvh] overflow-y-auto overscroll-none"
+        className={`mybiz-scroller h-[100dvh] overflow-y-auto${
+          apple ? " mybiz-scroller-apple" : ""
+        }`}
       >
         {chapters.map((chapter, index) => (
           <section
             key={chapter.id}
             data-chapter={chapter.id}
             data-chapter-index={index}
-            className="relative h-[100dvh] w-full flex flex-col items-center justify-center px-6 sm:px-10"
+            className="relative h-[100dvh] w-full flex flex-col items-center justify-center px-6 sm:px-10 mybiz-section"
           >
             <ChapterBody
               id={chapter.id}
@@ -197,16 +197,38 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
               copied={copied}
               onCopy={handleCopy}
             />
-            {index < chapters.length - 1 && (
-              <div className="absolute bottom-6 left-0 right-0 flex justify-center pointer-events-none">
-                <span className="text-[11px] uppercase tracking-[0.24em] text-white/35">
-                  Scroll
-                </span>
-              </div>
-            )}
           </section>
         ))}
       </div>
+
+      {active > 0 && (
+        <button
+          type="button"
+          aria-label="Previous section"
+          onClick={() => goTo(active - 1)}
+          className="absolute top-5 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 text-white/70 hover:text-white"
+        >
+          <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 border border-white/15">
+            <Chevron dir="up" />
+          </span>
+        </button>
+      )}
+
+      {active < chapters.length - 1 && (
+        <button
+          type="button"
+          aria-label="Next section"
+          onClick={() => goTo(active + 1)}
+          className="absolute bottom-5 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 text-white/70 hover:text-white"
+        >
+          <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 border border-white/15">
+            <Chevron dir="down" />
+          </span>
+          <span className="text-[10px] uppercase tracking-[0.22em] text-white/40">
+            Scroll
+          </span>
+        </button>
+      )}
 
       <nav
         aria-label="Sections"
@@ -230,12 +252,43 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
       <style jsx global>{`
         .mybiz-scroller {
           scrollbar-width: none;
+          -webkit-overflow-scrolling: touch;
+          overscroll-behavior-y: contain;
         }
         .mybiz-scroller::-webkit-scrollbar {
           display: none;
         }
+        .mybiz-scroller-apple {
+          scroll-snap-type: y mandatory;
+        }
+        .mybiz-scroller-apple .mybiz-section {
+          scroll-snap-align: start;
+          scroll-snap-stop: always;
+        }
       `}</style>
     </div>
+  );
+}
+
+function Chevron({ dir }: { dir: "up" | "down" }) {
+  return (
+    <svg
+      width="22"
+      height="22"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+    >
+      {dir === "up" ? (
+        <path d="M6 15l6-6 6 6" />
+      ) : (
+        <path d="M6 9l6 6 6-6" />
+      )}
+    </svg>
   );
 }
 
