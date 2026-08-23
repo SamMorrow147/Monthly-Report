@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 2,
+  "slug": "cleaniacs",
+  "propertyId": "519854014",
+  "clientName": "cleaniacs",
+  "highlightColor": "purple",
+  "month": "2026-07",
+  "monthLabel": "July 2026",
+  "generatedAt": "2026-08-23T22:01:17.576Z",
+  "range": {
+    "startDate": "2026-07-01",
+    "endDate": "2026-07-31",
+    "prevStartDate": "2026-06-01",
+    "prevEndDate": "2026-06-30"
+  },
+  "shareToken": "CoTKbkc38TYraQQQo18GXQ",
+  "summary": {
+    "sessions": 15,
+    "prevSessions": 13,
+    "users": 13,
+    "prevUsers": 12,
+    "newUsers": 13,
+    "prevNewUsers": 12,
+    "pageViews": 15,
+    "prevPageViews": 13,
+    "avgSessionDuration": 189.40043473333333,
+    "prevAvgSessionDuration": 109.56843976923075,
+    "bounceRate": 0.6,
+    "prevBounceRate": 0.5384615384615384,
+    "engagementRate": 0.4,
+    "prevEngagementRate": 0.46153846153846156,
+    "conversions": 0,
+    "prevConversions": 0,
+    "sessionsChange": 15.4,
+    "usersChange": 8.3,
+    "newUsersChange": 8.3,
+    "pageViewsChange": 15.4,
+    "avgSessionDurationChange": 72.9,
+    "bounceRateChange": 11.4,
+    "engagementRateChange": -13.3,
+    "conversionsChange": 0
+  },
+  "daily": [
+    {
+      "date": "2026-07-01",
+      "sessions": 2,
+      "users": 2,
+      "pageViews": 2
+    },
+    {
+      "date": "2026-07-02",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-07-13",
+      "sessions": 2,
+      "users": 2,
+      "pageViews": 2
+    },
+    {
+      "date": "2026-07-20",
+      "sessions": 2,
+      "users": 1,
+      "pageViews": 2
+    },
+    {
+      "date": "2026-07-23",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-07-24",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-07-26",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-07-27",
+      "sessions": 3,
+      "users": 3,
+      "pageViews": 3
+    }
+  ],
+  "topPages": [
+    {
+      "path": "/",
+      "title": "Cleaniacs || Minnesota’s Premier Cleaning Service",
+      "views": 13,
+      "sessions": 13,
+      "avgDuration": 109.56843976923076
+    }
+  ],
+  "channels": [
+    {
+      "channel": "Direct",
+      "sessions": 9,
+      "users": 8,
+      "percentage": 69
+    },
+    {
+      "channel": "Organic Search",
+      "sessions": 4,
+      "users": 4,
+      "percentage": 31
+    }
+  ],
+  "devices": [
+    {
+      "device": "desktop",
+      "sessions": 10,
+      "percentage": 77
+    },
+    {
+      "device": "mobile",
+      "sessions": 3,
+      "percentage": 23
+    }
+  ],
+  "countries": [
+    {
+      "country": "United States",
+      "sessions": 8,
+      "percentage": 62
+    },
+    {
+      "country": "Germany",
+      "sessions": 2,
+      "percentage": 15
+    },
+    {
+      "country": "Hong Kong",
+      "sessions": 1,
+      "percentage": 8
+    },
+    {
+      "country": "India",
+      "sessions": 1,
+      "percentage": 8
+    },
+    {
+      "country": "Singapore",
+      "sessions": 1,
+      "percentage": 8
+    }
+  ],
+  "cities": [
+    {
+      "city": "Minneapolis",
+      "country": "United States",
+      "sessions": 6
+    },
+    {
+      "city": "(not set)",
+      "country": "Germany",
+      "sessions": 1
+    },
+    {
+      "city": "(not set)",
+      "country": "Hong Kong",
+      "sessions": 1
+    },
+    {
+      "city": "(not set)",
+      "country": "Singapore",
+      "sessions": 1
+    },
+    {
+      "city": "(not set)",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "city": "Chennai",
+      "country": "India",
+      "sessions": 1
+    },
+    {
+      "city": "Holdorf",
+      "country": "Germany",
+      "sessions": 1
+    },
+    {
+      "city": "Rogers",
+      "country": "United States",
+      "sessions": 1
+    }
+  ],
+  "regions": [
+    {
+      "region": "Minnesota",
+      "country": "United States",
+      "sessions": 7
+    },
+    {
+      "region": "Colorado",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Lower Saxony",
+      "country": "Germany",
+      "sessions": 1
+    },
+    {
+      "region": "Tamil Nadu",
+      "country": "India",
+      "sessions": 1
+    }
+  ],
+  "referrers": [
+    {
+      "source": "(direct)",
+      "sessions": 9
+    },
+    {
+      "source": "google",
+      "sessions": 4
+    }
+  ]
+}

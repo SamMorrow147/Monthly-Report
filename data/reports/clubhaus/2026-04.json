@@ -1,0 +1,724 @@
+{
+  "schemaVersion": 2,
+  "slug": "clubhaus",
+  "propertyId": "309170366",
+  "clientName": "Clubhaus Agency",
+  "highlightColor": "blue",
+  "month": "2026-04",
+  "monthLabel": "April 2026",
+  "generatedAt": "2026-05-12T01:32:11.432Z",
+  "range": {
+    "startDate": "2026-04-01",
+    "endDate": "2026-04-30",
+    "prevStartDate": "2026-03-01",
+    "prevEndDate": "2026-03-31"
+  },
+  "shareToken": "iXXLgBTZXyJzSv_xmeo46w",
+  "summary": {
+    "sessions": 178,
+    "prevSessions": 160,
+    "users": 167,
+    "prevUsers": 150,
+    "newUsers": 190,
+    "prevNewUsers": 184,
+    "pageViews": 933,
+    "prevPageViews": 747,
+    "avgSessionDuration": 61.610392612359554,
+    "prevAvgSessionDuration": 26.43364468125,
+    "bounceRate": 0.30337078651685395,
+    "prevBounceRate": 0.21875,
+    "engagementRate": 0.6966292134831461,
+    "prevEngagementRate": 0.78125,
+    "conversions": 0,
+    "prevConversions": 0,
+    "sessionsChange": 11.3,
+    "usersChange": 11.3,
+    "newUsersChange": 3.3,
+    "pageViewsChange": 24.9,
+    "avgSessionDurationChange": 133.1,
+    "bounceRateChange": 38.7,
+    "engagementRateChange": -10.8,
+    "conversionsChange": 0
+  },
+  "daily": [
+    {
+      "date": "2026-04-01",
+      "sessions": 6,
+      "users": 6,
+      "pageViews": 12
+    },
+    {
+      "date": "2026-04-02",
+      "sessions": 2,
+      "users": 2,
+      "pageViews": 4
+    },
+    {
+      "date": "2026-04-03",
+      "sessions": 3,
+      "users": 3,
+      "pageViews": 5
+    },
+    {
+      "date": "2026-04-04",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 3
+    },
+    {
+      "date": "2026-04-05",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-04-06",
+      "sessions": 9,
+      "users": 9,
+      "pageViews": 50
+    },
+    {
+      "date": "2026-04-07",
+      "sessions": 3,
+      "users": 3,
+      "pageViews": 12
+    },
+    {
+      "date": "2026-04-08",
+      "sessions": 2,
+      "users": 2,
+      "pageViews": 8
+    },
+    {
+      "date": "2026-04-09",
+      "sessions": 10,
+      "users": 10,
+      "pageViews": 22
+    },
+    {
+      "date": "2026-04-10",
+      "sessions": 2,
+      "users": 2,
+      "pageViews": 13
+    },
+    {
+      "date": "2026-04-11",
+      "sessions": 8,
+      "users": 8,
+      "pageViews": 42
+    },
+    {
+      "date": "2026-04-12",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 3
+    },
+    {
+      "date": "2026-04-13",
+      "sessions": 10,
+      "users": 10,
+      "pageViews": 71
+    },
+    {
+      "date": "2026-04-14",
+      "sessions": 5,
+      "users": 5,
+      "pageViews": 34
+    },
+    {
+      "date": "2026-04-15",
+      "sessions": 7,
+      "users": 7,
+      "pageViews": 16
+    },
+    {
+      "date": "2026-04-16",
+      "sessions": 2,
+      "users": 2,
+      "pageViews": 3
+    },
+    {
+      "date": "2026-04-17",
+      "sessions": 7,
+      "users": 7,
+      "pageViews": 87
+    },
+    {
+      "date": "2026-04-18",
+      "sessions": 7,
+      "users": 7,
+      "pageViews": 19
+    },
+    {
+      "date": "2026-04-19",
+      "sessions": 6,
+      "users": 6,
+      "pageViews": 12
+    },
+    {
+      "date": "2026-04-20",
+      "sessions": 4,
+      "users": 4,
+      "pageViews": 9
+    },
+    {
+      "date": "2026-04-21",
+      "sessions": 14,
+      "users": 14,
+      "pageViews": 24
+    },
+    {
+      "date": "2026-04-22",
+      "sessions": 3,
+      "users": 3,
+      "pageViews": 5
+    },
+    {
+      "date": "2026-04-23",
+      "sessions": 4,
+      "users": 4,
+      "pageViews": 10
+    },
+    {
+      "date": "2026-04-24",
+      "sessions": 5,
+      "users": 4,
+      "pageViews": 14
+    },
+    {
+      "date": "2026-04-25",
+      "sessions": 6,
+      "users": 6,
+      "pageViews": 51
+    },
+    {
+      "date": "2026-04-26",
+      "sessions": 2,
+      "users": 2,
+      "pageViews": 4
+    },
+    {
+      "date": "2026-04-27",
+      "sessions": 7,
+      "users": 7,
+      "pageViews": 84
+    },
+    {
+      "date": "2026-04-28",
+      "sessions": 11,
+      "users": 11,
+      "pageViews": 30
+    },
+    {
+      "date": "2026-04-29",
+      "sessions": 4,
+      "users": 4,
+      "pageViews": 82
+    },
+    {
+      "date": "2026-04-30",
+      "sessions": 8,
+      "users": 8,
+      "pageViews": 17
+    }
+  ],
+  "topPages": [
+    {
+      "path": "/",
+      "title": "Clubhaus Agency | Minneapolis Creative & Marketing Powerhouse",
+      "views": 174,
+      "sessions": 132,
+      "avgDuration": 12.585388212121213
+    },
+    {
+      "path": "/",
+      "title": "Home Section",
+      "views": 165,
+      "sessions": 122,
+      "avgDuration": 3.049172491803279
+    },
+    {
+      "path": "/",
+      "title": "Who We Are Section",
+      "views": 55,
+      "sessions": 37,
+      "avgDuration": 7.103084108108109
+    },
+    {
+      "path": "/",
+      "title": "Projects Section",
+      "views": 37,
+      "sessions": 19,
+      "avgDuration": 19.497193842105265
+    },
+    {
+      "path": "/",
+      "title": "People Section",
+      "views": 31,
+      "sessions": 13,
+      "avgDuration": 7.185538230769231
+    },
+    {
+      "path": "/",
+      "title": "Modus Operandi Section",
+      "views": 27,
+      "sessions": 15,
+      "avgDuration": 5.246389066666667
+    },
+    {
+      "path": "/",
+      "title": "What We Do Section",
+      "views": 27,
+      "sessions": 16,
+      "avgDuration": 2.7295178125
+    },
+    {
+      "path": "/who-we-are",
+      "title": "Clubhaus Agency | Minneapolis Creative & Marketing Powerhouse",
+      "views": 27,
+      "sessions": 36,
+      "avgDuration": 3.625065888888889
+    },
+    {
+      "path": "/portfolio",
+      "title": "Clubhaus Agency | Minneapolis Creative & Marketing Powerhouse",
+      "views": 24,
+      "sessions": 20,
+      "avgDuration": 4.89003285
+    },
+    {
+      "path": "/",
+      "title": "Feeling Lucky? Section",
+      "views": 22,
+      "sessions": 16,
+      "avgDuration": 2.5055546875
+    },
+    {
+      "path": "/team",
+      "title": "Clubhaus Agency | Minneapolis Creative & Marketing Powerhouse",
+      "views": 18,
+      "sessions": 11,
+      "avgDuration": 10.88278090909091
+    },
+    {
+      "path": "/",
+      "title": "Contact Section",
+      "views": 17,
+      "sessions": 12,
+      "avgDuration": 12.432734416666667
+    },
+    {
+      "path": "/services",
+      "title": "Clubhaus Agency | Minneapolis Creative & Marketing Powerhouse",
+      "views": 16,
+      "sessions": 15,
+      "avgDuration": 5.6085764000000005
+    },
+    {
+      "path": "/contact",
+      "title": "Clubhaus Agency | Minneapolis Creative & Marketing Powerhouse",
+      "views": 12,
+      "sessions": 10,
+      "avgDuration": 2.1142493
+    },
+    {
+      "path": "/our-heart",
+      "title": "Clubhaus Agency | Minneapolis Creative & Marketing Powerhouse",
+      "views": 12,
+      "sessions": 8,
+      "avgDuration": 6.27044825
+    },
+    {
+      "path": "/projects",
+      "title": "Clubhaus Agency | Minneapolis Creative & Marketing Powerhouse",
+      "views": 11,
+      "sessions": 8,
+      "avgDuration": 12.704640875
+    },
+    {
+      "path": "/why-clubhaus",
+      "title": "Clubhaus Agency | Minneapolis Creative & Marketing Powerhouse",
+      "views": 11,
+      "sessions": 15,
+      "avgDuration": 2.1338958
+    },
+    {
+      "path": "/projects/w5bsL53pxKFai30CQmXAl",
+      "title": "Pints and Paddle - Clubhaus Agency Case Study",
+      "views": 6,
+      "sessions": 7,
+      "avgDuration": 5.218080142857143
+    },
+    {
+      "path": "/projects/1dPUCr9sz1VSwX64msaksd",
+      "title": "Twisted Pin Branding - Clubhaus Agency Case Study",
+      "views": 5,
+      "sessions": 6,
+      "avgDuration": 13.889333333333333
+    },
+    {
+      "path": "/projects",
+      "title": "Our Projects - Clubhaus Agency Portfolio",
+      "views": 4,
+      "sessions": 6,
+      "avgDuration": 3.883414
+    }
+  ],
+  "channels": [
+    {
+      "channel": "Direct",
+      "sessions": 132,
+      "users": 128,
+      "percentage": 83
+    },
+    {
+      "channel": "Organic Search",
+      "sessions": 15,
+      "users": 11,
+      "percentage": 9
+    },
+    {
+      "channel": "Organic Social",
+      "sessions": 8,
+      "users": 8,
+      "percentage": 5
+    },
+    {
+      "channel": "Referral",
+      "sessions": 4,
+      "users": 2,
+      "percentage": 3
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": 1,
+      "users": 1,
+      "percentage": 1
+    }
+  ],
+  "devices": [
+    {
+      "device": "desktop",
+      "sessions": 136,
+      "percentage": 85
+    },
+    {
+      "device": "mobile",
+      "sessions": 24,
+      "percentage": 15
+    }
+  ],
+  "countries": [
+    {
+      "country": "United States",
+      "sessions": 126,
+      "percentage": 80
+    },
+    {
+      "country": "Singapore",
+      "sessions": 12,
+      "percentage": 8
+    },
+    {
+      "country": "Germany",
+      "sessions": 9,
+      "percentage": 6
+    },
+    {
+      "country": "Bangladesh",
+      "sessions": 2,
+      "percentage": 1
+    },
+    {
+      "country": "Russia",
+      "sessions": 2,
+      "percentage": 1
+    },
+    {
+      "country": "Sweden",
+      "sessions": 2,
+      "percentage": 1
+    },
+    {
+      "country": "Australia",
+      "sessions": 1,
+      "percentage": 1
+    },
+    {
+      "country": "China",
+      "sessions": 1,
+      "percentage": 1
+    },
+    {
+      "country": "France",
+      "sessions": 1,
+      "percentage": 1
+    },
+    {
+      "country": "India",
+      "sessions": 1,
+      "percentage": 1
+    }
+  ],
+  "cities": [
+    {
+      "city": "San Jose",
+      "country": "United States",
+      "sessions": 23
+    },
+    {
+      "city": "(not set)",
+      "country": "United States",
+      "sessions": 18
+    },
+    {
+      "city": "Ashburn",
+      "country": "United States",
+      "sessions": 13
+    },
+    {
+      "city": "Flint Hill",
+      "country": "United States",
+      "sessions": 11
+    },
+    {
+      "city": "Minneapolis",
+      "country": "United States",
+      "sessions": 10
+    },
+    {
+      "city": "Singapore",
+      "country": "Singapore",
+      "sessions": 10
+    },
+    {
+      "city": "Phoenix",
+      "country": "United States",
+      "sessions": 9
+    },
+    {
+      "city": "Council Bluffs",
+      "country": "United States",
+      "sessions": 4
+    },
+    {
+      "city": "North Charleston",
+      "country": "United States",
+      "sessions": 3
+    },
+    {
+      "city": "(not set)",
+      "country": "Singapore",
+      "sessions": 2
+    }
+  ],
+  "regions": [
+    {
+      "region": "Minnesota",
+      "country": "United States",
+      "sessions": 30
+    },
+    {
+      "region": "Virginia",
+      "country": "United States",
+      "sessions": 27
+    },
+    {
+      "region": "California",
+      "country": "United States",
+      "sessions": 23
+    },
+    {
+      "region": "Arizona",
+      "country": "United States",
+      "sessions": 9
+    },
+    {
+      "region": "Iowa",
+      "country": "United States",
+      "sessions": 7
+    },
+    {
+      "region": "Colorado",
+      "country": "United States",
+      "sessions": 3
+    },
+    {
+      "region": "South Carolina",
+      "country": "United States",
+      "sessions": 3
+    },
+    {
+      "region": "Tennessee",
+      "country": "United States",
+      "sessions": 3
+    },
+    {
+      "region": "Washington",
+      "country": "United States",
+      "sessions": 3
+    },
+    {
+      "region": "Alabama",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "Baden-Wurttemberg",
+      "country": "Germany",
+      "sessions": 2
+    },
+    {
+      "region": "Bavaria",
+      "country": "Germany",
+      "sessions": 2
+    },
+    {
+      "region": "Florida",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "Hessen",
+      "country": "Germany",
+      "sessions": 2
+    },
+    {
+      "region": "Illinois",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "New York",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "Rajshahi Division",
+      "country": "Bangladesh",
+      "sessions": 2
+    },
+    {
+      "region": "Berlin",
+      "country": "Germany",
+      "sessions": 1
+    },
+    {
+      "region": "Brandenburg",
+      "country": "Germany",
+      "sessions": 1
+    },
+    {
+      "region": "Chiba",
+      "country": "Japan",
+      "sessions": 1
+    },
+    {
+      "region": "Donetsk Oblast",
+      "country": "Ukraine",
+      "sessions": 1
+    },
+    {
+      "region": "Maharashtra",
+      "country": "India",
+      "sessions": 1
+    },
+    {
+      "region": "Michigan",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Missouri",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Montevideo Department",
+      "country": "Uruguay",
+      "sessions": 1
+    },
+    {
+      "region": "New South Wales",
+      "country": "Australia",
+      "sessions": 1
+    },
+    {
+      "region": "Norrbotten County",
+      "country": "Sweden",
+      "sessions": 1
+    },
+    {
+      "region": "Ohio",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Oregon",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Provence-Alpes-Cote d'Azur",
+      "country": "France",
+      "sessions": 1
+    },
+    {
+      "region": "Saint Petersburg",
+      "country": "Russia",
+      "sessions": 1
+    },
+    {
+      "region": "Stavropol Krai",
+      "country": "Russia",
+      "sessions": 1
+    },
+    {
+      "region": "Texas",
+      "country": "United States",
+      "sessions": 1
+    }
+  ],
+  "referrers": [
+    {
+      "source": "(direct)",
+      "sessions": 132
+    },
+    {
+      "source": "google",
+      "sessions": 15
+    },
+    {
+      "source": "m.facebook.com",
+      "sessions": 3
+    },
+    {
+      "source": "vercel.com",
+      "sessions": 3
+    },
+    {
+      "source": "facebook.com",
+      "sessions": 2
+    },
+    {
+      "source": "(not set)",
+      "sessions": 1
+    },
+    {
+      "source": "business.i94westchamber.org",
+      "sessions": 1
+    },
+    {
+      "source": "l.facebook.com",
+      "sessions": 1
+    },
+    {
+      "source": "linkedin.com",
+      "sessions": 1
+    },
+    {
+      "source": "lm.facebook.com",
+      "sessions": 1
+    }
+  ]
+}
