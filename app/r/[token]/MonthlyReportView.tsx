@@ -32,6 +32,7 @@ const HIGHLIGHT_COLOR_HEX: Record<ClientHighlightColor, string> = {
   indigo: "#4f46e5",
   cyan: "#0891b2",
   black: "#171717",
+  gold: "#d4af37",
   pink: "#db2777",
   navy: "#1e3a8a",
 };

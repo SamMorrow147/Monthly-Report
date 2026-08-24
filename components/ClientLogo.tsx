@@ -10,7 +10,11 @@ const SIZE_CLASS = {
   md: "h-12 w-12",
   lg: "h-20 w-20",
   hero: "h-28 w-28 sm:h-40 sm:w-40",
+  display: "h-44 w-44 sm:h-64 sm:w-64",
 } as const;
+
+const METAL_GOLD =
+  "linear-gradient(165deg, #fff6d0 0%, #ffe9a0 16%, #f0c75e 34%, #d4af37 52%, #8a6a14 70%, #e8c84a 86%, #b8922a 100%)";
 
 export function ClientLogo({
   slug,
@@ -19,6 +23,8 @@ export function ClientLogo({
   clientName,
   size = "md",
   onDark = false,
+  fill,
+  metallic = false,
   className = "",
 }: {
   slug?: string;
@@ -27,6 +33,8 @@ export function ClientLogo({
   clientName?: string;
   size?: keyof typeof SIZE_CLASS;
   onDark?: boolean;
+  fill?: string;
+  metallic?: boolean;
   className?: string;
 }) {
   const resolved =
@@ -45,7 +53,9 @@ export function ClientLogo({
         aria-label={label}
         className={`${SIZE_CLASS[size]} inline-block ${className}`}
         style={{
-          backgroundColor: "#fff",
+          backgroundColor: fill || "#fff",
+          backgroundImage: metallic ? METAL_GOLD : undefined,
+          backgroundSize: metallic ? "100% 100%" : undefined,
           WebkitMaskImage: `url(${resolved.logo})`,
           maskImage: `url(${resolved.logo})`,
           WebkitMaskRepeat: "no-repeat",

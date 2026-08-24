@@ -90,6 +90,15 @@ export type MonthlyReportSessionPoint = {
   /** Month name only, e.g. "July". */
   label: string;
   sessions: number;
+  users?: number;
+  newUsers?: number;
+  avgSessionDuration?: number;
+  busiestDate?: string;
+  busiestSessions?: number;
+  /** Portfolio page views by artist id, e.g. { steve: 404 }. */
+  artistViews?: Record<string, number>;
+  /** Page views by path for this month, e.g. { "/": 1961 }. */
+  pageViews?: Record<string, number>;
 };
 
 export type MonthlyReport = {
@@ -97,7 +106,8 @@ export type MonthlyReport = {
    * Schema version. Bump when adding required fields.
    *  - 1: original (no `regions`).
    *  - 2: adds `regions` for state-level choropleth maps.
-   *  - 3: adds optional `sessionHistory` (up to 12 months).
+   *  - 3: adds optional `sessionHistory` (up to 12 months), including
+   *    users, duration, and busiest-day fields when present.
    */
   schemaVersion: 1 | 2 | 3;
   slug: string;

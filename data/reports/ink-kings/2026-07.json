@@ -1,0 +1,1192 @@
+{
+  "schemaVersion": 3,
+  "slug": "ink-kings",
+  "propertyId": "527348475",
+  "clientName": "Ink Kings",
+  "highlightColor": "gold",
+  "month": "2026-07",
+  "monthLabel": "July 2026",
+  "generatedAt": "2026-08-24T19:43:34.793Z",
+  "range": {
+    "startDate": "2026-07-01",
+    "endDate": "2026-07-31",
+    "prevStartDate": "2026-06-01",
+    "prevEndDate": "2026-06-30"
+  },
+  "shareToken": "_M0APvQeAn5LOIcm-KRs3A",
+  "summary": {
+    "sessions": 1536,
+    "prevSessions": 1415,
+    "users": 1013,
+    "prevUsers": 849,
+    "newUsers": 942,
+    "prevNewUsers": 785,
+    "pageViews": 5082,
+    "prevPageViews": 4226,
+    "avgSessionDuration": 215.2997497871094,
+    "prevAvgSessionDuration": 196.6187508911661,
+    "bounceRate": 0.421875,
+    "prevBounceRate": 0.4756183745583039,
+    "engagementRate": 0.578125,
+    "prevEngagementRate": 0.5243816254416961,
+    "conversions": 0,
+    "prevConversions": 0,
+    "sessionsChange": 8.6,
+    "usersChange": 19.3,
+    "newUsersChange": 20,
+    "pageViewsChange": 20.3,
+    "avgSessionDurationChange": 9.5,
+    "bounceRateChange": -11.3,
+    "engagementRateChange": 10.2,
+    "conversionsChange": 0
+  },
+  "daily": [
+    {
+      "date": "2026-07-01",
+      "sessions": 52,
+      "users": 45,
+      "pageViews": 175
+    },
+    {
+      "date": "2026-07-02",
+      "sessions": 46,
+      "users": 37,
+      "pageViews": 188
+    },
+    {
+      "date": "2026-07-03",
+      "sessions": 43,
+      "users": 37,
+      "pageViews": 101
+    },
+    {
+      "date": "2026-07-04",
+      "sessions": 31,
+      "users": 30,
+      "pageViews": 107
+    },
+    {
+      "date": "2026-07-05",
+      "sessions": 46,
+      "users": 41,
+      "pageViews": 121
+    },
+    {
+      "date": "2026-07-06",
+      "sessions": 43,
+      "users": 39,
+      "pageViews": 124
+    },
+    {
+      "date": "2026-07-07",
+      "sessions": 49,
+      "users": 39,
+      "pageViews": 178
+    },
+    {
+      "date": "2026-07-08",
+      "sessions": 50,
+      "users": 42,
+      "pageViews": 166
+    },
+    {
+      "date": "2026-07-09",
+      "sessions": 54,
+      "users": 44,
+      "pageViews": 157
+    },
+    {
+      "date": "2026-07-10",
+      "sessions": 52,
+      "users": 47,
+      "pageViews": 178
+    },
+    {
+      "date": "2026-07-11",
+      "sessions": 52,
+      "users": 41,
+      "pageViews": 184
+    },
+    {
+      "date": "2026-07-12",
+      "sessions": 36,
+      "users": 30,
+      "pageViews": 93
+    },
+    {
+      "date": "2026-07-13",
+      "sessions": 47,
+      "users": 40,
+      "pageViews": 157
+    },
+    {
+      "date": "2026-07-14",
+      "sessions": 53,
+      "users": 44,
+      "pageViews": 195
+    },
+    {
+      "date": "2026-07-15",
+      "sessions": 39,
+      "users": 33,
+      "pageViews": 190
+    },
+    {
+      "date": "2026-07-16",
+      "sessions": 60,
+      "users": 46,
+      "pageViews": 171
+    },
+    {
+      "date": "2026-07-17",
+      "sessions": 65,
+      "users": 54,
+      "pageViews": 252
+    },
+    {
+      "date": "2026-07-18",
+      "sessions": 67,
+      "users": 58,
+      "pageViews": 262
+    },
+    {
+      "date": "2026-07-19",
+      "sessions": 33,
+      "users": 30,
+      "pageViews": 164
+    },
+    {
+      "date": "2026-07-20",
+      "sessions": 62,
+      "users": 47,
+      "pageViews": 244
+    },
+    {
+      "date": "2026-07-21",
+      "sessions": 65,
+      "users": 49,
+      "pageViews": 174
+    },
+    {
+      "date": "2026-07-22",
+      "sessions": 47,
+      "users": 38,
+      "pageViews": 139
+    },
+    {
+      "date": "2026-07-23",
+      "sessions": 37,
+      "users": 31,
+      "pageViews": 130
+    },
+    {
+      "date": "2026-07-24",
+      "sessions": 49,
+      "users": 39,
+      "pageViews": 164
+    },
+    {
+      "date": "2026-07-25",
+      "sessions": 52,
+      "users": 48,
+      "pageViews": 135
+    },
+    {
+      "date": "2026-07-26",
+      "sessions": 41,
+      "users": 35,
+      "pageViews": 115
+    },
+    {
+      "date": "2026-07-27",
+      "sessions": 49,
+      "users": 41,
+      "pageViews": 153
+    },
+    {
+      "date": "2026-07-28",
+      "sessions": 58,
+      "users": 53,
+      "pageViews": 211
+    },
+    {
+      "date": "2026-07-29",
+      "sessions": 53,
+      "users": 43,
+      "pageViews": 139
+    },
+    {
+      "date": "2026-07-30",
+      "sessions": 59,
+      "users": 48,
+      "pageViews": 138
+    },
+    {
+      "date": "2026-07-31",
+      "sessions": 49,
+      "users": 40,
+      "pageViews": 177
+    }
+  ],
+  "topPages": [
+    {
+      "path": "/",
+      "title": "Ink Kings Tattoo",
+      "views": 1961,
+      "sessions": 1228,
+      "avgDuration": 83.94940993485342
+    },
+    {
+      "path": "/request",
+      "title": "Request Custom Art | Ink Kings Tattoo | Ink Kings Tattoo",
+      "views": 487,
+      "sessions": 402,
+      "avgDuration": 284.0854797960199
+    },
+    {
+      "path": "/portfolio/hunter",
+      "title": "Hunter Hulley — Portfolio | Ink Kings Tattoo | Ink Kings Tattoo",
+      "views": 405,
+      "sessions": 329,
+      "avgDuration": 55.27220994224924
+    },
+    {
+      "path": "/portfolio/steve",
+      "title": "Steve De Los Reyes — Portfolio | Ink Kings Tattoo | Ink Kings Tattoo",
+      "views": 404,
+      "sessions": 309,
+      "avgDuration": 70.04070640453075
+    },
+    {
+      "path": "/portfolio/breaelle",
+      "title": "Breaelle De Los Reyes — Portfolio | Ink Kings Tattoo | Ink Kings Tattoo",
+      "views": 351,
+      "sessions": 293,
+      "avgDuration": 46.28526011604095
+    },
+    {
+      "path": "/portfolio/austin",
+      "title": "Austin Jackels — Portfolio | Ink Kings Tattoo | Ink Kings Tattoo",
+      "views": 338,
+      "sessions": 276,
+      "avgDuration": 40.695980086956524
+    },
+    {
+      "path": "/portfolio/nick",
+      "title": "Nick Gagnon — Portfolio | Ink Kings Tattoo | Ink Kings Tattoo",
+      "views": 336,
+      "sessions": 259,
+      "avgDuration": 48.51918030888031
+    },
+    {
+      "path": "/portfolio/john",
+      "title": "John Carpenter — Portfolio | Ink Kings Tattoo | Ink Kings Tattoo",
+      "views": 296,
+      "sessions": 238,
+      "avgDuration": 32.93458339495798
+    },
+    {
+      "path": "/location",
+      "title": "Our Location | Ink Kings Tattoo | Ink Kings Tattoo",
+      "views": 156,
+      "sessions": 136,
+      "avgDuration": 77.971565125
+    },
+    {
+      "path": "/policies",
+      "title": "Policies | Ink Kings Tattoo | Ink Kings Tattoo",
+      "views": 151,
+      "sessions": 132,
+      "avgDuration": 79.36140076515152
+    },
+    {
+      "path": "/events",
+      "title": "Upcoming Events | Ink Kings Tattoo | Ink Kings Tattoo",
+      "views": 62,
+      "sessions": 58,
+      "avgDuration": 30.23172644827586
+    },
+    {
+      "path": "/aftercare",
+      "title": "Tattoo Aftercare | Ink Kings Tattoo | Ink Kings Tattoo",
+      "views": 55,
+      "sessions": 53,
+      "avgDuration": 45.830045735849055
+    },
+    {
+      "path": "/booking",
+      "title": "404: This page could not be found.",
+      "views": 41,
+      "sessions": 29,
+      "avgDuration": 1.4073683793103446
+    },
+    {
+      "path": "/tatt-care",
+      "title": "404: This page could not be found.",
+      "views": 9,
+      "sessions": 9,
+      "avgDuration": 0.004941222222222222
+    },
+    {
+      "path": "/tattoo-care-instructions",
+      "title": "404: This page could not be found.",
+      "views": 8,
+      "sessions": 8,
+      "avgDuration": 0
+    },
+    {
+      "path": "/booking",
+      "title": "Ink Kings Tattoo",
+      "views": 3,
+      "sessions": 29,
+      "avgDuration": 20.524471896551724
+    },
+    {
+      "path": "/nickg",
+      "title": "404: This page could not be found.",
+      "views": 2,
+      "sessions": 2,
+      "avgDuration": 2.123137
+    },
+    {
+      "path": "/steve",
+      "title": "404: This page could not be found.",
+      "views": 2,
+      "sessions": 2,
+      "avgDuration": 0
+    },
+    {
+      "path": "/tattoo-care",
+      "title": "404: This page could not be found.",
+      "views": 2,
+      "sessions": 2,
+      "avgDuration": 0
+    },
+    {
+      "path": "/dmitriy",
+      "title": "Ink Kings Tattoo",
+      "views": 1,
+      "sessions": 1,
+      "avgDuration": 0.047251
+    }
+  ],
+  "channels": [
+    {
+      "channel": "Organic Search",
+      "sessions": 896,
+      "users": 484,
+      "percentage": 58
+    },
+    {
+      "channel": "Direct",
+      "sessions": 556,
+      "users": 459,
+      "percentage": 36
+    },
+    {
+      "channel": "Organic Social",
+      "sessions": 65,
+      "users": 63,
+      "percentage": 4
+    },
+    {
+      "channel": "Referral",
+      "sessions": 10,
+      "users": 7,
+      "percentage": 1
+    },
+    {
+      "channel": "AI Assistant",
+      "sessions": 6,
+      "users": 6,
+      "percentage": 0
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": 3,
+      "users": 3,
+      "percentage": 0
+    }
+  ],
+  "devices": [
+    {
+      "device": "mobile",
+      "sessions": 1208,
+      "percentage": 79
+    },
+    {
+      "device": "desktop",
+      "sessions": 322,
+      "percentage": 21
+    },
+    {
+      "device": "tablet",
+      "sessions": 6,
+      "percentage": 0
+    }
+  ],
+  "countries": [
+    {
+      "country": "United States",
+      "sessions": 1348,
+      "percentage": 89
+    },
+    {
+      "country": "Singapore",
+      "sessions": 102,
+      "percentage": 7
+    },
+    {
+      "country": "(not set)",
+      "sessions": 23,
+      "percentage": 2
+    },
+    {
+      "country": "China",
+      "sessions": 9,
+      "percentage": 1
+    },
+    {
+      "country": "Netherlands",
+      "sessions": 8,
+      "percentage": 1
+    },
+    {
+      "country": "Iran",
+      "sessions": 7,
+      "percentage": 0
+    },
+    {
+      "country": "Germany",
+      "sessions": 4,
+      "percentage": 0
+    },
+    {
+      "country": "Canada",
+      "sessions": 3,
+      "percentage": 0
+    },
+    {
+      "country": "Greece",
+      "sessions": 3,
+      "percentage": 0
+    },
+    {
+      "country": "Japan",
+      "sessions": 3,
+      "percentage": 0
+    }
+  ],
+  "cities": [
+    {
+      "city": "Minneapolis",
+      "country": "United States",
+      "sessions": 368
+    },
+    {
+      "city": "Chicago",
+      "country": "United States",
+      "sessions": 304
+    },
+    {
+      "city": "Singapore",
+      "country": "Singapore",
+      "sessions": 101
+    },
+    {
+      "city": "(not set)",
+      "country": "United States",
+      "sessions": 57
+    },
+    {
+      "city": "Waukesha",
+      "country": "United States",
+      "sessions": 48
+    },
+    {
+      "city": "Otsego",
+      "country": "United States",
+      "sessions": 34
+    },
+    {
+      "city": "(not set)",
+      "country": "(not set)",
+      "sessions": 23
+    },
+    {
+      "city": "Elk River",
+      "country": "United States",
+      "sessions": 22
+    },
+    {
+      "city": "Beloit",
+      "country": "United States",
+      "sessions": 18
+    },
+    {
+      "city": "Big Lake",
+      "country": "United States",
+      "sessions": 16
+    }
+  ],
+  "regions": [
+    {
+      "region": "Minnesota",
+      "country": "United States",
+      "sessions": 711
+    },
+    {
+      "region": "Illinois",
+      "country": "United States",
+      "sessions": 316
+    },
+    {
+      "region": "Wisconsin",
+      "country": "United States",
+      "sessions": 114
+    },
+    {
+      "region": "Texas",
+      "country": "United States",
+      "sessions": 37
+    },
+    {
+      "region": "Colorado",
+      "country": "United States",
+      "sessions": 24
+    },
+    {
+      "region": "Arkansas",
+      "country": "United States",
+      "sessions": 20
+    },
+    {
+      "region": "California",
+      "country": "United States",
+      "sessions": 17
+    },
+    {
+      "region": "New York",
+      "country": "United States",
+      "sessions": 16
+    },
+    {
+      "region": "Iowa",
+      "country": "United States",
+      "sessions": 15
+    },
+    {
+      "region": "Missouri",
+      "country": "United States",
+      "sessions": 15
+    },
+    {
+      "region": "Arizona",
+      "country": "United States",
+      "sessions": 14
+    },
+    {
+      "region": "Virginia",
+      "country": "United States",
+      "sessions": 13
+    },
+    {
+      "region": "Oklahoma",
+      "country": "United States",
+      "sessions": 12
+    },
+    {
+      "region": "Ohio",
+      "country": "United States",
+      "sessions": 9
+    },
+    {
+      "region": "Alabama",
+      "country": "United States",
+      "sessions": 8
+    },
+    {
+      "region": "Florida",
+      "country": "United States",
+      "sessions": 8
+    },
+    {
+      "region": "Michigan",
+      "country": "United States",
+      "sessions": 8
+    },
+    {
+      "region": "Nebraska",
+      "country": "United States",
+      "sessions": 8
+    },
+    {
+      "region": "Georgia",
+      "country": "United States",
+      "sessions": 7
+    },
+    {
+      "region": "Kansas",
+      "country": "United States",
+      "sessions": 6
+    },
+    {
+      "region": "New Mexico",
+      "country": "United States",
+      "sessions": 6
+    },
+    {
+      "region": "Mississippi",
+      "country": "United States",
+      "sessions": 5
+    },
+    {
+      "region": "Utah",
+      "country": "United States",
+      "sessions": 5
+    },
+    {
+      "region": "Oregon",
+      "country": "United States",
+      "sessions": 4
+    },
+    {
+      "region": "South Dakota",
+      "country": "United States",
+      "sessions": 4
+    },
+    {
+      "region": "Connecticut",
+      "country": "United States",
+      "sessions": 3
+    },
+    {
+      "region": "Decentralized Administration of Peloponnese, Western Greece and the Ionian",
+      "country": "Greece",
+      "sessions": 3
+    },
+    {
+      "region": "Idaho",
+      "country": "United States",
+      "sessions": 3
+    },
+    {
+      "region": "Indiana",
+      "country": "United States",
+      "sessions": 3
+    },
+    {
+      "region": "Kentucky",
+      "country": "United States",
+      "sessions": 3
+    },
+    {
+      "region": "Louisiana",
+      "country": "United States",
+      "sessions": 3
+    },
+    {
+      "region": "North Carolina",
+      "country": "United States",
+      "sessions": 3
+    },
+    {
+      "region": "North Dakota",
+      "country": "United States",
+      "sessions": 3
+    },
+    {
+      "region": "Ontario",
+      "country": "Canada",
+      "sessions": 3
+    },
+    {
+      "region": "Tokyo",
+      "country": "Japan",
+      "sessions": 3
+    },
+    {
+      "region": "Andhra Pradesh",
+      "country": "India",
+      "sessions": 2
+    },
+    {
+      "region": "Bavaria",
+      "country": "Germany",
+      "sessions": 2
+    },
+    {
+      "region": "County Dublin",
+      "country": "Ireland",
+      "sessions": 2
+    },
+    {
+      "region": "Gelderland",
+      "country": "Netherlands",
+      "sessions": 2
+    },
+    {
+      "region": "Lisbon",
+      "country": "Portugal",
+      "sessions": 2
+    },
+    {
+      "region": "Montana",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "North Holland",
+      "country": "Netherlands",
+      "sessions": 2
+    },
+    {
+      "region": "Overijssel",
+      "country": "Netherlands",
+      "sessions": 2
+    },
+    {
+      "region": "Washington",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "Wyoming",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "Abu Dhabi",
+      "country": "United Arab Emirates",
+      "sessions": 1
+    },
+    {
+      "region": "Anhui",
+      "country": "China",
+      "sessions": 1
+    },
+    {
+      "region": "Brussels",
+      "country": "Belgium",
+      "sessions": 1
+    },
+    {
+      "region": "Calabarzon",
+      "country": "Philippines",
+      "sessions": 1
+    },
+    {
+      "region": "Can Tho",
+      "country": "Vietnam",
+      "sessions": 1
+    },
+    {
+      "region": "Chittagong Division",
+      "country": "Bangladesh",
+      "sessions": 1
+    },
+    {
+      "region": "Crimea",
+      "country": "Ukraine",
+      "sessions": 1
+    },
+    {
+      "region": "Da Nang",
+      "country": "Vietnam",
+      "sessions": 1
+    },
+    {
+      "region": "Dhaka Division",
+      "country": "Bangladesh",
+      "sessions": 1
+    },
+    {
+      "region": "England",
+      "country": "United Kingdom",
+      "sessions": 1
+    },
+    {
+      "region": "Federal District",
+      "country": "Brazil",
+      "sessions": 1
+    },
+    {
+      "region": "Flanders",
+      "country": "Belgium",
+      "sessions": 1
+    },
+    {
+      "region": "Friesland",
+      "country": "Netherlands",
+      "sessions": 1
+    },
+    {
+      "region": "Guanacaste Province",
+      "country": "Costa Rica",
+      "sessions": 1
+    },
+    {
+      "region": "Guangxi",
+      "country": "China",
+      "sessions": 1
+    },
+    {
+      "region": "Hebei",
+      "country": "China",
+      "sessions": 1
+    },
+    {
+      "region": "Henan",
+      "country": "China",
+      "sessions": 1
+    },
+    {
+      "region": "Hessen",
+      "country": "Germany",
+      "sessions": 1
+    },
+    {
+      "region": "Ho Chi Minh",
+      "country": "Vietnam",
+      "sessions": 1
+    },
+    {
+      "region": "Jiangsu",
+      "country": "China",
+      "sessions": 1
+    },
+    {
+      "region": "Kirov Oblast",
+      "country": "Russia",
+      "sessions": 1
+    },
+    {
+      "region": "Lang Son",
+      "country": "Vietnam",
+      "sessions": 1
+    },
+    {
+      "region": "Lower Saxony",
+      "country": "Germany",
+      "sessions": 1
+    },
+    {
+      "region": "Maryland",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Masovian Voivodeship",
+      "country": "Poland",
+      "sessions": 1
+    },
+    {
+      "region": "Mersch",
+      "country": "Luxembourg",
+      "sessions": 1
+    },
+    {
+      "region": "Nineveh Governorate",
+      "country": "Iraq",
+      "sessions": 1
+    },
+    {
+      "region": "Pennsylvania",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Punjab",
+      "country": "Pakistan",
+      "sessions": 1
+    },
+    {
+      "region": "Santa Fe Province",
+      "country": "Argentina",
+      "sessions": 1
+    },
+    {
+      "region": "Scotland",
+      "country": "United Kingdom",
+      "sessions": 1
+    },
+    {
+      "region": "Shandong",
+      "country": "China",
+      "sessions": 1
+    },
+    {
+      "region": "Shanxi",
+      "country": "China",
+      "sessions": 1
+    },
+    {
+      "region": "Sindh",
+      "country": "Pakistan",
+      "sessions": 1
+    },
+    {
+      "region": "South Holland",
+      "country": "Netherlands",
+      "sessions": 1
+    },
+    {
+      "region": "State of Mexico",
+      "country": "Mexico",
+      "sessions": 1
+    },
+    {
+      "region": "State of Rio Grande do Sul",
+      "country": "Brazil",
+      "sessions": 1
+    },
+    {
+      "region": "Vermont",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "West Virginia",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Zhejiang",
+      "country": "China",
+      "sessions": 1
+    }
+  ],
+  "referrers": [
+    {
+      "source": "google",
+      "sessions": 844
+    },
+    {
+      "source": "(direct)",
+      "sessions": 556
+    },
+    {
+      "source": "ig",
+      "sessions": 40
+    },
+    {
+      "source": "duckduckgo",
+      "sessions": 24
+    },
+    {
+      "source": "bing",
+      "sessions": 20
+    },
+    {
+      "source": "tattooexpo.eu",
+      "sessions": 10
+    },
+    {
+      "source": "yahoo",
+      "sessions": 9
+    },
+    {
+      "source": "facebook.com",
+      "sessions": 8
+    },
+    {
+      "source": "chatgpt.com",
+      "sessions": 6
+    },
+    {
+      "source": "lm.facebook.com",
+      "sessions": 6
+    }
+  ],
+  "sessionHistory": [
+    {
+      "month": "2026-07",
+      "label": "July",
+      "sessions": 1536,
+      "users": 1013,
+      "newUsers": 942,
+      "avgSessionDuration": 215.2997497871094,
+      "busiestDate": "2026-07-18",
+      "busiestSessions": 67,
+      "pageViews": {
+        "/": 1961,
+        "/request": 487,
+        "/portfolio/hunter": 405,
+        "/portfolio/steve": 404,
+        "/portfolio/breaelle": 351,
+        "/portfolio/austin": 338,
+        "/portfolio/nick": 336,
+        "/portfolio/john": 296,
+        "/location": 156,
+        "/policies": 151,
+        "/events": 62,
+        "/aftercare": 55,
+        "/booking": 44,
+        "/tatt-care": 9,
+        "/tattoo-care-instructions": 8,
+        "/steve": 2,
+        "/nickg": 2,
+        "/tattoo-care": 2,
+        "/dmitriy": 1,
+        "/employment": 1,
+        "/new-index-1": 1,
+        "/our-shop": 1,
+        "/sponsors": 1
+      },
+      "artistViews": {
+        "hunter": 405,
+        "steve": 404,
+        "breaelle": 351,
+        "austin": 338,
+        "nick": 336,
+        "john": 296
+      }
+    },
+    {
+      "month": "2026-06",
+      "label": "June",
+      "sessions": 1415,
+      "users": 849,
+      "newUsers": 785,
+      "avgSessionDuration": 196.6187508911661,
+      "busiestDate": "2026-06-25",
+      "busiestSessions": 65,
+      "pageViews": {
+        "/": 1717,
+        "/request": 453,
+        "/portfolio/hunter": 331,
+        "/portfolio/steve": 319,
+        "/portfolio/breaelle": 268,
+        "/portfolio/john": 261,
+        "/portfolio/nick": 248,
+        "/portfolio/austin": 240,
+        "/location": 116,
+        "/policies": 116,
+        "/events": 63,
+        "/aftercare": 43,
+        "/booking": 36,
+        "/steve": 4,
+        "/new-index-1": 2,
+        "/site/inkkingstattooandpiercing/10-popular-youtube-videos": 2,
+        "/artistsgallery": 1,
+        "/carl": 1,
+        "/employment": 1,
+        "/favicon.ico": 1,
+        "/nickg": 1,
+        "/tatt-care": 1,
+        "/tattoo-care-instructions": 1
+      },
+      "artistViews": {
+        "hunter": 331,
+        "steve": 319,
+        "breaelle": 268,
+        "john": 261,
+        "nick": 248,
+        "austin": 240
+      }
+    },
+    {
+      "month": "2026-05",
+      "label": "May",
+      "sessions": 1237,
+      "users": 830,
+      "newUsers": 825,
+      "avgSessionDuration": 195.28435837429265,
+      "busiestDate": "2026-05-05",
+      "busiestSessions": 72,
+      "pageViews": {
+        "/": 1667,
+        "/portfolio/steve": 343,
+        "/portfolio/hunter": 328,
+        "/request": 324,
+        "/portfolio/austin": 273,
+        "/portfolio/nick": 260,
+        "/portfolio/john": 251,
+        "/portfolio/breaelle": 230,
+        "/policies": 140,
+        "/location": 102,
+        "/events": 54,
+        "/aftercare": 42,
+        "/booking": 26,
+        "/artistsgallery": 19,
+        "/portfolio/breaella": 18,
+        "/tattoo-care-instructions": 14,
+        "/new-index-1": 13,
+        "/hunter": 4,
+        "/our-shop": 4,
+        "/steve": 4,
+        "/api/1.0/form-submission-service-api/external/form-owning-entities/673e7786e9ad932f4caa86bf/forms/673e7bb84ca5a9107a465e0d/files/0c4d7596-df61-4fd5-9945-2b5c3126c215": 2,
+        "/nickg": 2,
+        "/tattoo-care": 2,
+        "/carl": 1,
+        "/config/contacts/form-link/cc790a51-9a68-4912-a664-c4f1cf0fe880": 1,
+        "/employment": 1,
+        "/john": 1,
+        "/locations": 1
+      },
+      "artistViews": {
+        "steve": 343,
+        "hunter": 328,
+        "austin": 273,
+        "nick": 260,
+        "john": 251,
+        "breaelle": 230,
+        "breaella": 18
+      }
+    },
+    {
+      "month": "2026-04",
+      "label": "April",
+      "sessions": 18,
+      "users": 8,
+      "newUsers": 3,
+      "avgSessionDuration": 38.88920077777777,
+      "busiestDate": "2026-04-17",
+      "busiestSessions": 5,
+      "pageViews": {
+        "/": 19,
+        "/request": 3,
+        "/location": 2,
+        "/policies": 1,
+        "/portfolio/hunter": 1
+      },
+      "artistViews": {
+        "hunter": 1
+      }
+    },
+    {
+      "month": "2026-03",
+      "label": "March",
+      "sessions": 51,
+      "users": 22,
+      "newUsers": 22,
+      "avgSessionDuration": 275.5797053333333,
+      "busiestDate": "2026-03-06",
+      "busiestSessions": 11,
+      "pageViews": {
+        "/": 94,
+        "/request": 18,
+        "/aftercare": 12,
+        "/contact": 10,
+        "/portfolio/steve": 10,
+        "/policies": 7,
+        "/location": 6,
+        "/portfolio/austin": 6,
+        "/portfolio/john": 5,
+        "/portfolio/nick": 5,
+        "/events": 4,
+        "/portfolio/hunter": 3,
+        "/blog": 1,
+        "/portfolio/breaelle": 1
+      },
+      "artistViews": {
+        "steve": 10,
+        "austin": 6,
+        "john": 5,
+        "nick": 5,
+        "hunter": 3,
+        "breaelle": 1
+      }
+    }
+  ]
+}

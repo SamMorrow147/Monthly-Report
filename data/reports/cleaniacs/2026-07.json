@@ -3,10 +3,10 @@
   "slug": "cleaniacs",
   "propertyId": "519854014",
   "clientName": "cleaniacs",
-  "highlightColor": "purple",
+  "highlightColor": "light-blue",
   "month": "2026-07",
   "monthLabel": "July 2026",
-  "generatedAt": "2026-08-24T01:34:43.085Z",
+  "generatedAt": "2026-08-24T02:20:38.249Z",
   "range": {
     "startDate": "2026-07-01",
     "endDate": "2026-07-31",
@@ -230,37 +230,72 @@
     {
       "month": "2026-07",
       "label": "July",
-      "sessions": 15
+      "sessions": 15,
+      "users": 13,
+      "newUsers": 13,
+      "avgSessionDuration": 189.40043473333333,
+      "busiestDate": "2026-07-27",
+      "busiestSessions": 3
     },
     {
       "month": "2026-06",
       "label": "June",
-      "sessions": 13
+      "sessions": 13,
+      "users": 12,
+      "newUsers": 12,
+      "avgSessionDuration": 109.56843976923075,
+      "busiestDate": "2026-06-08",
+      "busiestSessions": 2
     },
     {
       "month": "2026-05",
       "label": "May",
-      "sessions": 5
+      "sessions": 5,
+      "users": 5,
+      "newUsers": 4,
+      "avgSessionDuration": 9.2669048,
+      "busiestDate": "2026-05-07",
+      "busiestSessions": 2
     },
     {
       "month": "2026-04",
       "label": "April",
-      "sessions": 48
+      "sessions": 48,
+      "users": 45,
+      "newUsers": 74,
+      "avgSessionDuration": 78.94307814583335,
+      "busiestDate": "2026-04-02",
+      "busiestSessions": 4
     },
     {
       "month": "2026-03",
       "label": "March",
-      "sessions": 72
+      "sessions": 72,
+      "users": 71,
+      "newUsers": 98,
+      "avgSessionDuration": 30.47079804166667,
+      "busiestDate": "2026-03-16",
+      "busiestSessions": 7
     },
     {
       "month": "2026-02",
       "label": "February",
-      "sessions": 56
+      "sessions": 56,
+      "users": 56,
+      "newUsers": 78,
+      "avgSessionDuration": 41.157691625,
+      "busiestDate": "2026-02-17",
+      "busiestSessions": 5
     },
     {
       "month": "2026-01",
       "label": "January",
-      "sessions": 75
+      "sessions": 75,
+      "users": 67,
+      "newUsers": 101,
+      "avgSessionDuration": 171.6485665066667,
+      "busiestDate": "2026-01-28",
+      "busiestSessions": 19
     }
   ]
 }

@@ -1,16 +1,24 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import type { MonthlyReport } from "@/lib/reports";
+import type { MonthlyReport, MonthlyReportSessionPoint } from "@/lib/reports";
 import {
   busiestDay,
-  formatChangeVs,
   formatCount,
   formatDayLabel,
+  formatDuration,
   monthlyReportPath,
   myBusinessPath,
   previousMonthLabel,
+  otherPages,
+  orderedArtistPages,
+  hasArtistRoster,
   rankedPages,
+  peopleMonths,
+  durationMonths,
+  busiestMonths,
+  HIGHLIGHT_COLOR_HEX,
+  percentChange,
   reportAccent,
   storyChapters,
   topChannel,
@@ -34,6 +42,18 @@ import { ClientLogo } from "@/components/ClientLogo";
 import { getClientBySlug } from "@/lib/clients";
 import { motion, type PanInfo } from "framer-motion";
 
+function isMetalAccent(accent: string) {
+  return accent.toLowerCase() === HIGHLIGHT_COLOR_HEX.gold;
+}
+
+function accentTextStyle(accent: string): React.CSSProperties {
+  return isMetalAccent(accent) ? {} : { color: accent };
+}
+
+function withMetal(accent: string, className: string) {
+  return isMetalAccent(accent) ? `${className} mybiz-metal` : className;
+}
+
 function isAppleBrowser(): boolean {
   if (typeof navigator === "undefined") return false;
   const ua = navigator.userAgent;
@@ -48,7 +68,9 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
   const accent = reportAccent(report.highlightColor);
   const chapters = useMemo(() => storyChapters(report), [report]);
   const prevMonth = previousMonthLabel(report);
-  const pages = rankedPages(report, 5);
+  const pages = hasArtistRoster(report)
+    ? otherPages(report, 5)
+    : rankedPages(report, 5);
   const busy = busiestDay(report);
   const channel = topChannel(report);
   const city = topCity(report);
@@ -109,10 +131,10 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
       setActive(next);
       if (Math.abs(root.scrollTop - target) > 12) {
         animatingRef.current = true;
-        root.scrollTo({ top: target, behavior: reduced ? "auto" : "smooth" });
+        root.scrollTo({ top: target, behavior: "auto" });
         window.setTimeout(() => {
           animatingRef.current = false;
-        }, 500);
+        }, 50);
       }
     };
 
@@ -155,9 +177,15 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
     };
 
     const onScroll = () => {
-      if (animatingRef.current) return;
+      const idx = Math.round(root.scrollTop / Math.max(1, root.clientHeight));
+      const next = Math.max(0, Math.min(chapters.length - 1, idx));
+      if (next !== indexRef.current) {
+        indexRef.current = next;
+        setActive(next);
+      }
+      if (appleRef.current || animatingRef.current) return;
       if (scrollQuiet) window.clearTimeout(scrollQuiet);
-      scrollQuiet = window.setTimeout(snapNearest, 90);
+      scrollQuiet = window.setTimeout(snapNearest, 140);
     };
 
     const onResize = () => {
@@ -279,7 +307,7 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
         .mybiz-scroller {
           scrollbar-width: none;
           -webkit-overflow-scrolling: touch;
-          overscroll-behavior-y: contain;
+          overscroll-behavior-y: none;
           overflow-x: hidden;
         }
         .mybiz-scroller::-webkit-scrollbar {
@@ -299,7 +327,7 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
           touch-action: none;
           cursor: grab;
           user-select: none;
-          overflow: visible;
+          overflow: hidden;
         }
         .mybiz-visit-depth.is-drag {
           cursor: grabbing;
@@ -329,6 +357,22 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
         .mybiz-mark {
           overflow: visible;
         }
+        .mybiz-metal {
+          background-image: linear-gradient(
+            165deg,
+            #fff6d0 0%,
+            #ffe9a0 16%,
+            #f0c75e 34%,
+            #d4af37 52%,
+            #8a6a14 70%,
+            #e8c84a 86%,
+            #b8922a 100%
+          );
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+          -webkit-text-fill-color: transparent;
+        }
         .mybiz-mark.is-play .mybiz-mark-core {
           animation: mybiz-pop 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
         }
@@ -351,6 +395,9 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
         }
         .mybiz-mark.is-play .mybiz-pop.d2 { animation-delay: 0.1s; }
         .mybiz-mark.is-play .mybiz-pop.d3 { animation-delay: 0.2s; }
+        .mybiz-mark.is-play .mybiz-pop.d4 { animation-delay: 0.3s; }
+        .mybiz-mark.is-play .mybiz-pop.d5 { animation-delay: 0.4s; }
+        .mybiz-mark.is-play .mybiz-pop.d6 { animation-delay: 0.5s; }
         .mybiz-mark.is-play .mybiz-pulse {
           transform-box: fill-box;
           transform-origin: center;
@@ -395,6 +442,36 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
           stroke-dashoffset: 50;
           animation: mybiz-draw 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
         }
+        .mybiz-visits-mark.is-play .mybiz-click-cursor {
+          transform-origin: 2px 2px;
+          animation: mybiz-cursor-click 2.2s ease-in-out infinite;
+        }
+        .mybiz-visits-mark.is-play .mybiz-click-btn {
+          transform-origin: center;
+          animation: mybiz-btn-press 2.2s ease-in-out infinite;
+        }
+        .mybiz-visits-mark.is-play .mybiz-click-ring {
+          transform-origin: center;
+          animation: mybiz-click-ripple 2.2s ease-out infinite;
+        }
+        @keyframes mybiz-cursor-click {
+          0% { transform: translate(28px, 32px); }
+          38% { transform: translate(0, 0); }
+          46% { transform: translate(1px, 3px); }
+          56% { transform: translate(0, 0); }
+          100% { transform: translate(0, 0); }
+        }
+        @keyframes mybiz-btn-press {
+          0%, 40% { transform: scale(1); }
+          46% { transform: scale(0.94); }
+          58%, 100% { transform: scale(1); }
+        }
+        @keyframes mybiz-click-ripple {
+          0%, 42% { transform: scale(0.25); opacity: 0; }
+          46% { opacity: 0.85; }
+          78% { transform: scale(8); opacity: 0; }
+          100% { opacity: 0; }
+        }
         @keyframes mybiz-pop {
           from { transform: scale(0.55); opacity: 0; }
           to { transform: scale(1); opacity: 1; }
@@ -436,17 +513,22 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
   );
 }
 
-function Chevron({ dir }: { dir: "up" | "down" | "left" | "right" }) {
+function Chevron({
+  dir,
+  className = "h-[22px] w-[22px]",
+}: {
+  dir: "up" | "down" | "left" | "right";
+  className?: string;
+}) {
   return (
     <svg
-      width="22"
-      height="22"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className={className}
       aria-hidden
     >
       {dir === "up" && <path d="M6 15l6-6 6 6" />}
@@ -496,8 +578,11 @@ function Eyebrow({
 }) {
   return (
     <p
-      className={`text-xs sm:text-sm uppercase tracking-[0.32em] font-semibold ${className}`}
-      style={{ color: accent }}
+      className={withMetal(
+        accent,
+        `text-2xl sm:text-4xl font-semibold tracking-tight ${className}`
+      )}
+      style={accentTextStyle(accent)}
     >
       {children}
     </p>
@@ -540,7 +625,9 @@ function ChapterBody({
       accent={accent}
       active={active}
       beforeMark={beforeMark}
-      hideMark={brandedOpen}
+      hideMark={
+        brandedOpen || id === "artists" || id === "busiest" || id === "pages"
+      }
     >
       {child}
     </ChapterFrame>
@@ -567,6 +654,7 @@ function ChapterBody({
         accent={accent}
         prevMonth={prevMonth}
         active={active}
+        visitDragRef={visitDragRef}
       />
     );
   }
@@ -577,22 +665,41 @@ function ChapterBody({
         accent={accent}
         prevMonth={prevMonth}
         active={active}
+        visitDragRef={visitDragRef}
       />
     );
   }
   if (id === "busiest" && busy) {
     return frame(
-      <BusiestChapter busy={busy} active={active} />,
-      <Reveal active={active}>
-        <Eyebrow accent={accent} className="mb-2">
-          Your busiest day
-        </Eyebrow>
-      </Reveal>
+      <BusiestChapter
+        report={report}
+        busy={busy}
+        accent={accent}
+        active={active}
+        visitDragRef={visitDragRef}
+      />
+    );
+  }
+  if (id === "artists") {
+    return frame(
+      <ArtistChapter
+        report={report}
+        accent={accent}
+        active={active}
+        visitDragRef={visitDragRef}
+      />
     );
   }
   if (id === "pages") {
     return frame(
-      <PagesChapter pages={pages} accent={accent} active={active} />
+      <PagesChapter
+        pages={pages}
+        accent={accent}
+        active={active}
+        title={hasArtistRoster(report) ? "Other page visits" : "Most visited pages"}
+        months={visitMonths(report)}
+        visitDragRef={visitDragRef}
+      />
     );
   }
   if (id === "channels") {
@@ -655,8 +762,10 @@ function OpenChapter({
         <ClientLogo
           slug={report.slug}
           clientName={report.clientName}
-          size="hero"
+          size={report.slug === "ink-kings" ? "display" : "hero"}
           onDark
+          metallic={isMetalAccent(accent)}
+          fill={isMetalAccent(accent) ? HIGHLIGHT_COLOR_HEX.gold : undefined}
           className="mx-auto mb-6"
         />
       </Reveal>
@@ -664,7 +773,13 @@ function OpenChapter({
         <Eyebrow accent={accent}>My Business</Eyebrow>
       </Reveal>
       <Reveal active={active} delay={140}>
-        <h1 className="text-6xl sm:text-8xl font-semibold tracking-tight leading-[1.05]">
+        <h1
+          className={withMetal(
+            accent,
+            "text-6xl sm:text-8xl font-semibold tracking-tight leading-[1.05]"
+          )}
+          style={accentTextStyle(accent)}
+        >
           {report.clientName}
         </h1>
       </Reveal>
@@ -705,23 +820,36 @@ function visitPose(offset: number) {
   };
 }
 
-function VisitDepthStrip({
-  months,
+type DepthItem = {
+  key: string;
+  label: string;
+  display: string;
+  photo?: string;
+};
+
+function StoryDepthStrip({
+  items,
   accent,
   active,
   visitDragRef,
+  onFocusIndex,
+  valueClass = "text-8xl sm:text-[10rem]",
+  heightClass = "h-52 sm:h-72",
 }: {
-  months: ReturnType<typeof visitMonths>;
+  items: DepthItem[];
   accent: string;
   active: boolean;
   visitDragRef: React.MutableRefObject<boolean>;
+  onFocusIndex?: (index: number) => void;
+  valueClass?: string;
+  heightClass?: string;
 }) {
   const reduced = usePrefersReducedMotion();
   const stageRef = useRef<HTMLDivElement>(null);
   const [progress, setProgress] = useState(0);
   const progressRef = useRef(0);
   const startRef = useRef(0);
-  const last = Math.max(0, months.length - 1);
+  const last = Math.max(0, items.length - 1);
   const [dragging, setDragging] = useState(false);
 
   const apply = (next: number) => {
@@ -735,6 +863,11 @@ function VisitDepthStrip({
   useEffect(() => {
     if (!active) apply(0);
   }, [active, last]);
+
+  const page = Math.round(progress);
+  useEffect(() => {
+    onFocusIndex?.(page);
+  }, [page, onFocusIndex]);
 
   useEffect(() => {
     const root = stageRef.current;
@@ -755,15 +888,27 @@ function VisitDepthStrip({
     return () => root.removeEventListener("wheel", onWheel);
   }, [reduced, last]);
 
+  const countClass = `font-semibold tabular-nums tracking-tight leading-none ${valueClass}`;
+
   if (reduced) {
-    const current = months[0];
+    const current = items[0];
     return (
-      <AnimatedCount
-        value={current?.sessions || 0}
-        active={active}
-        className="block text-8xl sm:text-[10rem] font-semibold tabular-nums tracking-tight leading-none"
-        style={{ color: accent }}
-      />
+      <div className="flex items-center justify-center gap-5">
+        {current?.photo && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={current.photo}
+            alt=""
+            className="h-20 w-20 sm:h-28 sm:w-28 rounded-full object-cover object-top"
+          />
+        )}
+        <span
+          className={withMetal(accent, countClass)}
+          style={accentTextStyle(accent)}
+        >
+          {current?.display || "0"}
+        </span>
+      </div>
     );
   }
 
@@ -787,14 +932,10 @@ function VisitDepthStrip({
     go(projected);
   };
 
-  const page = Math.round(progress);
-  const countClass =
-    "block text-8xl sm:text-[10rem] font-semibold tabular-nums tracking-tight leading-none";
-
   return (
     <div
       ref={stageRef}
-      className={`mybiz-visit-depth h-52 sm:h-72${dragging ? " is-drag" : ""}`}
+      className={`mybiz-visit-depth ${heightClass}${dragging ? " is-drag" : ""}`}
     >
       <motion.div
         className="absolute inset-0"
@@ -802,40 +943,49 @@ function VisitDepthStrip({
         onPan={onPan}
         onPanEnd={onPanEnd}
       >
-        {months.map((item, index) => {
+        {items.map((item, index) => {
           const offset = index - progress;
-          if (Math.abs(offset) > 3) return null;
           const focusedHere = Math.abs(offset) < 0.45;
           return (
             <div
-              key={item.month}
+              key={item.key}
               className="absolute inset-0 flex items-center justify-center pointer-events-none"
             >
               <motion.div
                 className="text-center"
+                initial={false}
                 animate={visitPose(offset)}
                 transition={dragging ? { duration: 0 } : visitSpring}
                 style={{
                   zIndex: 10 - Math.round(Math.abs(offset)),
-                  color: focusedHere && index === 0 ? accent : "#fff",
+                  visibility: Math.abs(offset) > 2.6 ? "hidden" : "visible",
                 }}
               >
-                <AnimatedCount
-                  value={item.sessions}
-                  active={active}
-                  delay={index * 40}
-                  className={countClass}
-                  style={{
-                    color: focusedHere && index === 0 ? accent : undefined,
-                  }}
-                />
-                <p
-                  className={`mt-3 text-xl sm:text-2xl ${
-                    focusedHere ? "text-white/70" : "text-white/45"
-                  }`}
-                >
-                  {item.label}
-                </p>
+                <div className="flex items-center justify-center gap-4 sm:gap-6">
+                  {item.photo && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={item.photo}
+                      alt=""
+                      className="h-16 w-16 sm:h-24 sm:w-24 rounded-full object-cover object-top shrink-0"
+                    />
+                  )}
+                  <span
+                    className={withMetal(accent, countClass)}
+                    style={accentTextStyle(accent)}
+                  >
+                    {item.display}
+                  </span>
+                </div>
+                {item.label ? (
+                  <p
+                    className={`mt-3 text-xl sm:text-2xl ${
+                      focusedHere ? "text-white/70" : "text-white/45"
+                    }`}
+                  >
+                    {item.label}
+                  </p>
+                ) : null}
               </motion.div>
             </div>
           );
@@ -845,26 +995,135 @@ function VisitDepthStrip({
       {page < last && (
         <button
           type="button"
-          aria-label={`See ${months[page + 1]?.label || "previous month"}`}
+          aria-label="See previous"
           onClick={() => go(page + 1)}
           onPointerDown={(e) => e.stopPropagation()}
-          className="absolute left-4 sm:left-10 top-1/2 -translate-y-1/2 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 border border-white/15 text-white/80 hover:text-white hover:bg-white/15"
+          className="absolute left-2 sm:left-10 top-1/2 -translate-y-1/2 z-20 flex h-8 w-8 sm:h-11 sm:w-11 items-center justify-center rounded-full bg-white/10 border border-white/15 text-white/80 hover:text-white hover:bg-white/15"
         >
-          <Chevron dir="left" />
+          <Chevron dir="left" className="h-4 w-4 sm:h-[22px] sm:w-[22px]" />
         </button>
       )}
       {page > 0 && (
         <button
           type="button"
-          aria-label={`See ${months[page - 1]?.label || "next month"}`}
+          aria-label="See next"
           onClick={() => go(page - 1)}
           onPointerDown={(e) => e.stopPropagation()}
-          className="absolute right-4 sm:right-10 top-1/2 -translate-y-1/2 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 border border-white/15 text-white/80 hover:text-white hover:bg-white/15"
+          className="absolute right-2 sm:right-10 top-1/2 -translate-y-1/2 z-20 flex h-8 w-8 sm:h-11 sm:w-11 items-center justify-center rounded-full bg-white/10 border border-white/15 text-white/80 hover:text-white hover:bg-white/15"
         >
-          <Chevron dir="right" />
+          <Chevron dir="right" className="h-4 w-4 sm:h-[22px] sm:w-[22px]" />
         </button>
       )}
     </div>
+  );
+}
+
+function MonthChangeLine({
+  months,
+  focus,
+  value,
+  active,
+  fallbackChange,
+  fallbackPrev,
+}: {
+  months: MonthlyReportSessionPoint[];
+  focus: number;
+  value: (month: MonthlyReportSessionPoint) => number;
+  active: boolean;
+  fallbackChange: number;
+  fallbackPrev: string;
+}) {
+  const index = Math.min(focus, Math.max(0, months.length - 1));
+  const focused = months[index];
+  const older = months[index + 1];
+  const change = older
+    ? percentChange(value(focused), value(older))
+    : fallbackChange;
+
+  if (older) {
+    return (
+      <ChangeLine
+        key={`${focused?.month}-${older.month}`}
+        change={change}
+        prevMonth={older.label}
+        active={active}
+        className="mt-8 text-2xl sm:text-3xl text-white/70"
+      />
+    );
+  }
+  if (months.length > 1) {
+    return (
+      <p className="mt-8 text-2xl sm:text-3xl text-white/70">
+        the earliest month we have
+      </p>
+    );
+  }
+  return (
+    <ChangeLine
+      change={fallbackChange}
+      prevMonth={fallbackPrev}
+      active={active}
+      className="mt-8 text-2xl sm:text-3xl text-white/70"
+    />
+  );
+}
+
+function MonthSwitcher({
+  months,
+  accent,
+  active,
+  visitDragRef,
+  onFocusIndex,
+}: {
+  months: Array<{ month: string; label: string }>;
+  accent: string;
+  active: boolean;
+  visitDragRef: React.MutableRefObject<boolean>;
+  onFocusIndex?: (index: number) => void;
+}) {
+  if (months.length < 2) return null;
+  return (
+    <StoryDepthStrip
+      items={months.map((item) => ({
+        key: item.month,
+        label: "",
+        display: item.label,
+      }))}
+      accent={accent}
+      active={active}
+      visitDragRef={visitDragRef}
+      onFocusIndex={onFocusIndex}
+      valueClass="text-3xl sm:text-5xl"
+      heightClass="h-16 sm:h-24"
+    />
+  );
+}
+
+function VisitDepthStrip({
+  months,
+  accent,
+  active,
+  visitDragRef,
+  onFocusIndex,
+}: {
+  months: ReturnType<typeof visitMonths>;
+  accent: string;
+  active: boolean;
+  visitDragRef: React.MutableRefObject<boolean>;
+  onFocusIndex?: (index: number) => void;
+}) {
+  return (
+    <StoryDepthStrip
+      items={months.map((item) => ({
+        key: item.month,
+        label: item.label,
+        display: formatCount(item.sessions),
+      }))}
+      accent={accent}
+      active={active}
+      visitDragRef={visitDragRef}
+      onFocusIndex={onFocusIndex}
+    />
   );
 }
 
@@ -882,33 +1141,41 @@ function VisitsChapter({
   visitDragRef: React.MutableRefObject<boolean>;
 }) {
   const months = visitMonths(report);
+  const [focus, setFocus] = useState(0);
+
+  useEffect(() => {
+    if (!active) setFocus(0);
+  }, [active]);
 
   return (
     <>
-      <Reveal active={active}>
-        <Eyebrow accent={accent}>Visits</Eyebrow>
-      </Reveal>
       {months.length > 1 ? (
         <VisitDepthStrip
           months={months}
           accent={accent}
           active={active}
           visitDragRef={visitDragRef}
+          onFocusIndex={setFocus}
         />
       ) : (
         <AnimatedCount
           value={report.summary.sessions}
           active={active}
-          className="block text-8xl sm:text-[10rem] font-semibold tabular-nums tracking-tight leading-none"
-          style={{ color: accent }}
+          className={withMetal(
+            accent,
+            "block text-8xl sm:text-[10rem] font-semibold tabular-nums tracking-tight leading-none"
+          )}
+          style={accentTextStyle(accent)}
         />
       )}
       <Reveal active={active} delay={220}>
-        <ChangeLine
-          change={report.summary.sessionsChange}
-          prevMonth={prevMonth}
+        <MonthChangeLine
+          months={months}
+          focus={focus}
+          value={(month) => month.sessions}
           active={active}
-          className="mt-8 text-2xl sm:text-3xl text-white/70"
+          fallbackChange={report.summary.sessionsChange}
+          fallbackPrev={prevMonth}
         />
       </Reveal>
     </>
@@ -920,42 +1187,70 @@ function PeopleChapter({
   accent,
   prevMonth,
   active,
+  visitDragRef,
 }: {
   report: MonthlyReport;
   accent: string;
   prevMonth: string;
   active: boolean;
+  visitDragRef: React.MutableRefObject<boolean>;
 }) {
-  const newUsers = useCountUp(report.summary.newUsers, active, { delay: 280 });
+  const months = peopleMonths(report);
+  const [focus, setFocus] = useState(0);
+
+  useEffect(() => {
+    if (!active) setFocus(0);
+  }, [active]);
+
+  const focused = months[Math.min(focus, Math.max(0, months.length - 1))];
+  const newUsers = focused?.newUsers ?? report.summary.newUsers;
+
   return (
     <>
       <Reveal active={active}>
-        <Eyebrow accent={accent}>People</Eyebrow>
+        <Eyebrow accent={accent}>Unique visitors</Eyebrow>
       </Reveal>
-      <AnimatedCount
-        value={report.summary.users}
-        active={active}
-        className="block text-8xl sm:text-[9rem] font-semibold tabular-nums tracking-tight leading-none"
-      />
+      {months.length > 1 ? (
+        <StoryDepthStrip
+          items={months.map((item) => ({
+            key: item.month,
+            label: item.label,
+            display: formatCount(item.users || 0),
+          }))}
+          accent={accent}
+          active={active}
+          visitDragRef={visitDragRef}
+          onFocusIndex={setFocus}
+        />
+      ) : (
+        <AnimatedCount
+          value={report.summary.users}
+          active={active}
+          className={withMetal(
+            accent,
+            "block text-8xl sm:text-[9rem] font-semibold tabular-nums tracking-tight leading-none"
+          )}
+          style={accentTextStyle(accent)}
+        />
+      )}
       <Reveal active={active} delay={180}>
-        <p className="mt-6 text-2xl sm:text-3xl text-white/70">
-          people came to the site
+        <p className="mt-2 text-2xl sm:text-3xl text-white/70">
+          people who came to the site
         </p>
       </Reveal>
+      <Reveal active={active} delay={220}>
+        <MonthChangeLine
+          months={months}
+          focus={focus}
+          value={(month) => month.users || 0}
+          active={active}
+          fallbackChange={report.summary.usersChange}
+          fallbackPrev={prevMonth}
+        />
+      </Reveal>
       <Reveal active={active} delay={280}>
-        <p
-          className="mt-4 text-lg sm:text-2xl text-white/50"
-          aria-label={`${formatCount(report.summary.newUsers)} were new · ${formatChangeVs(report.summary.newUsersChange, prevMonth)}`}
-        >
-          <span aria-hidden>
-            {formatCount(Math.round(newUsers))} were new ·{" "}
-          </span>
-          <ChangeLine
-            change={report.summary.newUsersChange}
-            prevMonth={prevMonth}
-            active={active}
-            as="span"
-          />
+        <p className="mt-4 text-lg sm:text-2xl text-white/50">
+          {formatCount(newUsers)} were new unique visitors
         </p>
       </Reveal>
     </>
@@ -967,65 +1262,221 @@ function AttentionChapter({
   accent,
   prevMonth,
   active,
+  visitDragRef,
 }: {
   report: MonthlyReport;
   accent: string;
   prevMonth: string;
   active: boolean;
+  visitDragRef: React.MutableRefObject<boolean>;
 }) {
+  const months = durationMonths(report);
+  const [focus, setFocus] = useState(0);
+
+  useEffect(() => {
+    if (!active) setFocus(0);
+  }, [active]);
+
   return (
     <>
       <Reveal active={active}>
-        <Eyebrow accent={accent}>Attention</Eyebrow>
+        <Eyebrow accent={accent}>Average time on site</Eyebrow>
       </Reveal>
-      <AnimatedDuration
-        seconds={report.summary.avgSessionDuration}
-        active={active}
-        className="block text-8xl sm:text-[9rem] font-semibold tabular-nums tracking-tight leading-none"
-        style={{ color: accent }}
-      />
+      {months.length > 1 ? (
+        <StoryDepthStrip
+          items={months.map((item) => ({
+            key: item.month,
+            label: item.label,
+            display: formatDuration(item.avgSessionDuration || 0),
+          }))}
+          accent={accent}
+          active={active}
+          visitDragRef={visitDragRef}
+          onFocusIndex={setFocus}
+        />
+      ) : (
+        <AnimatedDuration
+          seconds={report.summary.avgSessionDuration}
+          active={active}
+          className={withMetal(
+            accent,
+            "block text-8xl sm:text-[9rem] font-semibold tabular-nums tracking-tight leading-none"
+          )}
+          style={accentTextStyle(accent)}
+        />
+      )}
       <Reveal active={active} delay={180}>
-        <p className="mt-6 text-2xl sm:text-3xl text-white/70">
-          average time on the site
+        <p className="mt-2 text-2xl sm:text-3xl text-white/70">
+          how long a typical visit lasted
         </p>
       </Reveal>
-      <Reveal active={active} delay={260}>
-        <ChangeLine
-          change={report.summary.avgSessionDurationChange}
-          prevMonth={prevMonth}
+      <Reveal active={active} delay={220}>
+        <MonthChangeLine
+          months={months}
+          focus={focus}
+          value={(month) => month.avgSessionDuration || 0}
           active={active}
-          className="mt-4 text-lg sm:text-2xl text-white/50"
+          fallbackChange={report.summary.avgSessionDurationChange}
+          fallbackPrev={prevMonth}
         />
       </Reveal>
-      <Reveal active={active} delay={340}>
-        <p className="mt-3 text-lg sm:text-2xl text-white/50">
-          <AnimatedPercent rate={report.summary.engagementRate} active={active} />{" "}
-          of visits stayed engaged
-        </p>
-      </Reveal>
+      {focus === 0 && (
+        <Reveal active={active} delay={340}>
+          <p className="mt-3 text-lg sm:text-2xl text-white/50">
+            <AnimatedPercent rate={report.summary.engagementRate} active={active} />{" "}
+            of visits stayed engaged
+          </p>
+        </Reveal>
+      )}
     </>
   );
 }
 
 function BusiestChapter({
+  report,
   busy,
+  accent,
   active,
+  visitDragRef,
 }: {
+  report: MonthlyReport;
   busy: NonNullable<ReturnType<typeof busiestDay>>;
+  accent: string;
   active: boolean;
+  visitDragRef: React.MutableRefObject<boolean>;
 }) {
+  const months = busiestMonths(report);
+  const [focus, setFocus] = useState(0);
+
+  useEffect(() => {
+    if (!active) setFocus(0);
+  }, [active]);
+
+  const focused = months[Math.min(focus, Math.max(0, months.length - 1))];
+  const visits = focused?.busiestSessions ?? busy.sessions;
+
   return (
     <>
-      <Reveal active={active} delay={80}>
-        <p className="text-5xl sm:text-7xl font-semibold tracking-tight leading-tight">
-          {formatDayLabel(busy.date)}
-        </p>
+      <Reveal active={active}>
+        <Eyebrow accent={accent}>Your busiest day</Eyebrow>
       </Reveal>
+      {months.length > 1 ? (
+        <StoryDepthStrip
+          items={months.map((item) => ({
+            key: item.month,
+            label: item.label,
+            display: formatDayLabel(item.busiestDate || ""),
+          }))}
+          accent={accent}
+          active={active}
+          visitDragRef={visitDragRef}
+          onFocusIndex={setFocus}
+          valueClass="text-6xl sm:text-8xl"
+        />
+      ) : (
+        <Reveal active={active} delay={80}>
+          <p
+            className={withMetal(
+              accent,
+              "text-6xl sm:text-8xl font-semibold tracking-tight leading-tight"
+            )}
+            style={accentTextStyle(accent)}
+          >
+            {formatDayLabel(busy.date)}
+          </p>
+        </Reveal>
+      )}
       <Reveal active={active} delay={180}>
-        <p className="mt-6 text-2xl sm:text-3xl text-white/70">
-          <AnimatedCount value={busy.sessions} active={active} /> visits that day
+        <p className="mt-2 text-2xl sm:text-3xl text-white/70">
+          <AnimatedCount
+            key={focused?.month || busy.date}
+            value={visits}
+            active={active}
+          />{" "}
+          visits that day
         </p>
       </Reveal>
+      {months.length > 1 && (
+        <Reveal active={active} delay={220}>
+          <MonthChangeLine
+            months={months}
+            focus={focus}
+            value={(month) => month.busiestSessions || 0}
+            active={active}
+            fallbackChange={0}
+            fallbackPrev={focused?.label || ""}
+          />
+        </Reveal>
+      )}
+    </>
+  );
+}
+
+function ArtistChapter({
+  report,
+  accent,
+  active,
+  visitDragRef,
+}: {
+  report: MonthlyReport;
+  accent: string;
+  active: boolean;
+  visitDragRef: React.MutableRefObject<boolean>;
+}) {
+  const months = visitMonths(report);
+  const [focus, setFocus] = useState(0);
+  const artists = orderedArtistPages(report);
+
+  useEffect(() => {
+    if (!active) setFocus(0);
+  }, [active]);
+
+  const month = months[Math.min(focus, Math.max(0, months.length - 1))];
+  const canSwipe = months.some((item) => item.artistViews);
+  const views = month?.artistViews;
+
+  return (
+    <>
+      <Reveal active={active}>
+        <Eyebrow accent={accent} className="mb-2">
+          Artist Page Visits
+        </Eyebrow>
+      </Reveal>
+      {canSwipe && (
+        <MonthSwitcher
+          months={months}
+          accent={accent}
+          active={active}
+          visitDragRef={visitDragRef}
+          onFocusIndex={setFocus}
+        />
+      )}
+      <div className="grid grid-cols-3 gap-x-4 gap-y-6 sm:gap-x-8 sm:gap-y-8 w-full max-w-lg mx-auto mt-4">
+        {artists.map((artist) => (
+          <div key={artist.id} className="flex flex-col items-center text-center">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={artist.photo}
+              alt=""
+              className="h-14 w-14 sm:h-20 sm:w-20 rounded-full object-cover object-top"
+            />
+            <span
+              className={withMetal(
+                accent,
+                "mt-2 text-2xl sm:text-4xl font-semibold tabular-nums leading-none"
+              )}
+              style={accentTextStyle(accent)}
+            >
+              {formatCount(
+                views?.[artist.id] ?? (focus === 0 ? artist.views : 0)
+              )}
+            </span>
+            <span className="mt-1.5 text-sm sm:text-base text-white/65">
+              {artist.name}
+            </span>
+          </div>
+        ))}
+      </div>
     </>
   );
 }
@@ -1034,43 +1485,77 @@ function PagesChapter({
   pages,
   accent,
   active,
+  title = "Most visited pages",
+  months,
+  visitDragRef,
 }: {
   pages: ReturnType<typeof rankedPages>;
   accent: string;
   active: boolean;
+  title?: string;
+  months?: ReturnType<typeof visitMonths>;
+  visitDragRef?: React.MutableRefObject<boolean>;
 }) {
+  const [focus, setFocus] = useState(0);
+  const history =
+    months && months.some((item) => item.pageViews) && months.length > 1
+      ? months
+      : [];
+
+  useEffect(() => {
+    if (!active) setFocus(0);
+  }, [active]);
+
+  const month = history[Math.min(focus, Math.max(0, history.length - 1))];
+
   return (
     <>
       <Reveal active={active}>
-        <Eyebrow accent={accent}>Top pages</Eyebrow>
+        <Eyebrow accent={accent} className="mb-2">
+          {title}
+        </Eyebrow>
       </Reveal>
-      <ol className="space-y-5 max-w-xl mx-auto">
-        {pages.map((page, i) => (
-          <Reveal
-            key={`${page.path}-${i}`}
-            as="li"
-            active={active}
-            delay={90 * i}
-            className="flex items-baseline justify-center gap-4"
-          >
-            <span
-              className="text-base sm:text-lg tabular-nums w-6 shrink-0"
-              style={{ color: accent }}
+      {history.length > 1 && visitDragRef && (
+        <MonthSwitcher
+          months={history}
+          accent={accent}
+          active={active}
+          visitDragRef={visitDragRef}
+          onFocusIndex={setFocus}
+        />
+      )}
+      <ol className="space-y-4 sm:space-y-5 w-full max-w-xl mx-auto mt-4">
+        {pages.map((page, i) => {
+          const path = page.path.replace(/\/$/, "") || "/";
+          const views =
+            month?.pageViews?.[path] ??
+            month?.pageViews?.[page.path] ??
+            (focus === 0 || history.length < 2
+              ? page.views || page.sessions
+              : 0);
+          return (
+            <Reveal
+              key={`${page.path}-${i}`}
+              as="li"
+              active={active}
+              delay={90 * i}
+              className="flex items-baseline justify-between gap-4 text-left"
             >
-              {i + 1}
-            </span>
-            <span className="text-xl sm:text-3xl font-medium truncate">
-              {page.label}
-            </span>
-            <span className="text-base sm:text-xl tabular-nums text-white/45 shrink-0">
-              <AnimatedCount
-                value={page.views || page.sessions}
-                active={active}
-                delay={120 + 90 * i}
-              />
-            </span>
-          </Reveal>
-        ))}
+              <span className="text-xl sm:text-3xl font-medium min-w-0">
+                {page.label}
+              </span>
+              <span
+                className={withMetal(
+                  accent,
+                  "text-xl sm:text-3xl tabular-nums shrink-0 font-semibold"
+                )}
+                style={accentTextStyle(accent)}
+              >
+                {formatCount(views)}
+              </span>
+            </Reveal>
+          );
+        })}
       </ol>
     </>
   );
@@ -1157,7 +1642,7 @@ function GeographyChapter({
   return (
     <>
       <Reveal active={active}>
-        <Eyebrow accent={accent}>Where they came from</Eyebrow>
+        <Eyebrow accent={accent}>Where visitors came from</Eyebrow>
       </Reveal>
       {city && (
         <Reveal active={active} delay={80}>
@@ -1203,13 +1688,16 @@ function HoursChapter({
   return (
     <>
       <Reveal active={active}>
-        <Eyebrow accent={accent}>Time on the work</Eyebrow>
+        <Eyebrow accent={accent}>Hours on this site</Eyebrow>
       </Reveal>
       <AnimatedHours
         value={report.hours as number}
         active={active}
-        className="block text-8xl sm:text-[9rem] font-semibold tabular-nums tracking-tight leading-none"
-        style={{ color: accent }}
+        className={withMetal(
+          accent,
+          "block text-8xl sm:text-[9rem] font-semibold tabular-nums tracking-tight leading-none"
+        )}
+        style={accentTextStyle(accent)}
       />
       <Reveal active={active} delay={200}>
         <p className="mt-6 text-2xl sm:text-3xl text-white/70">
@@ -1233,7 +1721,7 @@ function NotesChapter({
   return (
     <>
       <Reveal active={active}>
-        <Eyebrow accent={accent}>Notes</Eyebrow>
+        <Eyebrow accent={accent}>A few notes</Eyebrow>
       </Reveal>
       <ul className="space-y-5 max-w-xl mx-auto">
         {notes.map((note, i) => (
@@ -1271,8 +1759,10 @@ function CloseChapter({
         <ClientLogo
           slug={report.slug}
           clientName={report.clientName}
-          size="lg"
+          size={report.slug === "ink-kings" ? "hero" : "lg"}
           onDark
+          metallic={isMetalAccent(accent)}
+          fill={isMetalAccent(accent) ? HIGHLIGHT_COLOR_HEX.gold : undefined}
           className="mx-auto mb-6"
         />
       </Reveal>

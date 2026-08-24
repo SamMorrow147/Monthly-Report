@@ -295,6 +295,57 @@ export function ChapterMark({
     wasActive.current = active;
   }, [active]);
 
+  if (id === "visits") {
+    return (
+      <div
+        aria-hidden
+        className="h-36 sm:h-48 w-full flex items-center justify-center mb-6 overflow-visible"
+      >
+        <div
+          key={gen}
+          className={`mybiz-mark mybiz-visits-mark relative overflow-visible${
+            play ? " is-play" : ""
+          }`}
+        >
+          <div
+            className="mybiz-click-btn relative flex items-center justify-center rounded-2xl border-[2.5px] px-10 py-5 sm:px-16 sm:py-7"
+            style={{
+              borderColor: accent,
+              backgroundColor: `${accent}33`,
+            }}
+          >
+            <span
+              className={`text-2xl sm:text-4xl font-semibold tracking-tight whitespace-nowrap${
+                accent.toLowerCase() === "#d4af37" ? " mybiz-metal" : ""
+              }`}
+              style={accent.toLowerCase() === "#d4af37" ? undefined : { color: accent }}
+            >
+              Total visits
+            </span>
+            <span
+              className="mybiz-click-ring pointer-events-none absolute right-6 bottom-3 h-5 w-5 rounded-full border-2"
+              style={{ borderColor: accent }}
+            />
+          </div>
+          <svg
+            className="mybiz-click-cursor pointer-events-none absolute right-4 bottom-1 overflow-visible"
+            width="32"
+            height="40"
+            viewBox="0 0 32 40"
+          >
+            <path
+              d="M2 0l3.2 30 8.4-7.4 6 14.4 7.2-3-6-14.6 10.8-1.8z"
+              fill="white"
+              stroke={accent}
+              strokeWidth="1.6"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div
       aria-hidden
@@ -313,30 +364,6 @@ export function ChapterMark({
             <circle cx="56" cy="56" r="22" fill="none" stroke={accent} strokeWidth="1.5" className="mybiz-ring r1" />
             <circle cx="56" cy="56" r="34" fill="none" stroke={accent} strokeWidth="1.25" className="mybiz-ring r2" />
             <circle cx="56" cy="56" r="46" fill="none" stroke={accent} strokeWidth="1" className="mybiz-ring r3" />
-          </>
-        )}
-        {id === "visits" && (
-          <>
-            {[
-              [56, 22],
-              [82, 34],
-              [90, 60],
-              [74, 84],
-              [38, 84],
-              [22, 60],
-              [30, 34],
-            ].map(([x, y], i) => (
-              <circle
-                key={i}
-                cx={x}
-                cy={y}
-                r="5"
-                fill={accent}
-                className="mybiz-dot"
-                style={{ animationDelay: `${i * 70}ms` }}
-              />
-            ))}
-            <circle cx="56" cy="56" r="7" fill="white" fillOpacity="0.9" className="mybiz-mark-core" />
           </>
         )}
         {id === "people" && (
@@ -368,6 +395,16 @@ export function ChapterMark({
             <rect x="28" y="30" width="56" height="54" rx="8" fill="none" stroke="white" strokeOpacity="0.28" strokeWidth="2" className="mybiz-pop" />
             <rect x="28" y="30" width="56" height="14" rx="8" fill={accent} fillOpacity="0.85" className="mybiz-pop" />
             <rect x="48" y="54" width="16" height="16" rx="3" fill={accent} className="mybiz-pulse" />
+          </>
+        )}
+        {id === "artists" && (
+          <>
+            <circle cx="32" cy="40" r="9" fill={accent} fillOpacity="0.95" className="mybiz-pop d1" />
+            <circle cx="56" cy="40" r="9" fill={accent} fillOpacity="0.8" className="mybiz-pop d2" />
+            <circle cx="80" cy="40" r="9" fill={accent} fillOpacity="0.65" className="mybiz-pop d3" />
+            <circle cx="32" cy="68" r="9" fill={accent} fillOpacity="0.8" className="mybiz-pop d4" />
+            <circle cx="56" cy="68" r="9" fill={accent} fillOpacity="0.65" className="mybiz-pop d5" />
+            <circle cx="80" cy="68" r="9" fill={accent} fillOpacity="0.5" className="mybiz-pop d6" />
           </>
         )}
         {id === "pages" && (

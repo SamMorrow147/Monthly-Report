@@ -11,6 +11,7 @@ export type ClientHighlightColor =
   | "indigo"
   | "cyan"
   | "black"
+  | "gold"
   | "pink"
   | "navy";
 
@@ -33,13 +34,13 @@ export const GA4_CLIENTS_ROW_1: GA4Client[] = [
   { clientName: "Pints and Paddle", propertyId: "346788360", highlightColor: "green", slug: "pints-and-paddle" },
   { clientName: "Experience Maple Grove", propertyId: "342306161", highlightColor: "orange", slug: "experience-maple-grove" },
   { clientName: "Hilltop Hanover", propertyId: "519865623", highlightColor: "brown", slug: "hilltop-hanover" },
-  { clientName: "Ink Kings", propertyId: "527348475", highlightColor: "black", slug: "ink-kings", logo: "/logos/ink-kings.png", logoTreatment: "invert-on-dark" },
+  { clientName: "Ink Kings", propertyId: "527348475", highlightColor: "gold", slug: "ink-kings", logo: "/logos/ink-kings.png", logoTreatment: "invert-on-dark" },
   { clientName: "TCFF", propertyId: "370970067", highlightColor: "teal", slug: "tcff" },
 ];
 
 export const GA4_CLIENTS_ROW_2: GA4Client[] = [
   { clientName: "Bayerkohler", propertyId: "427362273", highlightColor: "light-blue", slug: "bayerkohler" },
-  { clientName: "cleaniacs", propertyId: "519854014", highlightColor: "purple", slug: "cleaniacs", logo: "/logos/cleaniacs.png" },
+  { clientName: "cleaniacs", propertyId: "519854014", highlightColor: "light-blue", slug: "cleaniacs", logo: "/logos/cleaniacs.png" },
   { clientName: "GAC", propertyId: "519869355", highlightColor: "indigo", slug: "gac" },
   { clientName: "Mains'l", propertyId: "381995271", highlightColor: "cyan", slug: "mainsl" },
   { clientName: "Cold Culture", propertyId: "524005835", highlightColor: "green", slug: "cold-culture" },

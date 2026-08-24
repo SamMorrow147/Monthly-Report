@@ -6,7 +6,7 @@
   "highlightColor": "blue",
   "month": "2026-04",
   "monthLabel": "April 2026",
-  "generatedAt": "2026-08-24T01:34:46.017Z",
+  "generatedAt": "2026-08-24T02:20:41.419Z",
   "range": {
     "startDate": "2026-04-01",
     "endDate": "2026-04-30",
@@ -725,62 +725,122 @@
     {
       "month": "2026-04",
       "label": "April",
-      "sessions": 178
+      "sessions": 178,
+      "users": 167,
+      "newUsers": 190,
+      "avgSessionDuration": 61.610392612359554,
+      "busiestDate": "2026-04-21",
+      "busiestSessions": 14
     },
     {
       "month": "2026-03",
       "label": "March",
-      "sessions": 160
+      "sessions": 160,
+      "users": 150,
+      "newUsers": 184,
+      "avgSessionDuration": 26.43364468125,
+      "busiestDate": "2026-03-04",
+      "busiestSessions": 19
     },
     {
       "month": "2026-02",
       "label": "February",
-      "sessions": 181
+      "sessions": 181,
+      "users": 176,
+      "newUsers": 199,
+      "avgSessionDuration": 28.415337480662988,
+      "busiestDate": "2026-02-25",
+      "busiestSessions": 21
     },
     {
       "month": "2026-01",
       "label": "January",
-      "sessions": 254
+      "sessions": 254,
+      "users": 208,
+      "newUsers": 254,
+      "avgSessionDuration": 275.7415962795276,
+      "busiestDate": "2026-01-17",
+      "busiestSessions": 26
     },
     {
       "month": "2025-12",
       "label": "December",
-      "sessions": 133
+      "sessions": 133,
+      "users": 126,
+      "newUsers": 152,
+      "avgSessionDuration": 102.56253518796994,
+      "busiestDate": "2025-12-22",
+      "busiestSessions": 14
     },
     {
       "month": "2025-11",
       "label": "November",
-      "sessions": 113
+      "sessions": 113,
+      "users": 107,
+      "newUsers": 104,
+      "avgSessionDuration": 87.65293462831858,
+      "busiestDate": "2025-11-21",
+      "busiestSessions": 10
     },
     {
       "month": "2025-10",
       "label": "October",
-      "sessions": 87
+      "sessions": 87,
+      "users": 84,
+      "newUsers": 82,
+      "avgSessionDuration": 28.712123103448267,
+      "busiestDate": "2025-10-31",
+      "busiestSessions": 19
     },
     {
       "month": "2025-09",
       "label": "September",
-      "sessions": 78
+      "sessions": 78,
+      "users": 66,
+      "newUsers": 64,
+      "avgSessionDuration": 105.37768280769232,
+      "busiestDate": "2025-09-01",
+      "busiestSessions": 11
     },
     {
       "month": "2025-08",
       "label": "August",
-      "sessions": 95
+      "sessions": 95,
+      "users": 83,
+      "newUsers": 76,
+      "avgSessionDuration": 67.07191981052631,
+      "busiestDate": "2025-08-19",
+      "busiestSessions": 17
     },
     {
       "month": "2025-07",
       "label": "July",
-      "sessions": 570
+      "sessions": 570,
+      "users": 557,
+      "newUsers": 550,
+      "avgSessionDuration": 250.2621244508772,
+      "busiestDate": "2025-07-06",
+      "busiestSessions": 396
     },
     {
       "month": "2025-06",
       "label": "June",
-      "sessions": 279
+      "sessions": 279,
+      "users": 115,
+      "newUsers": 109,
+      "avgSessionDuration": 706.4490531935485,
+      "busiestDate": "2025-06-01",
+      "busiestSessions": 38
     },
     {
       "month": "2025-05",
       "label": "May",
-      "sessions": 172
+      "sessions": 172,
+      "users": 70,
+      "newUsers": 63,
+      "avgSessionDuration": 1504.8095568197673,
+      "busiestDate": "2025-05-21",
+      "busiestSessions": 28
     }
   ]
 }
