@@ -54,14 +54,6 @@ export function previousMonthLabel(report: MonthlyReport): string {
   return d.toLocaleString("en-US", { month: "long" });
 }
 
-export function olderMonthLabel(report: MonthlyReport): string {
-  const iso = report.range.prevStartDate;
-  const d = new Date(iso + "T00:00:00");
-  if (Number.isNaN(d.getTime())) return "";
-  d.setMonth(d.getMonth() - 1);
-  return d.toLocaleString("en-US", { month: "long" });
-}
-
 export function formatChangeVs(change: number, prevLabel: string): string {
   if (!Number.isFinite(change) || Math.abs(change) < 0.1) {
     return `about the same as ${prevLabel}`;

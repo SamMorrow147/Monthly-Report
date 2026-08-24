@@ -9,7 +9,6 @@ import {
   formatDayLabel,
   monthlyReportPath,
   myBusinessPath,
-  olderMonthLabel,
   previousMonthLabel,
   rankedPages,
   reportAccent,
@@ -32,6 +31,7 @@ import {
 } from "@/components/reports/MyBusinessMotion";
 import { ClientLogo } from "@/components/ClientLogo";
 import { getClientBySlug } from "@/lib/clients";
+import { motion, type PanInfo } from "framer-motion";
 
 function isAppleBrowser(): boolean {
   if (typeof navigator === "undefined") return false;
@@ -47,7 +47,6 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
   const accent = reportAccent(report.highlightColor);
   const chapters = useMemo(() => storyChapters(report), [report]);
   const prevMonth = previousMonthLabel(report);
-  const olderMonth = olderMonthLabel(report);
   const pages = rankedPages(report, 5);
   const busy = busiestDay(report);
   const channel = topChannel(report);
@@ -215,7 +214,6 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
               report={report}
               accent={accent}
               prevMonth={prevMonth}
-              olderMonth={olderMonth}
               pages={pages}
               busy={busy}
               channel={channel}
@@ -304,15 +302,6 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
         }
         .mybiz-visit-depth.is-drag {
           cursor: grabbing;
-        }
-        .mybiz-visit-item {
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          text-align: center;
-          will-change: transform, opacity, filter;
-          pointer-events: none;
-          white-space: nowrap;
         }
         .mybiz-map-shell {
           pointer-events: auto;
@@ -446,7 +435,7 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
   );
 }
 
-function Chevron({ dir }: { dir: "up" | "down" }) {
+function Chevron({ dir }: { dir: "up" | "down" | "left" | "right" }) {
   return (
     <svg
       width="22"
@@ -459,11 +448,10 @@ function Chevron({ dir }: { dir: "up" | "down" }) {
       strokeLinejoin="round"
       aria-hidden
     >
-      {dir === "up" ? (
-        <path d="M6 15l6-6 6 6" />
-      ) : (
-        <path d="M6 9l6 6 6-6" />
-      )}
+      {dir === "up" && <path d="M6 15l6-6 6 6" />}
+      {dir === "down" && <path d="M6 9l6 6 6-6" />}
+      {dir === "left" && <path d="M15 6l-6 6 6 6" />}
+      {dir === "right" && <path d="M9 6l6 6-6 6" />}
     </svg>
   );
 }
@@ -521,7 +509,6 @@ function ChapterBody({
   report,
   accent,
   prevMonth,
-  olderMonth,
   pages,
   busy,
   channel,
@@ -535,7 +522,6 @@ function ChapterBody({
   report: MonthlyReport;
   accent: string;
   prevMonth: string;
-  olderMonth: string;
   pages: ReturnType<typeof rankedPages>;
   busy: ReturnType<typeof busiestDay>;
   channel: ReturnType<typeof topChannel>;
@@ -568,7 +554,6 @@ function ChapterBody({
         report={report}
         accent={accent}
         prevMonth={prevMonth}
-        olderMonth={olderMonth}
         active={active}
         visitDragRef={visitDragRef}
       />
@@ -696,34 +681,13 @@ function OpenChapter({
   );
 }
 
-function lerp(a: number, b: number, t: number) {
-  return a + (b - a) * t;
-}
-
-function visitPose(
-  t: number,
-  fromX: number,
-  toX: number,
-  fromScale: number,
-  toScale: number,
-  fromOp: number,
-  toOp: number,
-  fromBlur: number,
-  toBlur: number
-) {
-  return {
-    transform: `translate(-50%, -50%) translateX(${lerp(fromX, toX, t)}vw) scale(${lerp(fromScale, toScale, t)})`,
-    opacity: lerp(fromOp, toOp, t),
-    filter: `blur(${lerp(fromBlur, toBlur, t)}px)`,
-  };
-}
+const visitSpring = { type: "spring" as const, stiffness: 380, damping: 36, mass: 0.8 };
 
 function VisitDepthStrip({
   current,
   previous,
   currentLabel,
   previousLabel,
-  olderLabel,
   accent,
   active,
   visitDragRef,
@@ -732,32 +696,19 @@ function VisitDepthStrip({
   previous: number;
   currentLabel: string;
   previousLabel: string;
-  olderLabel: string;
   accent: string;
   active: boolean;
   visitDragRef: React.MutableRefObject<boolean>;
 }) {
   const reduced = usePrefersReducedMotion();
   const stageRef = useRef<HTMLDivElement>(null);
-  const [t, setT] = useState(0);
-  const tRef = useRef(0);
-  const dragRef = useRef<{
-    x: number;
-    start: number;
-    lastX: number;
-    vel: number;
-    moved: boolean;
-  } | null>(null);
+  const [page, setPage] = useState<0 | 1>(0);
   const [dragging, setDragging] = useState(false);
 
-  const apply = (next: number) => {
-    const n = Math.max(0, Math.min(1, next));
-    tRef.current = n;
-    setT(n);
-  };
+  const go = (next: 0 | 1) => setPage(next);
 
   useEffect(() => {
-    if (!active) apply(0);
+    if (!active) go(0);
   }, [active]);
 
   useEffect(() => {
@@ -766,13 +717,13 @@ function VisitDepthStrip({
 
     const onWheel = (e: WheelEvent) => {
       const dx = e.shiftKey ? e.deltaY : e.deltaX;
-      if (!e.shiftKey && Math.abs(e.deltaX) < 1 && Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+      if (!e.shiftKey && Math.abs(e.deltaX) < 8 && Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
         return;
       }
-      if (Math.abs(dx) < 0.4) return;
+      if (Math.abs(dx) < 8) return;
       e.preventDefault();
       e.stopPropagation();
-      apply(tRef.current + dx / 160);
+      go(dx > 0 ? 1 : 0);
     };
 
     root.addEventListener("wheel", onWheel, { passive: false });
@@ -790,112 +741,94 @@ function VisitDepthStrip({
     );
   }
 
-  const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
-    dragRef.current = {
-      x: e.clientX,
-      start: tRef.current,
-      lastX: e.clientX,
-      vel: 0,
-      moved: false,
-    };
+  const onPanStart = () => {
     visitDragRef.current = true;
     setDragging(true);
-    e.currentTarget.setPointerCapture(e.pointerId);
   };
 
-  const onPointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
-    const drag = dragRef.current;
-    if (!drag) return;
-    const dx = e.clientX - drag.x;
-    if (Math.abs(dx) > 4) drag.moved = true;
-    drag.vel = e.clientX - drag.lastX;
-    drag.lastX = e.clientX;
-    const width = Math.max(280, e.currentTarget.clientWidth);
-    apply(drag.start - dx / (width * 0.18));
-  };
-
-  const endDrag = (e: React.PointerEvent<HTMLDivElement>) => {
-    const drag = dragRef.current;
-    dragRef.current = null;
+  const onPanEnd = (_: PointerEvent | MouseEvent | TouchEvent, info: PanInfo) => {
     visitDragRef.current = false;
     setDragging(false);
-    if (!drag) return;
-    if (!drag.moved) {
-      const rect = e.currentTarget.getBoundingClientRect();
-      const x = (e.clientX - rect.left) / rect.width;
-      if (x < 0.38) apply(1);
-      else if (x > 0.62) apply(0);
-      else apply(tRef.current > 0.4 ? 1 : 0);
-      return;
-    }
-    if (drag.vel < -5) apply(1);
-    else if (drag.vel > 5) apply(0);
-    else apply(tRef.current > 0.35 ? 1 : 0);
+    if (info.offset.x < -56 || info.velocity.x < -450) go(1);
+    else if (info.offset.x > 56 || info.velocity.x > 450) go(0);
   };
 
-  const ease = dragging
-    ? "none"
-    : "transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.45s ease, filter 0.45s ease";
-  const older = visitPose(t, -48, -20, 0.26, 0.46, 0.22, 0.4, 1.8, 0.6);
-  const prev = visitPose(t, -28, 4, 0.42, 1, 0.36, 1, 0.55, 0);
-  const curr = visitPose(t, 8, 46, 1, 0.4, 1, 0.26, 0, 0.6);
+  const countClass =
+    "block text-8xl sm:text-[10rem] font-semibold tabular-nums tracking-tight leading-none";
 
   return (
     <div
       ref={stageRef}
       className={`mybiz-visit-depth h-52 sm:h-72${dragging ? " is-drag" : ""}`}
-      onPointerDown={onPointerDown}
-      onPointerMove={onPointerMove}
-      onPointerUp={endDrag}
-      onPointerCancel={endDrag}
     >
-      {olderLabel ? (
-        <div
-          className="mybiz-visit-item text-white"
-          style={{
-            ...older,
-            zIndex: 0,
-            transition: ease,
-          }}
-        >
-          <span className="block text-8xl sm:text-[10rem] font-semibold tracking-tight leading-none text-white/80">
-            {olderLabel}
-          </span>
+      <motion.div
+        className="absolute inset-0"
+        onPanStart={onPanStart}
+        onPanEnd={onPanEnd}
+      >
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <motion.div
+            className="text-center text-white"
+            animate={{
+              x: page === 0 ? "-30vw" : 0,
+              scale: page === 0 ? 0.42 : 1,
+              opacity: page === 0 ? 0.38 : 1,
+            }}
+            transition={visitSpring}
+            style={{ zIndex: page === 1 ? 2 : 1 }}
+          >
+            <AnimatedCount
+              value={previous}
+              active={active}
+              delay={240}
+              className={countClass}
+            />
+            <p className="mt-3 text-xl sm:text-2xl text-white/70">{previousLabel}</p>
+          </motion.div>
         </div>
-      ) : null}
-      <div
-        className="mybiz-visit-item text-white"
-        style={{
-          ...prev,
-          zIndex: t >= 0.5 ? 2 : 1,
-          transition: ease,
-        }}
-      >
-        <AnimatedCount
-          value={previous}
-          active={active}
-          delay={240}
-          className="block text-8xl sm:text-[10rem] font-semibold tabular-nums tracking-tight leading-none"
-        />
-        <p className="mt-3 text-xl sm:text-2xl text-white/70">{previousLabel}</p>
-      </div>
-      <div
-        className="mybiz-visit-item"
-        style={{
-          ...curr,
-          zIndex: t < 0.5 ? 2 : 1,
-          color: accent,
-          transition: ease,
-        }}
-      >
-        <AnimatedCount
-          value={current}
-          active={active}
-          className="block text-8xl sm:text-[10rem] font-semibold tabular-nums tracking-tight leading-none"
-          style={{ color: accent }}
-        />
-        <p className="mt-3 text-xl sm:text-2xl text-white/45">{currentLabel}</p>
-      </div>
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <motion.div
+            className="text-center"
+            animate={{
+              x: page === 0 ? 0 : "30vw",
+              scale: page === 0 ? 1 : 0.42,
+              opacity: page === 0 ? 1 : 0.32,
+            }}
+            transition={visitSpring}
+            style={{ zIndex: page === 0 ? 2 : 1, color: accent }}
+          >
+            <AnimatedCount
+              value={current}
+              active={active}
+              className={countClass}
+              style={{ color: accent }}
+            />
+            <p className="mt-3 text-xl sm:text-2xl text-white/45">{currentLabel}</p>
+          </motion.div>
+        </div>
+      </motion.div>
+
+      {page === 0 ? (
+        <button
+          type="button"
+          aria-label={`See ${previousLabel}`}
+          onClick={() => go(1)}
+          onPointerDown={(e) => e.stopPropagation()}
+          className="absolute left-4 sm:left-10 top-1/2 -translate-y-1/2 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 border border-white/15 text-white/80 hover:text-white hover:bg-white/15"
+        >
+          <Chevron dir="left" />
+        </button>
+      ) : (
+        <button
+          type="button"
+          aria-label={`Back to ${currentLabel}`}
+          onClick={() => go(0)}
+          onPointerDown={(e) => e.stopPropagation()}
+          className="absolute right-4 sm:right-10 top-1/2 -translate-y-1/2 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 border border-white/15 text-white/80 hover:text-white hover:bg-white/15"
+        >
+          <Chevron dir="right" />
+        </button>
+      )}
     </div>
   );
 }
@@ -904,14 +837,12 @@ function VisitsChapter({
   report,
   accent,
   prevMonth,
-  olderMonth,
   active,
   visitDragRef,
 }: {
   report: MonthlyReport;
   accent: string;
   prevMonth: string;
-  olderMonth: string;
   active: boolean;
   visitDragRef: React.MutableRefObject<boolean>;
 }) {
@@ -929,7 +860,6 @@ function VisitsChapter({
           previous={report.summary.prevSessions}
           currentLabel={thisMonth}
           previousLabel={prevMonth}
-          olderLabel={olderMonth}
           accent={accent}
           active={active}
           visitDragRef={visitDragRef}
