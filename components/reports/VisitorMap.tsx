@@ -13,11 +13,24 @@ type Region = { region: string; country: string; sessions: number };
 type View = "world" | "us";
 
 /** Linear single-hue scale: 0 -> baseFill, max -> accent. Returns hex. */
-function colorScale(value: number, max: number, accent: string, isDark: boolean) {
-  if (!value || !max) return isDark ? "#1f2937" : "#f3f4f6";
+function colorScale(
+  value: number,
+  max: number,
+  accent: string,
+  isDark: boolean,
+  flush = false
+) {
+  if (!value || !max) {
+    if (flush) return "#243044";
+    return isDark ? "#1f2937" : "#f3f4f6";
+  }
   // Clamp + ease so big single-country numbers don't visually flatten the rest.
   const t = Math.min(1, Math.pow(value / max, 0.55));
-  const base = isDark ? [31, 41, 55] : [243, 244, 246]; // gray-800 / gray-100
+  const base = flush
+    ? [36, 48, 68]
+    : isDark
+    ? [31, 41, 55]
+    : [243, 244, 246];
   const a = hexToRgb(accent);
   const r = Math.round(base[0] + (a[0] - base[0]) * t);
   const g = Math.round(base[1] + (a[1] - base[1]) * t);
@@ -43,12 +56,15 @@ export function VisitorMap({
   accent,
   isDark = false,
   defaultView,
+  flush = false,
 }: {
   countries: Country[];
   regions?: Region[];
   accent: string;
   isDark?: boolean;
   defaultView?: View;
+  /** Bleed into a dark page — no card, no hard edges. */
+  flush?: boolean;
 }) {
   const hasRegions = regions.length > 0;
   const [view, setView] = useState<View>(
@@ -92,22 +108,30 @@ export function VisitorMap({
     return found?.sessions || 0;
   }
 
-  const stroke = isDark ? "#0a0e1a" : "#ffffff";
+  const stroke = flush ? "#252d40" : isDark ? "#0a0e1a" : "#ffffff";
 
   return (
-    <div className="space-y-3">
+    <div className={flush ? "relative space-y-2" : "space-y-3"}>
       {/* View toggle */}
-      <div className="flex items-center justify-between gap-3 flex-wrap">
+      <div
+        className={`flex items-center gap-3 flex-wrap ${
+          flush ? "justify-center" : "justify-between"
+        }`}
+      >
+        {!flush && (
+          <div
+            className={`text-xs uppercase font-semibold tracking-wider ${
+              isDark ? "text-gray-400" : "text-gray-600"
+            }`}
+          >
+            Visitors map
+          </div>
+        )}
         <div
-          className={`text-xs uppercase font-semibold tracking-wider ${
-            isDark ? "text-gray-400" : "text-gray-600"
-          }`}
-        >
-          Visitors map
-        </div>
-        <div
-          className={`no-print flex items-center gap-1 p-1 rounded-lg ${
-            isDark ? "bg-clubhaus-blue-900" : "bg-gray-100"
+          className={`no-print flex items-center gap-1 ${
+            flush
+              ? ""
+              : `p-1 rounded-lg ${isDark ? "bg-clubhaus-blue-900" : "bg-gray-100"}`
           }`}
           role="tablist"
         >
@@ -124,7 +148,9 @@ export function VisitorMap({
                 aria-selected={active}
                 className={`text-xs font-medium px-3 py-1.5 rounded-md transition-colors ${
                   active
-                    ? isDark
+                    ? flush
+                      ? "text-white"
+                      : isDark
                       ? "bg-clubhaus-blue-700 text-white"
                       : "bg-white text-gray-900 shadow-sm"
                     : disabled
@@ -146,9 +172,13 @@ export function VisitorMap({
 
       {/* Map */}
       <div
-        className={`rounded-lg overflow-hidden ${
-          isDark ? "bg-clubhaus-blue-950" : "bg-gray-50"
-        }`}
+        className={
+          flush
+            ? "mybiz-map-bleed overflow-visible"
+            : `rounded-lg overflow-hidden ${
+                isDark ? "bg-clubhaus-blue-950" : "bg-gray-50"
+              }`
+        }
       >
         {view === "world" ? (
           <ComposableMap
@@ -175,7 +205,7 @@ export function VisitorMap({
                     <Geography
                       key={geo.rsmKey}
                       geography={geo}
-                      fill={colorScale(sessions, maxCountry, accent, isDark)}
+                      fill={colorScale(sessions, maxCountry, accent, isDark, flush)}
                       stroke={stroke}
                       strokeWidth={0.4}
                       style={{
@@ -216,7 +246,7 @@ export function VisitorMap({
                     <Geography
                       key={geo.rsmKey}
                       geography={geo}
-                      fill={colorScale(sessions, maxRegion, accent, isDark)}
+                      fill={colorScale(sessions, maxRegion, accent, isDark, flush)}
                       stroke={stroke}
                       strokeWidth={0.5}
                       style={{
@@ -236,7 +266,11 @@ export function VisitorMap({
       </div>
 
       {/* Legend / empty state */}
-      <div className="flex items-center justify-between gap-3 flex-wrap">
+      <div
+        className={`flex items-center gap-3 flex-wrap ${
+          flush ? "justify-center opacity-60" : "justify-between"
+        }`}
+      >
         {view === "us" && !hasRegions ? (
           <p
             className={`text-[11px] ${

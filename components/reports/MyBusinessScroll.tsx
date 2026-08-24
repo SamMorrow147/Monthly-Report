@@ -7,10 +7,9 @@ import {
   formatChangeVs,
   formatCount,
   formatDayLabel,
-  formatDuration,
-  formatPercent,
   monthlyReportPath,
   myBusinessPath,
+  olderMonthLabel,
   previousMonthLabel,
   rankedPages,
   reportAccent,
@@ -19,6 +18,20 @@ import {
   topCity,
 } from "@/lib/report-story";
 import { VisitorMap } from "@/components/reports/VisitorMap";
+import {
+  AnimatedCount,
+  AnimatedDuration,
+  AnimatedHours,
+  AnimatedPercent,
+  ChangeLine,
+  ChapterMark,
+  LoadBar,
+  Reveal,
+  useCountUp,
+  usePrefersReducedMotion,
+} from "@/components/reports/MyBusinessMotion";
+import { ClientLogo } from "@/components/ClientLogo";
+import { getClientBySlug } from "@/lib/clients";
 
 function isAppleBrowser(): boolean {
   if (typeof navigator === "undefined") return false;
@@ -34,6 +47,7 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
   const accent = reportAccent(report.highlightColor);
   const chapters = useMemo(() => storyChapters(report), [report]);
   const prevMonth = previousMonthLabel(report);
+  const olderMonth = olderMonthLabel(report);
   const pages = rankedPages(report, 5);
   const busy = busiestDay(report);
   const channel = topChannel(report);
@@ -43,6 +57,7 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
   const indexRef = useRef(0);
   const animatingRef = useRef(false);
   const appleRef = useRef(false);
+  const visitDragRef = useRef(false);
   const [active, setActive] = useState(0);
   const [copied, setCopied] = useState(false);
   const [apple, setApple] = useState(false);
@@ -103,6 +118,15 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
 
     const onWheel = (e: WheelEvent) => {
       if (reduced || appleRef.current) return;
+      const overDepth =
+        e.target instanceof Element &&
+        e.target.closest(".mybiz-visit-depth");
+      if (
+        visitDragRef.current ||
+        (overDepth && Math.abs(e.deltaX) >= Math.abs(e.deltaY) - 2)
+      ) {
+        return;
+      }
       e.preventDefault();
       if (animatingRef.current || gestureLocked) {
         if (wheelQuiet) window.clearTimeout(wheelQuiet);
@@ -187,15 +211,18 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
           >
             <ChapterBody
               id={chapter.id}
+              active={index === active}
               report={report}
               accent={accent}
               prevMonth={prevMonth}
+              olderMonth={olderMonth}
               pages={pages}
               busy={busy}
               channel={channel}
               city={city}
               copied={copied}
               onCopy={handleCopy}
+              visitDragRef={visitDragRef}
             />
           </section>
         ))}
@@ -254,6 +281,7 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
           scrollbar-width: none;
           -webkit-overflow-scrolling: touch;
           overscroll-behavior-y: contain;
+          overflow-x: hidden;
         }
         .mybiz-scroller::-webkit-scrollbar {
           display: none;
@@ -264,6 +292,154 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
         .mybiz-scroller-apple .mybiz-section {
           scroll-snap-align: start;
           scroll-snap-stop: always;
+        }
+        .mybiz-visit-depth {
+          position: relative;
+          width: 100vw;
+          margin-left: calc(50% - 50vw);
+          touch-action: none;
+          cursor: grab;
+          user-select: none;
+          overflow: visible;
+        }
+        .mybiz-visit-depth.is-drag {
+          cursor: grabbing;
+        }
+        .mybiz-visit-item {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          text-align: center;
+          will-change: transform, opacity, filter;
+          pointer-events: none;
+          white-space: nowrap;
+        }
+        .mybiz-map-shell {
+          pointer-events: auto;
+        }
+        .mybiz-map-shell .mybiz-map-bleed {
+          -webkit-mask-image: radial-gradient(
+            ellipse 130% 118% at 50% 52%,
+            #000 72%,
+            rgba(0, 0, 0, 0.9) 92%,
+            transparent 100%
+          );
+                  mask-image: radial-gradient(
+            ellipse 130% 118% at 50% 52%,
+            #000 72%,
+            rgba(0, 0, 0, 0.9) 92%,
+            transparent 100%
+          );
+        }
+        .mybiz-map-shell .mybiz-map-bleed svg {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+        .mybiz-mark {
+          overflow: visible;
+        }
+        .mybiz-mark.is-play .mybiz-mark-core {
+          animation: mybiz-pop 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+        .mybiz-mark.is-play .mybiz-ring {
+          transform-box: fill-box;
+          transform-origin: center;
+          animation: mybiz-ring 1.8s ease-out infinite;
+        }
+        .mybiz-mark.is-play .mybiz-ring.r2 { animation-delay: 0.25s; }
+        .mybiz-mark.is-play .mybiz-ring.r3 { animation-delay: 0.5s; }
+        .mybiz-mark.is-play .mybiz-dot {
+          transform-box: fill-box;
+          transform-origin: center;
+          animation: mybiz-pop 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+        .mybiz-mark.is-play .mybiz-pop {
+          transform-box: fill-box;
+          transform-origin: center;
+          animation: mybiz-pop 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+        .mybiz-mark.is-play .mybiz-pop.d2 { animation-delay: 0.1s; }
+        .mybiz-mark.is-play .mybiz-pop.d3 { animation-delay: 0.2s; }
+        .mybiz-mark.is-play .mybiz-pulse {
+          transform-box: fill-box;
+          transform-origin: center;
+          animation: mybiz-pulse 1.2s ease-in-out infinite;
+        }
+        .mybiz-mark.is-play .mybiz-arc {
+          stroke-dasharray: 188;
+          stroke-dashoffset: 188;
+          animation: mybiz-draw 1.15s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
+        }
+        .mybiz-mark.is-play .mybiz-page {
+          animation: mybiz-rise 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+        .mybiz-mark.is-play .mybiz-page.p2 { animation-delay: 0.1s; }
+        .mybiz-mark.is-play .mybiz-page.p3 { animation-delay: 0.2s; }
+        .mybiz-mark.is-play .mybiz-bar {
+          transform-box: fill-box;
+          transform-origin: bottom center;
+          animation: mybiz-grow-y 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+        .mybiz-mark.is-play .mybiz-bar.b2 { animation-delay: 0.1s; }
+        .mybiz-mark.is-play .mybiz-bar.b3 { animation-delay: 0.2s; }
+        .mybiz-mark.is-play .mybiz-pin {
+          transform-box: fill-box;
+          transform-origin: bottom center;
+          animation: mybiz-drop 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+        .mybiz-mark.is-play .mybiz-hand {
+          transform-box: fill-box;
+          transform-origin: 56px 56px;
+          animation: mybiz-sweep 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+        .mybiz-mark.is-play .mybiz-line {
+          stroke-dasharray: 60;
+          stroke-dashoffset: 60;
+          animation: mybiz-draw 0.7s ease forwards;
+        }
+        .mybiz-mark.is-play .mybiz-line.l2 { animation-delay: 0.12s; }
+        .mybiz-mark.is-play .mybiz-line.l3 { animation-delay: 0.24s; }
+        .mybiz-mark.is-play .mybiz-check {
+          stroke-dasharray: 50;
+          stroke-dashoffset: 50;
+          animation: mybiz-draw 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
+        }
+        @keyframes mybiz-pop {
+          from { transform: scale(0.55); opacity: 0; }
+          to { transform: scale(1); opacity: 1; }
+        }
+        @keyframes mybiz-ring {
+          0% { transform: scale(0.7); opacity: 0.55; }
+          100% { transform: scale(1.2); opacity: 0; }
+        }
+        @keyframes mybiz-pulse {
+          0%, 100% { transform: scale(1); opacity: 1; }
+          50% { transform: scale(1.18); opacity: 0.75; }
+        }
+        @keyframes mybiz-draw {
+          to { stroke-dashoffset: 0; }
+        }
+        @keyframes mybiz-rise {
+          from { transform: translateY(10px); opacity: 0; }
+          to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes mybiz-grow-y {
+          from { transform: scaleY(0); }
+          to { transform: scaleY(1); }
+        }
+        @keyframes mybiz-drop {
+          from { transform: translateY(-16px); opacity: 0; }
+          to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes mybiz-sweep {
+          from { transform: rotate(-90deg); }
+          to { transform: rotate(270deg); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .mybiz-mark * {
+            animation: none !important;
+          }
         }
       `}</style>
     </div>
@@ -292,30 +468,46 @@ function Chevron({ dir }: { dir: "up" | "down" }) {
   );
 }
 
-function AnimationSlot() {
+function ChapterFrame({
+  id,
+  accent,
+  active,
+  beforeMark,
+  hideMark,
+  children,
+}: {
+  id: string;
+  accent: string;
+  active: boolean;
+  beforeMark?: React.ReactNode;
+  hideMark?: boolean;
+  children: React.ReactNode;
+}) {
   return (
     <div
-      aria-hidden
-      className="h-28 sm:h-36 w-full flex items-center justify-center mb-8"
+      className={`w-full mx-auto flex flex-col items-center text-center overflow-visible ${
+        id === "visits" ? "max-w-none" : "max-w-3xl"
+      }`}
     >
-      <div className="h-20 w-20 sm:h-28 sm:w-28 rounded-full border border-dashed border-white/15" />
-    </div>
-  );
-}
-
-function ChapterFrame({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="w-full max-w-3xl mx-auto flex flex-col items-center text-center">
-      <AnimationSlot />
+      {beforeMark}
+      {!hideMark && <ChapterMark id={id} accent={accent} active={active} />}
       <div className="w-full">{children}</div>
     </div>
   );
 }
 
-function Eyebrow({ children, accent }: { children: string; accent: string }) {
+function Eyebrow({
+  children,
+  accent,
+  className = "mb-5",
+}: {
+  children: string;
+  accent: string;
+  className?: string;
+}) {
   return (
     <p
-      className="text-xs sm:text-sm uppercase tracking-[0.32em] font-semibold mb-5"
+      className={`text-xs sm:text-sm uppercase tracking-[0.32em] font-semibold ${className}`}
       style={{ color: accent }}
     >
       {children}
@@ -325,252 +517,820 @@ function Eyebrow({ children, accent }: { children: string; accent: string }) {
 
 function ChapterBody({
   id,
+  active,
   report,
   accent,
   prevMonth,
+  olderMonth,
   pages,
   busy,
   channel,
   city,
   copied,
   onCopy,
+  visitDragRef,
 }: {
   id: string;
+  active: boolean;
   report: MonthlyReport;
   accent: string;
   prevMonth: string;
+  olderMonth: string;
   pages: ReturnType<typeof rankedPages>;
   busy: ReturnType<typeof busiestDay>;
   channel: ReturnType<typeof topChannel>;
   city: ReturnType<typeof topCity>;
   copied: boolean;
   onCopy: () => void;
+  visitDragRef: React.MutableRefObject<boolean>;
 }) {
-  const { summary } = report;
+  const brandedOpen =
+    (id === "open" || id === "close") &&
+    Boolean(getClientBySlug(report.slug)?.logo);
+  const frame = (child: React.ReactNode, beforeMark?: React.ReactNode) => (
+    <ChapterFrame
+      id={id}
+      accent={accent}
+      active={active}
+      beforeMark={beforeMark}
+      hideMark={brandedOpen}
+    >
+      {child}
+    </ChapterFrame>
+  );
 
   if (id === "open") {
-    return (
-      <ChapterFrame>
+    return frame(<OpenChapter report={report} accent={accent} active={active} />);
+  }
+  if (id === "visits") {
+    return frame(
+      <VisitsChapter
+        report={report}
+        accent={accent}
+        prevMonth={prevMonth}
+        olderMonth={olderMonth}
+        active={active}
+        visitDragRef={visitDragRef}
+      />
+    );
+  }
+  if (id === "people") {
+    return frame(
+      <PeopleChapter
+        report={report}
+        accent={accent}
+        prevMonth={prevMonth}
+        active={active}
+      />
+    );
+  }
+  if (id === "attention") {
+    return frame(
+      <AttentionChapter
+        report={report}
+        accent={accent}
+        prevMonth={prevMonth}
+        active={active}
+      />
+    );
+  }
+  if (id === "busiest" && busy) {
+    return frame(
+      <BusiestChapter busy={busy} active={active} />,
+      <Reveal active={active}>
+        <Eyebrow accent={accent} className="mb-2">
+          Your busiest day
+        </Eyebrow>
+      </Reveal>
+    );
+  }
+  if (id === "pages") {
+    return frame(
+      <PagesChapter pages={pages} accent={accent} active={active} />
+    );
+  }
+  if (id === "channels") {
+    return frame(
+      <ChannelsChapter
+        report={report}
+        channel={channel}
+        accent={accent}
+        active={active}
+      />
+    );
+  }
+  if (id === "geography") {
+    return frame(
+      <GeographyChapter
+        report={report}
+        city={city}
+        accent={accent}
+        active={active}
+      />
+    );
+  }
+  if (id === "hours" && typeof report.hours === "number") {
+    return frame(
+      <HoursChapter report={report} accent={accent} active={active} />
+    );
+  }
+  if (id === "notes" && report.highlights && report.highlights.length > 0) {
+    return frame(
+      <NotesChapter notes={report.highlights} accent={accent} active={active} />
+    );
+  }
+  if (id === "close") {
+    return frame(
+      <CloseChapter
+        report={report}
+        accent={accent}
+        active={active}
+        copied={copied}
+        onCopy={onCopy}
+      />
+    );
+  }
+
+  return null;
+}
+
+function OpenChapter({
+  report,
+  accent,
+  active,
+}: {
+  report: MonthlyReport;
+  accent: string;
+  active: boolean;
+}) {
+  return (
+    <>
+      <Reveal active={active}>
+        <ClientLogo
+          slug={report.slug}
+          clientName={report.clientName}
+          size="hero"
+          onDark
+          className="mx-auto mb-6"
+        />
+      </Reveal>
+      <Reveal active={active} delay={80}>
         <Eyebrow accent={accent}>My Business</Eyebrow>
+      </Reveal>
+      <Reveal active={active} delay={140}>
         <h1 className="text-6xl sm:text-8xl font-semibold tracking-tight leading-[1.05]">
           {report.clientName}
         </h1>
+      </Reveal>
+      <Reveal active={active} delay={180}>
         <p className="mt-6 text-2xl sm:text-4xl text-white/60">
           {report.monthLabel}
         </p>
+      </Reveal>
+      <Reveal active={active} delay={280}>
         <p className="mt-8 text-xl sm:text-3xl text-white/80">
           Your {report.monthLabel.replace(/\s+\d+$/, "")} on the web.
         </p>
-      </ChapterFrame>
+      </Reveal>
+    </>
+  );
+}
+
+function lerp(a: number, b: number, t: number) {
+  return a + (b - a) * t;
+}
+
+function visitPose(
+  t: number,
+  fromX: number,
+  toX: number,
+  fromScale: number,
+  toScale: number,
+  fromOp: number,
+  toOp: number,
+  fromBlur: number,
+  toBlur: number
+) {
+  return {
+    transform: `translate(-50%, -50%) translateX(${lerp(fromX, toX, t)}vw) scale(${lerp(fromScale, toScale, t)})`,
+    opacity: lerp(fromOp, toOp, t),
+    filter: `blur(${lerp(fromBlur, toBlur, t)}px)`,
+  };
+}
+
+function VisitDepthStrip({
+  current,
+  previous,
+  currentLabel,
+  previousLabel,
+  olderLabel,
+  accent,
+  active,
+  visitDragRef,
+}: {
+  current: number;
+  previous: number;
+  currentLabel: string;
+  previousLabel: string;
+  olderLabel: string;
+  accent: string;
+  active: boolean;
+  visitDragRef: React.MutableRefObject<boolean>;
+}) {
+  const reduced = usePrefersReducedMotion();
+  const stageRef = useRef<HTMLDivElement>(null);
+  const [t, setT] = useState(0);
+  const tRef = useRef(0);
+  const dragRef = useRef<{
+    x: number;
+    start: number;
+    lastX: number;
+    vel: number;
+    moved: boolean;
+  } | null>(null);
+  const [dragging, setDragging] = useState(false);
+
+  const apply = (next: number) => {
+    const n = Math.max(0, Math.min(1, next));
+    tRef.current = n;
+    setT(n);
+  };
+
+  useEffect(() => {
+    if (!active) apply(0);
+  }, [active]);
+
+  useEffect(() => {
+    const root = stageRef.current;
+    if (!root || reduced) return;
+
+    const onWheel = (e: WheelEvent) => {
+      const dx = e.shiftKey ? e.deltaY : e.deltaX;
+      if (!e.shiftKey && Math.abs(e.deltaX) < 1 && Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        return;
+      }
+      if (Math.abs(dx) < 0.4) return;
+      e.preventDefault();
+      e.stopPropagation();
+      apply(tRef.current + dx / 160);
+    };
+
+    root.addEventListener("wheel", onWheel, { passive: false });
+    return () => root.removeEventListener("wheel", onWheel);
+  }, [reduced]);
+
+  if (reduced) {
+    return (
+      <AnimatedCount
+        value={current}
+        active={active}
+        className="block text-8xl sm:text-[10rem] font-semibold tabular-nums tracking-tight leading-none"
+        style={{ color: accent }}
+      />
     );
   }
 
-  if (id === "visits") {
-    return (
-      <ChapterFrame>
-        <Eyebrow accent={accent}>Visits</Eyebrow>
-        <p
-          className="text-8xl sm:text-[10rem] font-semibold tabular-nums tracking-tight leading-none"
-          style={{ color: accent }}
+  const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    dragRef.current = {
+      x: e.clientX,
+      start: tRef.current,
+      lastX: e.clientX,
+      vel: 0,
+      moved: false,
+    };
+    visitDragRef.current = true;
+    setDragging(true);
+    e.currentTarget.setPointerCapture(e.pointerId);
+  };
+
+  const onPointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    const drag = dragRef.current;
+    if (!drag) return;
+    const dx = e.clientX - drag.x;
+    if (Math.abs(dx) > 4) drag.moved = true;
+    drag.vel = e.clientX - drag.lastX;
+    drag.lastX = e.clientX;
+    const width = Math.max(280, e.currentTarget.clientWidth);
+    apply(drag.start - dx / (width * 0.18));
+  };
+
+  const endDrag = (e: React.PointerEvent<HTMLDivElement>) => {
+    const drag = dragRef.current;
+    dragRef.current = null;
+    visitDragRef.current = false;
+    setDragging(false);
+    if (!drag) return;
+    if (!drag.moved) {
+      const rect = e.currentTarget.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width;
+      if (x < 0.38) apply(1);
+      else if (x > 0.62) apply(0);
+      else apply(tRef.current > 0.4 ? 1 : 0);
+      return;
+    }
+    if (drag.vel < -5) apply(1);
+    else if (drag.vel > 5) apply(0);
+    else apply(tRef.current > 0.35 ? 1 : 0);
+  };
+
+  const ease = dragging
+    ? "none"
+    : "transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.45s ease, filter 0.45s ease";
+  const older = visitPose(t, -48, -20, 0.26, 0.46, 0.22, 0.4, 1.8, 0.6);
+  const prev = visitPose(t, -28, 4, 0.42, 1, 0.36, 1, 0.55, 0);
+  const curr = visitPose(t, 8, 46, 1, 0.4, 1, 0.26, 0, 0.6);
+
+  return (
+    <div
+      ref={stageRef}
+      className={`mybiz-visit-depth h-52 sm:h-72${dragging ? " is-drag" : ""}`}
+      onPointerDown={onPointerDown}
+      onPointerMove={onPointerMove}
+      onPointerUp={endDrag}
+      onPointerCancel={endDrag}
+    >
+      {olderLabel ? (
+        <div
+          className="mybiz-visit-item text-white"
+          style={{
+            ...older,
+            zIndex: 0,
+            transition: ease,
+          }}
         >
-          {formatCount(summary.sessions)}
-        </p>
-        <p className="mt-8 text-2xl sm:text-3xl text-white/70">
-          {formatChangeVs(summary.sessionsChange, prevMonth)}
-        </p>
-      </ChapterFrame>
-    );
-  }
+          <span className="block text-8xl sm:text-[10rem] font-semibold tracking-tight leading-none text-white/80">
+            {olderLabel}
+          </span>
+        </div>
+      ) : null}
+      <div
+        className="mybiz-visit-item text-white"
+        style={{
+          ...prev,
+          zIndex: t >= 0.5 ? 2 : 1,
+          transition: ease,
+        }}
+      >
+        <AnimatedCount
+          value={previous}
+          active={active}
+          delay={240}
+          className="block text-8xl sm:text-[10rem] font-semibold tabular-nums tracking-tight leading-none"
+        />
+        <p className="mt-3 text-xl sm:text-2xl text-white/70">{previousLabel}</p>
+      </div>
+      <div
+        className="mybiz-visit-item"
+        style={{
+          ...curr,
+          zIndex: t < 0.5 ? 2 : 1,
+          color: accent,
+          transition: ease,
+        }}
+      >
+        <AnimatedCount
+          value={current}
+          active={active}
+          className="block text-8xl sm:text-[10rem] font-semibold tabular-nums tracking-tight leading-none"
+          style={{ color: accent }}
+        />
+        <p className="mt-3 text-xl sm:text-2xl text-white/45">{currentLabel}</p>
+      </div>
+    </div>
+  );
+}
 
-  if (id === "people") {
-    return (
-      <ChapterFrame>
+function VisitsChapter({
+  report,
+  accent,
+  prevMonth,
+  olderMonth,
+  active,
+  visitDragRef,
+}: {
+  report: MonthlyReport;
+  accent: string;
+  prevMonth: string;
+  olderMonth: string;
+  active: boolean;
+  visitDragRef: React.MutableRefObject<boolean>;
+}) {
+  const thisMonth = report.monthLabel.replace(/\s+\d+$/, "");
+  const hasPrev = Number.isFinite(report.summary.prevSessions);
+
+  return (
+    <>
+      <Reveal active={active}>
+        <Eyebrow accent={accent}>Visits</Eyebrow>
+      </Reveal>
+      {hasPrev ? (
+        <VisitDepthStrip
+          current={report.summary.sessions}
+          previous={report.summary.prevSessions}
+          currentLabel={thisMonth}
+          previousLabel={prevMonth}
+          olderLabel={olderMonth}
+          accent={accent}
+          active={active}
+          visitDragRef={visitDragRef}
+        />
+      ) : (
+        <AnimatedCount
+          value={report.summary.sessions}
+          active={active}
+          className="block text-8xl sm:text-[10rem] font-semibold tabular-nums tracking-tight leading-none"
+          style={{ color: accent }}
+        />
+      )}
+      <Reveal active={active} delay={220}>
+        <ChangeLine
+          change={report.summary.sessionsChange}
+          prevMonth={prevMonth}
+          active={active}
+          className="mt-8 text-2xl sm:text-3xl text-white/70"
+        />
+      </Reveal>
+    </>
+  );
+}
+
+function PeopleChapter({
+  report,
+  accent,
+  prevMonth,
+  active,
+}: {
+  report: MonthlyReport;
+  accent: string;
+  prevMonth: string;
+  active: boolean;
+}) {
+  const newUsers = useCountUp(report.summary.newUsers, active, { delay: 280 });
+  return (
+    <>
+      <Reveal active={active}>
         <Eyebrow accent={accent}>People</Eyebrow>
-        <p className="text-8xl sm:text-[9rem] font-semibold tabular-nums tracking-tight leading-none">
-          {formatCount(summary.users)}
-        </p>
+      </Reveal>
+      <AnimatedCount
+        value={report.summary.users}
+        active={active}
+        className="block text-8xl sm:text-[9rem] font-semibold tabular-nums tracking-tight leading-none"
+      />
+      <Reveal active={active} delay={180}>
         <p className="mt-6 text-2xl sm:text-3xl text-white/70">
           people came to the site
         </p>
-        <p className="mt-4 text-lg sm:text-2xl text-white/50">
-          {formatCount(summary.newUsers)} were new ·{" "}
-          {formatChangeVs(summary.newUsersChange, prevMonth)}
-        </p>
-      </ChapterFrame>
-    );
-  }
-
-  if (id === "attention") {
-    return (
-      <ChapterFrame>
-        <Eyebrow accent={accent}>Attention</Eyebrow>
+      </Reveal>
+      <Reveal active={active} delay={280}>
         <p
-          className="text-8xl sm:text-[9rem] font-semibold tabular-nums tracking-tight leading-none"
-          style={{ color: accent }}
+          className="mt-4 text-lg sm:text-2xl text-white/50"
+          aria-label={`${formatCount(report.summary.newUsers)} were new · ${formatChangeVs(report.summary.newUsersChange, prevMonth)}`}
         >
-          {formatDuration(summary.avgSessionDuration)}
+          <span aria-hidden>
+            {formatCount(Math.round(newUsers))} were new ·{" "}
+          </span>
+          <ChangeLine
+            change={report.summary.newUsersChange}
+            prevMonth={prevMonth}
+            active={active}
+            as="span"
+          />
         </p>
+      </Reveal>
+    </>
+  );
+}
+
+function AttentionChapter({
+  report,
+  accent,
+  prevMonth,
+  active,
+}: {
+  report: MonthlyReport;
+  accent: string;
+  prevMonth: string;
+  active: boolean;
+}) {
+  return (
+    <>
+      <Reveal active={active}>
+        <Eyebrow accent={accent}>Attention</Eyebrow>
+      </Reveal>
+      <AnimatedDuration
+        seconds={report.summary.avgSessionDuration}
+        active={active}
+        className="block text-8xl sm:text-[9rem] font-semibold tabular-nums tracking-tight leading-none"
+        style={{ color: accent }}
+      />
+      <Reveal active={active} delay={180}>
         <p className="mt-6 text-2xl sm:text-3xl text-white/70">
           average time on the site
         </p>
-        <p className="mt-4 text-lg sm:text-2xl text-white/50">
-          {formatChangeVs(summary.avgSessionDurationChange, prevMonth)}
-        </p>
+      </Reveal>
+      <Reveal active={active} delay={260}>
+        <ChangeLine
+          change={report.summary.avgSessionDurationChange}
+          prevMonth={prevMonth}
+          active={active}
+          className="mt-4 text-lg sm:text-2xl text-white/50"
+        />
+      </Reveal>
+      <Reveal active={active} delay={340}>
         <p className="mt-3 text-lg sm:text-2xl text-white/50">
-          {formatPercent(summary.engagementRate)} of visits stayed engaged
+          <AnimatedPercent rate={report.summary.engagementRate} active={active} />{" "}
+          of visits stayed engaged
         </p>
-      </ChapterFrame>
-    );
-  }
+      </Reveal>
+    </>
+  );
+}
 
-  if (id === "busiest" && busy) {
-    return (
-      <ChapterFrame>
-        <Eyebrow accent={accent}>Busiest day</Eyebrow>
+function BusiestChapter({
+  busy,
+  active,
+}: {
+  busy: NonNullable<ReturnType<typeof busiestDay>>;
+  active: boolean;
+}) {
+  return (
+    <>
+      <Reveal active={active} delay={80}>
         <p className="text-5xl sm:text-7xl font-semibold tracking-tight leading-tight">
           {formatDayLabel(busy.date)}
         </p>
+      </Reveal>
+      <Reveal active={active} delay={180}>
         <p className="mt-6 text-2xl sm:text-3xl text-white/70">
-          {formatCount(busy.sessions)} visits that day
+          <AnimatedCount value={busy.sessions} active={active} /> visits that day
         </p>
-      </ChapterFrame>
-    );
-  }
+      </Reveal>
+    </>
+  );
+}
 
-  if (id === "pages") {
-    return (
-      <ChapterFrame>
+function PagesChapter({
+  pages,
+  accent,
+  active,
+}: {
+  pages: ReturnType<typeof rankedPages>;
+  accent: string;
+  active: boolean;
+}) {
+  return (
+    <>
+      <Reveal active={active}>
         <Eyebrow accent={accent}>Top pages</Eyebrow>
-        <ol className="space-y-5 max-w-xl mx-auto">
-          {pages.map((page, i) => (
-            <li
-              key={`${page.path}-${i}`}
-              className="flex items-baseline justify-center gap-4"
+      </Reveal>
+      <ol className="space-y-5 max-w-xl mx-auto">
+        {pages.map((page, i) => (
+          <Reveal
+            key={`${page.path}-${i}`}
+            as="li"
+            active={active}
+            delay={90 * i}
+            className="flex items-baseline justify-center gap-4"
+          >
+            <span
+              className="text-base sm:text-lg tabular-nums w-6 shrink-0"
+              style={{ color: accent }}
             >
-              <span
-                className="text-base sm:text-lg tabular-nums w-6 shrink-0"
-                style={{ color: accent }}
-              >
-                {i + 1}
-              </span>
-              <span className="text-xl sm:text-3xl font-medium truncate">
-                {page.label}
-              </span>
-            </li>
-          ))}
-        </ol>
-      </ChapterFrame>
-    );
-  }
+              {i + 1}
+            </span>
+            <span className="text-xl sm:text-3xl font-medium truncate">
+              {page.label}
+            </span>
+            <span className="text-base sm:text-xl tabular-nums text-white/45 shrink-0">
+              <AnimatedCount
+                value={page.views || page.sessions}
+                active={active}
+                delay={120 + 90 * i}
+              />
+            </span>
+          </Reveal>
+        ))}
+      </ol>
+    </>
+  );
+}
 
-  if (id === "channels") {
-    return (
-      <ChapterFrame>
+function ChannelPercent({
+  percent,
+  active,
+  delay,
+}: {
+  percent: number;
+  active: boolean;
+  delay: number;
+}) {
+  const live = useCountUp(percent, active, { delay, duration: 900 });
+  return (
+    <span aria-label={`${percent}%`}>
+      <span aria-hidden>{Math.round(live)}%</span>
+    </span>
+  );
+}
+
+function ChannelsChapter({
+  report,
+  channel,
+  accent,
+  active,
+}: {
+  report: MonthlyReport;
+  channel: ReturnType<typeof topChannel>;
+  accent: string;
+  active: boolean;
+}) {
+  const rows = report.channels.filter((c) => c.sessions > 0).slice(0, 5);
+  return (
+    <>
+      <Reveal active={active}>
         <Eyebrow accent={accent}>How they found you</Eyebrow>
-        {channel && (
+      </Reveal>
+      {channel && (
+        <Reveal active={active} delay={80}>
           <p className="text-2xl sm:text-4xl text-white/80 mb-10">
             Mostly {channel.channel.toLowerCase()}
           </p>
-        )}
-        <ul className="space-y-5 max-w-md mx-auto w-full text-left">
-          {report.channels
-            .filter((c) => c.sessions > 0)
-            .slice(0, 5)
-            .map((c) => (
-              <li key={c.channel}>
-                <div className="flex items-baseline justify-between gap-4 text-lg sm:text-xl">
-                  <span>{c.channel}</span>
-                  <span className="tabular-nums text-white/50">
-                    {c.percentage}%
-                  </span>
-                </div>
-                <div className="mt-2 h-1.5 rounded-full bg-white/10">
-                  <div
-                    className="h-full rounded-full"
-                    style={{
-                      width: `${Math.min(100, c.percentage)}%`,
-                      backgroundColor: accent,
-                    }}
-                  />
-                </div>
-              </li>
-            ))}
-        </ul>
-      </ChapterFrame>
-    );
-  }
+        </Reveal>
+      )}
+      <ul className="space-y-5 max-w-md mx-auto w-full text-left">
+        {rows.map((c, i) => (
+          <Reveal key={c.channel} as="li" active={active} delay={90 * i}>
+            <div className="flex items-baseline justify-between gap-4 text-lg sm:text-xl">
+              <span>{c.channel}</span>
+              <span className="tabular-nums text-white/50">
+                <ChannelPercent
+                  percent={c.percentage}
+                  active={active}
+                  delay={140 + 90 * i}
+                />
+              </span>
+            </div>
+            <LoadBar
+              percent={c.percentage}
+              accent={accent}
+              active={active}
+              delay={140 + 90 * i}
+            />
+          </Reveal>
+        ))}
+      </ul>
+    </>
+  );
+}
 
-  if (id === "geography") {
-    return (
-      <ChapterFrame>
+function GeographyChapter({
+  report,
+  city,
+  accent,
+  active,
+}: {
+  report: MonthlyReport;
+  city: ReturnType<typeof topCity>;
+  accent: string;
+  active: boolean;
+}) {
+  return (
+    <>
+      <Reveal active={active}>
         <Eyebrow accent={accent}>Where they came from</Eyebrow>
-        {city && (
+      </Reveal>
+      {city && (
+        <Reveal active={active} delay={80}>
           <p className="text-5xl sm:text-7xl font-semibold tracking-tight mb-3">
             {city.city}
           </p>
-        )}
-        {city && (
+        </Reveal>
+      )}
+      {city && (
+        <Reveal active={active} delay={160}>
           <p className="text-lg sm:text-2xl text-white/55 mb-6">
-            {formatCount(city.sessions)} visits from {city.city}
+            <AnimatedCount value={city.sessions} active={active} delay={160} />{" "}
+            visits from {city.city}
             {city.country ? `, ${city.country}` : ""}
           </p>
-        )}
-        <div className="h-[28vh] sm:h-[32vh] min-h-[180px] w-full rounded-2xl overflow-hidden bg-white/[0.03] border border-white/10">
+        </Reveal>
+      )}
+      <Reveal active={active} delay={240} className="w-full">
+        <div className="relative w-[min(100vw,56rem)] max-w-none left-1/2 -translate-x-1/2 mybiz-map-shell">
           <VisitorMap
             countries={report.countries}
             regions={report.regions || []}
             accent={accent}
             isDark
+            flush
+            defaultView="us"
           />
         </div>
-      </ChapterFrame>
-    );
-  }
+      </Reveal>
+    </>
+  );
+}
 
-  if (id === "hours" && typeof report.hours === "number") {
-    return (
-      <ChapterFrame>
+function HoursChapter({
+  report,
+  accent,
+  active,
+}: {
+  report: MonthlyReport;
+  accent: string;
+  active: boolean;
+}) {
+  return (
+    <>
+      <Reveal active={active}>
         <Eyebrow accent={accent}>Time on the work</Eyebrow>
-        <p
-          className="text-8xl sm:text-[9rem] font-semibold tabular-nums tracking-tight leading-none"
-          style={{ color: accent }}
-        >
-          {report.hours.toLocaleString(undefined, { maximumFractionDigits: 1 })}
-        </p>
+      </Reveal>
+      <AnimatedHours
+        value={report.hours as number}
+        active={active}
+        className="block text-8xl sm:text-[9rem] font-semibold tabular-nums tracking-tight leading-none"
+        style={{ color: accent }}
+      />
+      <Reveal active={active} delay={200}>
         <p className="mt-6 text-2xl sm:text-3xl text-white/70">
           hours we spent on this site in{" "}
           {report.monthLabel.replace(/\s+\d+$/, "")}
         </p>
-      </ChapterFrame>
-    );
-  }
+      </Reveal>
+    </>
+  );
+}
 
-  if (id === "notes" && report.highlights && report.highlights.length > 0) {
-    return (
-      <ChapterFrame>
+function NotesChapter({
+  notes,
+  accent,
+  active,
+}: {
+  notes: string[];
+  accent: string;
+  active: boolean;
+}) {
+  return (
+    <>
+      <Reveal active={active}>
         <Eyebrow accent={accent}>Notes</Eyebrow>
-        <ul className="space-y-5 max-w-xl mx-auto">
-          {report.highlights.map((note, i) => (
-            <li key={i} className="text-xl sm:text-2xl text-white/85">
-              {note}
-            </li>
-          ))}
-        </ul>
-      </ChapterFrame>
-    );
-  }
+      </Reveal>
+      <ul className="space-y-5 max-w-xl mx-auto">
+        {notes.map((note, i) => (
+          <Reveal
+            key={i}
+            as="li"
+            active={active}
+            delay={110 * i}
+            className="text-xl sm:text-2xl text-white/85"
+          >
+            {note}
+          </Reveal>
+        ))}
+      </ul>
+    </>
+  );
+}
 
-  if (id === "close") {
-    return (
-      <ChapterFrame>
+function CloseChapter({
+  report,
+  accent,
+  active,
+  copied,
+  onCopy,
+}: {
+  report: MonthlyReport;
+  accent: string;
+  active: boolean;
+  copied: boolean;
+  onCopy: () => void;
+}) {
+  return (
+    <>
+      <Reveal active={active}>
+        <ClientLogo
+          slug={report.slug}
+          clientName={report.clientName}
+          size="lg"
+          onDark
+          className="mx-auto mb-6"
+        />
+      </Reveal>
+      <Reveal active={active} delay={80}>
         <Eyebrow accent={accent}>My Business</Eyebrow>
+      </Reveal>
+      <Reveal active={active} delay={140}>
         <h2 className="text-5xl sm:text-7xl font-semibold tracking-tight leading-tight">
           That was {report.monthLabel.replace(/\s+\d+$/, "")}.
         </h2>
+      </Reveal>
+      <Reveal active={active} delay={180}>
         <p className="mt-6 text-2xl sm:text-3xl text-white/65">
-          {formatCount(summary.sessions)} visits · {formatCount(summary.users)}{" "}
+          <AnimatedCount value={report.summary.sessions} active={active} /> visits
+          · <AnimatedCount value={report.summary.users} active={active} delay={220} />{" "}
           people
         </p>
+      </Reveal>
+      <Reveal active={active} delay={280}>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
           <button
             type="button"
@@ -587,9 +1347,7 @@ function ChapterBody({
             Full monthly report
           </a>
         </div>
-      </ChapterFrame>
-    );
-  }
-
-  return null;
+      </Reveal>
+    </>
+  );
 }

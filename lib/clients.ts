@@ -14,12 +14,18 @@ export type ClientHighlightColor =
   | "pink"
   | "navy";
 
+export type ClientLogoTreatment = "color" | "invert-on-dark";
+
 export type GA4Client = {
   clientName: string;
   propertyId: string;
   highlightColor: ClientHighlightColor;
   /** Stable URL-safe slug for the client portal at /c/[slug] */
   slug: string;
+  /** Public path to the client mark, e.g. /logos/cleaniacs.png */
+  logo?: string;
+  /** Black-only marks need invert-on-dark so they stay visible on dark UIs. */
+  logoTreatment?: ClientLogoTreatment;
 };
 
 export const GA4_CLIENTS_ROW_1: GA4Client[] = [
@@ -27,13 +33,13 @@ export const GA4_CLIENTS_ROW_1: GA4Client[] = [
   { clientName: "Pints and Paddle", propertyId: "346788360", highlightColor: "green", slug: "pints-and-paddle" },
   { clientName: "Experience Maple Grove", propertyId: "342306161", highlightColor: "orange", slug: "experience-maple-grove" },
   { clientName: "Hilltop Hanover", propertyId: "519865623", highlightColor: "brown", slug: "hilltop-hanover" },
-  { clientName: "Ink Kings", propertyId: "527348475", highlightColor: "black", slug: "ink-kings" },
+  { clientName: "Ink Kings", propertyId: "527348475", highlightColor: "black", slug: "ink-kings", logo: "/logos/ink-kings.png", logoTreatment: "invert-on-dark" },
   { clientName: "TCFF", propertyId: "370970067", highlightColor: "teal", slug: "tcff" },
 ];
 
 export const GA4_CLIENTS_ROW_2: GA4Client[] = [
   { clientName: "Bayerkohler", propertyId: "427362273", highlightColor: "light-blue", slug: "bayerkohler" },
-  { clientName: "cleaniacs", propertyId: "519854014", highlightColor: "purple", slug: "cleaniacs" },
+  { clientName: "cleaniacs", propertyId: "519854014", highlightColor: "purple", slug: "cleaniacs", logo: "/logos/cleaniacs.png" },
   { clientName: "GAC", propertyId: "519869355", highlightColor: "indigo", slug: "gac" },
   { clientName: "Mains'l", propertyId: "381995271", highlightColor: "cyan", slug: "mainsl" },
   { clientName: "Cold Culture", propertyId: "524005835", highlightColor: "green", slug: "cold-culture" },
@@ -55,6 +61,10 @@ export function getClientByPropertyId(propertyId: string): GA4Client | undefined
 
 export function getClientBySlug(slug: string): GA4Client | undefined {
   return GA4_CLIENTS_ALL.find((c) => c.slug === slug);
+}
+
+export function getClientByName(clientName: string): GA4Client | undefined {
+  return GA4_CLIENTS_ALL.find((c) => c.clientName === clientName);
 }
 
 /**
