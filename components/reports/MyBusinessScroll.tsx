@@ -15,6 +15,7 @@ import {
   storyChapters,
   topChannel,
   topCity,
+  visitMonths,
 } from "@/lib/report-story";
 import { VisitorMap } from "@/components/reports/VisitorMap";
 import {
@@ -681,35 +682,59 @@ function OpenChapter({
   );
 }
 
-const visitSpring = { type: "spring" as const, stiffness: 380, damping: 36, mass: 0.8 };
+const visitSpring = { type: "spring" as const, stiffness: 420, damping: 38, mass: 0.7 };
+
+function lerp(a: number, b: number, t: number) {
+  return a + (b - a) * t;
+}
+
+function visitPose(offset: number) {
+  const dist = Math.min(Math.abs(offset), 3);
+  const stops = [
+    { s: 1, o: 1 },
+    { s: 0.42, o: 0.38 },
+    { s: 0.26, o: 0.2 },
+    { s: 0.16, o: 0.1 },
+  ];
+  const i = Math.min(Math.floor(dist), 2);
+  const t = dist - i;
+  return {
+    x: `${-offset * 28}vw`,
+    scale: lerp(stops[i].s, stops[i + 1].s, t),
+    opacity: lerp(stops[i].o, stops[i + 1].o, t),
+  };
+}
 
 function VisitDepthStrip({
-  current,
-  previous,
-  currentLabel,
-  previousLabel,
+  months,
   accent,
   active,
   visitDragRef,
 }: {
-  current: number;
-  previous: number;
-  currentLabel: string;
-  previousLabel: string;
+  months: ReturnType<typeof visitMonths>;
   accent: string;
   active: boolean;
   visitDragRef: React.MutableRefObject<boolean>;
 }) {
   const reduced = usePrefersReducedMotion();
   const stageRef = useRef<HTMLDivElement>(null);
-  const [page, setPage] = useState<0 | 1>(0);
+  const [progress, setProgress] = useState(0);
+  const progressRef = useRef(0);
+  const startRef = useRef(0);
+  const last = Math.max(0, months.length - 1);
   const [dragging, setDragging] = useState(false);
 
-  const go = (next: 0 | 1) => setPage(next);
+  const apply = (next: number) => {
+    const n = Math.max(0, Math.min(last, next));
+    progressRef.current = n;
+    setProgress(n);
+  };
+
+  const go = (next: number) => apply(Math.round(next));
 
   useEffect(() => {
-    if (!active) go(0);
-  }, [active]);
+    if (!active) apply(0);
+  }, [active, last]);
 
   useEffect(() => {
     const root = stageRef.current;
@@ -723,17 +748,18 @@ function VisitDepthStrip({
       if (Math.abs(dx) < 8) return;
       e.preventDefault();
       e.stopPropagation();
-      go(dx > 0 ? 1 : 0);
+      go(progressRef.current + (dx > 0 ? 1 : -1));
     };
 
     root.addEventListener("wheel", onWheel, { passive: false });
     return () => root.removeEventListener("wheel", onWheel);
-  }, [reduced]);
+  }, [reduced, last]);
 
   if (reduced) {
+    const current = months[0];
     return (
       <AnimatedCount
-        value={current}
+        value={current?.sessions || 0}
         active={active}
         className="block text-8xl sm:text-[10rem] font-semibold tabular-nums tracking-tight leading-none"
         style={{ color: accent }}
@@ -741,18 +767,27 @@ function VisitDepthStrip({
     );
   }
 
+  const stepPx = () => Math.max(140, window.innerWidth * 0.28);
+
   const onPanStart = () => {
+    startRef.current = progressRef.current;
     visitDragRef.current = true;
     setDragging(true);
+  };
+
+  const onPan = (_: PointerEvent | MouseEvent | TouchEvent, info: PanInfo) => {
+    apply(startRef.current + info.offset.x / stepPx());
   };
 
   const onPanEnd = (_: PointerEvent | MouseEvent | TouchEvent, info: PanInfo) => {
     visitDragRef.current = false;
     setDragging(false);
-    if (info.offset.x < -56 || info.velocity.x < -450) go(1);
-    else if (info.offset.x > 56 || info.velocity.x > 450) go(0);
+    const projected =
+      startRef.current + info.offset.x / stepPx() + info.velocity.x / 1400;
+    go(projected);
   };
 
+  const page = Math.round(progress);
   const countClass =
     "block text-8xl sm:text-[10rem] font-semibold tabular-nums tracking-tight leading-none";
 
@@ -764,65 +799,65 @@ function VisitDepthStrip({
       <motion.div
         className="absolute inset-0"
         onPanStart={onPanStart}
+        onPan={onPan}
         onPanEnd={onPanEnd}
       >
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <motion.div
-            className="text-center text-white"
-            animate={{
-              x: page === 0 ? "-30vw" : 0,
-              scale: page === 0 ? 0.42 : 1,
-              opacity: page === 0 ? 0.38 : 1,
-            }}
-            transition={visitSpring}
-            style={{ zIndex: page === 1 ? 2 : 1 }}
-          >
-            <AnimatedCount
-              value={previous}
-              active={active}
-              delay={240}
-              className={countClass}
-            />
-            <p className="mt-3 text-xl sm:text-2xl text-white/70">{previousLabel}</p>
-          </motion.div>
-        </div>
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <motion.div
-            className="text-center"
-            animate={{
-              x: page === 0 ? 0 : "30vw",
-              scale: page === 0 ? 1 : 0.42,
-              opacity: page === 0 ? 1 : 0.32,
-            }}
-            transition={visitSpring}
-            style={{ zIndex: page === 0 ? 2 : 1, color: accent }}
-          >
-            <AnimatedCount
-              value={current}
-              active={active}
-              className={countClass}
-              style={{ color: accent }}
-            />
-            <p className="mt-3 text-xl sm:text-2xl text-white/45">{currentLabel}</p>
-          </motion.div>
-        </div>
+        {months.map((item, index) => {
+          const offset = index - progress;
+          if (Math.abs(offset) > 3) return null;
+          const focusedHere = Math.abs(offset) < 0.45;
+          return (
+            <div
+              key={item.month}
+              className="absolute inset-0 flex items-center justify-center pointer-events-none"
+            >
+              <motion.div
+                className="text-center"
+                animate={visitPose(offset)}
+                transition={dragging ? { duration: 0 } : visitSpring}
+                style={{
+                  zIndex: 10 - Math.round(Math.abs(offset)),
+                  color: focusedHere && index === 0 ? accent : "#fff",
+                }}
+              >
+                <AnimatedCount
+                  value={item.sessions}
+                  active={active}
+                  delay={index * 40}
+                  className={countClass}
+                  style={{
+                    color: focusedHere && index === 0 ? accent : undefined,
+                  }}
+                />
+                <p
+                  className={`mt-3 text-xl sm:text-2xl ${
+                    focusedHere ? "text-white/70" : "text-white/45"
+                  }`}
+                >
+                  {item.label}
+                </p>
+              </motion.div>
+            </div>
+          );
+        })}
       </motion.div>
 
-      {page === 0 ? (
+      {page < last && (
         <button
           type="button"
-          aria-label={`See ${previousLabel}`}
-          onClick={() => go(1)}
+          aria-label={`See ${months[page + 1]?.label || "previous month"}`}
+          onClick={() => go(page + 1)}
           onPointerDown={(e) => e.stopPropagation()}
           className="absolute left-4 sm:left-10 top-1/2 -translate-y-1/2 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 border border-white/15 text-white/80 hover:text-white hover:bg-white/15"
         >
           <Chevron dir="left" />
         </button>
-      ) : (
+      )}
+      {page > 0 && (
         <button
           type="button"
-          aria-label={`Back to ${currentLabel}`}
-          onClick={() => go(0)}
+          aria-label={`See ${months[page - 1]?.label || "next month"}`}
+          onClick={() => go(page - 1)}
           onPointerDown={(e) => e.stopPropagation()}
           className="absolute right-4 sm:right-10 top-1/2 -translate-y-1/2 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 border border-white/15 text-white/80 hover:text-white hover:bg-white/15"
         >
@@ -846,20 +881,16 @@ function VisitsChapter({
   active: boolean;
   visitDragRef: React.MutableRefObject<boolean>;
 }) {
-  const thisMonth = report.monthLabel.replace(/\s+\d+$/, "");
-  const hasPrev = Number.isFinite(report.summary.prevSessions);
+  const months = visitMonths(report);
 
   return (
     <>
       <Reveal active={active}>
         <Eyebrow accent={accent}>Visits</Eyebrow>
       </Reveal>
-      {hasPrev ? (
+      {months.length > 1 ? (
         <VisitDepthStrip
-          current={report.summary.sessions}
-          previous={report.summary.prevSessions}
-          currentLabel={thisMonth}
-          previousLabel={prevMonth}
+          months={months}
           accent={accent}
           active={active}
           visitDragRef={visitDragRef}

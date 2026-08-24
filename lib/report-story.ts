@@ -4,6 +4,7 @@ import type {
   MonthlyReportChannel,
   MonthlyReportCity,
   MonthlyReportDailyPoint,
+  MonthlyReportSessionPoint,
   MonthlyReportTopPage,
 } from "@/lib/reports";
 import { prettifyPageTitle } from "@/lib/page-names";
@@ -45,6 +46,26 @@ export function formatDuration(seconds: number): string {
 
 export function formatPercent(rate: number): string {
   return Math.round(rate * 100) + "%";
+}
+
+export function visitMonths(report: MonthlyReport): MonthlyReportSessionPoint[] {
+  if (report.sessionHistory && report.sessionHistory.length > 0) {
+    return report.sessionHistory.slice(0, 12);
+  }
+  const current: MonthlyReportSessionPoint = {
+    month: report.month,
+    label: report.monthLabel.replace(/\s+\d+$/, ""),
+    sessions: report.summary.sessions,
+  };
+  if (!Number.isFinite(report.summary.prevSessions)) return [current];
+  return [
+    current,
+    {
+      month: report.range.prevStartDate.slice(0, 7),
+      label: previousMonthLabel(report),
+      sessions: report.summary.prevSessions,
+    },
+  ];
 }
 
 export function previousMonthLabel(report: MonthlyReport): string {

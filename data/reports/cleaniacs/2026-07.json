@@ -1,12 +1,12 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "slug": "cleaniacs",
   "propertyId": "519854014",
   "clientName": "cleaniacs",
   "highlightColor": "purple",
   "month": "2026-07",
   "monthLabel": "July 2026",
-  "generatedAt": "2026-08-23T22:01:17.576Z",
+  "generatedAt": "2026-08-24T01:34:43.085Z",
   "range": {
     "startDate": "2026-07-01",
     "endDate": "2026-07-31",
@@ -224,6 +224,43 @@
     {
       "source": "google",
       "sessions": 4
+    }
+  ],
+  "sessionHistory": [
+    {
+      "month": "2026-07",
+      "label": "July",
+      "sessions": 15
+    },
+    {
+      "month": "2026-06",
+      "label": "June",
+      "sessions": 13
+    },
+    {
+      "month": "2026-05",
+      "label": "May",
+      "sessions": 5
+    },
+    {
+      "month": "2026-04",
+      "label": "April",
+      "sessions": 48
+    },
+    {
+      "month": "2026-03",
+      "label": "March",
+      "sessions": 72
+    },
+    {
+      "month": "2026-02",
+      "label": "February",
+      "sessions": 56
+    },
+    {
+      "month": "2026-01",
+      "label": "January",
+      "sessions": 75
     }
   ]
 }

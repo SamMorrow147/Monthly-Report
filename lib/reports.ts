@@ -84,13 +84,22 @@ export type MonthlyReportRegion = {
   sessions: number;
 };
 
+export type MonthlyReportSessionPoint = {
+  /** YYYY-MM */
+  month: string;
+  /** Month name only, e.g. "July". */
+  label: string;
+  sessions: number;
+};
+
 export type MonthlyReport = {
   /**
    * Schema version. Bump when adding required fields.
    *  - 1: original (no `regions`).
    *  - 2: adds `regions` for state-level choropleth maps.
+   *  - 3: adds optional `sessionHistory` (up to 12 months).
    */
-  schemaVersion: 1 | 2;
+  schemaVersion: 1 | 2 | 3;
   slug: string;
   propertyId: string;
   clientName: string;
@@ -120,6 +129,8 @@ export type MonthlyReport = {
   /** First-level subdivisions (US states, Canadian provinces, etc.). Added in schemaVersion 2. */
   regions?: MonthlyReportRegion[];
   referrers: MonthlyReportReferrer[];
+  /** Up to 12 calendar months of sessions, newest first. Added in schemaVersion 3. */
+  sessionHistory?: MonthlyReportSessionPoint[];
   /** Hours billed for this client in this month, if available from Sheets. */
   hours?: number;
   /** Optional agency commentary surfaced at the top of the report. Edit by hand in the JSON. */
