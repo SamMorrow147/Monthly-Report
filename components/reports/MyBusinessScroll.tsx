@@ -803,18 +803,18 @@ function lerp(a: number, b: number, t: number) {
   return a + (b - a) * t;
 }
 
-function visitPose(offset: number) {
+function visitPose(offset: number, stepVw: number) {
   const dist = Math.min(Math.abs(offset), 3);
   const stops = [
     { s: 1, o: 1 },
-    { s: 0.42, o: 0.38 },
-    { s: 0.26, o: 0.2 },
-    { s: 0.16, o: 0.1 },
+    { s: 0.34, o: 0.28 },
+    { s: 0.2, o: 0.12 },
+    { s: 0.12, o: 0.06 },
   ];
   const i = Math.min(Math.floor(dist), 2);
   const t = dist - i;
   return {
-    x: `${-offset * 28}vw`,
+    x: `${-offset * stepVw}vw`,
     scale: lerp(stops[i].s, stops[i + 1].s, t),
     opacity: lerp(stops[i].o, stops[i + 1].o, t),
   };
@@ -851,6 +851,15 @@ function StoryDepthStrip({
   const startRef = useRef(0);
   const last = Math.max(0, items.length - 1);
   const [dragging, setDragging] = useState(false);
+  const [stepVw, setStepVw] = useState(32);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 640px)");
+    const sync = () => setStepVw(mq.matches ? 72 : 32);
+    sync();
+    mq.addEventListener("change", sync);
+    return () => mq.removeEventListener("change", sync);
+  }, []);
 
   const apply = (next: number) => {
     const n = Math.max(0, Math.min(last, next));
@@ -912,7 +921,7 @@ function StoryDepthStrip({
     );
   }
 
-  const stepPx = () => Math.max(140, window.innerWidth * 0.28);
+  const stepPx = () => Math.max(160, window.innerWidth * (stepVw / 100));
 
   const onPanStart = () => {
     startRef.current = progressRef.current;
@@ -954,7 +963,7 @@ function StoryDepthStrip({
               <motion.div
                 className="text-center"
                 initial={false}
-                animate={visitPose(offset)}
+                animate={visitPose(offset, stepVw)}
                 transition={dragging ? { duration: 0 } : visitSpring}
                 style={{
                   zIndex: 10 - Math.round(Math.abs(offset)),
