@@ -36,17 +36,36 @@ export function ClientLogo({
     (clientName ? getClientByName(clientName) : undefined);
   if (!resolved?.logo) return null;
 
-  const invert = onDark && resolved.logoTreatment === "invert-on-dark";
+  const label = clientName || resolved.clientName;
+
+  if (onDark) {
+    return (
+      <span
+        role="img"
+        aria-label={label}
+        className={`${SIZE_CLASS[size]} inline-block ${className}`}
+        style={{
+          backgroundColor: "#fff",
+          WebkitMaskImage: `url(${resolved.logo})`,
+          maskImage: `url(${resolved.logo})`,
+          WebkitMaskRepeat: "no-repeat",
+          maskRepeat: "no-repeat",
+          WebkitMaskPosition: "center",
+          maskPosition: "center",
+          WebkitMaskSize: "contain",
+          maskSize: "contain",
+        }}
+      />
+    );
+  }
 
   return (
     // Regular img so public-site can copy this without next/image config.
     // eslint-disable-next-line @next/next/no-img-element
     <img
       src={resolved.logo}
-      alt={clientName || resolved.clientName}
-      className={`${SIZE_CLASS[size]} object-contain ${
-        invert ? "brightness-0 invert" : ""
-      } ${className}`}
+      alt={label}
+      className={`${SIZE_CLASS[size]} object-contain ${className}`}
     />
   );
 }
