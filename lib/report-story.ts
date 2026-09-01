@@ -331,7 +331,7 @@ export function storyChapters(report: MonthlyReport): StoryChapter[] {
   if (hasArtistRoster(report)) {
     chapters.push({ id: "artists" });
     if (otherPages(report).length > 0) chapters.push({ id: "pages" });
-  } else if (rankedPages(report).length > 1) {
+  } else if (report.slug !== "gac" && rankedPages(report).length > 1) {
     chapters.push({ id: "pages" });
   }
   if (report.channels.some((c) => c.sessions > 0)) {
