@@ -844,19 +844,28 @@ function OpenChapter({
       <Reveal active={active} delay={80}>
         <Eyebrow accent={accent}>My Business</Eyebrow>
       </Reveal>
-      <Reveal active={active} delay={140}>
-        <h1
-          className={withMetal(
-            accent,
-            "text-6xl sm:text-8xl font-semibold tracking-tight leading-[1.05]"
-          )}
-          style={titleTextStyle(accent, theme)}
+      {client?.logoShape === "wordmark" ? null : (
+        <Reveal active={active} delay={140}>
+          <h1
+            className={withMetal(
+              accent,
+              "text-6xl sm:text-8xl font-semibold tracking-tight leading-[1.05]"
+            )}
+            style={titleTextStyle(accent, theme)}
+          >
+            {report.clientName}
+          </h1>
+        </Reveal>
+      )}
+      <Reveal
+        active={active}
+        delay={client?.logoShape === "wordmark" ? 140 : 180}
+      >
+        <p
+          className={`${
+            client?.logoShape === "wordmark" ? "mt-2" : "mt-6"
+          } text-2xl sm:text-4xl mybiz-soft`}
         >
-          {report.clientName}
-        </h1>
-      </Reveal>
-      <Reveal active={active} delay={180}>
-        <p className="mt-6 text-2xl sm:text-4xl mybiz-soft">
           {report.monthLabel}
         </p>
       </Reveal>

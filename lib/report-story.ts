@@ -221,6 +221,35 @@ function isMissingPage(page: MonthlyReportTopPage): boolean {
   return /404|this page could not be found/i.test(page.title || "");
 }
 
+/** True when the story would show two or more differently named pages. */
+export function hasDistinctPages(report: MonthlyReport): boolean {
+  const pages = rankedPages(report, 8).filter((page) => !isMissingPage(page));
+  const labels = new Set(
+    pages.map((page) => page.label.trim().toLowerCase()).filter(Boolean)
+  );
+  if (labels.size < 2) return false;
+
+  // Same-URL section tracking (e.g. Clubhaus) is a real pages chapter.
+  const labelsByPath = new Map<string, Set<string>>();
+  for (const page of pages) {
+    const path = (page.path.replace(/\/$/, "") || "/").toLowerCase();
+    const set = labelsByPath.get(path) ?? new Set<string>();
+    set.add(page.label.trim().toLowerCase());
+    labelsByPath.set(path, set);
+  }
+  if ([...labelsByPath.values()].some((set) => set.size >= 3)) return true;
+
+  // A long homepage plus a tiny extra route is still a one-page site.
+  const peak = Math.max(0, ...pages.map((page) => page.views || page.sessions || 0));
+  const floor = peak * 0.08;
+  const meaningful = new Set(
+    pages
+      .filter((page) => (page.views || page.sessions || 0) >= floor)
+      .map((page) => page.label.trim().toLowerCase())
+  );
+  return meaningful.size >= 2;
+}
+
 export function isArtistPortfolioPath(path: string): boolean {
   return /^\/portfolio(\/|$)/i.test(path);
 }
@@ -331,7 +360,7 @@ export function storyChapters(report: MonthlyReport): StoryChapter[] {
   if (hasArtistRoster(report)) {
     chapters.push({ id: "artists" });
     if (otherPages(report).length > 0) chapters.push({ id: "pages" });
-  } else if (report.slug !== "gac" && rankedPages(report).length > 1) {
+  } else if (hasDistinctPages(report)) {
     chapters.push({ id: "pages" });
   }
   if (report.channels.some((c) => c.sessions > 0)) {
