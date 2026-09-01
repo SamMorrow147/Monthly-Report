@@ -376,10 +376,20 @@ export type StoryChapter = { id: StoryChapterId };
 
 export function storyChapters(report: MonthlyReport): StoryChapter[] {
   const chapters: StoryChapter[] = [{ id: "open" }, { id: "visits" }];
+  const hasPeople = report.summary.users > 0 || report.summary.newUsers > 0;
+  const hasChannels = report.channels.some((c) => c.sessions > 0);
+  const hasGeo =
+    Boolean(topCity(report)) ||
+    report.countries.some((c) => c.sessions > 0) ||
+    Boolean(report.regions && report.regions.some((r) => r.sessions > 0));
 
-  if (report.summary.users > 0 || report.summary.newUsers > 0) {
+  // Visits + unique visitors: source and place sit between those two counts.
+  if (hasPeople) {
+    if (hasChannels) chapters.push({ id: "channels" });
     chapters.push({ id: "people" });
+    if (hasGeo) chapters.push({ id: "geography" });
   }
+
   if (
     report.summary.avgSessionDuration > 0 ||
     report.summary.engagementRate > 0
@@ -393,16 +403,12 @@ export function storyChapters(report: MonthlyReport): StoryChapter[] {
   } else if (hasDistinctPages(report)) {
     chapters.push({ id: "pages" });
   }
-  if (report.channels.some((c) => c.sessions > 0)) {
-    chapters.push({ id: "channels" });
+
+  if (!hasPeople) {
+    if (hasChannels) chapters.push({ id: "channels" });
+    if (hasGeo) chapters.push({ id: "geography" });
   }
-  if (
-    topCity(report) ||
-    report.countries.some((c) => c.sessions > 0) ||
-    (report.regions && report.regions.some((r) => r.sessions > 0))
-  ) {
-    chapters.push({ id: "geography" });
-  }
+
   if (typeof report.hours === "number") chapters.push({ id: "hours" });
   if (report.highlights && report.highlights.length > 0) {
     chapters.push({ id: "notes" });

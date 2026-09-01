@@ -23,7 +23,7 @@ export async function generateMetadata({
     return { title: "My Business not found" };
   }
   const review = monthInReview(report);
-  const description = `${report.clientName} on the web in ${report.monthLabel}.`;
+  const description = `${report.clientName} — ${report.monthLabel}.`;
   return {
     metadataBase: new URL(siteUrl()),
     title: `${report.clientName} — ${review}`,

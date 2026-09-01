@@ -115,10 +115,33 @@ const CLEANIACS_THEME: StoryTheme = {
   mapStroke: "#c5e4f0",
 };
 
+/** GAC — white, teal from the wordmark. */
+const GAC_THEME: StoryTheme = {
+  id: "gac",
+  mode: "light",
+  bg: "#ffffff",
+  fg: "#1d5c6d",
+  accent: "#287890",
+  muted: "rgba(29,92,109,0.72)",
+  soft: "rgba(29,92,109,0.62)",
+  faint: "rgba(29,92,109,0.42)",
+  surface: "rgba(40,120,144,0.1)",
+  surfaceHover: "rgba(40,120,144,0.18)",
+  border: "rgba(40,120,144,0.38)",
+  headingFont: INHERIT,
+  bodyFont: INHERIT,
+  eyebrow: "label",
+  eyebrowColor: "#287890",
+  button: "md",
+  mapEmpty: "#e6f3f6",
+  mapStroke: "#c5e0e6",
+};
+
 const STORY_THEMES: Record<string, StoryTheme> = {
   "hilltop-hanover": HILLTOP_THEME,
   bayerkohler: BAYERKOHLER_THEME,
   cleaniacs: CLEANIACS_THEME,
+  gac: GAC_THEME,
 };
 
 export function storyThemeFor(report: {

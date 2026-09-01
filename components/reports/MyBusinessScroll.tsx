@@ -870,11 +870,6 @@ function OpenChapter({
           {report.monthLabel}
         </p>
       </Reveal>
-      <Reveal active={active} delay={280}>
-        <p className="mt-8 text-xl sm:text-3xl mybiz-muted">
-          Your {report.monthLabel.replace(/\s+\d+$/, "")} on the web.
-        </p>
-      </Reveal>
     </>
   );
 }
@@ -1965,11 +1960,6 @@ function CloseChapter({
         <Eyebrow accent={accent}>My Business</Eyebrow>
       </Reveal>
       <Reveal active={active} delay={140}>
-        <h2 className="mybiz-heading text-5xl sm:text-7xl font-semibold tracking-tight leading-tight">
-          That was {report.monthLabel.replace(/\s+\d+$/, "")}.
-        </h2>
-      </Reveal>
-      <Reveal active={active} delay={180}>
         <p className="mt-6 text-2xl sm:text-3xl mybiz-muted">
           <AnimatedCount value={report.summary.sessions} active={active} /> visits
           · <AnimatedCount value={report.summary.users} active={active} delay={220} />{" "}
