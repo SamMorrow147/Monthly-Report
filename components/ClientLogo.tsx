@@ -5,12 +5,20 @@ import {
   type GA4Client,
 } from "@/lib/clients";
 
-const SIZE_CLASS = {
+const MARK_SIZE_CLASS = {
   sm: "h-8 w-8",
   md: "h-12 w-12",
   lg: "h-20 w-20",
   hero: "h-28 w-28 sm:h-40 sm:w-40",
   display: "h-44 w-44 sm:h-64 sm:w-64",
+} as const;
+
+const WORDMARK_SIZE_CLASS = {
+  sm: "h-5 w-auto max-w-[7.5rem]",
+  md: "h-8 w-auto max-w-[12rem]",
+  lg: "h-10 w-auto max-w-[16rem]",
+  hero: "h-16 w-auto max-w-[min(90vw,22rem)] sm:h-20",
+  display: "h-20 w-auto max-w-[min(92vw,28rem)] sm:h-28",
 } as const;
 
 const METAL_GOLD =
@@ -31,7 +39,7 @@ export function ClientLogo({
   propertyId?: string;
   client?: GA4Client;
   clientName?: string;
-  size?: keyof typeof SIZE_CLASS;
+  size?: keyof typeof MARK_SIZE_CLASS;
   onDark?: boolean;
   fill?: string;
   metallic?: boolean;
@@ -45,13 +53,16 @@ export function ClientLogo({
   if (!resolved?.logo) return null;
 
   const label = clientName || resolved.clientName;
+  const wordmark = resolved.logoShape === "wordmark";
+  const sizeClass = wordmark ? WORDMARK_SIZE_CLASS[size] : MARK_SIZE_CLASS[size];
+  const silhouette = metallic || resolved.logoTreatment === "invert-on-dark";
 
-  if (onDark) {
+  if (onDark && silhouette) {
     return (
       <span
         role="img"
         aria-label={label}
-        className={`${SIZE_CLASS[size]} inline-block ${className}`}
+        className={`${sizeClass} inline-block ${className}`}
         style={{
           backgroundColor: fill || "#fff",
           backgroundImage: metallic ? METAL_GOLD : undefined,
@@ -75,7 +86,7 @@ export function ClientLogo({
     <img
       src={resolved.logo}
       alt={label}
-      className={`${SIZE_CLASS[size]} object-contain ${className}`}
+      className={`${sizeClass} object-contain ${className}`}
     />
   );
 }

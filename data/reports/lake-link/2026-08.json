@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 3,
+  "slug": "lake-link",
+  "propertyId": "537302129",
+  "clientName": "Lake Link",
+  "highlightColor": "cyan",
+  "month": "2026-08",
+  "monthLabel": "August 2026",
+  "generatedAt": "2026-09-01T14:30:37.211Z",
+  "range": {
+    "startDate": "2026-08-01",
+    "endDate": "2026-08-31",
+    "prevStartDate": "2026-07-01",
+    "prevEndDate": "2026-07-31"
+  },
+  "shareToken": "YYrlLQpQDWpFlQsffjSlmg",
+  "summary": {
+    "sessions": 16,
+    "prevSessions": 8,
+    "users": 15,
+    "prevUsers": 6,
+    "newUsers": 15,
+    "prevNewUsers": 6,
+    "pageViews": 17,
+    "prevPageViews": 8,
+    "avgSessionDuration": 79.207284875,
+    "prevAvgSessionDuration": 2.930448125,
+    "bounceRate": 0.75,
+    "prevBounceRate": 0.875,
+    "engagementRate": 0.25,
+    "prevEngagementRate": 0.125,
+    "conversions": 0,
+    "prevConversions": 0,
+    "sessionsChange": 100,
+    "usersChange": 150,
+    "newUsersChange": 150,
+    "pageViewsChange": 112.5,
+    "avgSessionDurationChange": 2602.9,
+    "bounceRateChange": -14.3,
+    "engagementRateChange": 100,
+    "conversionsChange": 0
+  },
+  "daily": [
+    {
+      "date": "2026-08-08",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-09",
+      "sessions": 2,
+      "users": 1,
+      "pageViews": 2
+    },
+    {
+      "date": "2026-08-11",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-14",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-17",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-27",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-28",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    }
+  ],
+  "topPages": [
+    {
+      "path": "/",
+      "title": "LakeLink IT — Friendly Tech Support You Can Trust in Alexandria, MN",
+      "views": 8,
+      "sessions": 8,
+      "avgDuration": 2.930448125
+    }
+  ],
+  "channels": [
+    {
+      "channel": "Direct",
+      "sessions": 4,
+      "users": 4,
+      "percentage": 50
+    },
+    {
+      "channel": "Organic Search",
+      "sessions": 4,
+      "users": 2,
+      "percentage": 50
+    }
+  ],
+  "devices": [
+    {
+      "device": "desktop",
+      "sessions": 4,
+      "percentage": 50
+    },
+    {
+      "device": "mobile",
+      "sessions": 4,
+      "percentage": 50
+    }
+  ],
+  "countries": [
+    {
+      "country": "United States",
+      "sessions": 4,
+      "percentage": 50
+    },
+    {
+      "country": "China",
+      "sessions": 3,
+      "percentage": 38
+    },
+    {
+      "country": "Canada",
+      "sessions": 1,
+      "percentage": 13
+    }
+  ],
+  "cities": [
+    {
+      "city": "(not set)",
+      "country": "China",
+      "sessions": 3
+    },
+    {
+      "city": "Burnaby",
+      "country": "Canada",
+      "sessions": 1
+    },
+    {
+      "city": "Council Bluffs",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "city": "Hannibal",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "city": "Minneapolis",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "city": "Seattle",
+      "country": "United States",
+      "sessions": 1
+    }
+  ],
+  "regions": [
+    {
+      "region": "British Columbia",
+      "country": "Canada",
+      "sessions": 1
+    },
+    {
+      "region": "Iowa",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Minnesota",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Missouri",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Washington",
+      "country": "United States",
+      "sessions": 1
+    }
+  ],
+  "referrers": [
+    {
+      "source": "(direct)",
+      "sessions": 4
+    },
+    {
+      "source": "google",
+      "sessions": 4
+    }
+  ],
+  "sessionHistory": [
+    {
+      "month": "2026-08",
+      "label": "August",
+      "sessions": 16,
+      "users": 15,
+      "newUsers": 15,
+      "avgSessionDuration": 79.207284875,
+      "busiestDate": "2026-08-09",
+      "busiestSessions": 2,
+      "pageViews": {
+        "/": 8
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-07",
+      "label": "July",
+      "sessions": 8,
+      "users": 6,
+      "newUsers": 6,
+      "avgSessionDuration": 2.930448125,
+      "busiestDate": "2026-07-10",
+      "busiestSessions": 4,
+      "pageViews": {
+        "/": 17
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-06",
+      "label": "June",
+      "sessions": 46,
+      "users": 41,
+      "newUsers": 40,
+      "avgSessionDuration": 6.2521629999999995,
+      "busiestDate": "2026-06-18",
+      "busiestSessions": 7,
+      "pageViews": {
+        "/": 46
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-05",
+      "label": "May",
+      "sessions": 100,
+      "users": 89,
+      "newUsers": 89,
+      "avgSessionDuration": 21.3248034,
+      "busiestDate": "2026-05-12",
+      "busiestSessions": 19,
+      "pageViews": {
+        "/": 97,
+        "/about": 1,
+        "/cmd_sco": 1
+      },
+      "artistViews": {}
+    }
+  ]
+}

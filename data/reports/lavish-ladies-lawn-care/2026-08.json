@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 3,
+  "slug": "lavish-ladies-lawn-care",
+  "propertyId": "537288495",
+  "clientName": "Lavish Ladies Lawn Care",
+  "highlightColor": "pink",
+  "month": "2026-08",
+  "monthLabel": "August 2026",
+  "generatedAt": "2026-09-01T14:30:39.724Z",
+  "range": {
+    "startDate": "2026-08-01",
+    "endDate": "2026-08-31",
+    "prevStartDate": "2026-07-01",
+    "prevEndDate": "2026-07-31"
+  },
+  "shareToken": "1CybI8tT2tsDJwMpVWxtVA",
+  "summary": {
+    "sessions": 1,
+    "prevSessions": 1,
+    "users": 1,
+    "prevUsers": 1,
+    "newUsers": 1,
+    "prevNewUsers": 1,
+    "pageViews": 1,
+    "prevPageViews": 1,
+    "avgSessionDuration": 0,
+    "prevAvgSessionDuration": 1.22682,
+    "bounceRate": 1,
+    "prevBounceRate": 1,
+    "engagementRate": 0,
+    "prevEngagementRate": 0,
+    "conversions": 0,
+    "prevConversions": 0,
+    "sessionsChange": 0,
+    "usersChange": 0,
+    "newUsersChange": 0,
+    "pageViewsChange": 0,
+    "avgSessionDurationChange": -100,
+    "bounceRateChange": 0,
+    "engagementRateChange": 0,
+    "conversionsChange": 0
+  },
+  "daily": [
+    {
+      "date": "2026-08-07",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    }
+  ],
+  "topPages": [
+    {
+      "path": "/",
+      "title": "Lavish Ladies Lawn Care | Alexandria MN Lawn Care & Landscaping",
+      "views": 1,
+      "sessions": 1,
+      "avgDuration": 0
+    }
+  ],
+  "channels": [
+    {
+      "channel": "Direct",
+      "sessions": 1,
+      "users": 1,
+      "percentage": 100
+    }
+  ],
+  "devices": [
+    {
+      "device": "mobile",
+      "sessions": 1,
+      "percentage": 100
+    }
+  ],
+  "countries": [
+    {
+      "country": "United States",
+      "sessions": 1,
+      "percentage": 100
+    }
+  ],
+  "cities": [
+    {
+      "city": "Minneapolis",
+      "country": "United States",
+      "sessions": 1
+    }
+  ],
+  "regions": [
+    {
+      "region": "Minnesota",
+      "country": "United States",
+      "sessions": 1
+    }
+  ],
+  "referrers": [
+    {
+      "source": "(direct)",
+      "sessions": 1
+    }
+  ],
+  "sessionHistory": [
+    {
+      "month": "2026-08",
+      "label": "August",
+      "sessions": 1,
+      "users": 1,
+      "newUsers": 1,
+      "avgSessionDuration": 0,
+      "busiestDate": "2026-08-07",
+      "busiestSessions": 1,
+      "pageViews": {
+        "/": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-07",
+      "label": "July",
+      "sessions": 1,
+      "users": 1,
+      "newUsers": 1,
+      "avgSessionDuration": 1.22682,
+      "busiestDate": "2026-07-25",
+      "busiestSessions": 1,
+      "pageViews": {
+        "/": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-06",
+      "label": "June",
+      "sessions": 10,
+      "users": 4,
+      "newUsers": 1,
+      "avgSessionDuration": 23.4429127,
+      "busiestDate": "2026-06-17",
+      "busiestSessions": 2,
+      "pageViews": {
+        "/": 15
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-05",
+      "label": "May",
+      "sessions": 23,
+      "users": 12,
+      "newUsers": 12,
+      "avgSessionDuration": 355.60462147826087,
+      "busiestDate": "2026-05-12",
+      "busiestSessions": 11,
+      "pageViews": {
+        "/": 55
+      },
+      "artistViews": {}
+    }
+  ]
+}

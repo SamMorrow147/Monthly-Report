@@ -1,0 +1,1548 @@
+{
+  "schemaVersion": 3,
+  "slug": "bayerkohler",
+  "propertyId": "427362273",
+  "clientName": "Bayerkohler",
+  "highlightColor": "light-blue",
+  "month": "2026-08",
+  "monthLabel": "August 2026",
+  "generatedAt": "2026-09-01T14:30:09.690Z",
+  "range": {
+    "startDate": "2026-08-01",
+    "endDate": "2026-08-31",
+    "prevStartDate": "2026-07-01",
+    "prevEndDate": "2026-07-31"
+  },
+  "shareToken": "3LNYAFwEetmqBARNLlWKsQ",
+  "summary": {
+    "sessions": 595,
+    "prevSessions": 577,
+    "users": 522,
+    "prevUsers": 519,
+    "newUsers": 509,
+    "prevNewUsers": 504,
+    "pageViews": 961,
+    "prevPageViews": 940,
+    "avgSessionDuration": 111.18461888403363,
+    "prevAvgSessionDuration": 85.38399187175042,
+    "bounceRate": 0.6672268907563025,
+    "prevBounceRate": 0.6117850953206239,
+    "engagementRate": 0.33277310924369746,
+    "prevEngagementRate": 0.3882149046793761,
+    "conversions": 0,
+    "prevConversions": 0,
+    "sessionsChange": 3.1,
+    "usersChange": 0.6,
+    "newUsersChange": 1,
+    "pageViewsChange": 2.2,
+    "avgSessionDurationChange": 30.2,
+    "bounceRateChange": 9.1,
+    "engagementRateChange": -14.3,
+    "conversionsChange": 0
+  },
+  "daily": [
+    {
+      "date": "2026-08-01",
+      "sessions": 10,
+      "users": 10,
+      "pageViews": 10
+    },
+    {
+      "date": "2026-08-02",
+      "sessions": 14,
+      "users": 14,
+      "pageViews": 18
+    },
+    {
+      "date": "2026-08-03",
+      "sessions": 9,
+      "users": 9,
+      "pageViews": 13
+    },
+    {
+      "date": "2026-08-04",
+      "sessions": 30,
+      "users": 27,
+      "pageViews": 51
+    },
+    {
+      "date": "2026-08-05",
+      "sessions": 34,
+      "users": 32,
+      "pageViews": 79
+    },
+    {
+      "date": "2026-08-06",
+      "sessions": 21,
+      "users": 17,
+      "pageViews": 28
+    },
+    {
+      "date": "2026-08-07",
+      "sessions": 33,
+      "users": 33,
+      "pageViews": 38
+    },
+    {
+      "date": "2026-08-08",
+      "sessions": 12,
+      "users": 12,
+      "pageViews": 15
+    },
+    {
+      "date": "2026-08-09",
+      "sessions": 14,
+      "users": 14,
+      "pageViews": 25
+    },
+    {
+      "date": "2026-08-10",
+      "sessions": 32,
+      "users": 26,
+      "pageViews": 61
+    },
+    {
+      "date": "2026-08-11",
+      "sessions": 22,
+      "users": 22,
+      "pageViews": 42
+    },
+    {
+      "date": "2026-08-12",
+      "sessions": 22,
+      "users": 21,
+      "pageViews": 66
+    },
+    {
+      "date": "2026-08-13",
+      "sessions": 26,
+      "users": 23,
+      "pageViews": 33
+    },
+    {
+      "date": "2026-08-14",
+      "sessions": 13,
+      "users": 13,
+      "pageViews": 19
+    },
+    {
+      "date": "2026-08-15",
+      "sessions": 16,
+      "users": 16,
+      "pageViews": 22
+    },
+    {
+      "date": "2026-08-16",
+      "sessions": 11,
+      "users": 11,
+      "pageViews": 15
+    },
+    {
+      "date": "2026-08-17",
+      "sessions": 25,
+      "users": 24,
+      "pageViews": 34
+    },
+    {
+      "date": "2026-08-18",
+      "sessions": 16,
+      "users": 16,
+      "pageViews": 21
+    },
+    {
+      "date": "2026-08-19",
+      "sessions": 20,
+      "users": 20,
+      "pageViews": 30
+    },
+    {
+      "date": "2026-08-20",
+      "sessions": 20,
+      "users": 20,
+      "pageViews": 45
+    },
+    {
+      "date": "2026-08-21",
+      "sessions": 16,
+      "users": 15,
+      "pageViews": 17
+    },
+    {
+      "date": "2026-08-22",
+      "sessions": 9,
+      "users": 9,
+      "pageViews": 12
+    },
+    {
+      "date": "2026-08-23",
+      "sessions": 13,
+      "users": 13,
+      "pageViews": 15
+    },
+    {
+      "date": "2026-08-24",
+      "sessions": 20,
+      "users": 19,
+      "pageViews": 24
+    },
+    {
+      "date": "2026-08-25",
+      "sessions": 24,
+      "users": 23,
+      "pageViews": 46
+    },
+    {
+      "date": "2026-08-26",
+      "sessions": 27,
+      "users": 25,
+      "pageViews": 39
+    },
+    {
+      "date": "2026-08-27",
+      "sessions": 20,
+      "users": 17,
+      "pageViews": 30
+    },
+    {
+      "date": "2026-08-28",
+      "sessions": 16,
+      "users": 15,
+      "pageViews": 35
+    },
+    {
+      "date": "2026-08-29",
+      "sessions": 11,
+      "users": 11,
+      "pageViews": 14
+    },
+    {
+      "date": "2026-08-30",
+      "sessions": 20,
+      "users": 20,
+      "pageViews": 39
+    },
+    {
+      "date": "2026-08-31",
+      "sessions": 3,
+      "users": 3,
+      "pageViews": 4
+    }
+  ],
+  "topPages": [
+    {
+      "path": "/",
+      "title": "Tax Consultation Solutions Services, Business Tax Filings Services, Business Tax Planning & Preparation Experts Minneapolis - Bayerkohler Ltd",
+      "views": 368,
+      "sessions": 343,
+      "avgDuration": 41.991318221574346
+    },
+    {
+      "path": "/staff/",
+      "title": "Staff Bayerkohler, Ltd - Tax Preparation Experts Minneapolis & Champlin MN.",
+      "views": 73,
+      "sessions": 61,
+      "avgDuration": 86.36828549180328
+    },
+    {
+      "path": "/job-listing/",
+      "title": "Job Listings Archive | Bayerkohler, Ltd",
+      "views": 64,
+      "sessions": 53,
+      "avgDuration": 20.08500958490566
+    },
+    {
+      "path": "/what-every-trustee-needs-to-know-about-filing-trust-tax-returns/",
+      "title": "What Every Trustee Needs to Know About Filing Trust Tax Returns | Bayerkohler, Ltd",
+      "views": 55,
+      "sessions": 54,
+      "avgDuration": 190.85410551851854
+    },
+    {
+      "path": "/contact/",
+      "title": "Contact Bayerkohler, Ltd | Reach Out for Expert Tax and Accounting Services",
+      "views": 51,
+      "sessions": 46,
+      "avgDuration": 111.9267722826087
+    },
+    {
+      "path": "/service/prepared-financials/",
+      "title": "Business Tax Filings & Business Tax Preparation Minneapolis - Bayerkohler Ltd",
+      "views": 46,
+      "sessions": 36,
+      "avgDuration": 71.25122652777777
+    },
+    {
+      "path": "/service/",
+      "title": "Business Tax Filing Services Minneapolis - Tax Preparation, Taxes Planning & Consulting, Accounting, Annual Engagement Agreement | Bayerkohler, Ltd",
+      "views": 45,
+      "sessions": 42,
+      "avgDuration": 40.18130476190476
+    },
+    {
+      "path": "/job-listing/staff-accountant/",
+      "title": "Staff Accountant | Bayerkohler, Ltd",
+      "views": 38,
+      "sessions": 28,
+      "avgDuration": 90.31045160714287
+    },
+    {
+      "path": "/about-us/",
+      "title": "About Bayerkohler, Ltd - Tax Solutions, Business Tax Planning & Preparation Minneapolis & Champlin MN.",
+      "views": 28,
+      "sessions": 24,
+      "avgDuration": 18.25183158333333
+    },
+    {
+      "path": "/staff/barb-bayerkohler/",
+      "title": "Barb Bayerkohler | Bayerkohler, Ltd",
+      "views": 20,
+      "sessions": 16,
+      "avgDuration": 59.53873525
+    },
+    {
+      "path": "/service/taxes-and-tax-planning/",
+      "title": "Business Tax Planning & Business Tax Preparation Minneapolis | Bayerkohler Ltd",
+      "views": 17,
+      "sessions": 18,
+      "avgDuration": 35.22884388888889
+    },
+    {
+      "path": "/staff/brian-bayerkohler/",
+      "title": "Brian Bayerkohler | Bayerkohler, Ltd",
+      "views": 16,
+      "sessions": 13,
+      "avgDuration": 97.79572576923077
+    },
+    {
+      "path": "/staff/johnathan/",
+      "title": "Johnathan Huspek | Bayerkohler, Ltd",
+      "views": 16,
+      "sessions": 15,
+      "avgDuration": 84.149557
+    },
+    {
+      "path": "/staff/amy-frahm/",
+      "title": "Amy Frahm | Bayerkohler, Ltd",
+      "views": 11,
+      "sessions": 10,
+      "avgDuration": 20.1234126
+    },
+    {
+      "path": "/staff/ashley-martin/",
+      "title": "Ashley Martin | Bayerkohler, Ltd",
+      "views": 11,
+      "sessions": 9,
+      "avgDuration": 22.090017333333336
+    },
+    {
+      "path": "/staff/amy-winskowski/",
+      "title": "Amy Winskowski | Bayerkohler, Ltd",
+      "views": 9,
+      "sessions": 8,
+      "avgDuration": 1.09175575
+    },
+    {
+      "path": "/staff/aielyn-bayerkohler/",
+      "title": "Aielyn Bayerkohler | Bayerkohler, Ltd",
+      "views": 8,
+      "sessions": 5,
+      "avgDuration": 39.311842
+    },
+    {
+      "path": "/free-consultation-thank-you/",
+      "title": "Thank You | Bayerkohler, Ltd",
+      "views": 7,
+      "sessions": 7,
+      "avgDuration": 53.94050057142857
+    },
+    {
+      "path": "/staff/amber/",
+      "title": "Amber Bayerkohler | Bayerkohler, Ltd",
+      "views": 7,
+      "sessions": 6,
+      "avgDuration": 4.446107333333333
+    },
+    {
+      "path": "/staff/young-woo/",
+      "title": "Young Woo | Bayerkohler, Ltd",
+      "views": 7,
+      "sessions": 5,
+      "avgDuration": 13.2521186
+    }
+  ],
+  "channels": [
+    {
+      "channel": "Direct",
+      "sessions": 308,
+      "users": 297,
+      "percentage": 53
+    },
+    {
+      "channel": "Organic Search",
+      "sessions": 172,
+      "users": 133,
+      "percentage": 30
+    },
+    {
+      "channel": "Paid Search",
+      "sessions": 69,
+      "users": 65,
+      "percentage": 12
+    },
+    {
+      "channel": "Organic Social",
+      "sessions": 12,
+      "users": 12,
+      "percentage": 2
+    },
+    {
+      "channel": "Referral",
+      "sessions": 11,
+      "users": 11,
+      "percentage": 2
+    },
+    {
+      "channel": "AI Assistant",
+      "sessions": 3,
+      "users": 2,
+      "percentage": 1
+    },
+    {
+      "channel": "Cross-network",
+      "sessions": 1,
+      "users": 1,
+      "percentage": 0
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": 1,
+      "users": 1,
+      "percentage": 0
+    }
+  ],
+  "devices": [
+    {
+      "device": "desktop",
+      "sessions": 427,
+      "percentage": 74
+    },
+    {
+      "device": "mobile",
+      "sessions": 143,
+      "percentage": 25
+    },
+    {
+      "device": "tablet",
+      "sessions": 7,
+      "percentage": 1
+    }
+  ],
+  "countries": [
+    {
+      "country": "United States",
+      "sessions": 364,
+      "percentage": 64
+    },
+    {
+      "country": "Singapore",
+      "sessions": 134,
+      "percentage": 24
+    },
+    {
+      "country": "India",
+      "sessions": 25,
+      "percentage": 4
+    },
+    {
+      "country": "(not set)",
+      "sessions": 23,
+      "percentage": 4
+    },
+    {
+      "country": "United Kingdom",
+      "sessions": 6,
+      "percentage": 1
+    },
+    {
+      "country": "China",
+      "sessions": 5,
+      "percentage": 1
+    },
+    {
+      "country": "Germany",
+      "sessions": 3,
+      "percentage": 1
+    },
+    {
+      "country": "Suriname",
+      "sessions": 3,
+      "percentage": 1
+    },
+    {
+      "country": "Australia",
+      "sessions": 2,
+      "percentage": 0
+    },
+    {
+      "country": "Hong Kong",
+      "sessions": 2,
+      "percentage": 0
+    }
+  ],
+  "cities": [
+    {
+      "city": "Singapore",
+      "country": "Singapore",
+      "sessions": 134
+    },
+    {
+      "city": "Minneapolis",
+      "country": "United States",
+      "sessions": 66
+    },
+    {
+      "city": "(not set)",
+      "country": "United States",
+      "sessions": 24
+    },
+    {
+      "city": "(not set)",
+      "country": "(not set)",
+      "sessions": 23
+    },
+    {
+      "city": "Chicago",
+      "country": "United States",
+      "sessions": 22
+    },
+    {
+      "city": "Ashburn",
+      "country": "United States",
+      "sessions": 16
+    },
+    {
+      "city": "Boardman",
+      "country": "United States",
+      "sessions": 16
+    },
+    {
+      "city": "Bloomington",
+      "country": "United States",
+      "sessions": 11
+    },
+    {
+      "city": "Hyderabad",
+      "country": "India",
+      "sessions": 9
+    },
+    {
+      "city": "Brooklyn Park",
+      "country": "United States",
+      "sessions": 8
+    }
+  ],
+  "regions": [
+    {
+      "region": "Minnesota",
+      "country": "United States",
+      "sessions": 165
+    },
+    {
+      "region": "Illinois",
+      "country": "United States",
+      "sessions": 30
+    },
+    {
+      "region": "Virginia",
+      "country": "United States",
+      "sessions": 26
+    },
+    {
+      "region": "California",
+      "country": "United States",
+      "sessions": 25
+    },
+    {
+      "region": "Oregon",
+      "country": "United States",
+      "sessions": 16
+    },
+    {
+      "region": "Florida",
+      "country": "United States",
+      "sessions": 12
+    },
+    {
+      "region": "Telangana",
+      "country": "India",
+      "sessions": 9
+    },
+    {
+      "region": "Alabama",
+      "country": "United States",
+      "sessions": 7
+    },
+    {
+      "region": "Iowa",
+      "country": "United States",
+      "sessions": 7
+    },
+    {
+      "region": "Texas",
+      "country": "United States",
+      "sessions": 7
+    },
+    {
+      "region": "Wisconsin",
+      "country": "United States",
+      "sessions": 7
+    },
+    {
+      "region": "Colorado",
+      "country": "United States",
+      "sessions": 6
+    },
+    {
+      "region": "England",
+      "country": "United Kingdom",
+      "sessions": 6
+    },
+    {
+      "region": "New York",
+      "country": "United States",
+      "sessions": 6
+    },
+    {
+      "region": "Maharashtra",
+      "country": "India",
+      "sessions": 5
+    },
+    {
+      "region": "Washington",
+      "country": "United States",
+      "sessions": 5
+    },
+    {
+      "region": "Georgia",
+      "country": "United States",
+      "sessions": 4
+    },
+    {
+      "region": "Gujarat",
+      "country": "India",
+      "sessions": 4
+    },
+    {
+      "region": "South Carolina",
+      "country": "United States",
+      "sessions": 4
+    },
+    {
+      "region": "Connecticut",
+      "country": "United States",
+      "sessions": 3
+    },
+    {
+      "region": "Louisiana",
+      "country": "United States",
+      "sessions": 3
+    },
+    {
+      "region": "Maryland",
+      "country": "United States",
+      "sessions": 3
+    },
+    {
+      "region": "Ohio",
+      "country": "United States",
+      "sessions": 3
+    },
+    {
+      "region": "County Dublin",
+      "country": "Ireland",
+      "sessions": 2
+    },
+    {
+      "region": "Haryana",
+      "country": "India",
+      "sessions": 2
+    },
+    {
+      "region": "Indiana",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "Massachusetts",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "New South Wales",
+      "country": "Australia",
+      "sessions": 2
+    },
+    {
+      "region": "North Carolina",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "North Dakota",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "Oklahoma",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "Pennsylvania",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "Punjab",
+      "country": "Pakistan",
+      "sessions": 2
+    },
+    {
+      "region": "Tamil Nadu",
+      "country": "India",
+      "sessions": 2
+    },
+    {
+      "region": "Arizona",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Assam",
+      "country": "India",
+      "sessions": 1
+    },
+    {
+      "region": "Beijing",
+      "country": "China",
+      "sessions": 1
+    },
+    {
+      "region": "Bihor County",
+      "country": "Romania",
+      "sessions": 1
+    },
+    {
+      "region": "Buenos Aires",
+      "country": "Argentina",
+      "sessions": 1
+    },
+    {
+      "region": "Delhi Division",
+      "country": "India",
+      "sessions": 1
+    },
+    {
+      "region": "Fujian",
+      "country": "China",
+      "sessions": 1
+    },
+    {
+      "region": "Hai Phong",
+      "country": "Vietnam",
+      "sessions": 1
+    },
+    {
+      "region": "Hunan",
+      "country": "China",
+      "sessions": 1
+    },
+    {
+      "region": "Hung Yen",
+      "country": "Vietnam",
+      "sessions": 1
+    },
+    {
+      "region": "Idaho",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Jiangsu",
+      "country": "China",
+      "sessions": 1
+    },
+    {
+      "region": "Kansas",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Kentucky",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Madhya Pradesh",
+      "country": "India",
+      "sessions": 1
+    },
+    {
+      "region": "Michigan",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Montana",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "New Jersey",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "New Mexico",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "North Holland",
+      "country": "Netherlands",
+      "sessions": 1
+    },
+    {
+      "region": "Shandong",
+      "country": "China",
+      "sessions": 1
+    },
+    {
+      "region": "Songkhla",
+      "country": "Thailand",
+      "sessions": 1
+    },
+    {
+      "region": "Tennessee",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Vermont",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Wyoming",
+      "country": "United States",
+      "sessions": 1
+    }
+  ],
+  "referrers": [
+    {
+      "source": "(direct)",
+      "sessions": 308
+    },
+    {
+      "source": "google",
+      "sessions": 225
+    },
+    {
+      "source": "bing",
+      "sessions": 10
+    },
+    {
+      "source": "linkedin.com",
+      "sessions": 9
+    },
+    {
+      "source": "chatgpt.com",
+      "sessions": 3
+    },
+    {
+      "source": "duckduckgo",
+      "sessions": 3
+    },
+    {
+      "source": "facebook.com",
+      "sessions": 2
+    },
+    {
+      "source": "phmediagroup.lightning.force.com",
+      "sessions": 2
+    },
+    {
+      "source": "(data not available)",
+      "sessions": 1
+    },
+    {
+      "source": "(not set)",
+      "sessions": 1
+    }
+  ],
+  "sessionHistory": [
+    {
+      "month": "2026-08",
+      "label": "August",
+      "sessions": 595,
+      "users": 522,
+      "newUsers": 509,
+      "avgSessionDuration": 111.18461888403363,
+      "busiestDate": "2026-08-05",
+      "busiestSessions": 34,
+      "pageViews": {
+        "/": 368,
+        "/staff": 73,
+        "/job-listing": 64,
+        "/what-every-trustee-needs-to-know-about-filing-trust-tax-returns": 55,
+        "/contact": 51,
+        "/service/prepared-financials": 46,
+        "/service": 45,
+        "/job-listing/staff-accountant": 38,
+        "/about-us": 28,
+        "/staff/barb-bayerkohler": 20,
+        "/service/taxes-and-tax-planning": 17,
+        "/staff/brian-bayerkohler": 16,
+        "/staff/johnathan": 16,
+        "/staff/amy-frahm": 11,
+        "/staff/ashley-martin": 11,
+        "/staff/amy-winskowski": 9,
+        "/staff/aielyn-bayerkohler": 8,
+        "/free-consultation-thank-you": 7,
+        "/staff/amber": 7,
+        "/staff/young-woo": 7,
+        "/service/personal-financial-statement-preparation": 6,
+        "/job-listing/2027-tax-internship": 5,
+        "/staff/taylor-bayerkohler": 5,
+        "/file": 3,
+        "/tax-planning-questionnaire": 3,
+        "/boi-filing": 2,
+        "/careers": 2,
+        "/mn-employment-law-updates": 2,
+        "/service/annual-engagement-agreement": 2,
+        "/service/estate-tax-filings": 2,
+        "/service/tax-preparation-and-tax-planning": 2,
+        "/site-map": 2,
+        "/about": 1,
+        "/common-mistakes-businesses-make-on-tax-returns-and-how-to-avoid-costly-errors": 1,
+        "/irs-issues-initial-guidance-on-new-trump-accounts-for-children": 1,
+        "/service/accounting": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-07",
+      "label": "July",
+      "sessions": 577,
+      "users": 519,
+      "newUsers": 504,
+      "avgSessionDuration": 85.38399187175042,
+      "busiestDate": "2026-07-28",
+      "busiestSessions": 33,
+      "pageViews": {
+        "/": 379,
+        "/service": 73,
+        "/staff": 67,
+        "/contact": 64,
+        "/what-every-trustee-needs-to-know-about-filing-trust-tax-returns": 64,
+        "/about-us": 43,
+        "/service/prepared-financials": 33,
+        "/service/taxes-and-tax-planning": 26,
+        "/staff/johnathan": 23,
+        "/blog": 17,
+        "/at": 15,
+        "/staff/amy-frahm": 14,
+        "/file": 13,
+        "/free-consultation-thank-you": 12,
+        "/service/personal-financial-statement-preparation": 10,
+        "/staff/brian-bayerkohler": 10,
+        "/job-listing": 9,
+        "/service/estate-tax-filings": 8,
+        "/staff/barb-bayerkohler": 8,
+        "/staff/young-woo": 8,
+        "/tax-planning-questionnaire": 8,
+        "/service/accounting": 7,
+        "/service/tax-preparation-and-tax-planning": 6,
+        "/job-listing/2027-tax-internship": 5,
+        "/site-map": 5,
+        "/staff/amber": 5,
+        "/category/uncategorized": 3,
+        "/common-mistakes-businesses-make-on-tax-returns-and-how-to-avoid-costly-errors": 3,
+        "/service/": 3,
+        "/staff/amy-winskowski": 3,
+        "/economic-response-grant": 2,
+        "/service/annual-engagement-agreement": 2,
+        "/service/prepared-financials/": 2,
+        "/staff/ashley-martin": 2,
+        "/staff/taylor-bayerkohler": 2,
+        "/boi-filing": 1,
+        "/irs-issues-initial-guidance-on-new-trump-accounts-for-children": 1,
+        "/service/tax-planning": 1,
+        "/service/taxes-and-tax-planning/": 1,
+        "/service/taxes-and-tax-planning/]": 1,
+        "/staff/aielyn-bayerkohler": 1,
+        "/wp-content/uploads/2024/01/business.pnghttps://bayerkohlercpa.com/staff/ashley-martin": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-06",
+      "label": "June",
+      "sessions": 606,
+      "users": 508,
+      "newUsers": 491,
+      "avgSessionDuration": 152.05233169471953,
+      "busiestDate": "2026-06-23",
+      "busiestSessions": 37,
+      "pageViews": {
+        "/": 418,
+        "/service": 85,
+        "/what-every-trustee-needs-to-know-about-filing-trust-tax-returns": 80,
+        "/service/prepared-financials": 47,
+        "/staff": 46,
+        "/about-us": 35,
+        "/contact": 35,
+        "/service/taxes-and-tax-planning": 28,
+        "/at": 25,
+        "/staff/johnathan": 18,
+        "/job-listing": 15,
+        "/free-consultation-thank-you": 13,
+        "/service/estate-tax-filings": 13,
+        "/staff/barb-bayerkohler": 9,
+        "/staff/brian-bayerkohler": 9,
+        "/file": 8,
+        "/service/tax-preparation-and-tax-planning": 8,
+        "/tax-planning-questionnaire": 8,
+        "/service/annual-engagement-agreement": 7,
+        "/service/personal-financial-statement-preparation": 7,
+        "/site-map": 7,
+        "/job-listing/2027-tax-internship": 6,
+        "/service/accounting": 6,
+        "/AT": 5,
+        "/boi-filing": 5,
+        "/category/uncategorized": 4,
+        "/common-mistakes-businesses-make-on-tax-returns-and-how-to-avoid-costly-errors": 4,
+        "/home-test-2": 4,
+        "/blog": 3,
+        "/job-listing/staff-accountant": 2,
+        "/staff/amber": 2,
+        "/staff/amy-frahm": 2,
+        "/staff/taylor-bayerkohler": 2,
+        "/coming-soon": 1,
+        "/home-test": 1,
+        "/staff/amy-winskowski": 1,
+        "/staff/young-woo": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-05",
+      "label": "May",
+      "sessions": 556,
+      "users": 489,
+      "newUsers": 470,
+      "avgSessionDuration": 49.05256827517985,
+      "busiestDate": "2026-05-20",
+      "busiestSessions": 69,
+      "pageViews": {
+        "/": 306,
+        "/what-every-trustee-needs-to-know-about-filing-trust-tax-returns": 73,
+        "/service": 63,
+        "/contact": 53,
+        "/staff": 41,
+        "/about-us": 28,
+        "/service/taxes-and-tax-planning": 24,
+        "/job-listing": 23,
+        "/staff/johnathan": 20,
+        "/service/prepared-financials": 15,
+        "/free-consultation-thank-you": 13,
+        "/job-listing/2027-tax-internship": 12,
+        "/service/tax-preparation-and-tax-planning": 12,
+        "/file": 8,
+        "/staff/brian-bayerkohler": 8,
+        "/site-map": 7,
+        "/staff/barb-bayerkohler": 7,
+        "/company/bayerkohler-ltd": 6,
+        "/impressum": 6,
+        "/imprint": 6,
+        "/tax-planning-questionnaire": 6,
+        "/AT": 5,
+        "/category/uncategorized": 4,
+        "/staff/amy-frahm": 4,
+        "/staff/ashley-martin": 4,
+        "/at": 3,
+        "/blog": 3,
+        "/service/accounting": 3,
+        "/service/personal-financial-statement-preparation": 3,
+        "/staff/young-woo": 3,
+        "/economic-response-grant": 2,
+        "/irs-issues-initial-guidance-on-new-trump-accounts-for-children": 2,
+        "/mailto:(redacted)": 2,
+        "/people/Bayerkohler/61556414603638": 2,
+        "/service/annual-engagement-agreement": 2,
+        "/staff/aielyn-bayerkohler": 2,
+        "/staff/amber": 2,
+        "/staff/amy-winskowski": 2,
+        "/staff/taylor-bayerkohler": 2,
+        "/common-mistakes-businesses-make-on-tax-returns-and-how-to-avoid-costly-errors": 1,
+        "/home-test-2": 1,
+        "/home-test": 1,
+        "/kgs/rtLToVm": 1,
+        "/service/estate-tax-filings": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-04",
+      "label": "April",
+      "sessions": 738,
+      "users": 609,
+      "newUsers": 564,
+      "avgSessionDuration": 99.02909089430894,
+      "busiestDate": "2026-04-07",
+      "busiestSessions": 55,
+      "pageViews": {
+        "/": 460,
+        "/what-every-trustee-needs-to-know-about-filing-trust-tax-returns": 110,
+        "/contact": 95,
+        "/staff": 60,
+        "/service": 50,
+        "/about-us": 34,
+        "/service/prepared-financials": 26,
+        "/staff/barb-bayerkohler": 16,
+        "/staff/brian-bayerkohler": 15,
+        "/staff/johnathan": 15,
+        "/file": 13,
+        "/job-listing": 12,
+        "/free-consultation-thank-you": 11,
+        "/service/tax-preparation-and-tax-planning": 11,
+        "/AT": 9,
+        "/staff/amy-frahm": 9,
+        "/staff/ashley-martin": 8,
+        "/staff/young-woo": 8,
+        "/at": 7,
+        "/irs-issues-initial-guidance-on-new-trump-accounts-for-children": 6,
+        "/job-listing/2027-tax-internship": 6,
+        "/service/taxes-and-tax-planning": 6,
+        "/staff/aielyn-bayerkohler": 6,
+        "/service/personal-financial-statement-preparation": 5,
+        "/staff/amber": 5,
+        "/staff/amy-winskowski": 5,
+        "/tax-planning-questionnaire": 5,
+        "/category/uncategorized": 4,
+        "/service/estate-tax-filings": 4,
+        "/site-map": 4,
+        "/blog": 3,
+        "/common-mistakes-businesses-make-on-tax-returns-and-how-to-avoid-costly-errors": 3,
+        "/service/accounting": 3,
+        "/staff/taylor-bayerkohler": 3,
+        "/testimonial/rick-dubiel": 3,
+        "/home-test-2": 2,
+        "/service/annual-engagement-agreement": 2,
+        "/testimonial/william-miller": 2,
+        "/economic-response-grant": 1,
+        "/file/schedule-c-organizer": 1,
+        "/home-test": 1,
+        "/service-type/business": 1,
+        "/testimonial/ali-saad": 1,
+        "/testimonial/brett-larson": 1,
+        "/testimonial/greg-schreier": 1,
+        "/testimonial/sarah-hess": 1,
+        "/testimonial/tim": 1,
+        "/testimonial/troy-boe": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-03",
+      "label": "March",
+      "sessions": 901,
+      "users": 709,
+      "newUsers": 651,
+      "avgSessionDuration": 140.24728707103216,
+      "busiestDate": "2026-03-02",
+      "busiestSessions": 51,
+      "pageViews": {
+        "/": 676,
+        "/staff": 125,
+        "/contact": 110,
+        "/service": 87,
+        "/about-us": 68,
+        "/home-test-2": 68,
+        "/staff/johnathan": 62,
+        "/at": 49,
+        "/what-every-trustee-needs-to-know-about-filing-trust-tax-returns": 46,
+        "/staff/brian-bayerkohler": 32,
+        "/file": 30,
+        "/service/prepared-financials": 29,
+        "/staff/barb-bayerkohler": 25,
+        "/service/tax-preparation-and-tax-planning": 24,
+        "/site-map": 19,
+        "/job-listing": 18,
+        "/free-consultation-thank-you": 15,
+        "/service/taxes-and-tax-planning": 14,
+        "/staff/amy-frahm": 14,
+        "/tax-planning-questionnaire": 13,
+        "/category/uncategorized": 12,
+        "/home-test": 11,
+        "/job-listing/2027-tax-internship": 9,
+        "/blog": 8,
+        "/staff/ashley-martin": 8,
+        "/staff/taylor-bayerkohler": 8,
+        "/staff/young-woo": 8,
+        "/staff/amber": 7,
+        "/AT": 6,
+        "/service/accounting": 6,
+        "/service/personal-financial-statement-preparation": 6,
+        "/economic-response-grant": 4,
+        "/service/annual-engagement-agreement": 4,
+        "/staff/aielyn-bayerkohler": 4,
+        "/staff/amy-winskowski": 4,
+        "/irs-issues-initial-guidance-on-new-trump-accounts-for-children": 3,
+        "/service/estate-tax-filings": 3,
+        "/service-type/business": 2,
+        "/testimonial": 2,
+        "/about": 1,
+        "/common-mistakes-businesses-make-on-tax-returns-and-how-to-avoid-costly-errors": 1,
+        "/service-type/individual": 1,
+        "/staff/": 1,
+        "/testimonial/alexa-martin": 1,
+        "/testimonial/josh-lantz": 1,
+        "/testimonial/mary-senander": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-02",
+      "label": "February",
+      "sessions": 942,
+      "users": 707,
+      "newUsers": 666,
+      "avgSessionDuration": 103.28562209447983,
+      "busiestDate": "2026-02-03",
+      "busiestSessions": 61,
+      "pageViews": {
+        "/": 672,
+        "/contact": 129,
+        "/staff": 101,
+        "/service": 93,
+        "/about-us": 60,
+        "/service/prepared-financials": 53,
+        "/home-test": 34,
+        "/service/tax-preparation-and-tax-planning": 34,
+        "/staff/johnathan": 31,
+        "/file": 22,
+        "/service/taxes-and-tax-planning": 21,
+        "/site-map": 20,
+        "/staff/brian-bayerkohler": 19,
+        "/staff/barb-bayerkohler": 18,
+        "/tax-planning-questionnaire": 17,
+        "/staff/amy-frahm": 16,
+        "/free-consultation-thank-you": 12,
+        "/staff/ashley-martin": 12,
+        "/job-listing": 11,
+        "/service/annual-engagement-agreement": 12,
+        "/staff/aielyn-bayerkohler": 11,
+        "/what-every-trustee-needs-to-know-about-filing-trust-tax-returns": 11,
+        "/service/personal-financial-statement-preparation": 10,
+        "/service/accounting": 9,
+        "/staff/amy-winskowski": 8,
+        "/staff/young-woo": 8,
+        "/blog": 8,
+        "/category/uncategorized": 6,
+        "/staff/amber": 6,
+        "/staff/taylor-bayerkohler": 6,
+        "/job-listing/2027-tax-internship": 5,
+        "/testimonial": 5,
+        "/about": 4,
+        "/service/estate-tax-filings": 4,
+        "/economic-response-grant": 3,
+        "/service-type/business": 3,
+        "/irs-issues-initial-guidance-on-new-trump-accounts-for-children": 2,
+        "/at": 1,
+        "/boi-filing": 1,
+        "/testimonial-sitemap.xml": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-01",
+      "label": "January",
+      "sessions": 869,
+      "users": 750,
+      "newUsers": 728,
+      "avgSessionDuration": 64.78157133371693,
+      "busiestDate": "2026-01-02",
+      "busiestSessions": 43,
+      "pageViews": {
+        "/": 616,
+        "/staff": 118,
+        "/contact": 91,
+        "/service": 77,
+        "/tax-planning-questionnaire": 39,
+        "/about-us": 36,
+        "/service/prepared-financials": 30,
+        "/service/tax-preparation-and-tax-planning": 30,
+        "/file": 21,
+        "/job-listing": 32,
+        "/site-map": 20,
+        "/staff/johnathan": 17,
+        "/at": 15,
+        "/staff/barb-bayerkohler": 15,
+        "/what-every-trustee-needs-to-know-about-filing-trust-tax-returns": 15,
+        "/blog": 14,
+        "/staff/brian-bayerkohler": 13,
+        "/service/estate-tax-filings": 12,
+        "/free-consultation-thank-you": 9,
+        "/service/personal-financial-statement-preparation": 10,
+        "/irs-issues-initial-guidance-on-new-trump-accounts-for-children": 8,
+        "/service/accounting": 8,
+        "/service/taxes-and-tax-planning": 9,
+        "/category/uncategorized": 6,
+        "/service/annual-engagement-agreement": 7,
+        "/job-listing/2027-tax-internship": 5,
+        "/staff/ashley-martin": 5,
+        "/service-type/business": 4,
+        "/staff/aielyn-bayerkohler": 4,
+        "/staff/amber": 5,
+        "/staff/amy-frahm": 4,
+        "/about": 3,
+        "/common-mistakes-businesses-make-on-tax-returns-and-how-to-avoid-costly-errors": 4,
+        "/staff/amy-winskowski": 3,
+        "/testimonial": 3,
+        "/staff/taylor-bayerkohler": 3,
+        "/staff/young-woo": 2,
+        "/boi-filing": 1,
+        "/job-listing/staff-accountant": 1,
+        "/testimonial/eric-morud": 1,
+        "/testimonial/rick-dubiel": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2025-12",
+      "label": "December",
+      "sessions": 821,
+      "users": 713,
+      "newUsers": 685,
+      "avgSessionDuration": 85.29781343727163,
+      "busiestDate": "2025-12-12",
+      "busiestSessions": 51,
+      "pageViews": {
+        "/": 507,
+        "/staff": 121,
+        "/contact": 100,
+        "/service": 75,
+        "/about-us": 46,
+        "/tax-planning-questionnaire": 27,
+        "/staff/johnathan": 26,
+        "/service/prepared-financials": 25,
+        "/staff/barb-bayerkohler": 22,
+        "/staff/brian-bayerkohler": 21,
+        "/service/tax-preparation-and-tax-planning": 17,
+        "/staff/amy-frahm": 17,
+        "/at": 16,
+        "/job-listing": 28,
+        "/site-map": 16,
+        "/file": 13,
+        "/free-consultation-thank-you": 12,
+        "/service/estate-tax-filings": 11,
+        "/service/taxes-and-tax-planning": 12,
+        "/staff/young-woo": 12,
+        "/service/accounting": 10,
+        "/service/annual-engagement-agreement": 9,
+        "/staff/aielyn-bayerkohler": 9,
+        "/category/uncategorized": 7,
+        "/job-listing/2027-tax-internship": 7,
+        "/service/personal-financial-statement-preparation": 7,
+        "/staff/taylor-bayerkohler": 8,
+        "/testimonial": 7,
+        "/staff/amber": 7,
+        "/what-every-trustee-needs-to-know-about-filing-trust-tax-returns": 6,
+        "/service-type/individual": 4,
+        "/service-type/business": 3,
+        "/testimonial/eric-morud": 3,
+        "/blog": 3,
+        "/file/schedule-c-organizer": 2,
+        "/mn-employment-law-updates": 2,
+        "/testimonial/ali-saad": 2,
+        "/boi-filing": 1,
+        "/coming-soon": 2,
+        "/common-mistakes-businesses-make-on-tax-returns-and-how-to-avoid-costly-errors": 1,
+        "/do-i-need-to-file-for-boi": 1,
+        "/staff/amy-winskowski": 2,
+        "/staff/ashley-martin": 2,
+        "/testimonial/rick-dubiel": 1,
+        "/thank-you": 2
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2025-11",
+      "label": "November",
+      "sessions": 806,
+      "users": 740,
+      "newUsers": 712,
+      "avgSessionDuration": 64.76622642307692,
+      "busiestDate": "2025-11-12",
+      "busiestSessions": 69,
+      "pageViews": {
+        "/": 531,
+        "/contact": 88,
+        "/staff": 94,
+        "/service": 60,
+        "/tax-planning-questionnaire": 40,
+        "/about-us": 38,
+        "/service/prepared-financials": 22,
+        "/staff/johnathan": 21,
+        "/staff/young-woo": 18,
+        "/staff/brian-bayerkohler": 17,
+        "/at": 16,
+        "/service/taxes-and-tax-planning": 15,
+        "/site-map": 14,
+        "/file": 13,
+        "/job-listing": 25,
+        "/staff/amy-frahm": 11,
+        "/staff/barb-bayerkohler": 11,
+        "/job-listing/2027-tax-internship": 10,
+        "/service/estate-tax-filings": 10,
+        "/service/tax-preparation-and-tax-planning": 9,
+        "/staff/amber": 9,
+        "/service/accounting": 8,
+        "/staff/amy-winskowski": 8,
+        "/free-consultation-thank-you": 7,
+        "/service/annual-engagement-agreement": 5,
+        "/service/personal-financial-statement-preparation": 5,
+        "/staff/aielyn-bayerkohler": 5,
+        "/staff/taylor-bayerkohler": 5,
+        "/testimonial": 5,
+        "/testimonial/ali-saad": 5,
+        "/blog": 4,
+        "/staff/ashley-martin": 3,
+        "/common-mistakes-businesses-make-on-tax-returns-and-how-to-avoid-costly-errors": 2,
+        "/file/schedule-c-organizer": 2,
+        "/service-type/individual": 2,
+        "/what-every-trustee-needs-to-know-about-filing-trust-tax-returns": 2,
+        "/aclk": 1,
+        "/author-sitemap.xml": 1,
+        "/boi-filing": 1,
+        "/file/individual-organizer": 1,
+        "/file/schedule-f-organizer": 1,
+        "/file/tax-checklist": 1,
+        "/locations": 1,
+        "/mn-employment-law-updates": 1,
+        "/service-type/business": 1,
+        "/staff/amber/mailTo:(redacted)": 1,
+        "/testimonial/alexa-martin": 1,
+        "/testimonial/brett-larson": 1,
+        "/testimonial/chris-johnson": 1,
+        "/testimonial/eric-morud": 1,
+        "/testimonial/greg-schreier": 1,
+        "/testimonial/mary-senander": 1,
+        "/testimonial/rick-dubiel": 1,
+        "/testimonial/rory-green": 1,
+        "/testimonial/sarah-hess": 1,
+        "/testimonial/troy-boe": 1,
+        "/testimonial/william-miller": 1,
+        "/thank-you": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2025-10",
+      "label": "October",
+      "sessions": 737,
+      "users": 645,
+      "newUsers": 629,
+      "avgSessionDuration": 85.15625225373135,
+      "busiestDate": "2025-10-07",
+      "busiestSessions": 72,
+      "pageViews": {
+        "/": 538,
+        "/contact": 87,
+        "/service": 73,
+        "/service/prepared-financials": 58,
+        "/staff": 62,
+        "/about-us": 45,
+        "/service/taxes-and-tax-planning": 38,
+        "/blog": 28,
+        "/staff/young-woo": 25,
+        "/file": 21,
+        "/staff/johnathan": 20,
+        "/tax-planning-questionnaire": 14,
+        "/job-listing": 20,
+        "/service/accounting": 11,
+        "/common-mistakes-businesses-make-on-tax-returns-and-how-to-avoid-costly-errors": 10,
+        "/service/estate-tax-filings": 8,
+        "/staff/brian-bayerkohler": 8,
+        "/at": 7,
+        "/free-consultation-thank-you": 7,
+        "/service/tax-preparation-and-tax-planning": 7,
+        "/site-map": 7,
+        "/staff/amy-frahm": 6,
+        "/job-listing/2027-tax-internship": 5,
+        "/mn-employment-law-updates": 5,
+        "/service/annual-engagement-agreement": 5,
+        "/service/personal-financial-statement-preparation": 5,
+        "/staff/barb-bayerkohler": 5,
+        "/file/schedule-c-organizer": 3,
+        "/staff/amber": 3,
+        "/staff/aielyn-bayerkohler": 2,
+        "/staff/taylor-bayerkohler": 2,
+        "/home-test": 1,
+        "/staff/amy-frahm/mailTo:(redacted)": 1,
+        "/staff/amy-winskowski": 1,
+        "/testimonial": 1,
+        "/testimonial/ali-saad": 1,
+        "/testimonial/eric-morud": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2025-09",
+      "label": "September",
+      "sessions": 479,
+      "users": 381,
+      "newUsers": 365,
+      "avgSessionDuration": 178.67384910647183,
+      "busiestDate": "2025-09-18",
+      "busiestSessions": 45,
+      "pageViews": {
+        "/": 386,
+        "/contact": 124,
+        "/staff": 86,
+        "/service/prepared-financials": 61,
+        "/service": 55,
+        "/about-us": 49,
+        "/staff/barb-bayerkohler": 40,
+        "/file": 31,
+        "/job-listing": 28,
+        "/service/taxes-and-tax-planning": 19,
+        "/tax-planning-questionnaire": 16,
+        "/service/tax-preparation-and-tax-planning": 15,
+        "/staff/brian-bayerkohler": 15,
+        "/staff/johnathan": 15,
+        "/service/estate-tax-filings": 11,
+        "/service/personal-financial-statement-preparation": 11,
+        "/free-consultation-thank-you": 10,
+        "/staff/amy-frahm": 10,
+        "/job-listing/2027-tax-internship": 8,
+        "/service/accounting": 7,
+        "/job-listing/2026-tax-internship": 6,
+        "/service/annual-engagement-agreement": 6,
+        "/thank-you": 6,
+        "/staff/amy-winskowski": 5,
+        "/staff/amber": 4,
+        "/staff/aielyn-bayerkohler": 3,
+        "/staff/ashley-martin": 3,
+        "/staff/young-woo": 3,
+        "/site-map": 2,
+        "/staff/taylor-bayerkohler": 2,
+        "/at": 1,
+        "/mn-employment-law-updates": 1
+      },
+      "artistViews": {}
+    }
+  ],
+  "hours": 1.5
+}

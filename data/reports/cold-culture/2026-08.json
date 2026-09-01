@@ -1,0 +1,696 @@
+{
+  "schemaVersion": 3,
+  "slug": "cold-culture",
+  "propertyId": "524005835",
+  "clientName": "Cold Culture",
+  "highlightColor": "green",
+  "month": "2026-08",
+  "monthLabel": "August 2026",
+  "generatedAt": "2026-09-01T14:30:27.490Z",
+  "range": {
+    "startDate": "2026-08-01",
+    "endDate": "2026-08-31",
+    "prevStartDate": "2026-07-01",
+    "prevEndDate": "2026-07-31"
+  },
+  "shareToken": "-SPGGa6cDe-xSQb-FiyrYQ",
+  "summary": {
+    "sessions": 47,
+    "prevSessions": 39,
+    "users": 44,
+    "prevUsers": 39,
+    "newUsers": 44,
+    "prevNewUsers": 40,
+    "pageViews": 71,
+    "prevPageViews": 43,
+    "avgSessionDuration": 51.89351610638298,
+    "prevAvgSessionDuration": 11.122423307692307,
+    "bounceRate": 0.6170212765957447,
+    "prevBounceRate": 0.7692307692307693,
+    "engagementRate": 0.3829787234042553,
+    "prevEngagementRate": 0.23076923076923078,
+    "conversions": 0,
+    "prevConversions": 0,
+    "sessionsChange": 20.5,
+    "usersChange": 12.8,
+    "newUsersChange": 10,
+    "pageViewsChange": 65.1,
+    "avgSessionDurationChange": 366.6,
+    "bounceRateChange": -19.8,
+    "engagementRateChange": 66,
+    "conversionsChange": 0
+  },
+  "daily": [
+    {
+      "date": "2026-08-01",
+      "sessions": 2,
+      "users": 2,
+      "pageViews": 2
+    },
+    {
+      "date": "2026-08-02",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-03",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-05",
+      "sessions": 3,
+      "users": 3,
+      "pageViews": 5
+    },
+    {
+      "date": "2026-08-07",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-08",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-09",
+      "sessions": 2,
+      "users": 2,
+      "pageViews": 2
+    },
+    {
+      "date": "2026-08-12",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 2
+    },
+    {
+      "date": "2026-08-13",
+      "sessions": 3,
+      "users": 3,
+      "pageViews": 3
+    },
+    {
+      "date": "2026-08-14",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-15",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-16",
+      "sessions": 4,
+      "users": 4,
+      "pageViews": 4
+    },
+    {
+      "date": "2026-08-18",
+      "sessions": 4,
+      "users": 4,
+      "pageViews": 4
+    },
+    {
+      "date": "2026-08-19",
+      "sessions": 3,
+      "users": 3,
+      "pageViews": 3
+    },
+    {
+      "date": "2026-08-20",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-21",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-22",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-23",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 2
+    },
+    {
+      "date": "2026-08-24",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-27",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-28",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-30",
+      "sessions": 3,
+      "users": 3,
+      "pageViews": 3
+    },
+    {
+      "date": "2026-08-31",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    }
+  ],
+  "topPages": [
+    {
+      "path": "/",
+      "title": "Cold Culture",
+      "views": 29,
+      "sessions": 27,
+      "avgDuration": 13.995903962962963
+    },
+    {
+      "path": "/drops",
+      "title": "Cold Culture",
+      "views": 3,
+      "sessions": 3,
+      "avgDuration": 0.03156133333333334
+    },
+    {
+      "path": "/drops/knux-necklace",
+      "title": "Cold Culture",
+      "views": 3,
+      "sessions": 2,
+      "avgDuration": 0.0309145
+    },
+    {
+      "path": "/team",
+      "title": "404: This page could not be found.",
+      "views": 2,
+      "sessions": 2,
+      "avgDuration": 0
+    },
+    {
+      "path": "//checkout/",
+      "title": "Cold Culture",
+      "views": 1,
+      "sessions": 1,
+      "avgDuration": 0
+    },
+    {
+      "path": "/about",
+      "title": "404: This page could not be found.",
+      "views": 1,
+      "sessions": 1,
+      "avgDuration": 0
+    },
+    {
+      "path": "/about",
+      "title": "Cold Culture",
+      "views": 1,
+      "sessions": 2,
+      "avgDuration": 0.676323
+    },
+    {
+      "path": "/about-us",
+      "title": "404: This page could not be found.",
+      "views": 1,
+      "sessions": 1,
+      "avgDuration": 0
+    },
+    {
+      "path": "/about-us",
+      "title": "Cold Culture",
+      "views": 1,
+      "sessions": 1,
+      "avgDuration": 0
+    },
+    {
+      "path": "/our-team",
+      "title": "Cold Culture",
+      "views": 1,
+      "sessions": 1,
+      "avgDuration": 0
+    },
+    {
+      "path": "/",
+      "title": "(not set)",
+      "views": 0,
+      "sessions": 6,
+      "avgDuration": 7.976013333333333
+    },
+    {
+      "path": "//checkout/",
+      "title": "(not set)",
+      "views": 0,
+      "sessions": 1,
+      "avgDuration": 6.519863
+    }
+  ],
+  "channels": [
+    {
+      "channel": "Direct",
+      "sessions": 29,
+      "users": 29,
+      "percentage": 74
+    },
+    {
+      "channel": "Organic Search",
+      "sessions": 8,
+      "users": 8,
+      "percentage": 21
+    },
+    {
+      "channel": "Referral",
+      "sessions": 2,
+      "users": 2,
+      "percentage": 5
+    }
+  ],
+  "devices": [
+    {
+      "device": "desktop",
+      "sessions": 35,
+      "percentage": 90
+    },
+    {
+      "device": "mobile",
+      "sessions": 4,
+      "percentage": 10
+    }
+  ],
+  "countries": [
+    {
+      "country": "United States",
+      "sessions": 20,
+      "percentage": 54
+    },
+    {
+      "country": "India",
+      "sessions": 7,
+      "percentage": 19
+    },
+    {
+      "country": "Germany",
+      "sessions": 2,
+      "percentage": 5
+    },
+    {
+      "country": "Russia",
+      "sessions": 2,
+      "percentage": 5
+    },
+    {
+      "country": "Canada",
+      "sessions": 1,
+      "percentage": 3
+    },
+    {
+      "country": "France",
+      "sessions": 1,
+      "percentage": 3
+    },
+    {
+      "country": "Hong Kong",
+      "sessions": 1,
+      "percentage": 3
+    },
+    {
+      "country": "Iran",
+      "sessions": 1,
+      "percentage": 3
+    },
+    {
+      "country": "Italy",
+      "sessions": 1,
+      "percentage": 3
+    },
+    {
+      "country": "Netherlands",
+      "sessions": 1,
+      "percentage": 3
+    }
+  ],
+  "cities": [
+    {
+      "city": "Navi Mumbai",
+      "country": "India",
+      "sessions": 6
+    },
+    {
+      "city": "(not set)",
+      "country": "United States",
+      "sessions": 4
+    },
+    {
+      "city": "Minneapolis",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "city": "Moscow",
+      "country": "Russia",
+      "sessions": 2
+    },
+    {
+      "city": "San Jose",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "city": "(unknown)",
+      "country": "Hong Kong",
+      "sessions": 1
+    },
+    {
+      "city": "(not set)",
+      "country": "Norway",
+      "sessions": 1
+    },
+    {
+      "city": "(not set)",
+      "country": "Romania",
+      "sessions": 1
+    },
+    {
+      "city": "Amsterdam",
+      "country": "Netherlands",
+      "sessions": 1
+    },
+    {
+      "city": "Ashburn",
+      "country": "United States",
+      "sessions": 1
+    }
+  ],
+  "regions": [
+    {
+      "region": "Maharashtra",
+      "country": "India",
+      "sessions": 7
+    },
+    {
+      "region": "Minnesota",
+      "country": "United States",
+      "sessions": 6
+    },
+    {
+      "region": "California",
+      "country": "United States",
+      "sessions": 4
+    },
+    {
+      "region": "Moscow",
+      "country": "Russia",
+      "sessions": 2
+    },
+    {
+      "region": "Oregon",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "Virginia",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "(unknown)",
+      "country": "Hong Kong",
+      "sessions": 1
+    },
+    {
+      "region": "Berlin",
+      "country": "Germany",
+      "sessions": 1
+    },
+    {
+      "region": "Colorado",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Connecticut",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "England",
+      "country": "United Kingdom",
+      "sessions": 1
+    },
+    {
+      "region": "Florida",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Hessen",
+      "country": "Germany",
+      "sessions": 1
+    },
+    {
+      "region": "Ile-de-France",
+      "country": "France",
+      "sessions": 1
+    },
+    {
+      "region": "Illinois",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Lombardy",
+      "country": "Italy",
+      "sessions": 1
+    },
+    {
+      "region": "New York",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "North Holland",
+      "country": "Netherlands",
+      "sessions": 1
+    },
+    {
+      "region": "Ohio",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Ontario",
+      "country": "Canada",
+      "sessions": 1
+    }
+  ],
+  "referrers": [
+    {
+      "source": "(direct)",
+      "sessions": 29
+    },
+    {
+      "source": "google",
+      "sessions": 6
+    },
+    {
+      "source": "yandex.ru",
+      "sessions": 2
+    },
+    {
+      "source": "258.com",
+      "sessions": 1
+    },
+    {
+      "source": "google.com",
+      "sessions": 1
+    }
+  ],
+  "sessionHistory": [
+    {
+      "month": "2026-08",
+      "label": "August",
+      "sessions": 47,
+      "users": 44,
+      "newUsers": 44,
+      "avgSessionDuration": 51.89351610638298,
+      "busiestDate": "2026-08-16",
+      "busiestSessions": 4,
+      "pageViews": {
+        "/": 29,
+        "/drops": 3,
+        "/drops/knux-necklace": 3,
+        "/about": 2,
+        "/about-us": 2,
+        "/team": 2,
+        "//checkout": 1,
+        "/our-team": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-07",
+      "label": "July",
+      "sessions": 39,
+      "users": 39,
+      "newUsers": 40,
+      "avgSessionDuration": 11.122423307692307,
+      "busiestDate": "2026-07-14",
+      "busiestSessions": 5,
+      "pageViews": {
+        "/": 51,
+        "/drops/knux-keychain": 4,
+        "/drops/knux-necklace": 4,
+        "/drops/knux-tee-tan": 4,
+        "/drops/knux-tee-purple": 3,
+        "/drops/knux-earrings": 2,
+        "//checkout": 1,
+        "/drops": 1,
+        "/drops/hotc-v1": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-06",
+      "label": "June",
+      "sessions": 43,
+      "users": 41,
+      "newUsers": 41,
+      "avgSessionDuration": 10.835996,
+      "busiestDate": "2026-06-04",
+      "busiestSessions": 7,
+      "pageViews": {
+        "/": 46,
+        "/drops/knux-necklace": 10,
+        "/drops/knux-tee-tan": 8,
+        "/drops/knux-earrings": 5,
+        "/drops/lumberjack": 4,
+        "/drops/beach-boy": 3,
+        "/drops/hotc-sticker": 3,
+        "/drops/knux-tee-purple": 3,
+        "/drops/hotc-v1": 2,
+        "/drops/knux-keychain": 2,
+        "/drops": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-05",
+      "label": "May",
+      "sessions": 49,
+      "users": 49,
+      "newUsers": 49,
+      "avgSessionDuration": 15.195134,
+      "busiestDate": "2026-05-26",
+      "busiestSessions": 9,
+      "pageViews": {
+        "/": 54,
+        "/drops/knux-tee-tan": 5,
+        "/drops/knux-necklace": 4,
+        "/drops/knux-earrings": 2,
+        "/drops/knux-tee-purple": 2,
+        "//checkout": 1,
+        "/drops/hotc-sticker": 1,
+        "/drops/knux-keychain": 1,
+        "/drops/lumberjack": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-04",
+      "label": "April",
+      "sessions": 50,
+      "users": 45,
+      "newUsers": 45,
+      "avgSessionDuration": 35.19833904000001,
+      "busiestDate": "2026-04-20",
+      "busiestSessions": 9,
+      "pageViews": {
+        "/": 62,
+        "/drops/knux-necklace": 11,
+        "/drops/knux-tee-tan": 9,
+        "/drops/hotc-sticker": 5,
+        "/drops/knux-earrings": 4,
+        "/drops/knux-keychain": 4,
+        "/drops/lumberjack": 4,
+        "/drops/hotc-v1": 3,
+        "/drops/knux-tee-purple": 3,
+        "//checkout": 2,
+        "/drops/beach-boy": 2,
+        "/drops": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-03",
+      "label": "March",
+      "sessions": 48,
+      "users": 45,
+      "newUsers": 43,
+      "avgSessionDuration": 47.66147854166666,
+      "busiestDate": "2026-03-26",
+      "busiestSessions": 5,
+      "pageViews": {
+        "/": 47,
+        "/drops/knux-necklace": 10,
+        "/drops/knux-keychain": 4,
+        "/drops/knux-earrings": 3,
+        "/drops/knux-tee-tan": 3,
+        "/drops": 2,
+        "/drops/lumberjack": 2,
+        "//checkout": 1,
+        "/drops/beach-boy": 1,
+        "/drops/hotc-sticker": 1,
+        "/drops/hotc-v1": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-02",
+      "label": "February",
+      "sessions": 102,
+      "users": 56,
+      "newUsers": 55,
+      "avgSessionDuration": 690.1199895098039,
+      "busiestDate": "2026-02-10",
+      "busiestSessions": 16,
+      "pageViews": {
+        "/": 427,
+        "/drops/knux-tee-tan": 43,
+        "/drops/knux-necklace": 25,
+        "/drops/knux-tee-purple": 23,
+        "/drops/hotc-sticker": 15,
+        "/drops/knux-keychain": 13,
+        "/drops/knux-earrings": 12,
+        "/drops/lumberjack": 10,
+        "/drops/beach-boy": 8,
+        "/drops/hotc-v1": 8,
+        "/contact": 7,
+        "/drops/cc-tank": 5,
+        "//checkout": 2,
+        "/drops": 1
+      },
+      "artistViews": {}
+    }
+  ]
+}

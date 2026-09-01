@@ -1,0 +1,1124 @@
+{
+  "schemaVersion": 3,
+  "slug": "clubhaus",
+  "propertyId": "309170366",
+  "clientName": "Clubhaus Agency",
+  "highlightColor": "blue",
+  "month": "2026-08",
+  "monthLabel": "August 2026",
+  "generatedAt": "2026-09-01T14:29:50.665Z",
+  "range": {
+    "startDate": "2026-08-01",
+    "endDate": "2026-08-31",
+    "prevStartDate": "2026-07-01",
+    "prevEndDate": "2026-07-31"
+  },
+  "shareToken": "4N0e2PRVBIcFgDFpzxVvzA",
+  "summary": {
+    "sessions": 126,
+    "prevSessions": 118,
+    "users": 115,
+    "prevUsers": 111,
+    "newUsers": 112,
+    "prevNewUsers": 107,
+    "pageViews": 484,
+    "prevPageViews": 514,
+    "avgSessionDuration": 58.29336023015873,
+    "prevAvgSessionDuration": 25.69413511864407,
+    "bounceRate": 0.42063492063492064,
+    "prevBounceRate": 0.5423728813559322,
+    "engagementRate": 0.5793650793650794,
+    "prevEngagementRate": 0.4576271186440678,
+    "conversions": 0,
+    "prevConversions": 0,
+    "sessionsChange": 6.8,
+    "usersChange": 3.6,
+    "newUsersChange": 4.7,
+    "pageViewsChange": -5.8,
+    "avgSessionDurationChange": 126.9,
+    "bounceRateChange": -22.4,
+    "engagementRateChange": 26.6,
+    "conversionsChange": 0
+  },
+  "daily": [
+    {
+      "date": "2026-08-01",
+      "sessions": 2,
+      "users": 2,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-02",
+      "sessions": 2,
+      "users": 2,
+      "pageViews": 11
+    },
+    {
+      "date": "2026-08-03",
+      "sessions": 3,
+      "users": 3,
+      "pageViews": 12
+    },
+    {
+      "date": "2026-08-04",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-06",
+      "sessions": 5,
+      "users": 4,
+      "pageViews": 14
+    },
+    {
+      "date": "2026-08-07",
+      "sessions": 5,
+      "users": 4,
+      "pageViews": 24
+    },
+    {
+      "date": "2026-08-08",
+      "sessions": 4,
+      "users": 3,
+      "pageViews": 4
+    },
+    {
+      "date": "2026-08-09",
+      "sessions": 3,
+      "users": 3,
+      "pageViews": 17
+    },
+    {
+      "date": "2026-08-10",
+      "sessions": 2,
+      "users": 2,
+      "pageViews": 8
+    },
+    {
+      "date": "2026-08-11",
+      "sessions": 4,
+      "users": 4,
+      "pageViews": 7
+    },
+    {
+      "date": "2026-08-12",
+      "sessions": 2,
+      "users": 2,
+      "pageViews": 3
+    },
+    {
+      "date": "2026-08-13",
+      "sessions": 10,
+      "users": 10,
+      "pageViews": 19
+    },
+    {
+      "date": "2026-08-14",
+      "sessions": 5,
+      "users": 5,
+      "pageViews": 19
+    },
+    {
+      "date": "2026-08-15",
+      "sessions": 5,
+      "users": 5,
+      "pageViews": 9
+    },
+    {
+      "date": "2026-08-17",
+      "sessions": 4,
+      "users": 4,
+      "pageViews": 63
+    },
+    {
+      "date": "2026-08-18",
+      "sessions": 3,
+      "users": 3,
+      "pageViews": 4
+    },
+    {
+      "date": "2026-08-19",
+      "sessions": 10,
+      "users": 9,
+      "pageViews": 55
+    },
+    {
+      "date": "2026-08-20",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 2
+    },
+    {
+      "date": "2026-08-21",
+      "sessions": 5,
+      "users": 5,
+      "pageViews": 27
+    },
+    {
+      "date": "2026-08-22",
+      "sessions": 4,
+      "users": 4,
+      "pageViews": 6
+    },
+    {
+      "date": "2026-08-23",
+      "sessions": 3,
+      "users": 3,
+      "pageViews": 3
+    },
+    {
+      "date": "2026-08-24",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 27
+    },
+    {
+      "date": "2026-08-25",
+      "sessions": 7,
+      "users": 7,
+      "pageViews": 28
+    },
+    {
+      "date": "2026-08-26",
+      "sessions": 5,
+      "users": 4,
+      "pageViews": 42
+    },
+    {
+      "date": "2026-08-27",
+      "sessions": 6,
+      "users": 6,
+      "pageViews": 10
+    },
+    {
+      "date": "2026-08-28",
+      "sessions": 2,
+      "users": 2,
+      "pageViews": 14
+    },
+    {
+      "date": "2026-08-29",
+      "sessions": 2,
+      "users": 2,
+      "pageViews": 8
+    },
+    {
+      "date": "2026-08-30",
+      "sessions": 20,
+      "users": 20,
+      "pageViews": 46
+    }
+  ],
+  "topPages": [
+    {
+      "path": "/",
+      "title": "Clubhaus Agency | Minneapolis Creative & Marketing Powerhouse",
+      "views": 99,
+      "sessions": 106,
+      "avgDuration": 21.496711867924528
+    },
+    {
+      "path": "/",
+      "title": "Home Section",
+      "views": 98,
+      "sessions": 70,
+      "avgDuration": 4.641635885714286
+    },
+    {
+      "path": "/",
+      "title": "Who We Are Section",
+      "views": 28,
+      "sessions": 19,
+      "avgDuration": 29.981433368421055
+    },
+    {
+      "path": "/",
+      "title": "What We Do Section",
+      "views": 27,
+      "sessions": 15,
+      "avgDuration": 4.7551476
+    },
+    {
+      "path": "/",
+      "title": "Projects Section",
+      "views": 25,
+      "sessions": 13,
+      "avgDuration": 8.859414076923077
+    },
+    {
+      "path": "/",
+      "title": "Modus Operandi Section",
+      "views": 21,
+      "sessions": 10,
+      "avgDuration": 41.1044695
+    },
+    {
+      "path": "/",
+      "title": "Feeling Lucky? Section",
+      "views": 20,
+      "sessions": 14,
+      "avgDuration": 4.5025957142857145
+    },
+    {
+      "path": "/services",
+      "title": "Clubhaus Agency | Minneapolis Creative & Marketing Powerhouse",
+      "views": 20,
+      "sessions": 17,
+      "avgDuration": 3.6897642352941173
+    },
+    {
+      "path": "/who-we-are",
+      "title": "Clubhaus Agency | Minneapolis Creative & Marketing Powerhouse",
+      "views": 18,
+      "sessions": 19,
+      "avgDuration": 7.065838
+    },
+    {
+      "path": "/",
+      "title": "Contact Section",
+      "views": 15,
+      "sessions": 9,
+      "avgDuration": 15.892123999999999
+    },
+    {
+      "path": "/why-clubhaus",
+      "title": "Clubhaus Agency | Minneapolis Creative & Marketing Powerhouse",
+      "views": 15,
+      "sessions": 15,
+      "avgDuration": 2.0959863333333333
+    },
+    {
+      "path": "/",
+      "title": "People Section",
+      "views": 13,
+      "sessions": 7,
+      "avgDuration": 3.517048714285714
+    },
+    {
+      "path": "/portfolio",
+      "title": "Clubhaus Agency | Minneapolis Creative & Marketing Powerhouse",
+      "views": 12,
+      "sessions": 13,
+      "avgDuration": 4.122337615384615
+    },
+    {
+      "path": "/contact",
+      "title": "Clubhaus Agency | Minneapolis Creative & Marketing Powerhouse",
+      "views": 7,
+      "sessions": 7,
+      "avgDuration": 295.95784157142856
+    },
+    {
+      "path": "/projects",
+      "title": "Clubhaus Agency | Minneapolis Creative & Marketing Powerhouse",
+      "views": 7,
+      "sessions": 6,
+      "avgDuration": 13.407861333333335
+    },
+    {
+      "path": "/team",
+      "title": "Clubhaus Agency | Minneapolis Creative & Marketing Powerhouse",
+      "views": 6,
+      "sessions": 5,
+      "avgDuration": 3.6902382000000005
+    },
+    {
+      "path": "/our-heart",
+      "title": "Clubhaus Agency | Minneapolis Creative & Marketing Powerhouse",
+      "views": 5,
+      "sessions": 7,
+      "avgDuration": 26.078212428571426
+    },
+    {
+      "path": "/contact",
+      "title": "I94 west chamber - Clubhaus Agency Case Study",
+      "views": 4,
+      "sessions": 2,
+      "avgDuration": 6.6126175
+    },
+    {
+      "path": "/projects",
+      "title": "Our Projects - Clubhaus Agency Portfolio",
+      "views": 3,
+      "sessions": 4,
+      "avgDuration": 125.135612
+    },
+    {
+      "path": "/projects/6NKJUsymfStxNtgX1Z5837",
+      "title": "Omni Breweries - Clubhaus Agency Case Study",
+      "views": 3,
+      "sessions": 4,
+      "avgDuration": 12.1580655
+    }
+  ],
+  "channels": [
+    {
+      "channel": "Direct",
+      "sessions": 102,
+      "users": 99,
+      "percentage": 81
+    },
+    {
+      "channel": "Organic Search",
+      "sessions": 16,
+      "users": 8,
+      "percentage": 13
+    },
+    {
+      "channel": "Referral",
+      "sessions": 7,
+      "users": 7,
+      "percentage": 6
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": 1,
+      "users": 1,
+      "percentage": 1
+    }
+  ],
+  "devices": [
+    {
+      "device": "desktop",
+      "sessions": 114,
+      "percentage": 90
+    },
+    {
+      "device": "mobile",
+      "sessions": 12,
+      "percentage": 10
+    }
+  ],
+  "countries": [
+    {
+      "country": "United States",
+      "sessions": 72,
+      "percentage": 63
+    },
+    {
+      "country": "China",
+      "sessions": 12,
+      "percentage": 10
+    },
+    {
+      "country": "Germany",
+      "sessions": 10,
+      "percentage": 9
+    },
+    {
+      "country": "Netherlands",
+      "sessions": 6,
+      "percentage": 5
+    },
+    {
+      "country": "France",
+      "sessions": 3,
+      "percentage": 3
+    },
+    {
+      "country": "India",
+      "sessions": 3,
+      "percentage": 3
+    },
+    {
+      "country": "United Kingdom",
+      "sessions": 3,
+      "percentage": 3
+    },
+    {
+      "country": "Cambodia",
+      "sessions": 2,
+      "percentage": 2
+    },
+    {
+      "country": "Colombia",
+      "sessions": 2,
+      "percentage": 2
+    },
+    {
+      "country": "Finland",
+      "sessions": 2,
+      "percentage": 2
+    }
+  ],
+  "cities": [
+    {
+      "city": "Council Bluffs",
+      "country": "United States",
+      "sessions": 21
+    },
+    {
+      "city": "Amsterdam",
+      "country": "Netherlands",
+      "sessions": 6
+    },
+    {
+      "city": "Frankfurt am Main",
+      "country": "Germany",
+      "sessions": 5
+    },
+    {
+      "city": "Ashburn",
+      "country": "United States",
+      "sessions": 4
+    },
+    {
+      "city": "Glenview",
+      "country": "United States",
+      "sessions": 4
+    },
+    {
+      "city": "Shanghai",
+      "country": "China",
+      "sessions": 4
+    },
+    {
+      "city": "St. Cloud",
+      "country": "United States",
+      "sessions": 4
+    },
+    {
+      "city": "(not set)",
+      "country": "Germany",
+      "sessions": 3
+    },
+    {
+      "city": "London",
+      "country": "United Kingdom",
+      "sessions": 3
+    },
+    {
+      "city": "Oregon City",
+      "country": "United States",
+      "sessions": 3
+    }
+  ],
+  "regions": [
+    {
+      "region": "Iowa",
+      "country": "United States",
+      "sessions": 22
+    },
+    {
+      "region": "Minnesota",
+      "country": "United States",
+      "sessions": 16
+    },
+    {
+      "region": "California",
+      "country": "United States",
+      "sessions": 8
+    },
+    {
+      "region": "Oregon",
+      "country": "United States",
+      "sessions": 7
+    },
+    {
+      "region": "North Holland",
+      "country": "Netherlands",
+      "sessions": 6
+    },
+    {
+      "region": "Hessen",
+      "country": "Germany",
+      "sessions": 5
+    },
+    {
+      "region": "Illinois",
+      "country": "United States",
+      "sessions": 4
+    },
+    {
+      "region": "Shanghai",
+      "country": "China",
+      "sessions": 4
+    },
+    {
+      "region": "Virginia",
+      "country": "United States",
+      "sessions": 4
+    },
+    {
+      "region": "England",
+      "country": "United Kingdom",
+      "sessions": 3
+    },
+    {
+      "region": "Karnataka",
+      "country": "India",
+      "sessions": 3
+    },
+    {
+      "region": "Colorado",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "County Dublin",
+      "country": "Ireland",
+      "sessions": 2
+    },
+    {
+      "region": "Guangdong Province",
+      "country": "China",
+      "sessions": 2
+    },
+    {
+      "region": "Ile-de-France",
+      "country": "France",
+      "sessions": 2
+    },
+    {
+      "region": "New Jersey",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "Phnom Penh",
+      "country": "Cambodia",
+      "sessions": 2
+    },
+    {
+      "region": "Alabama",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Antioquia",
+      "country": "Colombia",
+      "sessions": 1
+    },
+    {
+      "region": "Arkansas",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Baden-Wurttemberg",
+      "country": "Germany",
+      "sessions": 1
+    },
+    {
+      "region": "Berlin",
+      "country": "Germany",
+      "sessions": 1
+    },
+    {
+      "region": "Cundinamarca",
+      "country": "Colombia",
+      "sessions": 1
+    },
+    {
+      "region": "Fujian",
+      "country": "China",
+      "sessions": 1
+    },
+    {
+      "region": "Hebei",
+      "country": "China",
+      "sessions": 1
+    },
+    {
+      "region": "Henan",
+      "country": "China",
+      "sessions": 1
+    },
+    {
+      "region": "Ishikawa",
+      "country": "Japan",
+      "sessions": 1
+    },
+    {
+      "region": "Jiangsu",
+      "country": "China",
+      "sessions": 1
+    },
+    {
+      "region": "Lviv Oblast",
+      "country": "Ukraine",
+      "sessions": 1
+    },
+    {
+      "region": "Maryland",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Michigan",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Missouri",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "New York",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Quebec",
+      "country": "Canada",
+      "sessions": 1
+    },
+    {
+      "region": "South Carolina",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Sverdlovsk Oblast",
+      "country": "Russia",
+      "sessions": 1
+    },
+    {
+      "region": "Zhejiang",
+      "country": "China",
+      "sessions": 1
+    }
+  ],
+  "referrers": [
+    {
+      "source": "(direct)",
+      "sessions": 102
+    },
+    {
+      "source": "google",
+      "sessions": 13
+    },
+    {
+      "source": "bing",
+      "sessions": 3
+    },
+    {
+      "source": "i94westchamber.org",
+      "sessions": 3
+    },
+    {
+      "source": "(not set)",
+      "sessions": 1
+    },
+    {
+      "source": "business.i94westchamber.org",
+      "sessions": 1
+    },
+    {
+      "source": "considerin.net",
+      "sessions": 1
+    },
+    {
+      "source": "readlife.net",
+      "sessions": 1
+    },
+    {
+      "source": "sunblog.asia",
+      "sessions": 1
+    }
+  ],
+  "sessionHistory": [
+    {
+      "month": "2026-08",
+      "label": "August",
+      "sessions": 126,
+      "users": 115,
+      "newUsers": 112,
+      "avgSessionDuration": 58.29336023015873,
+      "busiestDate": "2026-08-30",
+      "busiestSessions": 20,
+      "pageViews": {
+        "/": 346,
+        "/services": 20,
+        "/who-we-are": 18,
+        "/portfolio": 12,
+        "/why-clubhaus": 15,
+        "/contact": 11,
+        "/team": 6,
+        "/projects": 10,
+        "/our-heart": 5,
+        "/projects/OOXhZty5Ueo1QMC9kmD9I": 5,
+        "/projects/6NKJUsymfStxNtgX1Z5837": 3,
+        "/projects/w5bsL53pxKFai30CQmXAl": 4,
+        "/projects/277qelKDeJSKSlwwIAzUz7": 3,
+        "/projects/6ewjcux7rRgS2LUYEIXS1O": 2,
+        "/projects/1VwPTDJm18XzEpNcu0MOnz": 1,
+        "/projects/1ZmOoZGUuZps8xYHs95Peh": 1,
+        "/projects/1dPUCr9sz1VSwX64msaksd": 1,
+        "/projects/1o3xYfzurprjuWkWAdJG7g": 1,
+        "/projects/4lIpDJP3RyeScQ7kC7Pvy4": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-07",
+      "label": "July",
+      "sessions": 118,
+      "users": 111,
+      "newUsers": 107,
+      "avgSessionDuration": 25.69413511864407,
+      "busiestDate": "2026-07-12",
+      "busiestSessions": 15,
+      "pageViews": {
+        "/": 341,
+        "/who-we-are": 29,
+        "/services": 21,
+        "/portfolio": 18,
+        "/team": 15,
+        "/projects": 14,
+        "/our-heart": 12,
+        "/why-clubhaus": 12,
+        "/contact": 11,
+        "/projects/6NKJUsymfStxNtgX1Z5837": 7,
+        "/projects/1dPUCr9sz1VSwX64msaksd": 5,
+        "/projects/1ZmOoZGUuZps8xYHs95Peh": 4,
+        "/projects/4lIpDJP3RyeScQ7kC7Pvy4": 4,
+        "/projects/w5bsL53pxKFai30CQmXAl": 4,
+        "/projects/1dpucr9sz1vswx64msaksd": 2,
+        "/projects/1zmoozguuzps8xyhs95peh": 2,
+        "/projects/4lipdjp3ryescq7kc7pvy4": 2,
+        "/projects/6nkjusymfstxntgx1z5837": 2,
+        "/projects/OOXhZty5Ueo1QMC9kmD9I": 2,
+        "/company": 1,
+        "/leadership": 1,
+        "/pricing": 1,
+        "/projects/6ewjcux7rRgS2LUYEIXS1O": 1,
+        "/security": 1,
+        "/solutions": 1,
+        "/trust": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-06",
+      "label": "June",
+      "sessions": 139,
+      "users": 115,
+      "newUsers": 110,
+      "avgSessionDuration": 39.77982415107914,
+      "busiestDate": "2026-06-29",
+      "busiestSessions": 19,
+      "pageViews": {
+        "/": 333,
+        "/team": 23,
+        "/portfolio": 13,
+        "/who-we-are": 13,
+        "/our-heart": 12,
+        "/why-clubhaus": 10,
+        "/services": 9,
+        "/contact": 7,
+        "/projects": 7,
+        "/projects/1ZmOoZGUuZps8xYHs95Peh": 6,
+        "/projects/6NKJUsymfStxNtgX1Z5837": 5,
+        "/projects/6ewjcux7rRgS2LUYEIXS1O": 5,
+        "/projects/w5bsL53pxKFai30CQmXAl": 5,
+        "/projects/1VwPTDJm18XzEpNcu0MOnz": 4,
+        "/projects/4lIpDJP3RyeScQ7kC7Pvy4": 4,
+        "/projects/OOXhZty5Ueo1QMC9kmD9I": 4,
+        "/projects/1dPUCr9sz1VSwX64msaksd": 3,
+        "/projects/1o3xYfzurprjuWkWAdJG7g": 3,
+        "/projects/277qelKDeJSKSlwwIAzUz7": 3,
+        "/about": 2,
+        "/investor-relations": 2,
+        "/leadership": 2,
+        "/partners": 2,
+        "/solutions": 2,
+        "/about-us": 1,
+        "/customers": 1,
+        "/investors": 1,
+        "/our-company": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-05",
+      "label": "May",
+      "sessions": 79,
+      "users": 73,
+      "newUsers": 70,
+      "avgSessionDuration": 35.78401874683544,
+      "busiestDate": "2026-05-15",
+      "busiestSessions": 10,
+      "pageViews": {
+        "/": 364,
+        "/who-we-are": 22,
+        "/services": 18,
+        "/portfolio": 15,
+        "/why-clubhaus": 14,
+        "/team": 12,
+        "/contact": 10,
+        "/our-heart": 10,
+        "/projects": 7,
+        "/projects/1ZmOoZGUuZps8xYHs95Peh": 4,
+        "/projects/4lIpDJP3RyeScQ7kC7Pvy4": 4,
+        "/projects/6NKJUsymfStxNtgX1Z5837": 4,
+        "/projects/1dPUCr9sz1VSwX64msaksd": 3,
+        "/projects/OOXhZty5Ueo1QMC9kmD9I": 3,
+        "/projects/w5bsL53pxKFai30CQmXAl": 2,
+        "/projects/1o3xYfzurprjuWkWAdJG7g": 1,
+        "/projects/277qelKDeJSKSlwwIAzUz7": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-04",
+      "label": "April",
+      "sessions": 160,
+      "users": 150,
+      "newUsers": 184,
+      "avgSessionDuration": 26.433644681249994,
+      "busiestDate": "2026-04-21",
+      "busiestSessions": 14,
+      "pageViews": {
+        "/": 555,
+        "/portfolio": 30,
+        "/who-we-are": 30,
+        "/team": 19,
+        "/services": 17,
+        "/projects": 16,
+        "/contact": 15,
+        "/our-heart": 13,
+        "/why-clubhaus": 12,
+        "/projects/1dPUCr9sz1VSwX64msaksd": 9,
+        "/projects/w5bsL53pxKFai30CQmXAl": 8,
+        "/projects/1ZmOoZGUuZps8xYHs95Peh": 5,
+        "/projects/6NKJUsymfStxNtgX1Z5837": 5,
+        "/projects/277qelKDeJSKSlwwIAzUz7": 3,
+        "/projects/4lIpDJP3RyeScQ7kC7Pvy4": 3,
+        "/projects/OOXhZty5Ueo1QMC9kmD9I": 3,
+        "/about": 1,
+        "/contact-us": 1,
+        "/projects/1VwPTDJm18XzEpNcu0MOnz": 1,
+        "/projects/6ewjcux7rRgS2LUYEIXS1O": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-03",
+      "label": "March",
+      "sessions": 178,
+      "users": 167,
+      "newUsers": 190,
+      "avgSessionDuration": 61.610392612359554,
+      "busiestDate": "2026-03-04",
+      "busiestSessions": 19,
+      "pageViews": {
+        "/": 691,
+        "/portfolio": 43,
+        "/why-clubhaus": 30,
+        "/who-we-are": 28,
+        "/services": 23,
+        "/team": 23,
+        "/contact": 22,
+        "/projects": 19,
+        "/our-heart": 16,
+        "/projects/6NKJUsymfStxNtgX1Z5837": 7,
+        "/projects/1dPUCr9sz1VSwX64msaksd": 6,
+        "/projects/4lIpDJP3RyeScQ7kC7Pvy4": 6,
+        "/projects/1ZmOoZGUuZps8xYHs95Peh": 5,
+        "/projects/1VwPTDJm18XzEpNcu0MOnz": 3,
+        "/projects/277qelKDeJSKSlwwIAzUz7": 3,
+        "/projects/w5bsL53pxKFai30CQmXAl": 3,
+        "/projects/6ewjcux7rRgS2LUYEIXS1O": 2,
+        "/projects/OOXhZty5Ueo1QMC9kmD9I": 2,
+        "/projects/1o3xYfzurprjuWkWAdJG7g": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-02",
+      "label": "February",
+      "sessions": 181,
+      "users": 176,
+      "newUsers": 199,
+      "avgSessionDuration": 28.41533748066299,
+      "busiestDate": "2026-02-25",
+      "busiestSessions": 21,
+      "pageViews": {
+        "/": 516,
+        "/who-we-are": 38,
+        "/services": 31,
+        "/why-clubhaus": 29,
+        "/portfolio": 27,
+        "/contact": 16,
+        "/team": 16,
+        "/projects/1dPUCr9sz1VSwX64msaksd": 15,
+        "/our-heart": 14,
+        "/projects": 13,
+        "/projects/6NKJUsymfStxNtgX1Z5837": 12,
+        "/projects/w5bsL53pxKFai30CQmXAl": 11,
+        "/projects/1ZmOoZGUuZps8xYHs95Peh": 5,
+        "/projects/277qelKDeJSKSlwwIAzUz7": 5,
+        "/projects/6ewjcux7rRgS2LUYEIXS1O": 4,
+        "/projects/OOXhZty5Ueo1QMC9kmD9I": 3,
+        "/projects/1VwPTDJm18XzEpNcu0MOnz": 2
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-01",
+      "label": "January",
+      "sessions": 254,
+      "users": 208,
+      "newUsers": 254,
+      "avgSessionDuration": 275.7415962795275,
+      "busiestDate": "2026-01-17",
+      "busiestSessions": 26,
+      "pageViews": {
+        "/": 1452,
+        "/projects": 342,
+        "/portfolio": 152,
+        "/team": 69,
+        "/who-we-are": 58,
+        "/our-heart": 48,
+        "/contact": 47,
+        "/why-clubhaus": 34,
+        "/services": 29,
+        "/projects/6NKJUsymfStxNtgX1Z5837": 25,
+        "/projects/4lIpDJP3RyeScQ7kC7Pvy4": 17,
+        "/projects/1ZmOoZGUuZps8xYHs95Peh": 16,
+        "/mobile-projects": 14,
+        "/projects/277qelKDeJSKSlwwIAzUz7": 13,
+        "/projects/w5bsL53pxKFai30CQmXAl": 13,
+        "/projects/1dPUCr9sz1VSwX64msaksd": 12,
+        "/projects/OOXhZty5Ueo1QMC9kmD9I": 11,
+        "/projects/1VwPTDJm18XzEpNcu0MOnz": 7,
+        "/projects/1lTclVEl0ziqRLfa0KHeXS": 7,
+        "/projects/6ewjcux7rRgS2LUYEIXS1O": 7,
+        "/projects/1o3xYfzurprjuWkWAdJG7g": 3,
+        "/BRANDING": 1,
+        "/CONTENT": 1,
+        "/STRATEGY": 1,
+        "/WEB": 1,
+        "/projects/1v7C6SabDbMgVc5pnFwNyp": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2025-12",
+      "label": "December",
+      "sessions": 133,
+      "users": 126,
+      "newUsers": 152,
+      "avgSessionDuration": 102.56253518796994,
+      "busiestDate": "2025-12-22",
+      "busiestSessions": 14,
+      "pageViews": {
+        "/": 598,
+        "/portfolio": 51,
+        "/who-we-are": 30,
+        "/services": 22,
+        "/contact": 20,
+        "/team": 20,
+        "/why-clubhaus": 20,
+        "/our-heart": 16,
+        "/projects/6NKJUsymfStxNtgX1Z5837": 12,
+        "/projects": 10,
+        "/projects/w5bsL53pxKFai30CQmXAl": 10,
+        "/projects/1dPUCr9sz1VSwX64msaksd": 6,
+        "/projects/277qelKDeJSKSlwwIAzUz7": 5,
+        "/projects/1ZmOoZGUuZps8xYHs95Peh": 4,
+        "/projects/1VwPTDJm18XzEpNcu0MOnz": 2,
+        "/projects/6ewjcux7rRgS2LUYEIXS1O": 2,
+        "/projects/OOXhZty5Ueo1QMC9kmD9I": 2
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2025-11",
+      "label": "November",
+      "sessions": 113,
+      "users": 107,
+      "newUsers": 104,
+      "avgSessionDuration": 87.65293462831859,
+      "busiestDate": "2025-11-21",
+      "busiestSessions": 10,
+      "pageViews": {
+        "/": 360,
+        "/portfolio": 23,
+        "/who-we-are": 17,
+        "/why-clubhaus": 14,
+        "/contact": 9,
+        "/projects/OOXhZty5Ueo1QMC9kmD9I": 9,
+        "/services": 9,
+        "/projects/1ZmOoZGUuZps8xYHs95Peh": 8,
+        "/projects/6NKJUsymfStxNtgX1Z5837": 6,
+        "/projects": 5,
+        "/projects/1dPUCr9sz1VSwX64msaksd": 5,
+        "/team": 5,
+        "/our-heart": 4,
+        "/projects/w5bsL53pxKFai30CQmXAl": 3,
+        "/projects/277qelKDeJSKSlwwIAzUz7": 2,
+        "/projects/1v7C6SabDbMgVc5pnFwNyp": 1,
+        "/uCxbXJfwEIELPua": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2025-10",
+      "label": "October",
+      "sessions": 87,
+      "users": 84,
+      "newUsers": 82,
+      "avgSessionDuration": 28.71212310344828,
+      "busiestDate": "2025-10-31",
+      "busiestSessions": 19,
+      "pageViews": {
+        "/": 258,
+        "/portfolio": 15,
+        "/team": 14,
+        "/who-we-are": 14,
+        "/contact": 12,
+        "/services": 11,
+        "/why-clubhaus": 11,
+        "/projects/277qelKDeJSKSlwwIAzUz7": 8,
+        "/projects": 7,
+        "/our-heart": 5,
+        "/projects/1VwPTDJm18XzEpNcu0MOnz": 3,
+        "/projects/6NKJUsymfStxNtgX1Z5837": 3,
+        "/projects/OOXhZty5Ueo1QMC9kmD9I": 3,
+        "/projects/w5bsL53pxKFai30CQmXAl": 3,
+        "/projects/1ZmOoZGUuZps8xYHs95Peh": 2,
+        "/projects/1dPUCr9sz1VSwX64msaksd": 2,
+        "/partners": 1,
+        "/projects/1v7C6SabDbMgVc5pnFwNyp": 1,
+        "/projects/6ewjcux7rRgS2LUYEIXS1O": 1,
+        "/solutions": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2025-09",
+      "label": "September",
+      "sessions": 78,
+      "users": 66,
+      "newUsers": 64,
+      "avgSessionDuration": 105.3776828076923,
+      "busiestDate": "2025-09-01",
+      "busiestSessions": 11,
+      "pageViews": {
+        "/": 400,
+        "/who-we-are": 33,
+        "/services": 28,
+        "/portfolio": 26,
+        "/team": 26,
+        "/contact": 25,
+        "/why-clubhaus": 22,
+        "/our-heart": 18,
+        "/projects": 7,
+        "/projects/6NKJUsymfStxNtgX1Z5837": 5,
+        "/projects/1dPUCr9sz1VSwX64msaksd": 3,
+        "/projects/277qelKDeJSKSlwwIAzUz7": 3,
+        "/projects/6ewjcux7rRgS2LUYEIXS1O": 3,
+        "/projects/1ZmOoZGUuZps8xYHs95Peh": 2,
+        "/projects/OOXhZty5Ueo1QMC9kmD9I": 2,
+        "/projects/w5bsL53pxKFai30CQmXAl": 2,
+        "/contact-us": 1,
+        "/projects/1VwPTDJm18XzEpNcu0MOnz": 1
+      },
+      "artistViews": {}
+    }
+  ]
+}

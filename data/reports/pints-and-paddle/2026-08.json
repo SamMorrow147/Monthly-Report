@@ -1,0 +1,2060 @@
+{
+  "schemaVersion": 3,
+  "slug": "pints-and-paddle",
+  "propertyId": "346788360",
+  "clientName": "Pints and Paddle",
+  "highlightColor": "green",
+  "month": "2026-08",
+  "monthLabel": "August 2026",
+  "generatedAt": "2026-09-01T14:29:53.662Z",
+  "range": {
+    "startDate": "2026-08-01",
+    "endDate": "2026-08-31",
+    "prevStartDate": "2026-07-01",
+    "prevEndDate": "2026-07-31"
+  },
+  "shareToken": "EuyMgqhdyOyFnZBsf8lJHg",
+  "summary": {
+    "sessions": 20562,
+    "prevSessions": 16400,
+    "users": 14170,
+    "prevUsers": 10359,
+    "newUsers": 12989,
+    "prevNewUsers": 9236,
+    "pageViews": 34346,
+    "prevPageViews": 29162,
+    "avgSessionDuration": 181.72558550471743,
+    "prevAvgSessionDuration": 215.7772977437805,
+    "bounceRate": 0.4988327983659177,
+    "prevBounceRate": 0.4245121951219512,
+    "engagementRate": 0.5011672016340822,
+    "prevEngagementRate": 0.5754878048780487,
+    "conversions": 0,
+    "prevConversions": 0,
+    "sessionsChange": 25.4,
+    "usersChange": 36.8,
+    "newUsersChange": 40.6,
+    "pageViewsChange": 17.8,
+    "avgSessionDurationChange": -15.8,
+    "bounceRateChange": 17.5,
+    "engagementRateChange": -12.9,
+    "conversionsChange": 0
+  },
+  "daily": [
+    {
+      "date": "2026-08-01",
+      "sessions": 632,
+      "users": 520,
+      "pageViews": 1095
+    },
+    {
+      "date": "2026-08-02",
+      "sessions": 518,
+      "users": 445,
+      "pageViews": 886
+    },
+    {
+      "date": "2026-08-03",
+      "sessions": 654,
+      "users": 546,
+      "pageViews": 1183
+    },
+    {
+      "date": "2026-08-04",
+      "sessions": 619,
+      "users": 513,
+      "pageViews": 1195
+    },
+    {
+      "date": "2026-08-05",
+      "sessions": 530,
+      "users": 457,
+      "pageViews": 954
+    },
+    {
+      "date": "2026-08-06",
+      "sessions": 475,
+      "users": 396,
+      "pageViews": 837
+    },
+    {
+      "date": "2026-08-07",
+      "sessions": 583,
+      "users": 454,
+      "pageViews": 1049
+    },
+    {
+      "date": "2026-08-08",
+      "sessions": 730,
+      "users": 548,
+      "pageViews": 1343
+    },
+    {
+      "date": "2026-08-09",
+      "sessions": 391,
+      "users": 328,
+      "pageViews": 713
+    },
+    {
+      "date": "2026-08-10",
+      "sessions": 365,
+      "users": 289,
+      "pageViews": 628
+    },
+    {
+      "date": "2026-08-11",
+      "sessions": 355,
+      "users": 292,
+      "pageViews": 648
+    },
+    {
+      "date": "2026-08-12",
+      "sessions": 598,
+      "users": 501,
+      "pageViews": 1048
+    },
+    {
+      "date": "2026-08-13",
+      "sessions": 630,
+      "users": 525,
+      "pageViews": 1132
+    },
+    {
+      "date": "2026-08-14",
+      "sessions": 575,
+      "users": 508,
+      "pageViews": 947
+    },
+    {
+      "date": "2026-08-15",
+      "sessions": 639,
+      "users": 520,
+      "pageViews": 1124
+    },
+    {
+      "date": "2026-08-16",
+      "sessions": 455,
+      "users": 387,
+      "pageViews": 825
+    },
+    {
+      "date": "2026-08-17",
+      "sessions": 560,
+      "users": 464,
+      "pageViews": 1005
+    },
+    {
+      "date": "2026-08-18",
+      "sessions": 509,
+      "users": 431,
+      "pageViews": 883
+    },
+    {
+      "date": "2026-08-19",
+      "sessions": 496,
+      "users": 425,
+      "pageViews": 865
+    },
+    {
+      "date": "2026-08-20",
+      "sessions": 550,
+      "users": 448,
+      "pageViews": 939
+    },
+    {
+      "date": "2026-08-21",
+      "sessions": 617,
+      "users": 513,
+      "pageViews": 1088
+    },
+    {
+      "date": "2026-08-22",
+      "sessions": 720,
+      "users": 563,
+      "pageViews": 1337
+    },
+    {
+      "date": "2026-08-23",
+      "sessions": 510,
+      "users": 420,
+      "pageViews": 818
+    },
+    {
+      "date": "2026-08-24",
+      "sessions": 518,
+      "users": 440,
+      "pageViews": 909
+    },
+    {
+      "date": "2026-08-25",
+      "sessions": 564,
+      "users": 474,
+      "pageViews": 991
+    },
+    {
+      "date": "2026-08-26",
+      "sessions": 630,
+      "users": 530,
+      "pageViews": 1046
+    },
+    {
+      "date": "2026-08-27",
+      "sessions": 535,
+      "users": 457,
+      "pageViews": 903
+    },
+    {
+      "date": "2026-08-28",
+      "sessions": 507,
+      "users": 412,
+      "pageViews": 875
+    },
+    {
+      "date": "2026-08-29",
+      "sessions": 599,
+      "users": 486,
+      "pageViews": 1046
+    },
+    {
+      "date": "2026-08-30",
+      "sessions": 535,
+      "users": 463,
+      "pageViews": 850
+    }
+  ],
+  "topPages": [
+    {
+      "path": "/",
+      "title": "Pints & Paddle | Taproom, Kitchen, Pickleball",
+      "views": 13405,
+      "sessions": 12162,
+      "avgDuration": 150.96077740947212
+    },
+    {
+      "path": "/join-a-league/",
+      "title": "Join A League - Pints & Paddle",
+      "views": 2119,
+      "sessions": 1580,
+      "avgDuration": 242.77637301329113
+    },
+    {
+      "path": "/open-play/",
+      "title": "Open Play - Pints & Paddle",
+      "views": 1822,
+      "sessions": 1533,
+      "avgDuration": 130.67667696803653
+    },
+    {
+      "path": "/pickleball/",
+      "title": "Pickleball - Pints & Paddle",
+      "views": 1536,
+      "sessions": 1389,
+      "avgDuration": 42.14444316342693
+    },
+    {
+      "path": "/public-events-calendar/",
+      "title": "Events from December 8, 2024 – January 5, 2025 – Pints & Paddle",
+      "views": 1146,
+      "sessions": 1052,
+      "avgDuration": 73.8172824553232
+    },
+    {
+      "path": "/slam-and-jam/",
+      "title": "Summer Slam & Jam '26 - Pints & Paddle",
+      "views": 827,
+      "sessions": 730,
+      "avgDuration": 101.23527648630137
+    },
+    {
+      "path": "/whats-on-tap/",
+      "title": "What's on Tap - Pints & Paddle",
+      "views": 590,
+      "sessions": 532,
+      "avgDuration": 149.71755855639097
+    },
+    {
+      "path": "/pickleball-tournaments/",
+      "title": "Tournaments - Pints & Paddle",
+      "views": 573,
+      "sessions": 485,
+      "avgDuration": 59.87614681443299
+    },
+    {
+      "path": "/happy-hour/",
+      "title": "Happy Hour - Pints & Paddle",
+      "views": 549,
+      "sessions": 474,
+      "avgDuration": 101.25269893881857
+    },
+    {
+      "path": "/music/",
+      "title": "Live Music - Pints & Paddle",
+      "views": 486,
+      "sessions": 442,
+      "avgDuration": 95.45957927601809
+    },
+    {
+      "path": "/rates-2/",
+      "title": "Rates - Pints & Paddle",
+      "views": 424,
+      "sessions": 398,
+      "avgDuration": 187.61138328894475
+    },
+    {
+      "path": "/skill-levels/",
+      "title": "Skill Levels - Pints & Paddle",
+      "views": 391,
+      "sessions": 354,
+      "avgDuration": 49.51624463559322
+    },
+    {
+      "path": "/our-menu/",
+      "title": "Our Menu - Pints & Paddle",
+      "views": 354,
+      "sessions": 346,
+      "avgDuration": 317.0826235722543
+    },
+    {
+      "path": "/event/slam-jam-26-gb-leighton/",
+      "title": "Slam & Jam 26: GB Leighton - Pints & Paddle",
+      "views": 320,
+      "sessions": 303,
+      "avgDuration": 143.30667594719472
+    },
+    {
+      "path": "/private-events/",
+      "title": "Private Events - Pints & Paddle",
+      "views": 267,
+      "sessions": 237,
+      "avgDuration": 160.77923287341773
+    },
+    {
+      "path": "/kitchen/",
+      "title": "Kitchen - Pints & Paddle",
+      "views": 265,
+      "sessions": 255,
+      "avgDuration": 118.30763372549019
+    },
+    {
+      "path": "/contact/",
+      "title": "Contact - Pints & Paddle",
+      "views": 261,
+      "sessions": 247,
+      "avgDuration": 92.90394949797572
+    },
+    {
+      "path": "/taproom/",
+      "title": "Taproom - Pints & Paddle",
+      "views": 258,
+      "sessions": 226,
+      "avgDuration": 73.62090946460178
+    },
+    {
+      "path": "/lessons/",
+      "title": "Lessons - Pints & Paddle",
+      "views": 235,
+      "sessions": 193,
+      "avgDuration": 138.55545877720206
+    },
+    {
+      "path": "/our-courts/",
+      "title": "Our Courts - Pints & Paddle",
+      "views": 170,
+      "sessions": 174,
+      "avgDuration": 122.39960720689655
+    }
+  ],
+  "channels": [
+    {
+      "channel": "Organic Search",
+      "sessions": 6943,
+      "users": 4383,
+      "percentage": 42
+    },
+    {
+      "channel": "Direct",
+      "sessions": 4535,
+      "users": 2820,
+      "percentage": 27
+    },
+    {
+      "channel": "Paid Search",
+      "sessions": 3870,
+      "users": 2573,
+      "percentage": 23
+    },
+    {
+      "channel": "Referral",
+      "sessions": 565,
+      "users": 436,
+      "percentage": 3
+    },
+    {
+      "channel": "Organic Social",
+      "sessions": 275,
+      "users": 247,
+      "percentage": 2
+    },
+    {
+      "channel": "Paid Social",
+      "sessions": 157,
+      "users": 157,
+      "percentage": 1
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": 86,
+      "users": 86,
+      "percentage": 1
+    },
+    {
+      "channel": "AI Assistant",
+      "sessions": 45,
+      "users": 43,
+      "percentage": 0
+    },
+    {
+      "channel": "Cross-network",
+      "sessions": 33,
+      "users": 29,
+      "percentage": 0
+    }
+  ],
+  "devices": [
+    {
+      "device": "mobile",
+      "sessions": 12351,
+      "percentage": 74
+    },
+    {
+      "device": "desktop",
+      "sessions": 4178,
+      "percentage": 25
+    },
+    {
+      "device": "tablet",
+      "sessions": 141,
+      "percentage": 1
+    },
+    {
+      "device": "smart tv",
+      "sessions": 1,
+      "percentage": 0
+    }
+  ],
+  "countries": [
+    {
+      "country": "United States",
+      "sessions": 15864,
+      "percentage": 97
+    },
+    {
+      "country": "Singapore",
+      "sessions": 332,
+      "percentage": 2
+    },
+    {
+      "country": "Canada",
+      "sessions": 60,
+      "percentage": 0
+    },
+    {
+      "country": "China",
+      "sessions": 29,
+      "percentage": 0
+    },
+    {
+      "country": "Germany",
+      "sessions": 11,
+      "percentage": 0
+    },
+    {
+      "country": "India",
+      "sessions": 11,
+      "percentage": 0
+    },
+    {
+      "country": "France",
+      "sessions": 10,
+      "percentage": 0
+    },
+    {
+      "country": "United Kingdom",
+      "sessions": 10,
+      "percentage": 0
+    },
+    {
+      "country": "(not set)",
+      "sessions": 9,
+      "percentage": 0
+    },
+    {
+      "country": "Netherlands",
+      "sessions": 4,
+      "percentage": 0
+    }
+  ],
+  "cities": [
+    {
+      "city": "Minneapolis",
+      "country": "United States",
+      "sessions": 4198
+    },
+    {
+      "city": "Chicago",
+      "country": "United States",
+      "sessions": 3620
+    },
+    {
+      "city": "Maple Grove",
+      "country": "United States",
+      "sessions": 1786
+    },
+    {
+      "city": "Brooklyn Park",
+      "country": "United States",
+      "sessions": 363
+    },
+    {
+      "city": "(not set)",
+      "country": "United States",
+      "sessions": 347
+    },
+    {
+      "city": "Singapore",
+      "country": "Singapore",
+      "sessions": 328
+    },
+    {
+      "city": "Plymouth",
+      "country": "United States",
+      "sessions": 319
+    },
+    {
+      "city": "Waukesha",
+      "country": "United States",
+      "sessions": 308
+    },
+    {
+      "city": "Saint Paul",
+      "country": "United States",
+      "sessions": 206
+    },
+    {
+      "city": "Beloit",
+      "country": "United States",
+      "sessions": 196
+    }
+  ],
+  "regions": [
+    {
+      "region": "Minnesota",
+      "country": "United States",
+      "sessions": 9811
+    },
+    {
+      "region": "Illinois",
+      "country": "United States",
+      "sessions": 3760
+    },
+    {
+      "region": "Wisconsin",
+      "country": "United States",
+      "sessions": 783
+    },
+    {
+      "region": "Texas",
+      "country": "United States",
+      "sessions": 341
+    },
+    {
+      "region": "California",
+      "country": "United States",
+      "sessions": 188
+    },
+    {
+      "region": "Colorado",
+      "country": "United States",
+      "sessions": 136
+    },
+    {
+      "region": "Indiana",
+      "country": "United States",
+      "sessions": 127
+    },
+    {
+      "region": "New York",
+      "country": "United States",
+      "sessions": 111
+    },
+    {
+      "region": "Iowa",
+      "country": "United States",
+      "sessions": 103
+    },
+    {
+      "region": "Virginia",
+      "country": "United States",
+      "sessions": 89
+    },
+    {
+      "region": "Alabama",
+      "country": "United States",
+      "sessions": 86
+    },
+    {
+      "region": "Florida",
+      "country": "United States",
+      "sessions": 84
+    },
+    {
+      "region": "Arkansas",
+      "country": "United States",
+      "sessions": 79
+    },
+    {
+      "region": "Washington",
+      "country": "United States",
+      "sessions": 73
+    },
+    {
+      "region": "Missouri",
+      "country": "United States",
+      "sessions": 72
+    },
+    {
+      "region": "Arizona",
+      "country": "United States",
+      "sessions": 66
+    },
+    {
+      "region": "Georgia",
+      "country": "United States",
+      "sessions": 60
+    },
+    {
+      "region": "Kansas",
+      "country": "United States",
+      "sessions": 46
+    },
+    {
+      "region": "Massachusetts",
+      "country": "United States",
+      "sessions": 41
+    },
+    {
+      "region": "Michigan",
+      "country": "United States",
+      "sessions": 39
+    },
+    {
+      "region": "Nebraska",
+      "country": "United States",
+      "sessions": 39
+    },
+    {
+      "region": "Oregon",
+      "country": "United States",
+      "sessions": 35
+    },
+    {
+      "region": "Oklahoma",
+      "country": "United States",
+      "sessions": 34
+    },
+    {
+      "region": "Ohio",
+      "country": "United States",
+      "sessions": 32
+    },
+    {
+      "region": "Tennessee",
+      "country": "United States",
+      "sessions": 31
+    },
+    {
+      "region": "Mississippi",
+      "country": "United States",
+      "sessions": 28
+    },
+    {
+      "region": "Quebec",
+      "country": "Canada",
+      "sessions": 26
+    },
+    {
+      "region": "Louisiana",
+      "country": "United States",
+      "sessions": 25
+    },
+    {
+      "region": "North Dakota",
+      "country": "United States",
+      "sessions": 21
+    },
+    {
+      "region": "South Dakota",
+      "country": "United States",
+      "sessions": 20
+    },
+    {
+      "region": "Ontario",
+      "country": "Canada",
+      "sessions": 18
+    },
+    {
+      "region": "Nevada",
+      "country": "United States",
+      "sessions": 17
+    },
+    {
+      "region": "North Carolina",
+      "country": "United States",
+      "sessions": 14
+    },
+    {
+      "region": "Kentucky",
+      "country": "United States",
+      "sessions": 13
+    },
+    {
+      "region": "Wyoming",
+      "country": "United States",
+      "sessions": 13
+    },
+    {
+      "region": "Idaho",
+      "country": "United States",
+      "sessions": 12
+    },
+    {
+      "region": "Montana",
+      "country": "United States",
+      "sessions": 11
+    },
+    {
+      "region": "New Mexico",
+      "country": "United States",
+      "sessions": 11
+    },
+    {
+      "region": "Pennsylvania",
+      "country": "United States",
+      "sessions": 11
+    },
+    {
+      "region": "Utah",
+      "country": "United States",
+      "sessions": 11
+    },
+    {
+      "region": "England",
+      "country": "United Kingdom",
+      "sessions": 10
+    },
+    {
+      "region": "Manitoba",
+      "country": "Canada",
+      "sessions": 8
+    },
+    {
+      "region": "Vermont",
+      "country": "United States",
+      "sessions": 8
+    },
+    {
+      "region": "Fujian",
+      "country": "China",
+      "sessions": 7
+    },
+    {
+      "region": "Ile-de-France",
+      "country": "France",
+      "sessions": 7
+    },
+    {
+      "region": "Maryland",
+      "country": "United States",
+      "sessions": 7
+    },
+    {
+      "region": "South Carolina",
+      "country": "United States",
+      "sessions": 7
+    },
+    {
+      "region": "Connecticut",
+      "country": "United States",
+      "sessions": 6
+    },
+    {
+      "region": "British Columbia",
+      "country": "Canada",
+      "sessions": 4
+    },
+    {
+      "region": "New Jersey",
+      "country": "United States",
+      "sessions": 4
+    },
+    {
+      "region": "Norrbotten County",
+      "country": "Sweden",
+      "sessions": 4
+    },
+    {
+      "region": "North Holland",
+      "country": "Netherlands",
+      "sessions": 4
+    },
+    {
+      "region": "West Virginia",
+      "country": "United States",
+      "sessions": 4
+    },
+    {
+      "region": "Alberta",
+      "country": "Canada",
+      "sessions": 3
+    },
+    {
+      "region": "Delaware",
+      "country": "United States",
+      "sessions": 3
+    },
+    {
+      "region": "Shandong",
+      "country": "China",
+      "sessions": 3
+    },
+    {
+      "region": "Shanghai",
+      "country": "China",
+      "sessions": 3
+    },
+    {
+      "region": "Telangana",
+      "country": "India",
+      "sessions": 3
+    },
+    {
+      "region": "Alaska",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "District of Columbia",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "Hawaii",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "Hessen",
+      "country": "Germany",
+      "sessions": 2
+    },
+    {
+      "region": "Jiangsu",
+      "country": "China",
+      "sessions": 2
+    },
+    {
+      "region": "Karnataka",
+      "country": "India",
+      "sessions": 2
+    },
+    {
+      "region": "Maine",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "Provence-Alpes-Cote d'Azur",
+      "country": "France",
+      "sessions": 2
+    },
+    {
+      "region": "Rivers",
+      "country": "Nigeria",
+      "sessions": 2
+    },
+    {
+      "region": "Sindh",
+      "country": "Pakistan",
+      "sessions": 2
+    },
+    {
+      "region": "Tamil Nadu",
+      "country": "India",
+      "sessions": 2
+    },
+    {
+      "region": "Tianjin",
+      "country": "China",
+      "sessions": 2
+    },
+    {
+      "region": "Victoria",
+      "country": "Australia",
+      "sessions": 2
+    },
+    {
+      "region": "An Giang",
+      "country": "Vietnam",
+      "sessions": 1
+    },
+    {
+      "region": "Anhui",
+      "country": "China",
+      "sessions": 1
+    },
+    {
+      "region": "Attica",
+      "country": "Greece",
+      "sessions": 1
+    },
+    {
+      "region": "Bagmati Province",
+      "country": "Nepal",
+      "sessions": 1
+    },
+    {
+      "region": "Baku",
+      "country": "Azerbaijan",
+      "sessions": 1
+    },
+    {
+      "region": "Bavaria",
+      "country": "Germany",
+      "sessions": 1
+    },
+    {
+      "region": "Beijing",
+      "country": "China",
+      "sessions": 1
+    },
+    {
+      "region": "Berlin",
+      "country": "Germany",
+      "sessions": 1
+    },
+    {
+      "region": "Capital Region of Denmark",
+      "country": "Denmark",
+      "sessions": 1
+    },
+    {
+      "region": "Central Department",
+      "country": "Paraguay",
+      "sessions": 1
+    },
+    {
+      "region": "Chongqing",
+      "country": "China",
+      "sessions": 1
+    },
+    {
+      "region": "County Dublin",
+      "country": "Ireland",
+      "sessions": 1
+    },
+    {
+      "region": "Davao Region",
+      "country": "Philippines",
+      "sessions": 1
+    },
+    {
+      "region": "George Town",
+      "country": "Cayman Islands",
+      "sessions": 1
+    },
+    {
+      "region": "Guangdong Province",
+      "country": "China",
+      "sessions": 1
+    },
+    {
+      "region": "Guizhou",
+      "country": "China",
+      "sessions": 1
+    },
+    {
+      "region": "Hauts-de-France",
+      "country": "France",
+      "sessions": 1
+    },
+    {
+      "region": "Hunan",
+      "country": "China",
+      "sessions": 1
+    }
+  ],
+  "referrers": [
+    {
+      "source": "google",
+      "sessions": 10094
+    },
+    {
+      "source": "(direct)",
+      "sessions": 4535
+    },
+    {
+      "source": "bing",
+      "sessions": 536
+    },
+    {
+      "source": "connect.dragnfly.com",
+      "sessions": 373
+    },
+    {
+      "source": "fb",
+      "sessions": 131
+    },
+    {
+      "source": "yahoo",
+      "sessions": 129
+    },
+    {
+      "source": "l.instagram.com",
+      "sessions": 115
+    },
+    {
+      "source": "duckduckgo",
+      "sessions": 97
+    },
+    {
+      "source": "(not set)",
+      "sessions": 85
+    },
+    {
+      "source": "facebook.com",
+      "sessions": 63
+    }
+  ],
+  "sessionHistory": [
+    {
+      "month": "2026-08",
+      "label": "August",
+      "sessions": 20562,
+      "users": 14170,
+      "newUsers": 12989,
+      "avgSessionDuration": 181.72558550471743,
+      "busiestDate": "2026-08-08",
+      "busiestSessions": 730,
+      "pageViews": {
+        "/": 13405,
+        "/join-a-league": 2119,
+        "/open-play": 1822,
+        "/pickleball": 1536,
+        "/public-events-calendar": 1146,
+        "/slam-and-jam": 827,
+        "/whats-on-tap": 590,
+        "/pickleball-tournaments": 573,
+        "/happy-hour": 549,
+        "/music": 486,
+        "/rates-2": 424,
+        "/skill-levels": 391,
+        "/our-menu": 354,
+        "/event/slam-jam-26-gb-leighton": 320,
+        "/private-events": 267,
+        "/kitchen": 265,
+        "/contact": 261,
+        "/taproom": 258,
+        "/lessons": 235,
+        "/our-courts": 170
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-07",
+      "label": "July",
+      "sessions": 16400,
+      "users": 10359,
+      "newUsers": 9236,
+      "avgSessionDuration": 215.7772977437805,
+      "busiestDate": "2026-07-20",
+      "busiestSessions": 1122,
+      "pageViews": {},
+      "artistViews": {}
+    },
+    {
+      "month": "2026-06",
+      "label": "June",
+      "sessions": 21666,
+      "users": 15009,
+      "newUsers": 13759,
+      "avgSessionDuration": 146.37632367940552,
+      "busiestDate": "2026-06-01",
+      "busiestSessions": 1112,
+      "pageViews": {},
+      "artistViews": {}
+    },
+    {
+      "month": "2026-05",
+      "label": "May",
+      "sessions": 16721,
+      "users": 10211,
+      "newUsers": 9260,
+      "avgSessionDuration": 166.15731886322592,
+      "busiestDate": "2026-05-01",
+      "busiestSessions": 819,
+      "pageViews": {},
+      "artistViews": {}
+    },
+    {
+      "month": "2026-04",
+      "label": "April",
+      "sessions": 18810,
+      "users": 13236,
+      "newUsers": 11927,
+      "avgSessionDuration": 158.05536895720363,
+      "busiestDate": "2026-04-02",
+      "busiestSessions": 960,
+      "pageViews": {},
+      "artistViews": {}
+    },
+    {
+      "month": "2026-03",
+      "label": "March",
+      "sessions": 24042,
+      "users": 15596,
+      "newUsers": 13737,
+      "avgSessionDuration": 156.2633629373596,
+      "busiestDate": "2026-03-14",
+      "busiestSessions": 1002,
+      "pageViews": {},
+      "artistViews": {}
+    },
+    {
+      "month": "2026-02",
+      "label": "February",
+      "sessions": 23676,
+      "users": 15446,
+      "newUsers": 13465,
+      "avgSessionDuration": 170.54799838384866,
+      "busiestDate": "2026-02-21",
+      "busiestSessions": 942,
+      "pageViews": {},
+      "artistViews": {}
+    },
+    {
+      "month": "2026-01",
+      "label": "January",
+      "sessions": 24253,
+      "users": 14377,
+      "newUsers": 12636,
+      "avgSessionDuration": 230.57764767834905,
+      "busiestDate": "2026-01-02",
+      "busiestSessions": 930,
+      "pageViews": {
+        "/": 19256,
+        "/join-a-league": 2693,
+        "/open-play": 2628,
+        "/pickleball": 2548,
+        "/kitchen": 1176,
+        "/rates": 978,
+        "/public-events-calendar": 879,
+        "/lunch-specials": 840,
+        "/whats-on-tap": 728,
+        "/private-events": 724,
+        "/our-menu": 717,
+        "/happy-hour": 542,
+        "/skill-levels": 491,
+        "/contact": 403,
+        "/lessons": 374,
+        "/bingo": 358,
+        "/our-courts": 350,
+        "/taproom": 313,
+        "/public-events-calendar/category/pickleball-tournament": 296,
+        "/trivia-night": 288,
+        "/how-it-works": 218,
+        "/rules": 218,
+        "/bags-league": 202,
+        "/public-events-calendar/category/live-music": 181,
+        "/event-spaces": 178,
+        "/clinics": 149,
+        "/careers": 130,
+        "/event/free-music-bingo-4": 127,
+        "/coaches": 114,
+        "/event/team-jigsaw-puzzle-contest-at-pints-and-paddle-with-sarah-does-puzzles-llc-2": 93,
+        "/event/adult-child-mahjong-lesson": 91,
+        "/event/bingo-4": 70,
+        "/live-music-events": 66,
+        "/event/lets-learn-mahjong-4": 52,
+        "/coaches/jennifer": 48,
+        "/event/trivia-at-pints-paddle-37": 47,
+        "/event/lets-learn-mahjong": 46,
+        "/coaches/matt": 42,
+        "/event/lets-learn-mahjong-3": 41,
+        "/slam-and-jam": 38,
+        "/event/cool-jazz-warm-spirits": 33,
+        "/vikings": 30,
+        "/event/trivia-at-pints-paddle-38": 20,
+        "/catering": 19,
+        "/event/bingo-3": 16,
+        "/event/valentines-day": 16,
+        "/event/bingo": 13,
+        "/event/lets-learn-mahjong-4-2": 13,
+        "/event/lets-learn-mahjong-4-2-2": 12,
+        "/event/bingo-2": 11,
+        "/event/trivia-at-pints-paddle-39": 11,
+        "/event/nye-at-pints-paddle": 10,
+        "/event/sweetheart-slam-pickleball-tournament": 10,
+        "/wild-watch-party": 10,
+        "/public-events-calendar/photo": 9,
+        "/public-events-calendar/category/pickleball-tournament/photo": 8,
+        "/fantasy-football": 7,
+        "/public-events-calendar/photo/page/2": 7,
+        "/event/slam-jam-25-pickleball-tournament-festival": 6,
+        "/page-category/taproom": 6,
+        "/venue/15450-grove-cir-n-maple-grove-mn-55369": 6,
+        "/book-a-court": 5,
+        "/event/trivia-at-pints-paddle-double-prize-night": 5,
+        "/live-music-2": 5,
+        "/venue/15450-grove-cir-n-maple-grove-mn-united-states-minnesota-55369": 5,
+        "/category/live-music": 4,
+        "/category/party": 4,
+        "/category/tournament": 4,
+        "/event/bingo-at-pints-paddle-14": 4,
+        "/event/bingo-at-pints-paddle-24": 4,
+        "/event/dinks-dates-ages-28-38": 4,
+        "/event/free-music-bingo": 4,
+        "/event/pickle-with-purpose-2025": 4,
+        "/event/the-initials-game-live-at-pints-paddle-4": 4,
+        "/event/trivia-at-pints-paddle-36": 4,
+        "/page-category/pickleball": 4,
+        "/public-events-calendar/2025-01-28": 4,
+        "/public-events-calendar/2025-02-25": 4,
+        "/public-events-calendar/month/2024-12": 4,
+        "/public-events-calendar/month/2025-04": 4,
+        "/super-bowl": 4,
+        "/venue/15450-grove-cir-n-maple-grove-mn-55369-5772-united-states": 4,
+        "/category/trivia": 3,
+        "/coaches/ivy": 3,
+        "/event/bingo-at-pints-paddle-29": 3,
+        "/event/bingo-at-pints-paddle-31": 3,
+        "/event/bingo-at-pints-paddle-42": 3,
+        "/event/bingo-at-pints-paddle-45": 3,
+        "/event/team-jigsaw-puzzle-contest-at-pints-and-paddle-with-sarah-does-puzzles": 3,
+        "/event/the-initials-game-live-2": 3,
+        "/event/toys-for-taps": 3,
+        "/event/trivia-at-pints-paddle-21": 3,
+        "/event/vikings-gameday-at-pints-paddle-eagles": 3,
+        "/public-events-calendar/2025-02-11": 3,
+        "/public-events-calendar/2025-03-19": 3,
+        "/public-events-calendar/2025-09-04": 3,
+        "/public-events-calendar/2025-09-21": 3,
+        "/public-events-calendar/category/live-music/photo": 3,
+        "/public-events-calendar/category/pickleball-tournament/month": 3,
+        "/event/bingo-at-pints-paddle-10": 2,
+        "/event/bingo-at-pints-paddle-18": 2,
+        "/event/bingo-at-pints-paddle-19": 2,
+        "/event/bingo-at-pints-paddle-21": 2,
+        "/event/bingo-at-pints-paddle-30": 2,
+        "/event/bingo-at-pints-paddle-35": 2,
+        "/event/bingo-at-pints-paddle-37": 2,
+        "/event/bingo-at-pints-paddle-40": 2,
+        "/event/bingo-at-pints-paddle-43": 2,
+        "/event/bingo-at-pints-paddle-47": 2,
+        "/event/holiday-themed-team-jigsaw-puzzle-contest-at-pints-and-paddle-with-sarah-does-puzzles-llc": 2,
+        "/event/hunting-wives-brunch": 2,
+        "/event/live-music-with-3-quarter-country": 2,
+        "/event/march-madness-pints-paddle": 2,
+        "/event/shaver-slam-25": 2,
+        "/event/st-paddys-day-party": 2,
+        "/event/summer-25-patio-playlist-with-bruce-bowman-3": 2,
+        "/event/summer-25-patio-playlist-with-carlton-mitchell": 2,
+        "/event/summer-25-patio-playlist-with-shane-martin": 2,
+        "/event/team-jigsaw-puzzle-contest-at-pints-and-paddle-with-sarah-does-puzzles-3": 2,
+        "/event/the-initials-game-live-at-pints-paddle-2": 2,
+        "/event/triva-at-pints-paddle-3": 2,
+        "/event/trivia-at-pints-paddle-20": 2,
+        "/event/trivia-at-pints-paddle-25": 2,
+        "/event/trivia-at-pints-paddle-6": 2,
+        "/event/trivia-at-pints-paddle-7": 2,
+        "/event/trivia-at-pints-paddle-8": 2,
+        "/event/trivia-at-pints-paddle-9": 2,
+        "/event/vikings-gameday-at-pints-paddle-bengals": 2,
+        "/event/vikings-gameday-at-pints-paddle-commanders": 2,
+        "/event/vikings-gameday-at-pints-paddle-lions-2": 2,
+        "/event/wolves-v-warriors-game-3-watch-party": 2,
+        "/facebook-event/vikings-gameday-at-pints-paddle-falcons": 2,
+        "/league/winter-26-womens-2-0-3-0-partner": 2,
+        "/organizer/sarah-does-puzzles": 2,
+        "/public-events-calendar/2025-03-02": 2,
+        "/public-events-calendar/2025-04-03": 2,
+        "/super-bowl-catering": 2,
+        "/venue/15450-grove-cir-nmaple-grove-mn-55369": 2,
+        "/venue/pints-paddle": 2,
+        "/Online/Account/LogIn/8384": 1,
+        "/Online/Memberships/Public/8384": 1,
+        "/about": 1,
+        "/about-us": 1,
+        "/aboutus": 1,
+        "/article": 1,
+        "/coaches/ivy-3": 1,
+        "/contact-us": 1,
+        "/contactus": 1,
+        "/event/3-quarter-country-pints-paddle-friday-january-10th": 1,
+        "/event/bingo-at-pints-paddle-11": 1,
+        "/event/bingo-at-pints-paddle-12": 1,
+        "/event/bingo-at-pints-paddle-13": 2,
+        "/event/bingo-at-pints-paddle-15": 2
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2025-12",
+      "label": "December",
+      "sessions": 22969,
+      "users": 13994,
+      "newUsers": 12315,
+      "avgSessionDuration": 223.4836450485002,
+      "busiestDate": "2025-12-13",
+      "busiestSessions": 1115,
+      "pageViews": {
+        "/": 18284,
+        "/open-play": 2824,
+        "/pickleball": 2429,
+        "/join-a-league": 2067,
+        "/rates": 1168,
+        "/kitchen": 1128,
+        "/public-events-calendar": 954,
+        "/bags-league": 658,
+        "/skill-levels": 642,
+        "/whats-on-tap": 631,
+        "/our-menu": 600,
+        "/event/nye-at-pints-paddle": 519,
+        "/happy-hour": 468,
+        "/contact": 459,
+        "/our-courts": 411,
+        "/private-events": 381,
+        "/lessons": 361,
+        "/taproom": 331,
+        "/how-it-works": 249,
+        "/trivia-night": 238,
+        "/bingo": 226,
+        "/lunch-specials": 214,
+        "/rules": 196,
+        "/event/ugly-sweater-holiday-cornhole-tournament-2": 196,
+        "/public-events-calendar/category/pickleball-tournament": 165,
+        "/event/breakfast-with-santa": 160,
+        "/clinics": 138,
+        "/careers": 135,
+        "/public-events-calendar/category/live-music": 129,
+        "/event-spaces": 108,
+        "/coaches": 106,
+        "/event/team-jigsaw-puzzle-contest-at-pints-and-paddle-with-sarah-does-puzzles-llc-2": 86,
+        "/slam-and-jam": 73,
+        "/coaches/matt": 63,
+        "/event/lets-learn-mahjong-2": 61,
+        "/vikings": 54,
+        "/event/holiday-themed-team-jigsaw-puzzle-contest-at-pints-and-paddle-with-sarah-does-puzzles-llc": 48,
+        "/coaches/jennifer": 43,
+        "/event/kat-perkins-spreads-christmas-cheer": 33,
+        "/event/vikings-gameday-at-pints-paddle-giants": 34,
+        "/event/lets-learn-mahjong": 32,
+        "/event/trivia-at-pints-paddle-34": 25,
+        "/event/vikings-gameday-at-pints-paddle-cowboys": 23,
+        "/catering": 18,
+        "/wild-watch-party": 17,
+        "/event/trivia-at-pints-paddle-35": 15,
+        "/event/toys-for-taps": 14,
+        "/fantasy-football": 13,
+        "/page-category/taproom": 12,
+        "/event/trivia-at-pints-paddle-36": 9,
+        "/venue/15450-grove-cir-n-maple-grove-mn-55369": 9,
+        "/event/free-music-bingo": 8,
+        "/event/trivia-at-pints-paddle-21": 7,
+        "/event/vikings-gameday-at-pints-paddle-commanders": 7,
+        "/public-events-calendar/photo": 6,
+        "/event/dinks-dates-ages-28-38": 6,
+        "/event/pickle-with-purpose-2025": 6,
+        "/event/trivia-at-pints-paddle-9": 6,
+        "/super-bowl": 6,
+        "/venue/15450-grove-cir-nmaple-grove-mn-55369": 6,
+        "/event/team-jigsaw-puzzle-contest-at-pints-and-paddle-with-sarah-does-puzzles": 5,
+        "/event/the-initials-game-live-at-pints-paddle-2": 5,
+        "/event/trivia-at-pints-paddle-17": 5,
+        "/event/trivia-at-pints-paddle-3": 5,
+        "/event/trivia-at-pints-paddle-6": 5,
+        "/facebook-event/triva-at-pints-paddle-2": 5,
+        "/league/spring-25-sunday-funday-coed-partner-2-5-3-5-2": 4,
+        "/league/winter-25-coached-womens-individual-3-0-4-0": 4,
+        "/page-category/pickleball": 5,
+        "/public-events-calendar/2025-03-15": 4,
+        "/venue/pints-paddle": 6,
+        "/book-a-court": 4,
+        "/event/3-quarter-country-pints-paddle-friday-january-10th": 4,
+        "/event/bingo-at-pints-paddle-30": 4,
+        "/event/bingo-at-pints-paddle-9": 4,
+        "/event/march-madness-pints-paddle": 4,
+        "/event/shaver-slam-25": 4,
+        "/event/slam-jam-25-pickleball-tournament-festival": 4,
+        "/event/summer-25-patio-playlist-with-maddie-kadlec": 4,
+        "/event/triva-at-pints-paddle-3": 4,
+        "/event/trivia-at-pints-paddle-18": 4,
+        "/event/trivia-at-pints-paddle-20": 4,
+        "/event/trivia-at-pints-paddle-31": 4,
+        "/event/trivia-at-pints-paddle-8": 4,
+        "/event/trivia-at-pints-paddle-double-prize-night-3": 4,
+        "/event/trivia-at-pints-paddle": 4,
+        "/facebook-event/triva-at-pints-paddle": 4,
+        "/facebook-event/vikings-gameday-at-pints-paddle-falcons": 3,
+        "/league/winter-26-mens-partner-4-25": 4,
+        "/league/winter-26-sunday-funday-coed-individual-2-5-3-5": 4,
+        "/league/winter-26-sunday-funday-coed-partner-2-5-3-5": 4,
+        "/league/winter-26-sunday-funday-coed-partner-league-2-2-5-3-5": 4,
+        "/public-events-calendar/2025-04-03": 3,
+        "/public-events-calendar/2025-04-20": 3,
+        "/public-events-calendar/2025-09-04": 3,
+        "/public-events-calendar/category/live-music/photo": 3,
+        "/super-bowl-catering": 3,
+        "/banner-test-example": 3,
+        "/category/live-music": 3,
+        "/coaches/ivy-3": 2,
+        "/event/bingo-at-pints-paddle-12": 3,
+        "/event/bingo-at-pints-paddle-18": 3,
+        "/event/bingo-at-pints-paddle-29": 3,
+        "/event/bingo-at-pints-paddle-31": 3,
+        "/event/free-music-bingo-2": 3,
+        "/event/june-1st-team-jigsaw-puzzle-contest-at-pints-and-paddle-with-sarah-does-puzzles-llc": 3,
+        "/event/slam-jam-25-gb-leighton": 3,
+        "/event/summer-25-patio-playlist-with-adam-daniels-2": 2,
+        "/event/summer-25-patio-playlist-with-whiskey-and-water": 3,
+        "/event/summer-25-patio-playlist-with-will-skoog": 3,
+        "/event/team-jigsaw-puzzle-contest": 3,
+        "/event/the-initials-game-live-2": 3,
+        "/event/the-initials-game-live-3": 3,
+        "/event/trivia-at-pints-paddle-10": 3,
+        "/event/trivia-at-pints-paddle-30": 2,
+        "/event/vikings-gameday-at-pints-paddle-steelers-2": 2,
+        "/event/vikings-gameday-vs-packers": 3,
+        "/event/wild-v-knights-game-6-watch-party": 3,
+        "/event/wolves-vs-thunder-game-5-watch-party": 2,
+        "/facebook-event": 3,
+        "/facebook-event/team-jigsaw-puzzle-contest-at-pints-and-paddle-with-sarah-does-puzzles": 3,
+        "/league/holiday26-womens-coached-holiday-league-2-0-3-5": 3,
+        "/league/winter-1-sunday-funday-partner-coed-2-5-3-5": 2,
+        "/league/winter-25-coached-womens-individual-2-0-3-0": 2,
+        "/league/winter-26-coed-2-5-3-5-partner": 3,
+        "/league/winter-26-mens-partner-2-5-3-5": 3,
+        "/league/winter-26-womens-2-0-3-0-partner": 2,
+        "/league/winter-26-womens-partner-3-0": 2,
+        "/organizer/sarah-does-puzzles": 3,
+        "/public-events-calendar/2025-03-05": 2,
+        "/public-events-calendar/2025-03-18": 2,
+        "/public-events-calendar/2025-04-13": 2,
+        "/public-events-calendar/2025-04-30": 2,
+        "/public-events-calendar/2025-09-21": 2,
+        "/venue/15450-grove-cir-n-maple-grove-mn-united-states-minnesota-55369": 3,
+        "/Online/Portal/Index/8384": 1,
+        "/about-us": 1,
+        "/category/party": 1,
+        "/category/tournament": 1,
+        "/category/trivia": 1,
+        "/cornhole": 1,
+        "/event/bingo-at-pints-paddle": 1,
+        "/event/bingo-at-pints-paddle-10": 1,
+        "/event/bingo-at-pints-paddle-11": 2,
+        "/event/bingo-at-pints-paddle-13": 1,
+        "/event/bingo-at-pints-paddle-14": 1,
+        "/event/bingo-at-pints-paddle-15": 1,
+        "/event/bingo-at-pints-paddle-16": 1,
+        "/event/bingo-at-pints-paddle-17": 1,
+        "/event/bingo-at-pints-paddle-19": 2,
+        "/event/bingo-at-pints-paddle-2": 1,
+        "/event/bingo-at-pints-paddle-20": 1,
+        "/event/bingo-at-pints-paddle-21": 2,
+        "/event/bingo-at-pints-paddle-22": 2,
+        "/event/bingo-at-pints-paddle-23": 2,
+        "/event/bingo-at-pints-paddle-24": 2,
+        "/event/bingo-at-pints-paddle-25": 1,
+        "/event/bingo-at-pints-paddle-26": 2,
+        "/event/bingo-at-pints-paddle-27": 1,
+        "/event/bingo-at-pints-paddle-28": 1,
+        "/event/bingo-at-pints-paddle-3": 1,
+        "/event/bingo-at-pints-paddle-32": 2,
+        "/event/bingo-at-pints-paddle-33": 1,
+        "/event/bingo-at-pints-paddle-34": 1,
+        "/event/bingo-at-pints-paddle-35": 2,
+        "/event/bingo-at-pints-paddle-36": 2,
+        "/event/bingo-at-pints-paddle-37": 1,
+        "/event/bingo-at-pints-paddle-38": 2,
+        "/event/bingo-at-pints-paddle-4": 1,
+        "/event/bingo-at-pints-paddle-40": 2,
+        "/event/bingo-at-pints-paddle-42": 1,
+        "/event/bingo-at-pints-paddle-43": 1,
+        "/event/bingo-at-pints-paddle-45": 1,
+        "/event/bingo-at-pints-paddle-48": 2,
+        "/event/bingo-at-pints-paddle-5": 1,
+        "/event/bingo-at-pints-paddle-51": 1,
+        "/event/bingo-at-pints-paddle-6": 1,
+        "/event/bingo-at-pints-paddle-7": 2,
+        "/event/bingo-at-pints-paddle-8": 1,
+        "/event/cancelled-trivia-at-pints-paddle": 1,
+        "/event/easter-sunday-brunch": 2,
+        "/event/free-music-bingo-3": 1,
+        "/event/free-music-bingo-night": 1,
+        "/event/hunting-wives-brunch": 1,
+        "/event/july-6th-team-jigsaw-puzzle-contest-at-pints-and-paddle-with-sarah-does-puzzles-llc": 1,
+        "/event/live-music-with-3-quarter-country": 1,
+        "/event/mingo-at-pints-paddle-maple-grove": 2,
+        "/event/music-bingo-sunday-pints-and-paddles": 1,
+        "/event/nsdu-vs-sdsu-watch-party": 2,
+        "/event/pints-and-paddle-patio": 1,
+        "/event/pints-paddle-open-mic": 2,
+        "/event/pumpkin-carving": 2,
+        "/event/slam-jam-25-anderson-daniels": 1,
+        "/event/slam-jam-25-mike-bustin": 2,
+        "/event/st-paddys-day-party": 1,
+        "/event/star-wars-team-jigsaw-puzzle-contest-at-pints-and-paddle-with-sarah-does-puzzles-llc": 2,
+        "/event/stars-stripes-and-smashes-pickleball-tournament": 1,
+        "/event/summer-25-patio-playlist-showcase-two-weeks-notice-maya-holmgren": 1,
+        "/event/summer-25-patio-playlist-with-3-quarter-country": 1,
+        "/event/summer-25-patio-playlist-with-adam-daniel": 2,
+        "/event/summer-25-patio-playlist-with-brenda-b-sings": 1,
+        "/event/summer-25-patio-playlist-with-brenda-b-sings-2": 1,
+        "/event/summer-25-patio-playlist-with-bruce-bowman": 2,
+        "/event/summer-25-patio-playlist-with-bruce-bowman-2": 2,
+        "/event/summer-25-patio-playlist-with-bruce-bowman-3": 2,
+        "/event/summer-25-patio-playlist-with-carlton-mitchell": 1,
+        "/event/summer-25-patio-playlist-with-carlton-mitchell-2": 2,
+        "/event/summer-25-patio-playlist-with-josh-tracy": 1,
+        "/event/summer-25-patio-playlist-with-kurt-bearinger": 1,
+        "/event/summer-25-patio-playlist-with-maxwell-johnson": 1,
+        "/event/summer-25-patio-playlist-with-mike-bustin": 1,
+        "/event/summer-25-patio-playlist-with-preston-gunderson": 1,
+        "/event/summer-25-patio-playlist-with-shane-martin": 2,
+        "/event/summer-25-patio-playlist-with-the-everly-covers": 1,
+        "/event/sweetheart-slam-pickleball-tournament": 2,
+        "/event/team-jigsaw-puzzle-contest-at-pints-and-paddle-with-sarah-does-puzzles-3": 1,
+        "/event/team-jigsaw-puzzle-contest-at-pints-and-paddle-with-sarah-does-puzzles-llc": 2,
+        "/event/the-initials-game-live": 1,
+        "/event/the-initials-game-live-at-pints-paddle": 1,
+        "/event/the-initials-game-live-at-pints-paddle-4": 2,
+        "/event/triva-at-pints-paddle": 2,
+        "/event/triva-at-pints-paddle-2": 2,
+        "/event/triva-at-pints-paddle-4": 1,
+        "/event/triva-at-pints-paddle-5": 1,
+        "/event/triva-at-pints-paddle-6": 1,
+        "/event/triva-at-pints-paddle-7": 2,
+        "/event/trivia-at-pints-paddle-11": 1,
+        "/event/trivia-at-pints-paddle-12": 1,
+        "/event/trivia-at-pints-paddle-13": 1,
+        "/event/trivia-at-pints-paddle-14": 1,
+        "/event/trivia-at-pints-paddle-15": 2,
+        "/event/trivia-at-pints-paddle-16": 2,
+        "/event/trivia-at-pints-paddle-19": 1,
+        "/event/trivia-at-pints-paddle-2": 1,
+        "/event/trivia-at-pints-paddle-22": 1,
+        "/event/trivia-at-pints-paddle-23": 2,
+        "/event/trivia-at-pints-paddle-24": 1,
+        "/event/trivia-at-pints-paddle-25": 2,
+        "/event/trivia-at-pints-paddle-26": 2,
+        "/event/trivia-at-pints-paddle-27": 1,
+        "/event/trivia-at-pints-paddle-28": 2,
+        "/event/trivia-at-pints-paddle-29": 1,
+        "/event/trivia-at-pints-paddle-33": 2,
+        "/event/trivia-at-pints-paddle-4": 2,
+        "/event/trivia-at-pints-paddle-5": 1,
+        "/event/trivia-at-pints-paddle-7": 1,
+        "/event/trivia-at-pints-paddle-double-prize-night": 1,
+        "/event/trivia-at-pints-paddle-double-prize-night-2": 1,
+        "/event/ugly-sweater-holiday-cornhole-tournament": 1,
+        "/event/valentines-dinner-live-music-by-lauren-verhel": 1,
+        "/event/vikings-gameday-at-pints-paddle-bears": 2,
+        "/event/vikings-gameday-at-pints-paddle-bears-2": 2,
+        "/event/vikings-gameday-at-pints-paddle-bengals": 2,
+        "/event/vikings-gameday-at-pints-paddle-browns-2": 2,
+        "/event/vikings-gameday-at-pints-paddle-chargers": 1,
+        "/event/vikings-gameday-at-pints-paddle-eagles": 2,
+        "/event/vikings-gameday-at-pints-paddle-falcons": 1,
+        "/event/vikings-gameday-at-pints-paddle-falcons-3": 2,
+        "/event/vikings-gameday-at-pints-paddle-lions-2": 2,
+        "/event/vikings-gameday-at-pints-paddle-packers": 2,
+        "/event/vikings-gameday-at-pints-paddle-ravens": 1,
+        "/event/vikings-gameday-at-pints-paddle-seahawks": 1,
+        "/event/vikings-gameday-at-pints-paddle-seahawks-2": 2,
+        "/event/vikings-gameday-vs-lions": 2,
+        "/event/vikings-playoff-gameday-vs-rams": 1,
+        "/event/vikings-themed-team-jigsaw-puzzle-contest-at-pints-and-paddle-with-sarah-does-puzzles-llc-2": 2,
+        "/event/wolves-v-lakers-game-3-watch-party": 2,
+        "/event/wolves-v-warriors-game-2-watch-party": 1,
+        "/event/wolves-v-warriors-game-3-watch-party": 1,
+        "/event/wolves-vs-thunder-game-1-watch-party": 2,
+        "/event/wolves-vs-thunder-game-2-watch-party": 1,
+        "/event/wolves-vs-thunder-game-3-watch-party": 1,
+        "/event/yoga-beer": 1,
+        "/events/bingo-4-30-24": 1,
+        "/events/live-music-cisco-skanson-2": 1,
+        "/events/live-music-mark-stary-2-3": 1,
+        "/events/trivia-12-4-24": 1,
+        "/events/trivia-7-10-24": 1,
+        "/facebook-event/ugly-sweater-holiday-cornhole-tournament": 2,
+        "/how-to-play": 1,
+        "/league": 1,
+        "/league/fall-1-womens-individual-3-0-3-5": 1,
+        "/league/spring-25-womens-ind-3-0": 1,
+        "/league/summer-25-coached-womens-individual-2-0-3-0-1": 1,
+        "/league/summer-25-coed-partner-3-6-4-5-2": 1,
+        "/league/summer-25-mens-partner-2-5-3-5": 1,
+        "/league/summer-25-mens-partner-3-5-4-5": 1,
+        "/league/summer-25-young-adult-league-2-5-3-5": 1,
+        "/league/winter-26-coed-55-partner-2-5-3-5": 1,
+        "/league/winter-26-coed-individual-2-5-3-5": 1,
+        "/league/winter-26-coed-partner-3-6-4-5": 2,
+        "/league/winter-26-mens-individual-3-6-4-5": 1,
+        "/league/winter-26-mens-partner-3-6-4-25": 1,
+        "/open-play/null": 1,
+        "/organizer/on-call-music-events": 1,
+        "/page-category/malones": 1,
+        "/pickleball/ court reserve": 1,
+        "/public-events-calendar/2025-03-02": 1,
+        "/public-events-calendar/2025-03-19": 1,
+        "/public-events-calendar/2025-08-05": 1,
+        "/public-events-calendar/category/live-music/month": 1,
+        "/public-events-calendar/category/vikings-gameday": 1,
+        "/public-events-calendar/category/vikings-gameday/photo": 1,
+        "/public-events-calendar/month": 1,
+        "/public-events-calendar/month/2025-12": 1,
+        "/venue/15450-grove-cir-n-maple-grove-mn-55369-5772-united-states": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2025-11",
+      "label": "November",
+      "sessions": 20862,
+      "users": 12636,
+      "newUsers": 11050,
+      "avgSessionDuration": 192.86329576085703,
+      "busiestDate": "2025-11-28",
+      "busiestSessions": 890,
+      "pageViews": {
+        "/": 16260,
+        "/open-play": 3092,
+        "/pickleball": 2308,
+        "/join-a-league": 1469,
+        "/kitchen": 1188,
+        "/private-events": 1004,
+        "/rates": 962,
+        "/public-events-calendar": 710,
+        "/whats-on-tap": 618,
+        "/skill-levels": 577,
+        "/our-menu": 546,
+        "/happy-hour": 475,
+        "/lessons": 426,
+        "/our-courts": 414,
+        "/contact": 366,
+        "/taproom": 311,
+        "/bags-league": 236,
+        "/how-it-works": 209,
+        "/public-events-calendar/category/pickleball-tournament": 208,
+        "/clinics": 201,
+        "/bingo": 192,
+        "/rules": 175,
+        "/lunch-specials": 169,
+        "/event-spaces": 161,
+        "/trivia-night": 157,
+        "/event/lets-learn-mahjong": 148,
+        "/public-events-calendar/category/live-music": 142,
+        "/coaches": 130,
+        "/careers": 128,
+        "/vikings": 115,
+        "/event/ugly-sweater-holiday-cornhole-tournament-2": 112,
+        "/event/holiday-themed-team-jigsaw-puzzle-contest-at-pints-and-paddle-with-sarah-does-puzzles-llc": 84,
+        "/event/trivia-at-pints-paddle-31": 57,
+        "/event/bingo-at-pints-paddle-35": 54,
+        "/coaches/jennifer": 51,
+        "/coaches/matt": 51,
+        "/slam-and-jam": 44,
+        "/event/hunting-wives-brunch": 39,
+        "/event/vikings-gameday-at-pints-paddle-seahawks-2": 34,
+        "/event/vikings-gameday-at-pints-paddle-packers": 30,
+        "/event/bingo-at-pints-paddle-34": 29,
+        "/event/vikings-gameday-at-pints-paddle-bears": 27,
+        "/event/breakfast-with-santa": 26,
+        "/event/bingo-at-pints-paddle-36": 20,
+        "/event/cancelled-trivia-at-pints-paddle": 20,
+        "/event/trivia-at-pints-paddle-32": 19,
+        "/event/vikings-gameday-at-pints-paddle-ravens": 19,
+        "/event/toys-for-taps": 12,
+        "/event/trivia-at-pints-paddle-33": 12,
+        "/fantasy-football": 11,
+        "/wild-watch-party": 10,
+        "/book-a-court": 7,
+        "/catering": 7,
+        "/event/free-music-bingo": 7,
+        "/event/team-jigsaw-puzzle-contest": 7,
+        "/event/vikings-gameday-at-pints-paddle-commanders": 7,
+        "/page-category/taproom": 7,
+        "/venue/pints-paddle": 7,
+        "/public-events-calendar/2025-09-21": 6,
+        "/venue/15450-grove-cir-nmaple-grove-mn-55369": 6,
+        "/event/pickle-with-purpose-2025": 5,
+        "/event/sweetheart-slam-pickleball-tournament": 5,
+        "/event/dinks-dates-ages-28-38": 4,
+        "/event/free-music-bingo-night": 4,
+        "/event/march-madness-pints-paddle": 4,
+        "/event/vikings-gameday-at-pints-paddle-cowboys": 4,
+        "/event/wild-v-knights-game-6-watch-party": 4,
+        "/league/spring-25-sunday-funday-coed-partner-2-5-3-5-2": 4,
+        "/league/winter-25-coached-womens-individual-2-0-3-0": 4,
+        "/league/winter-25-coached-womens-individual-3-0-4-0": 4,
+        "/public-events-calendar/2025-03-18": 4,
+        "/category/live-music": 3,
+        "/event/bingo-at-pints-paddle-37": 3,
+        "/event/bingo-at-pints-paddle-9": 3,
+        "/event/lets-learn-mahjong-2": 3,
+        "/event/pumpkin-carving": 3,
+        "/event/summer-25-patio-playlist-with-maddie-kadlec": 3,
+        "/event/team-jigsaw-puzzle-contest-at-pints-and-paddle-with-sarah-does-puzzles-llc-2": 3,
+        "/event/the-initials-game-live-3": 3,
+        "/event/the-initials-game-live-at-pints-paddle-2": 3,
+        "/event/trivia-at-pints-paddle-6": 3,
+        "/event/vikings-gameday-vs-packers": 3,
+        "/league/winter-1-sunday-funday-partner-coed-2-5-3-5": 3,
+        "/public-events-calendar/2025-04-13": 3,
+        "/public-events-calendar/2025-04-20": 3,
+        "/PRIVATE-EVENTS": 2,
+        "/event/free-music-bingo-2": 2,
+        "/event/free-music-bingo-3": 2,
+        "/event/live-music-with-3-quarter-country": 2,
+        "/event/slam-jam-25-anderson-daniels": 2,
+        "/event/stars-stripes-and-smashes-pickleball-tournament": 2,
+        "/event/team-jigsaw-puzzle-contest-at-pints-and-paddle-with-sarah-does-puzzles": 2,
+        "/event/triva-at-pints-paddle-2": 2,
+        "/event/trivia-at-pints-paddle-28": 2,
+        "/event/trivia-at-pints-paddle-9": 2,
+        "/facebook-event/team-jigsaw-puzzle-contest-at-pints-and-paddle-with-sarah-does-puzzles": 2,
+        "/organizer/sarah-does-puzzles": 2,
+        "/page-category/pickleball": 2,
+        "/public-events-calendar/2025-03-02": 2,
+        "/public-events-calendar/2025-03-05": 2,
+        "/public-events-calendar/2025-04-30": 2,
+        "/public-events-calendar/category/pickleball-tournament/photo": 2,
+        "/about": 1,
+        "/about-us": 1,
+        "/aboutus": 1,
+        "/contact-us": 1,
+        "/contactus": 1,
+        "/event/3-quarter-country-pints-paddle-friday-january-10th": 1,
+        "/event/bingo-at-pints-paddle-11": 1,
+        "/event/bingo-at-pints-paddle-12": 1,
+        "/event/bingo-at-pints-paddle-19": 1,
+        "/event/bingo-at-pints-paddle-22": 1,
+        "/event/bingo-at-pints-paddle-23": 1,
+        "/event/bingo-at-pints-paddle-26": 1,
+        "/event/bingo-at-pints-paddle-29": 1,
+        "/event/bingo-at-pints-paddle-30": 1,
+        "/event/music-bingo-sunday-pints-and-paddles": 1,
+        "/event/slam-jam-25-gb-leighton": 1,
+        "/event/slam-jam-25-mike-bustin": 1,
+        "/event/slam-jam-25-pickleball-tournament-festival": 1,
+        "/event/st-paddys-day-party": 1,
+        "/event/star-wars-team-jigsaw-puzzle-contest-at-pints-and-paddle-with-sarah-does-puzzles-llc": 1,
+        "/event/summer-25-patio-playlist-showcase-two-weeks-notice-maya-holmgren": 1,
+        "/event/summer-25-patio-playlist-with-brenda-b-sings": 1,
+        "/event/summer-25-patio-playlist-with-bruce-bowman": 1,
+        "/event/summer-25-patio-playlist-with-josh-tracy": 1,
+        "/event/summer-25-patio-playlist-with-preston-gunderson": 1,
+        "/event/summer-25-patio-playlist-with-shane-martin": 1,
+        "/event/team-jigsaw-puzzle-contest-at-pints-and-paddle-with-sarah-does-puzzles-llc": 1,
+        "/event/triva-at-pints-paddle-5": 1,
+        "/event/triva-at-pints-paddle": 1,
+        "/event/trivia-at-pints-paddle-10": 1,
+        "/event/trivia-at-pints-paddle-12": 1,
+        "/event/trivia-at-pints-paddle-14": 1,
+        "/event/trivia-at-pints-paddle-16": 1,
+        "/event/trivia-at-pints-paddle-17": 1,
+        "/event/trivia-at-pints-paddle-18": 1,
+        "/event/trivia-at-pints-paddle-20": 1,
+        "/event/trivia-at-pints-paddle-23": 1,
+        "/event/trivia-at-pints-paddle-26": 1,
+        "/event/trivia-at-pints-paddle-3": 1,
+        "/event/trivia-at-pints-paddle-34": 1,
+        "/event/trivia-at-pints-paddle-35": 1,
+        "/event/trivia-at-pints-paddle-5": 1,
+        "/event/trivia-at-pints-paddle-7": 1,
+        "/event/trivia-at-pints-paddle-8": 1,
+        "/event/trivia-at-pints-paddle-double-prize-night-3": 1,
+        "/event/valentines-dinner-live-music-by-lauren-verhel": 1,
+        "/event/vikings-gameday-at-pints-paddle-eagles": 1,
+        "/event/vikings-gameday-at-pints-paddle-falcons": 1,
+        "/event/vikings-gameday-at-pints-paddle-giants": 1,
+        "/event/vikings-gameday-at-pints-paddle-lions-2": 1,
+        "/event/vikings-gameday-at-pints-paddle-lions": 1,
+        "/event/vikings-gameday-vs-lions": 1,
+        "/event/wolves-vs-thunder-game-1-watch-party": 1,
+        "/event/wolves-vs-thunder-game-5-watch-party": 1,
+        "/events/trivia-09-24-2023-2": 1,
+        "/facebook-event": 1,
+        "/facebook-event/triva-at-pints-paddle-2": 1,
+        "/facebook-event/triva-at-pints-paddle": 1,
+        "/facebook-event/ugly-sweater-holiday-cornhole-tournament": 1,
+        "/facebook-event/vikings-gameday-at-pints-paddle-falcons": 1,
+        "/info": 1,
+        "/league/8384-954": 1,
+        "/organizer/on-call-music-events": 1,
+        "/public-events-calendar/2025-03-15": 1,
+        "/public-events-calendar/2025-04-27": 1,
+        "/public-events-calendar/2025-05-03": 1,
+        "/public-events-calendar/category/vikings-gameday/month": 1,
+        "/public-events-calendar/category/vikings-gameday/photo": 1,
+        "/public-events-calendar/photo": 1,
+        "/venue/15450-grove-cir-n-maple-grove-mn-55369-5772-united-states": 1,
+        "/venue/15450-grove-cir-n-maple-grove-mn-55369": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2025-10",
+      "label": "October",
+      "sessions": 18896,
+      "users": 11061,
+      "newUsers": 9599,
+      "avgSessionDuration": 227.6725662848222,
+      "busiestDate": "2025-10-24",
+      "busiestSessions": 760,
+      "pageViews": {
+        "/": 14986,
+        "/open-play": 2871,
+        "/join-a-league": 2557,
+        "/pickleball": 2185,
+        "/kitchen": 1021,
+        "/public-events-calendar": 979,
+        "/rates": 938,
+        "/whats-on-tap": 662,
+        "/our-menu": 604,
+        "/skill-levels": 566,
+        "/happy-hour": 528,
+        "/private-events": 385,
+        "/careers": 367,
+        "/contact": 343,
+        "/lessons": 315,
+        "/taproom": 279,
+        "/public-events-calendar/category/pickleball-tournament": 263,
+        "/our-courts": 258,
+        "/bags-league": 234,
+        "/how-it-works": 231,
+        "/public-events-calendar/category/live-music": 223,
+        "/event/shaver-slam-25": 213,
+        "/bingo": 205,
+        "/lunch-specials": 204,
+        "/trivia-night": 160,
+        "/event/pumpkin-carving": 142,
+        "/vikings": 141,
+        "/event-spaces": 128,
+        "/clinics": 127,
+        "/rules": 107,
+        "/coaches": 94,
+        "/event/free-music-bingo-night": 82,
+        "/slam-and-jam": 65,
+        "/event/vikings-gameday-at-pints-paddle-browns-2": 51,
+        "/coaches/jennifer": 50,
+        "/coaches/matt": 44,
+        "/event/dinks-dates-ages-28-38": 41,
+        "/event/vikings-gameday-at-pints-paddle-eagles": 31,
+        "/event/bingo-at-pints-paddle-40": 30,
+        "/event/bingo-at-pints-paddle-39": 29,
+        "/event/trivia-at-pints-paddle-28": 25,
+        "/event/holiday-themed-team-jigsaw-puzzle-contest-at-pints-and-paddle-with-sarah-does-puzzles-llc": 24,
+        "/event/bingo-at-pints-paddle-38": 21,
+        "/event/pickle-with-purpose-2025": 20,
+        "/event/vikings-gameday-at-pints-paddle-chargers": 20,
+        "/event/bingo-at-pints-paddle-42": 19,
+        "/event/trivia-at-pints-paddle-26": 19,
+        "/event/vikings-gameday-at-pints-paddle-lions-2": 19,
+        "/event/trivia-at-pints-paddle-29": 17,
+        "/event/trivia-at-pints-paddle-27": 16,
+        "/fantasy-football": 13,
+        "/catering": 12,
+        "/event/hunting-wives-brunch": 12,
+        "/event/team-jigsaw-puzzle-contest-at-pints-and-paddle-with-sarah-does-puzzles": 12,
+        "/event/ugly-sweater-holiday-cornhole-tournament-2": 12,
+        "/event/sweetheart-slam-pickleball-tournament": 7,
+        "/event/bingo-at-pints-paddle-36": 6,
+        "/event/bingo-at-pints-paddle-37": 6,
+        "/event/slam-jam-25-pickleball-tournament-festival": 6,
+        "/event/team-jigsaw-puzzle-contest": 6,
+        "/event/vikings-gameday-at-pints-paddle-steelers-2": 6,
+        "/venue/15450-grove-cir-n-maple-grove-mn-united-states-minnesota-55369": 6,
+        "/book-a-court": 5,
+        "/event/free-music-bingo": 5,
+        "/event/summer-25-patio-playlist-with-bruce-bowman-3": 5,
+        "/wild-watch-party": 5,
+        "/facebook-event/ugly-sweater-holiday-cornhole-tournament": 4,
+        "/venue/15450-grove-cir-nmaple-grove-mn-55369": 4,
+        "/event/team-jigsaw-puzzle-contest-at-pints-and-paddle-with-sarah-does-puzzles-llc": 3,
+        "/events/holiday-cornhole-tournament-2024": 3,
+        "/venue/pints-paddle": 3,
+        "/cornhole": 2,
+        "/event/free-music-bingo-3": 2,
+        "/event/slam-jam-25-gb-leighton": 2,
+        "/event/summer-25-patio-playlist-with-bruce-bowman": 2,
+        "/event/vikings-gameday-at-pints-paddle-bears": 2,
+        "/league/fall-25-womens-partner-20-30": 2,
+        "/league/fall-25-womens-partner-3-0": 2,
+        "/public-events-calendar/category/pickleball-tournament/photo": 2,
+        "/event/3-quarter-country-pints-paddle-friday-january-10th": 1,
+        "/event/bingo-at-pints-paddle-12": 1,
+        "/event/bingo-at-pints-paddle-35": 1,
+        "/event/free-music-bingo-2": 1,
+        "/event/stars-stripes-and-smashes-pickleball-tournament": 1,
+        "/event/summer-25-patio-playlist-with-carlton-mitchell-2": 1,
+        "/event/summer-25-patio-playlist-with-the-everly-covers": 1,
+        "/event/the-initials-game-live-at-pints-paddle-4": 1,
+        "/event/trivia-at-pints-paddle-18": 1,
+        "/event/vikings-gameday-at-pints-paddle-commanders": 1,
+        "/event/vikings-gameday-at-pints-paddle-packers": 1,
+        "/event/vikings-gameday-at-pints-paddle-ravens": 1,
+        "/events/bingo-5-14-24": 1,
+        "/events/bingo-5-7-24": 1,
+        "/events/live-music-cisco-skanson-9-26-2023": 1,
+        "/events/march-madness-24": 1,
+        "/events/pickle-with-purpose-24": 1,
+        "/events/trivia-09-07-2023": 1,
+        "/events/trivia-10-11-2023": 1,
+        "/events/trivia-4-3-24": 1,
+        "/events/wild-watch-party-03-08-2024": 1,
+        "/facebook-event": 1,
+        "/how-to-play": 1,
+        "/league": 1,
+        "/league/winter-25-coached-womens-individual-2-0-3-0": 1,
+        "/league/winter-25-mens-individual-3-5-4-5-2": 1,
+        "/page-category/pickleball": 1,
+        "/page-category/taproom": 1,
+        "/public-events-calendar/2025-03-02": 1,
+        "/public-events-calendar/2025-03-05": 1,
+        "/public-events-calendar/2025-03-18": 1,
+        "/public-events-calendar/2025-04-13": 1,
+        "/public-events-calendar/2025-04-30": 1,
+        "/public-events-calendar/2025-09-21": 1,
+        "/rates/goo": 1,
+        "/sneak-preview": 1,
+        "/venue/15450-grove-cir-n-maple-grove-mn-55369": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2025-09",
+      "label": "September",
+      "sessions": 19604,
+      "users": 11491,
+      "newUsers": 9931,
+      "avgSessionDuration": 229.64719261268107,
+      "busiestDate": "2025-09-03",
+      "busiestSessions": 843,
+      "pageViews": {
+        "/": 14674,
+        "/join-a-league": 2874,
+        "/open-play": 2031,
+        "/pickleball": 1871,
+        "/vikings": 1056,
+        "/public-events-calendar": 983,
+        "/kitchen": 970,
+        "/whats-on-tap": 765,
+        "/rates": 727,
+        "/our-menu": 642,
+        "/happy-hour": 557,
+        "/private-events": 484,
+        "/skill-levels": 444,
+        "/bags-league": 424,
+        "/taproom": 381,
+        "/contact": 376,
+        "/lessons": 333,
+        "/our-courts": 284,
+        "/public-events-calendar/category/live-music": 283,
+        "/how-it-works": 272,
+        "/bingo": 241,
+        "/lunch-specials": 209,
+        "/trivia-night": 174,
+        "/event-spaces": 159,
+        "/rules": 130,
+        "/clinics": 129,
+        "/careers": 125,
+        "/public-events-calendar/category/pickleball-tournament": 123,
+        "/event/shaver-slam-25": 106,
+        "/coaches": 96,
+        "/event/vikings-gameday-at-pints-paddle-steelers-2": 96,
+        "/slam-and-jam": 89,
+        "/event/free-music-bingo-3": 55,
+        "/event/summer-25-patio-playlist-with-adam-daniel": 49,
+        "/coaches/jennifer": 44,
+        "/event/summer-25-patio-playlist-with-3-quarter-country": 34,
+        "/event/summer-25-patio-playlist-with-shane-martin": 33,
+        "/event/vikings-themed-team-jigsaw-puzzle-contest-at-pints-and-paddle-with-sarah-does-puzzles-llc-2": 32,
+        "/coaches/matt": 31,
+        "/event/summer-25-patio-playlist-with-kurt-bearinger-2": 29,
+        "/event/vikings-gameday-at-pints-paddle-bengals": 26,
+        "/event/bingo-at-pints-paddle-43": 22,
+        "/event/pickle-with-purpose-2025": 22,
+        "/event/vikings-gameday-at-pints-paddle-browns-2": 20,
+        "/fantasy-football": 20,
+        "/event/bingo-at-pints-paddle-48": 19,
+        "/event/bingo-at-pints-paddle-45": 18,
+        "/event/vikings-gameday-at-pints-paddle-bears-2": 16,
+        "/event/vikings-gameday-at-pints-paddle-falcons-3": 16,
+        "/catering": 14,
+        "/event/bingo-at-pints-paddle-47": 14,
+        "/event/pumpkin-carving": 14,
+        "/event/trivia-at-pints-paddle-23": 14,
+        "/venue/15450-grove-cir-nmaple-grove-mn-55369": 12,
+        "/event/trivia-at-pints-paddle-24": 11,
+        "/event/dinks-dates-ages-28-38": 9,
+        "/event/bingo-at-pints-paddle-42": 7,
+        "/event/team-jigsaw-puzzle-contest-at-pints-and-paddle-with-sarah-does-puzzles-llc": 7,
+        "/event/slam-jam-25-pickleball-tournament-festival": 6,
+        "/event/team-jigsaw-puzzle-contest-at-pints-and-paddle-with-sarah-does-puzzles": 6,
+        "/cornhole": 5,
+        "/event/bingo-at-pints-paddle-51": 5,
+        "/event/sweetheart-slam-pickleball-tournament": 5,
+        "/event/vikings-gameday-at-pints-paddle-eagles": 5,
+        "/event/bingo-at-pints-paddle-40": 4,
+        "/event/free-music-bingo": 4,
+        "/book-a-court": 3,
+        "/event/bingo-at-pints-paddle-38": 3,
+        "/event/slam-jam-25-gb-leighton": 3,
+        "/event/stars-stripes-and-smashes-pickleball-tournament": 3,
+        "/event/summer-25-patio-playlist-with-bruce-bowman": 3,
+        "/venue/pints-paddle": 3,
+        "/event/bingo-at-pints-paddle-18": 2,
+        "/event/bingo-at-pints-paddle-39": 2,
+        "/event/summer-25-patio-playlist-with-carlton-mitchell-2": 2,
+        "/event/summer-25-patio-playlist-with-the-everly-covers": 2,
+        "/event/the-initials-game-live-2": 2,
+        "/public-events-calendar/category/pickleball-tournament/photo": 2,
+        "/venue/15450-grove-cir-n-maple-grove-mn-united-states-minnesota-55369": 2,
+        "/event/bingo-at-pints-paddle-24": 1,
+        "/event/bingo-at-pints-paddle-34": 1,
+        "/event/free-music-bingo-2": 1,
+        "/event/july-6th-team-jigsaw-puzzle-contest-at-pints-and-paddle-with-sarah-does-puzzles-llc": 1,
+        "/event/music-bingo-sunday-pints-and-paddles": 1,
+        "/event/slam-jam-25-anderson-daniels": 1,
+        "/event/st-paddys-day-party": 1,
+        "/event/summer-25-patio-playlist-with-adam-daniels-2": 1,
+        "/event/summer-25-patio-playlist-with-carlton-mitchell": 1,
+        "/event/summer-25-patio-playlist-with-maxwell-johnson": 1,
+        "/event/summer-25-patio-playlist-with-preston-gunderson": 1,
+        "/event/team-jigsaw-puzzle-contest-at-pints-and-paddle-with-sarah-does-puzzles-3": 1,
+        "/event/the-initials-game-live-at-pints-paddle-4": 1,
+        "/event/trivia-at-pints-paddle-25": 1,
+        "/event/vikings-gameday-at-pints-paddle-eagles-2": 1,
+        "/event/vikings-gameday-at-pints-paddle-giants": 1,
+        "/event/vikings-gameday-at-pints-paddle-lions": 1,
+        "/event/yoga-beer": 1,
+        "/events/trivia-5-22-24": 1,
+        "/events/trivia-5-29-24": 1,
+        "/open-play/null": 1,
+        "/pu mpkin-carving": 1,
+        "/taprinoom": 1
+      },
+      "artistViews": {}
+    }
+  ]
+}

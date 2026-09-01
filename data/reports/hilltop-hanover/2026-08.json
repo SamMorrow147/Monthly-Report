@@ -1,0 +1,990 @@
+{
+  "schemaVersion": 3,
+  "slug": "hilltop-hanover",
+  "propertyId": "519865623",
+  "clientName": "Hilltop Hanover",
+  "highlightColor": "brown",
+  "month": "2026-08",
+  "monthLabel": "August 2026",
+  "generatedAt": "2026-09-01T14:30:00.640Z",
+  "range": {
+    "startDate": "2026-08-01",
+    "endDate": "2026-08-31",
+    "prevStartDate": "2026-07-01",
+    "prevEndDate": "2026-07-31"
+  },
+  "shareToken": "_IXBWTEsDVe2krilF5Ubfg",
+  "summary": {
+    "sessions": 4256,
+    "prevSessions": 4108,
+    "users": 2891,
+    "prevUsers": 2847,
+    "newUsers": 2617,
+    "prevNewUsers": 2587,
+    "pageViews": 4751,
+    "prevPageViews": 4538,
+    "avgSessionDuration": 127.02939576550754,
+    "prevAvgSessionDuration": 143.95481536148975,
+    "bounceRate": 0.5794172932330827,
+    "prevBounceRate": 0.5766796494644596,
+    "engagementRate": 0.4205827067669173,
+    "prevEngagementRate": 0.4233203505355404,
+    "conversions": 0,
+    "prevConversions": 0,
+    "sessionsChange": 3.6,
+    "usersChange": 1.5,
+    "newUsersChange": 1.2,
+    "pageViewsChange": 4.7,
+    "avgSessionDurationChange": -11.8,
+    "bounceRateChange": 0.5,
+    "engagementRateChange": -0.6,
+    "conversionsChange": 0
+  },
+  "daily": [
+    {
+      "date": "2026-08-01",
+      "sessions": 145,
+      "users": 127,
+      "pageViews": 165
+    },
+    {
+      "date": "2026-08-02",
+      "sessions": 162,
+      "users": 140,
+      "pageViews": 183
+    },
+    {
+      "date": "2026-08-03",
+      "sessions": 158,
+      "users": 135,
+      "pageViews": 174
+    },
+    {
+      "date": "2026-08-04",
+      "sessions": 117,
+      "users": 103,
+      "pageViews": 134
+    },
+    {
+      "date": "2026-08-05",
+      "sessions": 118,
+      "users": 105,
+      "pageViews": 123
+    },
+    {
+      "date": "2026-08-06",
+      "sessions": 133,
+      "users": 109,
+      "pageViews": 144
+    },
+    {
+      "date": "2026-08-07",
+      "sessions": 180,
+      "users": 148,
+      "pageViews": 205
+    },
+    {
+      "date": "2026-08-08",
+      "sessions": 126,
+      "users": 108,
+      "pageViews": 152
+    },
+    {
+      "date": "2026-08-09",
+      "sessions": 137,
+      "users": 113,
+      "pageViews": 149
+    },
+    {
+      "date": "2026-08-10",
+      "sessions": 108,
+      "users": 96,
+      "pageViews": 128
+    },
+    {
+      "date": "2026-08-11",
+      "sessions": 140,
+      "users": 111,
+      "pageViews": 150
+    },
+    {
+      "date": "2026-08-12",
+      "sessions": 115,
+      "users": 102,
+      "pageViews": 124
+    },
+    {
+      "date": "2026-08-13",
+      "sessions": 124,
+      "users": 100,
+      "pageViews": 136
+    },
+    {
+      "date": "2026-08-14",
+      "sessions": 156,
+      "users": 128,
+      "pageViews": 172
+    },
+    {
+      "date": "2026-08-15",
+      "sessions": 195,
+      "users": 156,
+      "pageViews": 215
+    },
+    {
+      "date": "2026-08-16",
+      "sessions": 123,
+      "users": 108,
+      "pageViews": 140
+    },
+    {
+      "date": "2026-08-17",
+      "sessions": 123,
+      "users": 114,
+      "pageViews": 137
+    },
+    {
+      "date": "2026-08-18",
+      "sessions": 130,
+      "users": 106,
+      "pageViews": 138
+    },
+    {
+      "date": "2026-08-19",
+      "sessions": 126,
+      "users": 105,
+      "pageViews": 134
+    },
+    {
+      "date": "2026-08-20",
+      "sessions": 129,
+      "users": 115,
+      "pageViews": 137
+    },
+    {
+      "date": "2026-08-21",
+      "sessions": 137,
+      "users": 120,
+      "pageViews": 151
+    },
+    {
+      "date": "2026-08-22",
+      "sessions": 169,
+      "users": 152,
+      "pageViews": 204
+    },
+    {
+      "date": "2026-08-23",
+      "sessions": 139,
+      "users": 119,
+      "pageViews": 149
+    },
+    {
+      "date": "2026-08-24",
+      "sessions": 143,
+      "users": 115,
+      "pageViews": 166
+    },
+    {
+      "date": "2026-08-25",
+      "sessions": 109,
+      "users": 95,
+      "pageViews": 121
+    },
+    {
+      "date": "2026-08-26",
+      "sessions": 107,
+      "users": 95,
+      "pageViews": 119
+    },
+    {
+      "date": "2026-08-27",
+      "sessions": 126,
+      "users": 111,
+      "pageViews": 146
+    },
+    {
+      "date": "2026-08-28",
+      "sessions": 159,
+      "users": 132,
+      "pageViews": 166
+    },
+    {
+      "date": "2026-08-29",
+      "sessions": 171,
+      "users": 148,
+      "pageViews": 198
+    },
+    {
+      "date": "2026-08-30",
+      "sessions": 140,
+      "users": 116,
+      "pageViews": 174
+    },
+    {
+      "date": "2026-08-31",
+      "sessions": 112,
+      "users": 98,
+      "pageViews": 117
+    }
+  ],
+  "topPages": [
+    {
+      "path": "/",
+      "title": "Hilltop Bar - Historic Hanover, MN",
+      "views": 4722,
+      "sessions": 4242,
+      "avgDuration": 127.16601351037247
+    },
+    {
+      "path": "/hiring",
+      "title": "Hiring - Hilltop Bar & Grill",
+      "views": 13,
+      "sessions": 11,
+      "avgDuration": 41.78466063636363
+    },
+    {
+      "path": "/application",
+      "title": "Job Application - Hilltop Bar & Grill",
+      "views": 6,
+      "sessions": 6,
+      "avgDuration": 107.19443533333333
+    },
+    {
+      "path": "/online/hilltophanover",
+      "title": "404 Page | Venus",
+      "views": 1,
+      "sessions": 1,
+      "avgDuration": 1.77217
+    },
+    {
+      "path": "/online/hilltophanover/item-bonless-wings_30afdde7-6f81-4472-931c-c495163269f8",
+      "title": "404 Page | Venus",
+      "views": 1,
+      "sessions": 1,
+      "avgDuration": 2.369918
+    },
+    {
+      "path": "/online/hilltophanover/item-buffalo-chicken-wontons_dce575bb-dbe3-4f76-994a-b1bea2afbd12",
+      "title": "404 Page | Venus",
+      "views": 1,
+      "sessions": 1,
+      "avgDuration": 19.92707
+    },
+    {
+      "path": "/online/hilltophanover/item-cheese-curds_f76865ad-e45c-4d07-8814-ded56abd27a4",
+      "title": "404 Page | Venus",
+      "views": 1,
+      "sessions": 1,
+      "avgDuration": 2.472913
+    },
+    {
+      "path": "/online/hilltophanover/item-chicken-quinoa-salad_8825cc16-9623-4853-9ca4-9c5de601f72a",
+      "title": "404 Page | Venus",
+      "views": 1,
+      "sessions": 1,
+      "avgDuration": 3.233887
+    },
+    {
+      "path": "/online/hilltophanover/item-chips-salsa-queso_45fd5d06-72da-4b25-b595-213ed2922fa3",
+      "title": "404 Page | Venus",
+      "views": 1,
+      "sessions": 1,
+      "avgDuration": 3.770442
+    },
+    {
+      "path": "/online/hilltophanover/item-cobb-salad_b8029a4f-cb3c-4877-887c-3404c34c88dc",
+      "title": "404 Page | Venus",
+      "views": 1,
+      "sessions": 1,
+      "avgDuration": 2.036881
+    },
+    {
+      "path": "/online/hilltophanover/item-firecracker-chicken-wrap_a9a34835-48a3-4d8a-b166-2bfacdd2109b",
+      "title": "404 Page | Venus",
+      "views": 1,
+      "sessions": 1,
+      "avgDuration": 2.36561
+    },
+    {
+      "path": "/online/hilltophanover/item-hilltop-smash-burger_904c8e6b-25f8-4419-a948-0b2eab088cf6",
+      "title": "404 Page | Venus",
+      "views": 1,
+      "sessions": 1,
+      "avgDuration": 3.019549
+    },
+    {
+      "path": "/online/hilltophanover/item-traditional-bonein-wings_1677ca8d-c4b7-4a07-9ee5-cd6c3a57de88",
+      "title": "404 Page | Venus",
+      "views": 1,
+      "sessions": 1,
+      "avgDuration": 2.845204
+    },
+    {
+      "path": "/",
+      "title": "﻿Hilltop Bar - Historic Hanover, MN",
+      "views": 0,
+      "sessions": 1,
+      "avgDuration": 52.267544
+    }
+  ],
+  "channels": [
+    {
+      "channel": "Organic Search",
+      "sessions": 2762,
+      "users": 1689,
+      "percentage": 65
+    },
+    {
+      "channel": "Direct",
+      "sessions": 1151,
+      "users": 899,
+      "percentage": 27
+    },
+    {
+      "channel": "Paid Social",
+      "sessions": 238,
+      "users": 222,
+      "percentage": 6
+    },
+    {
+      "channel": "Organic Social",
+      "sessions": 85,
+      "users": 79,
+      "percentage": 2
+    },
+    {
+      "channel": "Referral",
+      "sessions": 10,
+      "users": 8,
+      "percentage": 0
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": 9,
+      "users": 8,
+      "percentage": 0
+    },
+    {
+      "channel": "AI Assistant",
+      "sessions": 1,
+      "users": 1,
+      "percentage": 0
+    }
+  ],
+  "devices": [
+    {
+      "device": "mobile",
+      "sessions": 3710,
+      "percentage": 87
+    },
+    {
+      "device": "desktop",
+      "sessions": 497,
+      "percentage": 12
+    },
+    {
+      "device": "tablet",
+      "sessions": 61,
+      "percentage": 1
+    }
+  ],
+  "countries": [
+    {
+      "country": "United States",
+      "sessions": 4227,
+      "percentage": 100
+    },
+    {
+      "country": "Germany",
+      "sessions": 4,
+      "percentage": 0
+    },
+    {
+      "country": "United Kingdom",
+      "sessions": 4,
+      "percentage": 0
+    },
+    {
+      "country": "Canada",
+      "sessions": 3,
+      "percentage": 0
+    },
+    {
+      "country": "China",
+      "sessions": 2,
+      "percentage": 0
+    },
+    {
+      "country": "Ireland",
+      "sessions": 2,
+      "percentage": 0
+    },
+    {
+      "country": "Singapore",
+      "sessions": 2,
+      "percentage": 0
+    },
+    {
+      "country": "France",
+      "sessions": 1,
+      "percentage": 0
+    },
+    {
+      "country": "Hong Kong",
+      "sessions": 1,
+      "percentage": 0
+    },
+    {
+      "country": "Italy",
+      "sessions": 1,
+      "percentage": 0
+    }
+  ],
+  "cities": [
+    {
+      "city": "Minneapolis",
+      "country": "United States",
+      "sessions": 1199
+    },
+    {
+      "city": "Chicago",
+      "country": "United States",
+      "sessions": 872
+    },
+    {
+      "city": "Maple Grove",
+      "country": "United States",
+      "sessions": 216
+    },
+    {
+      "city": "(not set)",
+      "country": "United States",
+      "sessions": 164
+    },
+    {
+      "city": "Saint Michael",
+      "country": "United States",
+      "sessions": 157
+    },
+    {
+      "city": "Waukesha",
+      "country": "United States",
+      "sessions": 90
+    },
+    {
+      "city": "Buffalo",
+      "country": "United States",
+      "sessions": 60
+    },
+    {
+      "city": "Plymouth",
+      "country": "United States",
+      "sessions": 52
+    },
+    {
+      "city": "Beloit",
+      "country": "United States",
+      "sessions": 51
+    },
+    {
+      "city": "Rogers",
+      "country": "United States",
+      "sessions": 50
+    }
+  ],
+  "regions": [
+    {
+      "region": "Minnesota",
+      "country": "United States",
+      "sessions": 2666
+    },
+    {
+      "region": "Illinois",
+      "country": "United States",
+      "sessions": 904
+    },
+    {
+      "region": "Wisconsin",
+      "country": "United States",
+      "sessions": 211
+    },
+    {
+      "region": "Texas",
+      "country": "United States",
+      "sessions": 82
+    },
+    {
+      "region": "Colorado",
+      "country": "United States",
+      "sessions": 80
+    },
+    {
+      "region": "California",
+      "country": "United States",
+      "sessions": 42
+    },
+    {
+      "region": "Arizona",
+      "country": "United States",
+      "sessions": 40
+    },
+    {
+      "region": "Arkansas",
+      "country": "United States",
+      "sessions": 29
+    },
+    {
+      "region": "Alabama",
+      "country": "United States",
+      "sessions": 27
+    },
+    {
+      "region": "Indiana",
+      "country": "United States",
+      "sessions": 23
+    },
+    {
+      "region": "Florida",
+      "country": "United States",
+      "sessions": 18
+    },
+    {
+      "region": "Kansas",
+      "country": "United States",
+      "sessions": 17
+    },
+    {
+      "region": "New York",
+      "country": "United States",
+      "sessions": 17
+    },
+    {
+      "region": "Georgia",
+      "country": "United States",
+      "sessions": 15
+    },
+    {
+      "region": "Iowa",
+      "country": "United States",
+      "sessions": 15
+    },
+    {
+      "region": "Missouri",
+      "country": "United States",
+      "sessions": 15
+    },
+    {
+      "region": "Oklahoma",
+      "country": "United States",
+      "sessions": 13
+    },
+    {
+      "region": "Nebraska",
+      "country": "United States",
+      "sessions": 12
+    },
+    {
+      "region": "Montana",
+      "country": "United States",
+      "sessions": 11
+    },
+    {
+      "region": "South Dakota",
+      "country": "United States",
+      "sessions": 11
+    },
+    {
+      "region": "Washington",
+      "country": "United States",
+      "sessions": 11
+    },
+    {
+      "region": "Michigan",
+      "country": "United States",
+      "sessions": 10
+    },
+    {
+      "region": "Mississippi",
+      "country": "United States",
+      "sessions": 10
+    },
+    {
+      "region": "Idaho",
+      "country": "United States",
+      "sessions": 9
+    },
+    {
+      "region": "Tennessee",
+      "country": "United States",
+      "sessions": 8
+    },
+    {
+      "region": "Virginia",
+      "country": "United States",
+      "sessions": 8
+    },
+    {
+      "region": "North Dakota",
+      "country": "United States",
+      "sessions": 7
+    },
+    {
+      "region": "Wyoming",
+      "country": "United States",
+      "sessions": 7
+    },
+    {
+      "region": "Louisiana",
+      "country": "United States",
+      "sessions": 6
+    },
+    {
+      "region": "New Mexico",
+      "country": "United States",
+      "sessions": 6
+    },
+    {
+      "region": "Utah",
+      "country": "United States",
+      "sessions": 6
+    },
+    {
+      "region": "Massachusetts",
+      "country": "United States",
+      "sessions": 5
+    },
+    {
+      "region": "Ohio",
+      "country": "United States",
+      "sessions": 5
+    },
+    {
+      "region": "Connecticut",
+      "country": "United States",
+      "sessions": 3
+    },
+    {
+      "region": "England",
+      "country": "United Kingdom",
+      "sessions": 3
+    },
+    {
+      "region": "Nevada",
+      "country": "United States",
+      "sessions": 3
+    },
+    {
+      "region": "County Dublin",
+      "country": "Ireland",
+      "sessions": 2
+    },
+    {
+      "region": "Kentucky",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "Ontario",
+      "country": "Canada",
+      "sessions": 2
+    },
+    {
+      "region": "Oregon",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "West Virginia",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "Alberta",
+      "country": "Canada",
+      "sessions": 1
+    },
+    {
+      "region": "Bucharest",
+      "country": "Romania",
+      "sessions": 1
+    },
+    {
+      "region": "Delaware",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Fribourg",
+      "country": "Switzerland",
+      "sessions": 1
+    },
+    {
+      "region": "Fujian",
+      "country": "China",
+      "sessions": 1
+    },
+    {
+      "region": "Maine",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Mecklenburg-Vorpommern",
+      "country": "Germany",
+      "sessions": 1
+    },
+    {
+      "region": "Norrbotten County",
+      "country": "Sweden",
+      "sessions": 1
+    },
+    {
+      "region": "North Holland",
+      "country": "Netherlands",
+      "sessions": 1
+    },
+    {
+      "region": "North Rhine-Westphalia",
+      "country": "Germany",
+      "sessions": 1
+    },
+    {
+      "region": "Sindh",
+      "country": "Pakistan",
+      "sessions": 1
+    },
+    {
+      "region": "South Carolina",
+      "country": "United States",
+      "sessions": 1
+    }
+  ],
+  "referrers": [
+    {
+      "source": "google",
+      "sessions": 2585
+    },
+    {
+      "source": "(direct)",
+      "sessions": 1151
+    },
+    {
+      "source": "fb",
+      "sessions": 233
+    },
+    {
+      "source": "bing",
+      "sessions": 89
+    },
+    {
+      "source": "duckduckgo",
+      "sessions": 53
+    },
+    {
+      "source": "facebook.com",
+      "sessions": 53
+    },
+    {
+      "source": "yahoo",
+      "sessions": 33
+    },
+    {
+      "source": "ig",
+      "sessions": 16
+    },
+    {
+      "source": "m.facebook.com",
+      "sessions": 10
+    },
+    {
+      "source": "SaveOn",
+      "sessions": 8
+    }
+  ],
+  "sessionHistory": [
+    {
+      "month": "2026-08",
+      "label": "August",
+      "sessions": 4256,
+      "users": 2891,
+      "newUsers": 2617,
+      "avgSessionDuration": 127.02939576550754,
+      "busiestDate": "2026-08-15",
+      "busiestSessions": 195,
+      "pageViews": {
+        "/": 4722,
+        "/hiring": 13,
+        "/application": 6,
+        "/online/hilltophanover": 1,
+        "/online/hilltophanover/item-bonless-wings_30afdde7-6f81-4472-931c-c495163269f8": 1,
+        "/online/hilltophanover/item-buffalo-chicken-wontons_dce575bb-dbe3-4f76-994a-b1bea2afbd12": 1,
+        "/online/hilltophanover/item-cheese-curds_f76865ad-e45c-4d07-8814-ded56abd27a4": 1,
+        "/online/hilltophanover/item-chicken-quinoa-salad_8825cc16-9623-4853-9ca4-9c5de601f72a": 1,
+        "/online/hilltophanover/item-chips-salsa-queso_45fd5d06-72da-4b25-b595-213ed2922fa3": 1,
+        "/online/hilltophanover/item-cobb-salad_b8029a4f-cb3c-4877-887c-3404c34c88dc": 1,
+        "/online/hilltophanover/item-firecracker-chicken-wrap_a9a34835-48a3-4d8a-b166-2bfacdd2109b": 1,
+        "/online/hilltophanover/item-hilltop-smash-burger_904c8e6b-25f8-4419-a948-0b2eab088cf6": 1,
+        "/online/hilltophanover/item-traditional-bonein-wings_1677ca8d-c4b7-4a07-9ee5-cd6c3a57de88": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-07",
+      "label": "July",
+      "sessions": 4108,
+      "users": 2847,
+      "newUsers": 2587,
+      "avgSessionDuration": 143.95481536148975,
+      "busiestDate": "2026-07-17",
+      "busiestSessions": 170,
+      "pageViews": {
+        "/": 4503,
+        "/application": 24,
+        "/hiring": 11
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-06",
+      "label": "June",
+      "sessions": 3701,
+      "users": 2479,
+      "newUsers": 2251,
+      "avgSessionDuration": 127.07337691110511,
+      "busiestDate": "2026-06-21",
+      "busiestSessions": 189,
+      "pageViews": {
+        "/": 3963,
+        "/hiring": 21,
+        "/application": 20,
+        "/careers": 1,
+        "/menu": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-05",
+      "label": "May",
+      "sessions": 4086,
+      "users": 2667,
+      "newUsers": 2413,
+      "avgSessionDuration": 128.91756858321102,
+      "busiestDate": "2026-05-10",
+      "busiestSessions": 214,
+      "pageViews": {
+        "/": 4415,
+        "/application": 49,
+        "/hiring": 28,
+        "/admin": 3,
+        "/contact": 1,
+        "/online/hilltophanover": 1,
+        "/online/hilltophanover/item-bonless-wings_30afdde7-6f81-4472-931c-c495163269f8": 1,
+        "/online/hilltophanover/item-buffalo-chicken-wontons_dce575bb-dbe3-4f76-994a-b1bea2afbd12": 1,
+        "/online/hilltophanover/item-cheese-curds_f76865ad-e45c-4d07-8814-ded56abd27a4": 1,
+        "/online/hilltophanover/item-chicken-quinoa-salad_8825cc16-9623-4853-9ca4-9c5de601f72a": 1,
+        "/online/hilltophanover/item-chips-salsa-queso_45fd5d06-72da-4b25-b595-213ed2922fa3": 1,
+        "/online/hilltophanover/item-cobb-salad_b8029a4f-cb3c-4877-887c-3404c34c88dc": 1,
+        "/online/hilltophanover/item-firecracker-chicken-wrap_a9a34835-48a3-4d8a-b166-2bfacdd2109b": 1,
+        "/online/hilltophanover/item-hilltop-smash-burger_904c8e6b-25f8-4419-a948-0b2eab088cf6": 1,
+        "/online/hilltophanover/item-traditional-bonein-wings_1677ca8d-c4b7-4a07-9ee5-cd6c3a57de88": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-04",
+      "label": "April",
+      "sessions": 4022,
+      "users": 2699,
+      "newUsers": 2493,
+      "avgSessionDuration": 158.71798888214812,
+      "busiestDate": "2026-04-11",
+      "busiestSessions": 192,
+      "pageViews": {
+        "/": 4337,
+        "/application": 20,
+        "/hiring": 19,
+        "/contact": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-03",
+      "label": "March",
+      "sessions": 4180,
+      "users": 2763,
+      "newUsers": 2525,
+      "avgSessionDuration": 112.05321833684211,
+      "busiestDate": "2026-03-28",
+      "busiestSessions": 191,
+      "pageViews": {
+        "/": 4587,
+        "/application": 11,
+        "/hiring": 8,
+        "/about-us/contact": 1,
+        "/about/contact": 1,
+        "/contact": 1,
+        "/contact-us": 1,
+        "/contact_us": 1,
+        "/contactus": 1,
+        "/get-in-touch": 1,
+        "/info/contact": 1,
+        "/online/hilltophanover": 1,
+        "/online/hilltophanover/item-bonless-wings_30afdde7-6f81-4472-931c-c495163269f8": 1,
+        "/online/hilltophanover/item-buffalo-chicken-wontons_dce575bb-dbe3-4f76-994a-b1bea2afbd12": 1,
+        "/online/hilltophanover/item-buffalo-chicken-wrap_e70004bb-ffd0-4479-9428-dbf84f5ce066": 1,
+        "/online/hilltophanover/item-cheese-curds_f76865ad-e45c-4d07-8814-ded56abd27a4": 1,
+        "/online/hilltophanover/item-chips-salsa-queso_45fd5d06-72da-4b25-b595-213ed2922fa3": 1,
+        "/online/hilltophanover/item-firecracker-chicken-wrap_a9a34835-48a3-4d8a-b166-2bfacdd2109b": 1,
+        "/online/hilltophanover/item-hilltop-smash-burger_904c8e6b-25f8-4419-a948-0b2eab088cf6": 1,
+        "/online/hilltophanover/item-steak-bites_2ccf83fb-9579-4f02-9ef1-82b41abe5265": 1,
+        "/online/hilltophanover/item-traditional-bonein-wings_1677ca8d-c4b7-4a07-9ee5-cd6c3a57de88": 1,
+        "/reach-us": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-02",
+      "label": "February",
+      "sessions": 3846,
+      "users": 2542,
+      "newUsers": 2340,
+      "avgSessionDuration": 142.04348594669784,
+      "busiestDate": "2026-02-21",
+      "busiestSessions": 216,
+      "pageViews": {
+        "/": 4157,
+        "/hiring": 33,
+        "/application": 32,
+        "/applacation": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-01",
+      "label": "January",
+      "sessions": 2532,
+      "users": 1737,
+      "newUsers": 1733,
+      "avgSessionDuration": 110.34660168641392,
+      "busiestDate": "2026-01-17",
+      "busiestSessions": 230,
+      "pageViews": {
+        "/": 2749,
+        "/hiring": 61,
+        "/application": 39,
+        "/online/hilltophanover": 1,
+        "/online/hilltophanover/item-bbq-bacon-smash-burger_057ba595-5065-4d6c-b073-71edacdf7c45": 1,
+        "/online/hilltophanover/item-bonless-wings_30afdde7-6f81-4472-931c-c495163269f8": 1,
+        "/online/hilltophanover/item-buffalo-chicken-wontons_dce575bb-dbe3-4f76-994a-b1bea2afbd12": 1,
+        "/online/hilltophanover/item-cheese-curds_f76865ad-e45c-4d07-8814-ded56abd27a4": 1,
+        "/online/hilltophanover/item-chicken-quinoa-salad_8825cc16-9623-4853-9ca4-9c5de601f72a": 1,
+        "/online/hilltophanover/item-cobb-salad_b8029a4f-cb3c-4877-887c-3404c34c88dc": 1,
+        "/online/hilltophanover/item-firecracker-chicken-wrap_a9a34835-48a3-4d8a-b166-2bfacdd2109b": 1,
+        "/online/hilltophanover/item-hilltop-smash-burger_904c8e6b-25f8-4419-a948-0b2eab088cf6": 1,
+        "/online/hilltophanover/item-traditional-bonein-wings_1677ca8d-c4b7-4a07-9ee5-cd6c3a57de88": 1
+      },
+      "artistViews": {}
+    }
+  ]
+}

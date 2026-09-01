@@ -1,6 +1,14 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import type { MonthlyReport, MonthlyReportSessionPoint } from "@/lib/reports";
 import {
   busiestDay,
@@ -19,12 +27,17 @@ import {
   busiestMonths,
   HIGHLIGHT_COLOR_HEX,
   percentChange,
-  reportAccent,
   storyChapters,
   topChannel,
   topCity,
   visitMonths,
 } from "@/lib/report-story";
+import {
+  isMetalAccent,
+  storyThemeFor,
+  storyThemeVars,
+  type StoryTheme,
+} from "@/lib/story-theme";
 import { VisitorMap } from "@/components/reports/VisitorMap";
 import {
   AnimatedCount,
@@ -42,16 +55,28 @@ import { ClientLogo } from "@/components/ClientLogo";
 import { getClientBySlug } from "@/lib/clients";
 import { motion, type PanInfo } from "framer-motion";
 
-function isMetalAccent(accent: string) {
-  return accent.toLowerCase() === HIGHLIGHT_COLOR_HEX.gold;
+const StoryThemeContext = createContext<StoryTheme>(storyThemeFor({
+  slug: "",
+  highlightColor: "blue",
+}));
+
+function useStoryTheme() {
+  return useContext(StoryThemeContext);
 }
 
 function accentTextStyle(accent: string): React.CSSProperties {
   return isMetalAccent(accent) ? {} : { color: accent };
 }
 
+function titleTextStyle(accent: string, theme: StoryTheme): React.CSSProperties {
+  if (isMetalAccent(accent)) return {};
+  if (theme.mode === "light") return { color: theme.fg };
+  return { color: accent };
+}
+
 function withMetal(accent: string, className: string) {
-  return isMetalAccent(accent) ? `${className} mybiz-metal` : className;
+  const headed = `${className} mybiz-heading`;
+  return isMetalAccent(accent) ? `${headed} mybiz-metal` : headed;
 }
 
 function isAppleBrowser(): boolean {
@@ -65,7 +90,8 @@ function isAppleBrowser(): boolean {
 }
 
 export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
-  const accent = reportAccent(report.highlightColor);
+  const theme = storyThemeFor(report);
+  const accent = theme.accent;
   const chapters = useMemo(() => storyChapters(report), [report]);
   const prevMonth = previousMonthLabel(report);
   const pages = hasArtistRoster(report)
@@ -223,7 +249,19 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
   }
 
   return (
-    <div className="fixed inset-0 bg-[#0a0e1a] text-white">
+    <StoryThemeContext.Provider value={theme}>
+    <div className="mybiz-root fixed inset-0" data-theme={theme.id} style={storyThemeVars(theme)}>
+      {theme.fontsHref ? (
+        <>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="anonymous"
+          />
+          <link href={theme.fontsHref} rel="stylesheet" />
+        </>
+      ) : null}
       <div
         ref={scrollerRef}
         className={`mybiz-scroller h-[100dvh] overflow-y-auto${
@@ -260,9 +298,9 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
           type="button"
           aria-label="Previous section"
           onClick={() => goTo(active - 1)}
-          className="absolute top-5 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 text-white/70 hover:text-white"
+          className="absolute top-5 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 mybiz-muted"
         >
-          <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 border border-white/15">
+          <span className="flex h-12 w-12 items-center justify-center rounded-full mybiz-chip">
             <Chevron dir="up" />
           </span>
         </button>
@@ -273,12 +311,12 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
           type="button"
           aria-label="Next section"
           onClick={() => goTo(active + 1)}
-          className="absolute bottom-5 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 text-white/70 hover:text-white"
+          className="absolute bottom-5 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 mybiz-muted"
         >
-          <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 border border-white/15">
+          <span className="flex h-12 w-12 items-center justify-center rounded-full mybiz-chip">
             <Chevron dir="down" />
           </span>
-          <span className="text-[10px] uppercase tracking-[0.22em] text-white/40">
+          <span className="text-[10px] uppercase tracking-[0.22em] mybiz-faint">
             Scroll
           </span>
         </button>
@@ -296,7 +334,7 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
             onClick={() => goTo(index)}
             className="w-2.5 h-2.5 rounded-full transition-all"
             style={{
-              backgroundColor: index === active ? accent : "rgba(255,255,255,0.25)",
+              backgroundColor: index === active ? accent : "var(--mybiz-faint)",
               transform: index === active ? "scale(1.25)" : "scale(1)",
             }}
           />
@@ -372,6 +410,21 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
           background-clip: text;
           color: transparent;
           -webkit-text-fill-color: transparent;
+        }
+        .mybiz-heading {
+          font-family: var(--mybiz-heading);
+        }
+        .mybiz-muted { color: var(--mybiz-muted); }
+        .mybiz-soft { color: var(--mybiz-soft); }
+        .mybiz-faint { color: var(--mybiz-faint); }
+        .mybiz-chip {
+          background: var(--mybiz-surface);
+          border: 1px solid var(--mybiz-border);
+          color: var(--mybiz-muted);
+        }
+        .mybiz-chip:hover {
+          background: var(--mybiz-surface-hover);
+          color: var(--mybiz-fg);
         }
         .mybiz-mark.is-play .mybiz-mark-core {
           animation: mybiz-pop 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
@@ -510,6 +563,7 @@ export function MyBusinessScroll({ report }: { report: MonthlyReport }) {
         }
       `}</style>
     </div>
+    </StoryThemeContext.Provider>
   );
 }
 
@@ -576,6 +630,17 @@ function Eyebrow({
   accent: string;
   className?: string;
 }) {
+  const theme = useStoryTheme();
+  if (theme.eyebrow === "label") {
+    return (
+      <p
+        className={`text-sm sm:text-base font-normal tracking-[0.28em] uppercase mybiz-heading ${className}`}
+        style={{ color: theme.fg }}
+      >
+        {children}
+      </p>
+    );
+  }
   return (
     <p
       className={withMetal(
@@ -756,17 +821,24 @@ function OpenChapter({
   accent: string;
   active: boolean;
 }) {
+  const theme = useStoryTheme();
+  const client = getClientBySlug(report.slug);
+  const logoSize =
+    report.slug === "ink-kings" || client?.logoShape === "wordmark"
+      ? "display"
+      : "hero";
+
   return (
     <>
       <Reveal active={active}>
         <ClientLogo
           slug={report.slug}
           clientName={report.clientName}
-          size={report.slug === "ink-kings" ? "display" : "hero"}
-          onDark
+          size={logoSize}
+          onDark={theme.mode === "dark"}
           metallic={isMetalAccent(accent)}
           fill={isMetalAccent(accent) ? HIGHLIGHT_COLOR_HEX.gold : undefined}
-          className="mx-auto mb-6"
+          className={`mx-auto mb-6${theme.mode === "light" ? " drop-shadow-md" : ""}`}
         />
       </Reveal>
       <Reveal active={active} delay={80}>
@@ -778,18 +850,18 @@ function OpenChapter({
             accent,
             "text-6xl sm:text-8xl font-semibold tracking-tight leading-[1.05]"
           )}
-          style={accentTextStyle(accent)}
+          style={titleTextStyle(accent, theme)}
         >
           {report.clientName}
         </h1>
       </Reveal>
       <Reveal active={active} delay={180}>
-        <p className="mt-6 text-2xl sm:text-4xl text-white/60">
+        <p className="mt-6 text-2xl sm:text-4xl mybiz-soft">
           {report.monthLabel}
         </p>
       </Reveal>
       <Reveal active={active} delay={280}>
-        <p className="mt-8 text-xl sm:text-3xl text-white/80">
+        <p className="mt-8 text-xl sm:text-3xl mybiz-muted">
           Your {report.monthLabel.replace(/\s+\d+$/, "")} on the web.
         </p>
       </Reveal>
@@ -989,7 +1061,7 @@ function StoryDepthStrip({
                 {item.label ? (
                   <p
                     className={`mt-3 text-xl sm:text-2xl ${
-                      focusedHere ? "text-white/70" : "text-white/45"
+                      focusedHere ? "mybiz-muted" : "mybiz-faint"
                     }`}
                   >
                     {item.label}
@@ -1007,7 +1079,7 @@ function StoryDepthStrip({
           aria-label="See previous"
           onClick={() => go(page + 1)}
           onPointerDown={(e) => e.stopPropagation()}
-          className="absolute left-2 sm:left-10 top-1/2 -translate-y-1/2 z-20 flex h-8 w-8 sm:h-11 sm:w-11 items-center justify-center rounded-full bg-white/10 border border-white/15 text-white/80 hover:text-white hover:bg-white/15"
+          className="absolute left-2 sm:left-10 top-1/2 -translate-y-1/2 z-20 flex h-8 w-8 sm:h-11 sm:w-11 items-center justify-center rounded-full mybiz-chip"
         >
           <Chevron dir="left" className="h-4 w-4 sm:h-[22px] sm:w-[22px]" />
         </button>
@@ -1018,7 +1090,7 @@ function StoryDepthStrip({
           aria-label="See next"
           onClick={() => go(page - 1)}
           onPointerDown={(e) => e.stopPropagation()}
-          className="absolute right-2 sm:right-10 top-1/2 -translate-y-1/2 z-20 flex h-8 w-8 sm:h-11 sm:w-11 items-center justify-center rounded-full bg-white/10 border border-white/15 text-white/80 hover:text-white hover:bg-white/15"
+          className="absolute right-2 sm:right-10 top-1/2 -translate-y-1/2 z-20 flex h-8 w-8 sm:h-11 sm:w-11 items-center justify-center rounded-full mybiz-chip"
         >
           <Chevron dir="right" className="h-4 w-4 sm:h-[22px] sm:w-[22px]" />
         </button>
@@ -1056,13 +1128,13 @@ function MonthChangeLine({
         change={change}
         prevMonth={older.label}
         active={active}
-        className="mt-8 text-2xl sm:text-3xl text-white/70"
+        className="mt-8 text-2xl sm:text-3xl mybiz-muted"
       />
     );
   }
   if (months.length > 1) {
     return (
-      <p className="mt-8 text-2xl sm:text-3xl text-white/70">
+      <p className="mt-8 text-2xl sm:text-3xl mybiz-muted">
         the earliest month we have
       </p>
     );
@@ -1072,7 +1144,7 @@ function MonthChangeLine({
       change={fallbackChange}
       prevMonth={fallbackPrev}
       active={active}
-      className="mt-8 text-2xl sm:text-3xl text-white/70"
+      className="mt-8 text-2xl sm:text-3xl mybiz-muted"
     />
   );
 }
@@ -1243,7 +1315,7 @@ function PeopleChapter({
         />
       )}
       <Reveal active={active} delay={180}>
-        <p className="mt-2 text-2xl sm:text-3xl text-white/70">
+        <p className="mt-2 text-2xl sm:text-3xl mybiz-muted">
           people who came to the site
         </p>
       </Reveal>
@@ -1258,7 +1330,7 @@ function PeopleChapter({
         />
       </Reveal>
       <Reveal active={active} delay={280}>
-        <p className="mt-4 text-lg sm:text-2xl text-white/50">
+        <p className="mt-4 text-lg sm:text-2xl mybiz-faint">
           {formatCount(newUsers)} were new unique visitors
         </p>
       </Reveal>
@@ -1315,7 +1387,7 @@ function AttentionChapter({
         />
       )}
       <Reveal active={active} delay={180}>
-        <p className="mt-2 text-2xl sm:text-3xl text-white/70">
+        <p className="mt-2 text-2xl sm:text-3xl mybiz-muted">
           how long a typical visit lasted
         </p>
       </Reveal>
@@ -1331,7 +1403,7 @@ function AttentionChapter({
       </Reveal>
       {focus === 0 && (
         <Reveal active={active} delay={340}>
-          <p className="mt-3 text-lg sm:text-2xl text-white/50">
+          <p className="mt-3 text-lg sm:text-2xl mybiz-faint">
             <AnimatedPercent rate={report.summary.engagementRate} active={active} />{" "}
             of visits stayed engaged
           </p>
@@ -1396,7 +1468,7 @@ function BusiestChapter({
         </Reveal>
       )}
       <Reveal active={active} delay={180}>
-        <p className="mt-2 text-2xl sm:text-3xl text-white/70">
+        <p className="mt-2 text-2xl sm:text-3xl mybiz-muted">
           <AnimatedCount
             key={focused?.month || busy.date}
             value={visits}
@@ -1463,6 +1535,9 @@ function ArtistChapter({
       <div className="grid grid-cols-3 gap-x-4 gap-y-6 sm:gap-x-8 sm:gap-y-8 w-full max-w-lg mx-auto mt-4">
         {artists.map((artist) => (
           <div key={artist.id} className="flex flex-col items-center text-center">
+            <span className="mb-2 text-sm sm:text-base mybiz-muted">
+              {artist.name}
+            </span>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={artist.photo}
@@ -1479,9 +1554,6 @@ function ArtistChapter({
               {formatCount(
                 views?.[artist.id] ?? (focus === 0 ? artist.views : 0)
               )}
-            </span>
-            <span className="mt-1.5 text-sm sm:text-base text-white/65">
-              {artist.name}
             </span>
           </div>
         ))}
@@ -1606,7 +1678,7 @@ function ChannelsChapter({
       </Reveal>
       {channel && (
         <Reveal active={active} delay={80}>
-          <p className="text-2xl sm:text-4xl text-white/80 mb-10">
+          <p className="text-2xl sm:text-4xl mybiz-muted mb-10">
             Mostly {channel.channel.toLowerCase()}
           </p>
         </Reveal>
@@ -1616,7 +1688,7 @@ function ChannelsChapter({
           <Reveal key={c.channel} as="li" active={active} delay={90 * i}>
             <div className="flex items-baseline justify-between gap-4 text-lg sm:text-xl">
               <span>{c.channel}</span>
-              <span className="tabular-nums text-white/50">
+              <span className="tabular-nums mybiz-faint">
                 <ChannelPercent
                   percent={c.percentage}
                   active={active}
@@ -1648,6 +1720,7 @@ function GeographyChapter({
   accent: string;
   active: boolean;
 }) {
+  const theme = useStoryTheme();
   return (
     <>
       <Reveal active={active}>
@@ -1655,14 +1728,14 @@ function GeographyChapter({
       </Reveal>
       {city && (
         <Reveal active={active} delay={80}>
-          <p className="text-5xl sm:text-7xl font-semibold tracking-tight mb-3">
+          <p className="mybiz-heading text-5xl sm:text-7xl font-semibold tracking-tight mb-3">
             {city.city}
           </p>
         </Reveal>
       )}
       {city && (
         <Reveal active={active} delay={160}>
-          <p className="text-lg sm:text-2xl text-white/55 mb-6">
+          <p className="text-lg sm:text-2xl mybiz-faint mb-6">
             <AnimatedCount value={city.sessions} active={active} delay={160} />{" "}
             visits from {city.city}
             {city.country ? `, ${city.country}` : ""}
@@ -1675,7 +1748,7 @@ function GeographyChapter({
             countries={report.countries}
             regions={report.regions || []}
             accent={accent}
-            isDark
+            isDark={theme.mode === "dark"}
             flush
             defaultView="us"
           />
@@ -1709,7 +1782,7 @@ function HoursChapter({
         style={accentTextStyle(accent)}
       />
       <Reveal active={active} delay={200}>
-        <p className="mt-6 text-2xl sm:text-3xl text-white/70">
+        <p className="mt-6 text-2xl sm:text-3xl mybiz-muted">
           hours we spent on this site in{" "}
           {report.monthLabel.replace(/\s+\d+$/, "")}
         </p>
@@ -1739,7 +1812,7 @@ function NotesChapter({
             as="li"
             active={active}
             delay={110 * i}
-            className="text-xl sm:text-2xl text-white/85"
+            className="text-xl sm:text-2xl mybiz-muted"
           >
             {note}
           </Reveal>
@@ -1762,29 +1835,37 @@ function CloseChapter({
   copied: boolean;
   onCopy: () => void;
 }) {
+  const theme = useStoryTheme();
+  const client = getClientBySlug(report.slug);
+  const logoSize =
+    report.slug === "ink-kings" || client?.logoShape === "wordmark"
+      ? "hero"
+      : "lg";
+  const pill = theme.button === "pill";
+
   return (
     <>
       <Reveal active={active}>
         <ClientLogo
           slug={report.slug}
           clientName={report.clientName}
-          size={report.slug === "ink-kings" ? "hero" : "lg"}
-          onDark
+          size={logoSize}
+          onDark={theme.mode === "dark"}
           metallic={isMetalAccent(accent)}
           fill={isMetalAccent(accent) ? HIGHLIGHT_COLOR_HEX.gold : undefined}
-          className="mx-auto mb-6"
+          className={`mx-auto mb-6${theme.mode === "light" ? " drop-shadow-md" : ""}`}
         />
       </Reveal>
       <Reveal active={active} delay={80}>
         <Eyebrow accent={accent}>My Business</Eyebrow>
       </Reveal>
       <Reveal active={active} delay={140}>
-        <h2 className="text-5xl sm:text-7xl font-semibold tracking-tight leading-tight">
+        <h2 className="mybiz-heading text-5xl sm:text-7xl font-semibold tracking-tight leading-tight">
           That was {report.monthLabel.replace(/\s+\d+$/, "")}.
         </h2>
       </Reveal>
       <Reveal active={active} delay={180}>
-        <p className="mt-6 text-2xl sm:text-3xl text-white/65">
+        <p className="mt-6 text-2xl sm:text-3xl mybiz-muted">
           <AnimatedCount value={report.summary.sessions} active={active} /> visits
           · <AnimatedCount value={report.summary.users} active={active} delay={220} />{" "}
           people
@@ -1795,14 +1876,20 @@ function CloseChapter({
           <button
             type="button"
             onClick={onCopy}
-            className="text-sm sm:text-base font-semibold px-5 py-3 rounded-md text-white"
+            className={`text-sm sm:text-base font-semibold px-6 py-3 text-white ${
+              pill ? "rounded-full" : "rounded-md"
+            }`}
             style={{ backgroundColor: accent }}
           >
             {copied ? "Link copied" : "Copy this link"}
           </button>
           <a
             href={monthlyReportPath(report.shareToken)}
-            className="text-sm sm:text-base font-medium px-5 py-3 rounded-md text-white/70 hover:text-white bg-white/10"
+            className={`text-sm sm:text-base font-medium px-6 py-3 ${
+              pill
+                ? "rounded-full bg-black text-white hover:bg-gray-800"
+                : "rounded-md mybiz-chip"
+            }`}
           >
             Full monthly report
           </a>

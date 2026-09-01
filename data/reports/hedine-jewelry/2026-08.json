@@ -1,0 +1,328 @@
+{
+  "schemaVersion": 3,
+  "slug": "hedine-jewelry",
+  "propertyId": "549979956",
+  "clientName": "Hedine Jewelry",
+  "highlightColor": "navy",
+  "month": "2026-08",
+  "monthLabel": "August 2026",
+  "generatedAt": "2026-09-01T14:30:42.527Z",
+  "range": {
+    "startDate": "2026-08-01",
+    "endDate": "2026-08-31",
+    "prevStartDate": "2026-07-01",
+    "prevEndDate": "2026-07-31"
+  },
+  "shareToken": "pMM5AY1gYL3KeiTwusHy7Q",
+  "summary": {
+    "sessions": 14,
+    "prevSessions": 0,
+    "users": 10,
+    "prevUsers": 0,
+    "newUsers": 9,
+    "prevNewUsers": 0,
+    "pageViews": 19,
+    "prevPageViews": 0,
+    "avgSessionDuration": 17.188153928571428,
+    "prevAvgSessionDuration": 0,
+    "bounceRate": 0.7142857142857143,
+    "prevBounceRate": 0,
+    "engagementRate": 0.2857142857142857,
+    "prevEngagementRate": 0,
+    "conversions": 0,
+    "prevConversions": 0,
+    "sessionsChange": 100,
+    "usersChange": 100,
+    "newUsersChange": 100,
+    "pageViewsChange": 100,
+    "avgSessionDurationChange": 100,
+    "bounceRateChange": 100,
+    "engagementRateChange": 100,
+    "conversionsChange": 0
+  },
+  "daily": [
+    {
+      "date": "2026-08-15",
+      "sessions": 3,
+      "users": 3,
+      "pageViews": 3
+    },
+    {
+      "date": "2026-08-16",
+      "sessions": 2,
+      "users": 2,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-17",
+      "sessions": 2,
+      "users": 1,
+      "pageViews": 2
+    },
+    {
+      "date": "2026-08-18",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-19",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 5
+    },
+    {
+      "date": "2026-08-20",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 2
+    },
+    {
+      "date": "2026-08-21",
+      "sessions": 2,
+      "users": 2,
+      "pageViews": 2
+    },
+    {
+      "date": "2026-08-24",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 2
+    },
+    {
+      "date": "2026-08-26",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    }
+  ],
+  "topPages": [
+    {
+      "path": "/",
+      "title": "Hedine Jewelry",
+      "views": 10,
+      "sessions": 10,
+      "avgDuration": 12.1126208
+    },
+    {
+      "path": "/product-category/earrings/metal_type-white-gold/",
+      "title": "Earrings – Hedine Jewelry",
+      "views": 4,
+      "sessions": 4,
+      "avgDuration": 0
+    },
+    {
+      "path": "/buy-sell/",
+      "title": "Buy & Sell – Hedine Jewelry",
+      "views": 1,
+      "sessions": 1,
+      "avgDuration": 52.244052
+    },
+    {
+      "path": "/contact/",
+      "title": "Contact – Hedine Jewelry",
+      "views": 1,
+      "sessions": 1,
+      "avgDuration": 5.467295
+    },
+    {
+      "path": "/custom-designs/",
+      "title": "Custom Designs – Hedine Jewelry",
+      "views": 1,
+      "sessions": 1,
+      "avgDuration": 7.956601
+    },
+    {
+      "path": "/jewelry-repairs/",
+      "title": "Jewelry Repairs – Hedine Jewelry",
+      "views": 1,
+      "sessions": 1,
+      "avgDuration": 48.09179
+    },
+    {
+      "path": "/product-category/rings/",
+      "title": "Rings – Hedine Jewelry",
+      "views": 1,
+      "sessions": 1,
+      "avgDuration": 5.748209
+    }
+  ],
+  "channels": [
+    {
+      "channel": "Direct",
+      "sessions": 11,
+      "users": 7,
+      "percentage": 79
+    },
+    {
+      "channel": "Organic Social",
+      "sessions": 2,
+      "users": 2,
+      "percentage": 14
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": 1,
+      "users": 1,
+      "percentage": 7
+    }
+  ],
+  "devices": [
+    {
+      "device": "desktop",
+      "sessions": 7,
+      "percentage": 50
+    },
+    {
+      "device": "mobile",
+      "sessions": 7,
+      "percentage": 50
+    }
+  ],
+  "countries": [
+    {
+      "country": "United States",
+      "sessions": 12,
+      "percentage": 86
+    },
+    {
+      "country": "Germany",
+      "sessions": 2,
+      "percentage": 14
+    }
+  ],
+  "cities": [
+    {
+      "city": "Minneapolis",
+      "country": "United States",
+      "sessions": 4
+    },
+    {
+      "city": "Alexandria",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "city": "Prineville",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "city": "(not set)",
+      "country": "Germany",
+      "sessions": 1
+    },
+    {
+      "city": "(not set)",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "city": "Fargo",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "city": "Glenview",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "city": "Hays",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "city": "Hennigsdorf",
+      "country": "Germany",
+      "sessions": 1
+    }
+  ],
+  "regions": [
+    {
+      "region": "Minnesota",
+      "country": "United States",
+      "sessions": 6
+    },
+    {
+      "region": "Oregon",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "Brandenburg",
+      "country": "Germany",
+      "sessions": 1
+    },
+    {
+      "region": "Illinois",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Kansas",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "New York",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "North Dakota",
+      "country": "United States",
+      "sessions": 1
+    }
+  ],
+  "referrers": [
+    {
+      "source": "(direct)",
+      "sessions": 11
+    },
+    {
+      "source": "(not set)",
+      "sessions": 1
+    },
+    {
+      "source": "facebook.com",
+      "sessions": 1
+    },
+    {
+      "source": "m.facebook.com",
+      "sessions": 1
+    }
+  ],
+  "sessionHistory": [
+    {
+      "month": "2026-08",
+      "label": "August",
+      "sessions": 14,
+      "users": 10,
+      "newUsers": 9,
+      "avgSessionDuration": 17.188153928571428,
+      "busiestDate": "2026-08-15",
+      "busiestSessions": 3,
+      "pageViews": {
+        "/": 10,
+        "/product-category/earrings/metal_type-white-gold": 4,
+        "/buy-sell": 1,
+        "/contact": 1,
+        "/custom-designs": 1,
+        "/jewelry-repairs": 1,
+        "/product-category/rings": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-07",
+      "label": "July",
+      "sessions": 0,
+      "users": 0,
+      "newUsers": 0,
+      "avgSessionDuration": 0,
+      "pageViews": {},
+      "artistViews": {}
+    }
+  ]
+}

@@ -1,0 +1,511 @@
+{
+  "schemaVersion": 3,
+  "slug": "no-words",
+  "propertyId": "525434558",
+  "clientName": "No Words",
+  "highlightColor": "orange",
+  "month": "2026-08",
+  "monthLabel": "August 2026",
+  "generatedAt": "2026-09-01T14:30:29.605Z",
+  "range": {
+    "startDate": "2026-08-01",
+    "endDate": "2026-08-31",
+    "prevStartDate": "2026-07-01",
+    "prevEndDate": "2026-07-31"
+  },
+  "shareToken": "1l0w8jW3M6AhO9WwYqOG3A",
+  "summary": {
+    "sessions": 108,
+    "prevSessions": 61,
+    "users": 103,
+    "prevUsers": 46,
+    "newUsers": 101,
+    "prevNewUsers": 43,
+    "pageViews": 127,
+    "prevPageViews": 104,
+    "avgSessionDuration": 49.663746842592595,
+    "prevAvgSessionDuration": 164.18402380327868,
+    "bounceRate": 0.2777777777777778,
+    "prevBounceRate": 0.4098360655737705,
+    "engagementRate": 0.7222222222222222,
+    "prevEngagementRate": 0.5901639344262295,
+    "conversions": 0,
+    "prevConversions": 0,
+    "sessionsChange": 77,
+    "usersChange": 123.9,
+    "newUsersChange": 134.9,
+    "pageViewsChange": 22.1,
+    "avgSessionDurationChange": -69.8,
+    "bounceRateChange": -32.2,
+    "engagementRateChange": 22.4,
+    "conversionsChange": 0
+  },
+  "daily": [
+    {
+      "date": "2026-08-01",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-02",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 2
+    },
+    {
+      "date": "2026-08-04",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-05",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-06",
+      "sessions": 2,
+      "users": 2,
+      "pageViews": 2
+    },
+    {
+      "date": "2026-08-07",
+      "sessions": 68,
+      "users": 67,
+      "pageViews": 67
+    },
+    {
+      "date": "2026-08-09",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 4
+    },
+    {
+      "date": "2026-08-11",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-12",
+      "sessions": 2,
+      "users": 2,
+      "pageViews": 3
+    },
+    {
+      "date": "2026-08-14",
+      "sessions": 5,
+      "users": 5,
+      "pageViews": 8
+    },
+    {
+      "date": "2026-08-15",
+      "sessions": 5,
+      "users": 5,
+      "pageViews": 6
+    },
+    {
+      "date": "2026-08-17",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-18",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-19",
+      "sessions": 3,
+      "users": 3,
+      "pageViews": 7
+    },
+    {
+      "date": "2026-08-20",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 2
+    },
+    {
+      "date": "2026-08-25",
+      "sessions": 4,
+      "users": 4,
+      "pageViews": 4
+    },
+    {
+      "date": "2026-08-26",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 5
+    },
+    {
+      "date": "2026-08-27",
+      "sessions": 4,
+      "users": 4,
+      "pageViews": 6
+    },
+    {
+      "date": "2026-08-28",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-30",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-31",
+      "sessions": 3,
+      "users": 3,
+      "pageViews": 3
+    }
+  ],
+  "topPages": [
+    {
+      "path": "/",
+      "title": "No Words Print Studio",
+      "views": 117,
+      "sessions": 106,
+      "avgDuration": 41.66928489622641
+    },
+    {
+      "path": "/contact",
+      "title": "No Words Print Studio",
+      "views": 10,
+      "sessions": 8,
+      "avgDuration": 118.3425575
+    }
+  ],
+  "channels": [
+    {
+      "channel": "Direct",
+      "sessions": 78,
+      "users": 78,
+      "percentage": 72
+    },
+    {
+      "channel": "Organic Search",
+      "sessions": 27,
+      "users": 22,
+      "percentage": 25
+    },
+    {
+      "channel": "Organic Social",
+      "sessions": 3,
+      "users": 3,
+      "percentage": 3
+    }
+  ],
+  "devices": [
+    {
+      "device": "desktop",
+      "sessions": 82,
+      "percentage": 76
+    },
+    {
+      "device": "mobile",
+      "sessions": 26,
+      "percentage": 24
+    }
+  ],
+  "countries": [
+    {
+      "country": "Germany",
+      "sessions": 65,
+      "percentage": 60
+    },
+    {
+      "country": "United States",
+      "sessions": 38,
+      "percentage": 35
+    },
+    {
+      "country": "Singapore",
+      "sessions": 2,
+      "percentage": 2
+    },
+    {
+      "country": "India",
+      "sessions": 1,
+      "percentage": 1
+    },
+    {
+      "country": "Poland",
+      "sessions": 1,
+      "percentage": 1
+    },
+    {
+      "country": "Sweden",
+      "sessions": 1,
+      "percentage": 1
+    }
+  ],
+  "cities": [
+    {
+      "city": "(not set)",
+      "country": "Germany",
+      "sessions": 48
+    },
+    {
+      "city": "Minneapolis",
+      "country": "United States",
+      "sessions": 13
+    },
+    {
+      "city": "Munich",
+      "country": "Germany",
+      "sessions": 9
+    },
+    {
+      "city": "Chicago",
+      "country": "United States",
+      "sessions": 6
+    },
+    {
+      "city": "Gelsenkirchen",
+      "country": "Germany",
+      "sessions": 6
+    },
+    {
+      "city": "Redmond",
+      "country": "United States",
+      "sessions": 3
+    },
+    {
+      "city": "Waukesha",
+      "country": "United States",
+      "sessions": 3
+    },
+    {
+      "city": "(not set)",
+      "country": "Singapore",
+      "sessions": 2
+    },
+    {
+      "city": "Council Bluffs",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "city": "Frankfurt am Main",
+      "country": "Germany",
+      "sessions": 2
+    }
+  ],
+  "regions": [
+    {
+      "region": "Minnesota",
+      "country": "United States",
+      "sessions": 16
+    },
+    {
+      "region": "Bavaria",
+      "country": "Germany",
+      "sessions": 9
+    },
+    {
+      "region": "Illinois",
+      "country": "United States",
+      "sessions": 6
+    },
+    {
+      "region": "North Rhine-Westphalia",
+      "country": "Germany",
+      "sessions": 6
+    },
+    {
+      "region": "Wisconsin",
+      "country": "United States",
+      "sessions": 5
+    },
+    {
+      "region": "Washington",
+      "country": "United States",
+      "sessions": 3
+    },
+    {
+      "region": "Colorado",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "Hessen",
+      "country": "Germany",
+      "sessions": 2
+    },
+    {
+      "region": "Iowa",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "Alabama",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Maharashtra",
+      "country": "India",
+      "sessions": 1
+    },
+    {
+      "region": "Masovian Voivodeship",
+      "country": "Poland",
+      "sessions": 1
+    },
+    {
+      "region": "Norrbotten County",
+      "country": "Sweden",
+      "sessions": 1
+    },
+    {
+      "region": "North Carolina",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Oregon",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Texas",
+      "country": "United States",
+      "sessions": 1
+    }
+  ],
+  "referrers": [
+    {
+      "source": "(direct)",
+      "sessions": 78
+    },
+    {
+      "source": "google",
+      "sessions": 26
+    },
+    {
+      "source": "m.facebook.com",
+      "sessions": 3
+    },
+    {
+      "source": "duckduckgo",
+      "sessions": 1
+    }
+  ],
+  "sessionHistory": [
+    {
+      "month": "2026-08",
+      "label": "August",
+      "sessions": 108,
+      "users": 103,
+      "newUsers": 101,
+      "avgSessionDuration": 49.663746842592595,
+      "busiestDate": "2026-08-07",
+      "busiestSessions": 68,
+      "pageViews": {
+        "/": 117,
+        "/contact": 10
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-07",
+      "label": "July",
+      "sessions": 61,
+      "users": 46,
+      "newUsers": 43,
+      "avgSessionDuration": 164.18402380327868,
+      "busiestDate": "2026-07-13",
+      "busiestSessions": 6,
+      "pageViews": {
+        "/": 82,
+        "/contact": 22
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-06",
+      "label": "June",
+      "sessions": 82,
+      "users": 57,
+      "newUsers": 54,
+      "avgSessionDuration": 61.99925978048781,
+      "busiestDate": "2026-06-23",
+      "busiestSessions": 23,
+      "pageViews": {
+        "/": 97,
+        "/contact": 19
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-05",
+      "label": "May",
+      "sessions": 44,
+      "users": 32,
+      "newUsers": 32,
+      "avgSessionDuration": 68.80080681818183,
+      "busiestDate": "2026-05-21",
+      "busiestSessions": 13,
+      "pageViews": {
+        "/": 49,
+        "/contact": 6,
+        "/signin": 2
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-04",
+      "label": "April",
+      "sessions": 12,
+      "users": 7,
+      "newUsers": 6,
+      "avgSessionDuration": 4.674956916666667,
+      "busiestDate": "2026-04-01",
+      "busiestSessions": 4,
+      "pageViews": {
+        "/": 13
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-03",
+      "label": "March",
+      "sessions": 65,
+      "users": 42,
+      "newUsers": 39,
+      "avgSessionDuration": 36.43655116923077,
+      "busiestDate": "2026-03-03",
+      "busiestSessions": 11,
+      "pageViews": {
+        "/": 72,
+        "/contact": 5
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-02",
+      "label": "February",
+      "sessions": 69,
+      "users": 52,
+      "newUsers": 52,
+      "avgSessionDuration": 49.01008771014493,
+      "busiestDate": "2026-02-24",
+      "busiestSessions": 14,
+      "pageViews": {
+        "/": 89,
+        "/contact": 5,
+        "/cmd_sco": 1
+      },
+      "artistViews": {}
+    }
+  ]
+}

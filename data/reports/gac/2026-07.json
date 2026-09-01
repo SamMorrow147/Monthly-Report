@@ -1,0 +1,642 @@
+{
+  "schemaVersion": 3,
+  "slug": "gac",
+  "propertyId": "519869355",
+  "clientName": "GAC",
+  "highlightColor": "indigo",
+  "month": "2026-07",
+  "monthLabel": "July 2026",
+  "generatedAt": "2026-08-24T21:47:43.233Z",
+  "range": {
+    "startDate": "2026-07-01",
+    "endDate": "2026-07-31",
+    "prevStartDate": "2026-06-01",
+    "prevEndDate": "2026-06-30"
+  },
+  "shareToken": "Xb90GmU4mta-uL94E43m7w",
+  "summary": {
+    "sessions": 193,
+    "prevSessions": 59,
+    "users": 185,
+    "prevUsers": 57,
+    "newUsers": 180,
+    "prevNewUsers": 54,
+    "pageViews": 195,
+    "prevPageViews": 59,
+    "avgSessionDuration": 7.94353889119171,
+    "prevAvgSessionDuration": 16.199285389830507,
+    "bounceRate": 0.8808290155440415,
+    "prevBounceRate": 0.7457627118644068,
+    "engagementRate": 0.11917098445595854,
+    "prevEngagementRate": 0.2542372881355932,
+    "conversions": 0,
+    "prevConversions": 0,
+    "sessionsChange": 227.1,
+    "usersChange": 224.6,
+    "newUsersChange": 233.3,
+    "pageViewsChange": 230.5,
+    "avgSessionDurationChange": -51,
+    "bounceRateChange": 18.1,
+    "engagementRateChange": -53.1,
+    "conversionsChange": 0
+  },
+  "daily": [
+    {
+      "date": "2026-07-01",
+      "sessions": 2,
+      "users": 2,
+      "pageViews": 2
+    },
+    {
+      "date": "2026-07-03",
+      "sessions": 3,
+      "users": 3,
+      "pageViews": 3
+    },
+    {
+      "date": "2026-07-04",
+      "sessions": 4,
+      "users": 4,
+      "pageViews": 4
+    },
+    {
+      "date": "2026-07-05",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-07-08",
+      "sessions": 4,
+      "users": 4,
+      "pageViews": 6
+    },
+    {
+      "date": "2026-07-09",
+      "sessions": 2,
+      "users": 2,
+      "pageViews": 2
+    },
+    {
+      "date": "2026-07-10",
+      "sessions": 2,
+      "users": 2,
+      "pageViews": 2
+    },
+    {
+      "date": "2026-07-13",
+      "sessions": 2,
+      "users": 2,
+      "pageViews": 2
+    },
+    {
+      "date": "2026-07-16",
+      "sessions": 4,
+      "users": 4,
+      "pageViews": 4
+    },
+    {
+      "date": "2026-07-17",
+      "sessions": 5,
+      "users": 5,
+      "pageViews": 5
+    },
+    {
+      "date": "2026-07-19",
+      "sessions": 4,
+      "users": 4,
+      "pageViews": 4
+    },
+    {
+      "date": "2026-07-20",
+      "sessions": 3,
+      "users": 3,
+      "pageViews": 3
+    },
+    {
+      "date": "2026-07-21",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-07-23",
+      "sessions": 3,
+      "users": 3,
+      "pageViews": 4
+    },
+    {
+      "date": "2026-07-24",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-07-25",
+      "sessions": 2,
+      "users": 2,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-07-26",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-07-27",
+      "sessions": 4,
+      "users": 3,
+      "pageViews": 3
+    },
+    {
+      "date": "2026-07-28",
+      "sessions": 2,
+      "users": 2,
+      "pageViews": 2
+    },
+    {
+      "date": "2026-07-29",
+      "sessions": 4,
+      "users": 3,
+      "pageViews": 3
+    },
+    {
+      "date": "2026-07-30",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-07-31",
+      "sessions": 4,
+      "users": 4,
+      "pageViews": 4
+    }
+  ],
+  "topPages": [
+    {
+      "path": "/",
+      "title": "Grace Anthony Consulting - Strategic Marketing Solutions",
+      "views": 55,
+      "sessions": 56,
+      "avgDuration": 15.819486392857144
+    },
+    {
+      "path": "/contact",
+      "title": "Grace Anthony Consulting - Strategic Marketing Solutions",
+      "views": 2,
+      "sessions": 1,
+      "avgDuration": 60.46351
+    },
+    {
+      "path": "/blogs",
+      "title": "Grace Anthony Consulting - Strategic Marketing Solutions",
+      "views": 1,
+      "sessions": 1,
+      "avgDuration": 4.718507
+    },
+    {
+      "path": "/contact-us",
+      "title": "Grace Anthony Consulting - Strategic Marketing Solutions",
+      "views": 1,
+      "sessions": 1,
+      "avgDuration": 4.684583
+    }
+  ],
+  "channels": [
+    {
+      "channel": "Direct",
+      "sessions": 49,
+      "users": 48,
+      "percentage": 83
+    },
+    {
+      "channel": "Organic Search",
+      "sessions": 5,
+      "users": 4,
+      "percentage": 8
+    },
+    {
+      "channel": "Organic Social",
+      "sessions": 3,
+      "users": 3,
+      "percentage": 5
+    },
+    {
+      "channel": "Referral",
+      "sessions": 1,
+      "users": 1,
+      "percentage": 2
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": 1,
+      "users": 1,
+      "percentage": 2
+    }
+  ],
+  "devices": [
+    {
+      "device": "desktop",
+      "sessions": 57,
+      "percentage": 97
+    },
+    {
+      "device": "mobile",
+      "sessions": 2,
+      "percentage": 3
+    }
+  ],
+  "countries": [
+    {
+      "country": "United States",
+      "sessions": 33,
+      "percentage": 61
+    },
+    {
+      "country": "Germany",
+      "sessions": 5,
+      "percentage": 9
+    },
+    {
+      "country": "China",
+      "sessions": 4,
+      "percentage": 7
+    },
+    {
+      "country": "Canada",
+      "sessions": 2,
+      "percentage": 4
+    },
+    {
+      "country": "Czechia",
+      "sessions": 2,
+      "percentage": 4
+    },
+    {
+      "country": "Hong Kong",
+      "sessions": 2,
+      "percentage": 4
+    },
+    {
+      "country": "Iran",
+      "sessions": 2,
+      "percentage": 4
+    },
+    {
+      "country": "Taiwan",
+      "sessions": 2,
+      "percentage": 4
+    },
+    {
+      "country": "Congo - Kinshasa",
+      "sessions": 1,
+      "percentage": 2
+    },
+    {
+      "country": "France",
+      "sessions": 1,
+      "percentage": 2
+    }
+  ],
+  "cities": [
+    {
+      "city": "(not set)",
+      "country": "United States",
+      "sessions": 4
+    },
+    {
+      "city": "Minneapolis",
+      "country": "United States",
+      "sessions": 4
+    },
+    {
+      "city": "(not set)",
+      "country": "China",
+      "sessions": 3
+    },
+    {
+      "city": "Ashburn",
+      "country": "United States",
+      "sessions": 3
+    },
+    {
+      "city": "North Charleston",
+      "country": "United States",
+      "sessions": 3
+    },
+    {
+      "city": "(not set)",
+      "country": "Hong Kong",
+      "sessions": 2
+    },
+    {
+      "city": "Boardman",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "city": "Cesky Brod",
+      "country": "Czechia",
+      "sessions": 2
+    },
+    {
+      "city": "Columbus",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "city": "Hanover",
+      "country": "Germany",
+      "sessions": 2
+    }
+  ],
+  "regions": [
+    {
+      "region": "Minnesota",
+      "country": "United States",
+      "sessions": 9
+    },
+    {
+      "region": "South Carolina",
+      "country": "United States",
+      "sessions": 3
+    },
+    {
+      "region": "Texas",
+      "country": "United States",
+      "sessions": 3
+    },
+    {
+      "region": "Virginia",
+      "country": "United States",
+      "sessions": 3
+    },
+    {
+      "region": "California",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "Central Bohemian Region",
+      "country": "Czechia",
+      "sessions": 2
+    },
+    {
+      "region": "Colorado",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "Hsinchu County",
+      "country": "Taiwan",
+      "sessions": 2
+    },
+    {
+      "region": "Lower Saxony",
+      "country": "Germany",
+      "sessions": 2
+    },
+    {
+      "region": "Ohio",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "Ontario",
+      "country": "Canada",
+      "sessions": 2
+    },
+    {
+      "region": "Oregon",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "Berlin",
+      "country": "Germany",
+      "sessions": 1
+    },
+    {
+      "region": "England",
+      "country": "United Kingdom",
+      "sessions": 1
+    },
+    {
+      "region": "Florida",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Guangdong Province",
+      "country": "China",
+      "sessions": 1
+    },
+    {
+      "region": "Hauts-de-France",
+      "country": "France",
+      "sessions": 1
+    },
+    {
+      "region": "Hessen",
+      "country": "Germany",
+      "sessions": 1
+    },
+    {
+      "region": "Illinois",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Iowa",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Maharashtra",
+      "country": "India",
+      "sessions": 1
+    },
+    {
+      "region": "New York",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Norrbotten County",
+      "country": "Sweden",
+      "sessions": 1
+    },
+    {
+      "region": "North Holland",
+      "country": "Netherlands",
+      "sessions": 1
+    },
+    {
+      "region": "Thuringia",
+      "country": "Germany",
+      "sessions": 1
+    },
+    {
+      "region": "Washington",
+      "country": "United States",
+      "sessions": 1
+    }
+  ],
+  "referrers": [
+    {
+      "source": "(direct)",
+      "sessions": 49
+    },
+    {
+      "source": "google",
+      "sessions": 4
+    },
+    {
+      "source": "facebook.com",
+      "sessions": 3
+    },
+    {
+      "source": "(not set)",
+      "sessions": 1
+    },
+    {
+      "source": "yahoo.com",
+      "sessions": 1
+    },
+    {
+      "source": "zeyao.net",
+      "sessions": 1
+    }
+  ],
+  "sessionHistory": [
+    {
+      "month": "2026-07",
+      "label": "July",
+      "sessions": 193,
+      "users": 185,
+      "newUsers": 180,
+      "avgSessionDuration": 7.94353889119171,
+      "busiestDate": "2026-07-17",
+      "busiestSessions": 5,
+      "pageViews": {
+        "/": 55,
+        "/contact": 2,
+        "/blogs": 1,
+        "/contact-us": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-06",
+      "label": "June",
+      "sessions": 59,
+      "users": 57,
+      "newUsers": 54,
+      "avgSessionDuration": 16.199285389830507,
+      "busiestDate": "2026-06-05",
+      "busiestSessions": 33,
+      "pageViews": {
+        "/": 187,
+        "/blogs": 2,
+        "/contact": 2,
+        "/about": 1,
+        "/about-us": 1,
+        "/our-team": 1,
+        "/team": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-05",
+      "label": "May",
+      "sessions": 69,
+      "users": 60,
+      "newUsers": 59,
+      "avgSessionDuration": 29.12492908695652,
+      "busiestDate": "2026-05-15",
+      "busiestSessions": 6,
+      "pageViews": {
+        "/": 62,
+        "/blogs": 4,
+        "/\"": 1,
+        "/about": 1,
+        "/contact-us": 1,
+        "/portfolio": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-04",
+      "label": "April",
+      "sessions": 164,
+      "users": 145,
+      "newUsers": 173,
+      "avgSessionDuration": 46.575966243902435,
+      "busiestDate": "2026-04-20",
+      "busiestSessions": 25,
+      "pageViews": {
+        "/": 181,
+        "/blogs": 2,
+        "/contact": 2,
+        "/javascript:void(0)": 2,
+        "/contact-us": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-03",
+      "label": "March",
+      "sessions": 117,
+      "users": 116,
+      "newUsers": 143,
+      "avgSessionDuration": 30.610109188034187,
+      "busiestDate": "2026-03-13",
+      "busiestSessions": 12,
+      "pageViews": {
+        "/": 125,
+        "/about": 20,
+        "/blogs": 3,
+        "/contact": 2,
+        "/contact-us": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-02",
+      "label": "February",
+      "sessions": 116,
+      "users": 112,
+      "newUsers": 122,
+      "avgSessionDuration": 19.26202057758621,
+      "busiestDate": "2026-02-24",
+      "busiestSessions": 10,
+      "pageViews": {
+        "/": 108,
+        "/about": 18,
+        "/blogs": 2,
+        "/works": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-01",
+      "label": "January",
+      "sessions": 68,
+      "users": 68,
+      "newUsers": 68,
+      "avgSessionDuration": 11.275329705882353,
+      "busiestDate": "2026-01-15",
+      "busiestSessions": 9,
+      "pageViews": {
+        "/": 61,
+        "/about": 3,
+        "/contact-us": 2,
+        "/blogs": 1,
+        "/works": 1
+      },
+      "artistViews": {}
+    }
+  ]
+}

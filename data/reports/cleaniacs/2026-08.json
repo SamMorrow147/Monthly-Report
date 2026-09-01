@@ -1,0 +1,507 @@
+{
+  "schemaVersion": 3,
+  "slug": "cleaniacs",
+  "propertyId": "519854014",
+  "clientName": "cleaniacs",
+  "highlightColor": "light-blue",
+  "month": "2026-08",
+  "monthLabel": "August 2026",
+  "generatedAt": "2026-09-01T14:30:18.239Z",
+  "range": {
+    "startDate": "2026-08-01",
+    "endDate": "2026-08-31",
+    "prevStartDate": "2026-07-01",
+    "prevEndDate": "2026-07-31"
+  },
+  "shareToken": "zytsNyrGUzNsjy-yuE-XAQ",
+  "summary": {
+    "sessions": 31,
+    "prevSessions": 13,
+    "users": 31,
+    "prevUsers": 12,
+    "newUsers": 31,
+    "prevNewUsers": 12,
+    "pageViews": 31,
+    "prevPageViews": 13,
+    "avgSessionDuration": 36.95657970967742,
+    "prevAvgSessionDuration": 109.56843976923075,
+    "bounceRate": 0.7096774193548387,
+    "prevBounceRate": 0.5384615384615384,
+    "engagementRate": 0.2903225806451613,
+    "prevEngagementRate": 0.46153846153846156,
+    "conversions": 0,
+    "prevConversions": 0,
+    "sessionsChange": 138.5,
+    "usersChange": 158.3,
+    "newUsersChange": 158.3,
+    "pageViewsChange": 138.5,
+    "avgSessionDurationChange": -66.3,
+    "bounceRateChange": 31.8,
+    "engagementRateChange": -37.1,
+    "conversionsChange": 0
+  },
+  "daily": [
+    {
+      "date": "2026-08-04",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-06",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-07",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-11",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-12",
+      "sessions": 3,
+      "users": 3,
+      "pageViews": 3
+    },
+    {
+      "date": "2026-08-13",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-15",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-17",
+      "sessions": 6,
+      "users": 6,
+      "pageViews": 6
+    },
+    {
+      "date": "2026-08-18",
+      "sessions": 7,
+      "users": 7,
+      "pageViews": 7
+    },
+    {
+      "date": "2026-08-19",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-20",
+      "sessions": 2,
+      "users": 2,
+      "pageViews": 2
+    },
+    {
+      "date": "2026-08-21",
+      "sessions": 2,
+      "users": 2,
+      "pageViews": 2
+    },
+    {
+      "date": "2026-08-24",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    },
+    {
+      "date": "2026-08-26",
+      "sessions": 2,
+      "users": 2,
+      "pageViews": 2
+    },
+    {
+      "date": "2026-08-27",
+      "sessions": 1,
+      "users": 1,
+      "pageViews": 1
+    }
+  ],
+  "topPages": [
+    {
+      "path": "/",
+      "title": "Cleaniacs || Minnesota’s Premier Cleaning Service",
+      "views": 31,
+      "sessions": 31,
+      "avgDuration": 36.95657970967742
+    }
+  ],
+  "channels": [
+    {
+      "channel": "Direct",
+      "sessions": 23,
+      "users": 23,
+      "percentage": 74
+    },
+    {
+      "channel": "Organic Search",
+      "sessions": 4,
+      "users": 4,
+      "percentage": 13
+    },
+    {
+      "channel": "Referral",
+      "sessions": 2,
+      "users": 2,
+      "percentage": 6
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": 2,
+      "users": 2,
+      "percentage": 6
+    }
+  ],
+  "devices": [
+    {
+      "device": "desktop",
+      "sessions": 30,
+      "percentage": 97
+    },
+    {
+      "device": "mobile",
+      "sessions": 1,
+      "percentage": 3
+    }
+  ],
+  "countries": [
+    {
+      "country": "United States",
+      "sessions": 11,
+      "percentage": 35
+    },
+    {
+      "country": "India",
+      "sessions": 8,
+      "percentage": 26
+    },
+    {
+      "country": "Germany",
+      "sessions": 3,
+      "percentage": 10
+    },
+    {
+      "country": "China",
+      "sessions": 2,
+      "percentage": 6
+    },
+    {
+      "country": "New Zealand",
+      "sessions": 2,
+      "percentage": 6
+    },
+    {
+      "country": "Singapore",
+      "sessions": 2,
+      "percentage": 6
+    },
+    {
+      "country": "Austria",
+      "sessions": 1,
+      "percentage": 3
+    },
+    {
+      "country": "Hong Kong",
+      "sessions": 1,
+      "percentage": 3
+    },
+    {
+      "country": "United Kingdom",
+      "sessions": 1,
+      "percentage": 3
+    }
+  ],
+  "cities": [
+    {
+      "city": "(not set)",
+      "country": "India",
+      "sessions": 7
+    },
+    {
+      "city": "(not set)",
+      "country": "United States",
+      "sessions": 3
+    },
+    {
+      "city": "(not set)",
+      "country": "New Zealand",
+      "sessions": 2
+    },
+    {
+      "city": "Frankfurt am Main",
+      "country": "Germany",
+      "sessions": 2
+    },
+    {
+      "city": "(not set)",
+      "country": "Hong Kong",
+      "sessions": 1
+    },
+    {
+      "city": "(not set)",
+      "country": "Singapore",
+      "sessions": 1
+    },
+    {
+      "city": "Chengdu",
+      "country": "China",
+      "sessions": 1
+    },
+    {
+      "city": "Chicago",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "city": "Des Moines",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "city": "Doylestown",
+      "country": "United States",
+      "sessions": 1
+    }
+  ],
+  "regions": [
+    {
+      "region": "Hessen",
+      "country": "Germany",
+      "sessions": 2
+    },
+    {
+      "region": "Maharashtra",
+      "country": "India",
+      "sessions": 2
+    },
+    {
+      "region": "Minnesota",
+      "country": "United States",
+      "sessions": 2
+    },
+    {
+      "region": "Bavaria",
+      "country": "Germany",
+      "sessions": 1
+    },
+    {
+      "region": "Bihar",
+      "country": "India",
+      "sessions": 1
+    },
+    {
+      "region": "California",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "England",
+      "country": "United Kingdom",
+      "sessions": 1
+    },
+    {
+      "region": "Florida",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Fujian",
+      "country": "China",
+      "sessions": 1
+    },
+    {
+      "region": "Georgia",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Illinois",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Iowa",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Pennsylvania",
+      "country": "United States",
+      "sessions": 1
+    },
+    {
+      "region": "Sichuan",
+      "country": "China",
+      "sessions": 1
+    },
+    {
+      "region": "Vienna",
+      "country": "Austria",
+      "sessions": 1
+    },
+    {
+      "region": "Virginia",
+      "country": "United States",
+      "sessions": 1
+    }
+  ],
+  "referrers": [
+    {
+      "source": "(direct)",
+      "sessions": 23
+    },
+    {
+      "source": "google",
+      "sessions": 3
+    },
+    {
+      "source": "(not set)",
+      "sessions": 2
+    },
+    {
+      "source": "bing",
+      "sessions": 1
+    },
+    {
+      "source": "readlife.net",
+      "sessions": 1
+    },
+    {
+      "source": "sunblog.asia",
+      "sessions": 1
+    }
+  ],
+  "sessionHistory": [
+    {
+      "month": "2026-08",
+      "label": "August",
+      "sessions": 31,
+      "users": 31,
+      "newUsers": 31,
+      "avgSessionDuration": 36.95657970967742,
+      "busiestDate": "2026-08-18",
+      "busiestSessions": 7,
+      "pageViews": {
+        "/": 31
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-07",
+      "label": "July",
+      "sessions": 13,
+      "users": 12,
+      "newUsers": 12,
+      "avgSessionDuration": 109.56843976923075,
+      "busiestDate": "2026-07-27",
+      "busiestSessions": 3,
+      "pageViews": {
+        "/": 13
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-06",
+      "label": "June",
+      "sessions": 15,
+      "users": 13,
+      "newUsers": 13,
+      "avgSessionDuration": 189.40043473333336,
+      "busiestDate": "2026-06-08",
+      "busiestSessions": 2,
+      "pageViews": {
+        "/": 15
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-05",
+      "label": "May",
+      "sessions": 5,
+      "users": 5,
+      "newUsers": 4,
+      "avgSessionDuration": 9.2669048,
+      "busiestDate": "2026-05-07",
+      "busiestSessions": 2,
+      "pageViews": {
+        "/": 5
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-04",
+      "label": "April",
+      "sessions": 48,
+      "users": 45,
+      "newUsers": 74,
+      "avgSessionDuration": 78.94307814583334,
+      "busiestDate": "2026-04-02",
+      "busiestSessions": 4,
+      "pageViews": {
+        "/": 75,
+        "/index.html": 1
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-03",
+      "label": "March",
+      "sessions": 72,
+      "users": 71,
+      "newUsers": 98,
+      "avgSessionDuration": 30.470798041666676,
+      "busiestDate": "2026-03-16",
+      "busiestSessions": 7,
+      "pageViews": {
+        "/": 83,
+        "/index.html": 22
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-02",
+      "label": "February",
+      "sessions": 56,
+      "users": 56,
+      "newUsers": 78,
+      "avgSessionDuration": 41.157691625000005,
+      "busiestDate": "2026-02-17",
+      "busiestSessions": 5,
+      "pageViews": {
+        "/": 61,
+        "/index.html": 19
+      },
+      "artistViews": {}
+    },
+    {
+      "month": "2026-01",
+      "label": "January",
+      "sessions": 75,
+      "users": 67,
+      "newUsers": 101,
+      "avgSessionDuration": 171.6485665066667,
+      "busiestDate": "2026-01-28",
+      "busiestSessions": 19,
+      "pageViews": {
+        "/": 109,
+        "/index.html": 32
+      },
+      "artistViews": {}
+    }
+  ]
+}

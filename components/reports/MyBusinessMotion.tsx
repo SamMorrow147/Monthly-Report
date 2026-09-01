@@ -259,7 +259,10 @@ export function LoadBar({
 
   const grown = reduced || fill;
   return (
-    <div className="mt-2 h-1.5 rounded-full bg-white/10 overflow-hidden">
+    <div
+      className="mt-2 h-1.5 rounded-full overflow-hidden"
+      style={{ background: "var(--mybiz-surface)" }}
+    >
       <div
         className="h-full rounded-full"
         style={{
@@ -315,7 +318,7 @@ export function ChapterMark({
             }}
           >
             <span
-              className={`text-2xl sm:text-4xl font-semibold tracking-tight whitespace-nowrap${
+              className={`mybiz-heading text-2xl sm:text-4xl font-semibold tracking-tight whitespace-nowrap${
                 accent.toLowerCase() === "#d4af37" ? " mybiz-metal" : ""
               }`}
               style={accent.toLowerCase() === "#d4af37" ? undefined : { color: accent }}
@@ -335,7 +338,7 @@ export function ChapterMark({
           >
             <path
               d="M2 0l3.2 30 8.4-7.4 6 14.4 7.2-3-6-14.6 10.8-1.8z"
-              fill="white"
+              fill="var(--mybiz-fg)"
               stroke={accent}
               strokeWidth="1.6"
               strokeLinejoin="round"
@@ -375,7 +378,7 @@ export function ChapterMark({
         )}
         {id === "attention" && (
           <>
-            <circle cx="56" cy="56" r="30" fill="none" stroke="white" strokeOpacity="0.15" strokeWidth="4" />
+            <circle cx="56" cy="56" r="30" fill="none" stroke="var(--mybiz-fg)" strokeOpacity="0.15" strokeWidth="4" />
             <circle
               cx="56"
               cy="56"
@@ -392,7 +395,7 @@ export function ChapterMark({
         )}
         {id === "busiest" && (
           <>
-            <rect x="28" y="30" width="56" height="54" rx="8" fill="none" stroke="white" strokeOpacity="0.28" strokeWidth="2" className="mybiz-pop" />
+            <rect x="28" y="30" width="56" height="54" rx="8" fill="none" stroke="var(--mybiz-fg)" strokeOpacity="0.28" strokeWidth="2" className="mybiz-pop" />
             <rect x="28" y="30" width="56" height="14" rx="8" fill={accent} fillOpacity="0.85" className="mybiz-pop" />
             <rect x="48" y="54" width="16" height="16" rx="3" fill={accent} className="mybiz-pulse" />
           </>
@@ -423,19 +426,19 @@ export function ChapterMark({
         )}
         {id === "geography" && (
           <>
-            <circle cx="56" cy="56" r="30" fill="none" stroke="white" strokeOpacity="0.18" strokeWidth="2" />
+            <circle cx="56" cy="56" r="30" fill="none" stroke="var(--mybiz-fg)" strokeOpacity="0.18" strokeWidth="2" />
             <circle cx="56" cy="56" r="18" fill="none" stroke={accent} strokeOpacity="0.45" strokeWidth="1.5" className="mybiz-ring r1" />
             <path
               d="M56 34c-8.8 0-16 7-16 15.6 0 11.4 16 26.4 16 26.4s16-15 16-26.4C72 41 64.8 34 56 34z"
               fill={accent}
               className="mybiz-pin"
             />
-            <circle cx="56" cy="49" r="5" fill="#0a0e1a" />
+            <circle cx="56" cy="49" r="5" fill="var(--mybiz-bg)" />
           </>
         )}
         {id === "hours" && (
           <>
-            <circle cx="56" cy="56" r="30" fill="none" stroke="white" strokeOpacity="0.2" strokeWidth="3" />
+            <circle cx="56" cy="56" r="30" fill="none" stroke="var(--mybiz-fg)" strokeOpacity="0.2" strokeWidth="3" />
             <circle cx="56" cy="56" r="3.5" fill={accent} />
             <line x1="56" y1="56" x2="56" y2="36" stroke={accent} strokeWidth="3" strokeLinecap="round" className="mybiz-hand" />
           </>

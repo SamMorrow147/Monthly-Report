@@ -21,13 +21,15 @@ function colorScale(
   flush = false
 ) {
   if (!value || !max) {
-    if (flush) return "#243044";
+    if (flush) return isDark ? "#243044" : "#d4cfa8";
     return isDark ? "#1f2937" : "#f3f4f6";
   }
   // Clamp + ease so big single-country numbers don't visually flatten the rest.
   const t = Math.min(1, Math.pow(value / max, 0.55));
   const base = flush
-    ? [36, 48, 68]
+    ? isDark
+      ? [36, 48, 68]
+      : [212, 207, 168]
     : isDark
     ? [31, 41, 55]
     : [243, 244, 246];
@@ -108,7 +110,13 @@ export function VisitorMap({
     return found?.sessions || 0;
   }
 
-  const stroke = flush ? "#252d40" : isDark ? "#0a0e1a" : "#ffffff";
+  const stroke = flush
+    ? isDark
+      ? "#252d40"
+      : "#c9c395"
+    : isDark
+    ? "#0a0e1a"
+    : "#ffffff";
 
   return (
     <div className={flush ? "relative space-y-2" : "space-y-3"}>
@@ -149,7 +157,9 @@ export function VisitorMap({
                 className={`text-xs font-medium px-3 py-1.5 rounded-md transition-colors ${
                   active
                     ? flush
-                      ? "text-white"
+                      ? isDark
+                        ? "text-white"
+                        : "text-black"
                       : isDark
                       ? "bg-clubhaus-blue-700 text-white"
                       : "bg-white text-gray-900 shadow-sm"

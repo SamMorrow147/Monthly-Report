@@ -3,7 +3,8 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { getReportByToken } from "@/lib/reports";
 import { getClientBySlug } from "@/lib/clients";
-import { monthInReview, reportAccent } from "@/lib/report-story";
+import { monthInReview } from "@/lib/report-story";
+import { storyThemeFor } from "@/lib/story-theme";
 
 export const runtime = "nodejs";
 export const alt = "Monthly in Review";
@@ -18,8 +19,12 @@ export default async function Image({
   const report = await getReportByToken(params.token);
   const review = report ? monthInReview(report) : "In Review";
   const name = report?.clientName || "My Business";
-  const accent = reportAccent(report?.highlightColor || "blue");
+  const theme = report
+    ? storyThemeFor(report)
+    : storyThemeFor({ slug: "", highlightColor: "blue" });
   const client = report ? getClientBySlug(report.slug) : undefined;
+  const light = theme.mode === "light";
+  const wordmark = client?.logoShape === "wordmark";
 
   let logoSrc: string | null = null;
   if (client?.logo) {
@@ -41,36 +46,47 @@ export default async function Image({
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          background: "#0a0e1a",
+          background: theme.bg,
+          fontFamily: light ? "Georgia, ui-serif, serif" : "sans-serif",
         }}
       >
         {logoSrc ? (
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              width: 240,
-              height: 240,
-              borderRadius: 36,
-              background: "#fff",
-              marginBottom: 40,
-            }}
-          >
+          wordmark || light ? (
             <img
               src={logoSrc}
               alt=""
-              width={180}
-              height={180}
-              style={{ objectFit: "contain" }}
+              width={wordmark ? 520 : 220}
+              height={wordmark ? 160 : 220}
+              style={{ objectFit: "contain", marginBottom: 40 }}
             />
-          </div>
+          ) : (
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: 240,
+                height: 240,
+                borderRadius: 36,
+                background: "#fff",
+                marginBottom: 40,
+              }}
+            >
+              <img
+                src={logoSrc}
+                alt=""
+                width={180}
+                height={180}
+                style={{ objectFit: "contain" }}
+              />
+            </div>
+          )
         ) : null}
         <div
           style={{
             fontSize: 72,
             fontWeight: 700,
-            color: accent,
+            color: theme.accent,
             letterSpacing: -1.5,
           }}
         >
@@ -80,7 +96,7 @@ export default async function Image({
           style={{
             marginTop: 18,
             fontSize: 32,
-            color: "rgba(255,255,255,0.7)",
+            color: light ? "rgba(17,17,17,0.62)" : "rgba(255,255,255,0.7)",
           }}
         >
           {name}
