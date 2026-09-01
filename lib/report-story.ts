@@ -194,14 +194,44 @@ export function topChannel(report: MonthlyReport): MonthlyReportChannel | null {
   return first ?? null;
 }
 
+function isUnsetPlace(name: string | undefined): boolean {
+  const n = (name || "").trim().toLowerCase();
+  return !n || n === "(not set)" || n === "(other)" || n === "(unknown)";
+}
+
+export function isUnitedStates(country: string | undefined): boolean {
+  const n = (country || "").trim().toLowerCase();
+  return n === "united states" || n === "usa" || n === "us";
+}
+
+/**
+ * Headline the place that actually sent the most people: the top country,
+ * then the busiest named city inside it. Datacenter/bot cities (Singapore,
+ * Frankfurt, …) only win if that country itself led the month.
+ */
 export function topCity(report: MonthlyReport): MonthlyReportCity | null {
-  for (const city of report.cities) {
-    if (!city.sessions) continue;
-    const name = (city.city || "").trim();
-    if (!name || name === "(not set)" || name === "(other)") continue;
-    return city;
+  const countries = [...report.countries]
+    .filter((country) => country.sessions > 0 && !isUnsetPlace(country.country))
+    .sort((a, b) => b.sessions - a.sessions);
+  const namedCities = report.cities.filter(
+    (city) => city.sessions > 0 && !isUnsetPlace(city.city)
+  );
+
+  const leadCountry = countries[0];
+  if (leadCountry) {
+    const inCountry = namedCities
+      .filter((city) => city.country === leadCountry.country)
+      .sort((a, b) => b.sessions - a.sessions);
+    const best = inCountry[0];
+    if (best && best.sessions >= 3) return best;
+    return {
+      city: leadCountry.country,
+      country: leadCountry.country,
+      sessions: leadCountry.sessions,
+    };
   }
-  return null;
+
+  return [...namedCities].sort((a, b) => b.sessions - a.sessions)[0] ?? null;
 }
 
 export function rankedPages(

@@ -21,6 +21,7 @@ import {
   otherPages,
   orderedArtistPages,
   hasArtistRoster,
+  isUnitedStates,
   rankedPages,
   peopleMonths,
   durationMonths,
@@ -1747,7 +1748,9 @@ function GeographyChapter({
           <p className="text-lg sm:text-2xl mybiz-faint mb-6">
             <AnimatedCount value={city.sessions} active={active} delay={160} />{" "}
             visits from {city.city}
-            {city.country ? `, ${city.country}` : ""}
+            {city.country && city.country !== city.city
+              ? `, ${city.country}`
+              : ""}
           </p>
         </Reveal>
       )}
@@ -1759,7 +1762,7 @@ function GeographyChapter({
             accent={accent}
             isDark={theme.mode === "dark"}
             flush
-            defaultView="us"
+            defaultView={isUnitedStates(city?.country) ? "us" : "world"}
             emptyFill={theme.mapEmpty}
             emptyStroke={theme.mapStroke}
           />
