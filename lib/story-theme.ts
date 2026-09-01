@@ -93,9 +93,32 @@ const BAYERKOHLER_THEME: StoryTheme = {
   mapStroke: "#c5dced",
 };
 
+/** cleaniacs — white, navy + sky from the shield mark. */
+const CLEANIACS_THEME: StoryTheme = {
+  id: "cleaniacs",
+  mode: "light",
+  bg: "#ffffff",
+  fg: "#203878",
+  accent: "#06b6d4",
+  muted: "rgba(32,56,120,0.72)",
+  soft: "rgba(32,56,120,0.62)",
+  faint: "rgba(32,56,120,0.42)",
+  surface: "rgba(6,182,212,0.1)",
+  surfaceHover: "rgba(6,182,212,0.18)",
+  border: "rgba(64,152,208,0.4)",
+  headingFont: INHERIT,
+  bodyFont: INHERIT,
+  eyebrow: "label",
+  eyebrowColor: "#4098d0",
+  button: "md",
+  mapEmpty: "#e8f6fb",
+  mapStroke: "#c5e4f0",
+};
+
 const STORY_THEMES: Record<string, StoryTheme> = {
   "hilltop-hanover": HILLTOP_THEME,
   bayerkohler: BAYERKOHLER_THEME,
+  cleaniacs: CLEANIACS_THEME,
 };
 
 export function storyThemeFor(report: {
