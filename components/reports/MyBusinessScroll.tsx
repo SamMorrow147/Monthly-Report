@@ -885,13 +885,96 @@ function lerp(a: number, b: number, t: number) {
   return a + (b - a) * t;
 }
 
+function parseHex(hex: string): [number, number, number] | null {
+  let h = hex.replace("#", "").trim();
+  if (h.length === 3) {
+    h = h
+      .split("")
+      .map((c) => c + c)
+      .join("");
+  }
+  if (h.length !== 6) return null;
+  const n = parseInt(h, 16);
+  if (Number.isNaN(n)) return null;
+  return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+}
+
+function rgbToHsl(r: number, g: number, b: number): [number, number, number] {
+  r /= 255;
+  g /= 255;
+  b /= 255;
+  const max = Math.max(r, g, b);
+  const min = Math.min(r, g, b);
+  const l = (max + min) / 2;
+  const d = max - min;
+  if (!d) return [0, 0, l];
+  const s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+  let h = 0;
+  if (max === r) h = (g - b) / d + (g < b ? 6 : 0);
+  else if (max === g) h = (b - r) / d + 2;
+  else h = (r - g) / d + 4;
+  return [h / 6, s, l];
+}
+
+function hslToHex(h: number, s: number, l: number): string {
+  const hue2rgb = (p: number, q: number, t: number) => {
+    if (t < 0) t += 1;
+    if (t > 1) t -= 1;
+    if (t < 1 / 6) return p + (q - p) * 6 * t;
+    if (t < 1 / 2) return q;
+    if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
+    return p;
+  };
+  let r: number;
+  let g: number;
+  let b: number;
+  if (!s) {
+    r = g = b = l;
+  } else {
+    const q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+    const p = 2 * l - q;
+    r = hue2rgb(p, q, h + 1 / 3);
+    g = hue2rgb(p, q, h);
+    b = hue2rgb(p, q, h - 1 / 3);
+  }
+  const to = (n: number) =>
+    Math.round(n * 255)
+      .toString(16)
+      .padStart(2, "0");
+  return `#${to(r)}${to(g)}${to(b)}`;
+}
+
+/** Same family as the accent, shifted so neighbor months don't match this month. */
+function monthCountColor(
+  accent: string,
+  dist: number,
+  mode: "dark" | "light"
+): string {
+  const rgb = parseHex(accent);
+  if (!rgb || dist < 0.4) return accent;
+  const [h, s, l] = rgbToHsl(rgb[0], rgb[1], rgb[2]);
+  const t = Math.min(1, (dist - 0.4) / 1.15);
+  if (mode === "dark") {
+    return hslToHex(
+      h,
+      Math.max(0.22, s * (0.74 - 0.14 * t)),
+      Math.max(0.24, l * (0.56 - 0.1 * t))
+    );
+  }
+  return hslToHex(
+    h,
+    Math.max(0.2, s * (0.7 - 0.14 * t)),
+    Math.min(0.8, l + (1 - l) * (0.34 + 0.12 * t))
+  );
+}
+
 function visitPose(offset: number, stepVw: number) {
   const dist = Math.min(Math.abs(offset), 3);
   const stops = [
     { s: 1, o: 1 },
-    { s: 0.34, o: 0.28 },
-    { s: 0.2, o: 0.12 },
-    { s: 0.12, o: 0.06 },
+    { s: 0.36, o: 0.72 },
+    { s: 0.22, o: 0.32 },
+    { s: 0.14, o: 0.12 },
   ];
   const i = Math.min(Math.floor(dist), 2);
   const t = dist - i;
@@ -980,6 +1063,7 @@ function StoryDepthStrip({
   }, [reduced, last]);
 
   const countClass = `font-semibold tabular-nums tracking-tight leading-none ${valueClass}`;
+  const theme = useStoryTheme();
 
   if (reduced) {
     const current = items[0];
@@ -1036,7 +1120,10 @@ function StoryDepthStrip({
       >
         {items.map((item, index) => {
           const offset = index - progress;
-          const focusedHere = Math.abs(offset) < 0.45;
+          const dist = Math.abs(offset);
+          const focusedHere = dist < 0.45;
+          const countColor = monthCountColor(accent, dist, theme.mode);
+          const metal = isMetalAccent(accent) && focusedHere;
           return (
             <div
               key={item.key}
@@ -1062,8 +1149,12 @@ function StoryDepthStrip({
                     />
                   )}
                   <span
-                    className={withMetal(accent, countClass)}
-                    style={accentTextStyle(accent)}
+                    className={
+                      metal
+                        ? `${countClass} mybiz-heading mybiz-metal`
+                        : `${countClass} mybiz-heading`
+                    }
+                    style={metal ? undefined : { color: countColor }}
                   >
                     {item.display}
                   </span>
@@ -1747,10 +1838,10 @@ function GeographyChapter({
         <Reveal active={active} delay={160}>
           <p className="text-lg sm:text-2xl mybiz-faint mb-6">
             <AnimatedCount value={city.sessions} active={active} delay={160} />{" "}
-            visits from {city.city}
+            visits from{" "}
             {city.country && city.country !== city.city
-              ? `, ${city.country}`
-              : ""}
+              ? `${city.city}, ${city.country}`
+              : city.city}
           </p>
         </Reveal>
       )}
