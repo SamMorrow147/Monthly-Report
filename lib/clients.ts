@@ -42,7 +42,7 @@ export const GA4_CLIENTS_ROW_1: GA4Client[] = [
 ];
 
 export const GA4_CLIENTS_ROW_2: GA4Client[] = [
-  { clientName: "Bayerkohler", propertyId: "427362273", highlightColor: "light-blue", slug: "bayerkohler" },
+  { clientName: "Bayerkohler", propertyId: "427362273", highlightColor: "light-blue", slug: "bayerkohler", logo: "/logos/bayerkohler.png", logoShape: "wordmark" },
   { clientName: "cleaniacs", propertyId: "519854014", highlightColor: "light-blue", slug: "cleaniacs", logo: "/logos/cleaniacs.png" },
   { clientName: "GAC", propertyId: "519869355", highlightColor: "indigo", slug: "gac", logo: "/logos/gac.png", logoShape: "wordmark" },
   { clientName: "Mains'l", propertyId: "381995271", highlightColor: "cyan", slug: "mainsl", logo: "/logos/mainsl.png", logoShape: "wordmark" },

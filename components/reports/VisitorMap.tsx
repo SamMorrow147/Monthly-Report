@@ -18,15 +18,20 @@ function colorScale(
   max: number,
   accent: string,
   isDark: boolean,
-  flush = false
+  flush = false,
+  emptyFill?: string
 ) {
   if (!value || !max) {
+    if (emptyFill) return emptyFill;
     if (flush) return isDark ? "#243044" : "#d4cfa8";
     return isDark ? "#1f2937" : "#f3f4f6";
   }
   // Clamp + ease so big single-country numbers don't visually flatten the rest.
   const t = Math.min(1, Math.pow(value / max, 0.55));
-  const base = flush
+  const empty = emptyFill ? hexToRgb(emptyFill) : null;
+  const base = empty
+    ? empty
+    : flush
     ? isDark
       ? [36, 48, 68]
       : [212, 207, 168]
@@ -59,6 +64,8 @@ export function VisitorMap({
   isDark = false,
   defaultView,
   flush = false,
+  emptyFill,
+  emptyStroke,
 }: {
   countries: Country[];
   regions?: Region[];
@@ -67,6 +74,8 @@ export function VisitorMap({
   defaultView?: View;
   /** Bleed into a dark page — no card, no hard edges. */
   flush?: boolean;
+  emptyFill?: string;
+  emptyStroke?: string;
 }) {
   const hasRegions = regions.length > 0;
   const [view, setView] = useState<View>(
@@ -110,13 +119,15 @@ export function VisitorMap({
     return found?.sessions || 0;
   }
 
-  const stroke = flush
-    ? isDark
-      ? "#252d40"
-      : "#c9c395"
-    : isDark
-    ? "#0a0e1a"
-    : "#ffffff";
+  const stroke =
+    emptyStroke ||
+    (flush
+      ? isDark
+        ? "#252d40"
+        : "#c9c395"
+      : isDark
+      ? "#0a0e1a"
+      : "#ffffff");
 
   return (
     <div className={flush ? "relative space-y-2" : "space-y-3"}>
@@ -215,7 +226,14 @@ export function VisitorMap({
                     <Geography
                       key={geo.rsmKey}
                       geography={geo}
-                      fill={colorScale(sessions, maxCountry, accent, isDark, flush)}
+                      fill={colorScale(
+                        sessions,
+                        maxCountry,
+                        accent,
+                        isDark,
+                        flush,
+                        emptyFill
+                      )}
                       stroke={stroke}
                       strokeWidth={0.4}
                       style={{
@@ -256,7 +274,14 @@ export function VisitorMap({
                     <Geography
                       key={geo.rsmKey}
                       geography={geo}
-                      fill={colorScale(sessions, maxRegion, accent, isDark, flush)}
+                      fill={colorScale(
+                        sessions,
+                        maxRegion,
+                        accent,
+                        isDark,
+                        flush,
+                        emptyFill
+                      )}
                       stroke={stroke}
                       strokeWidth={0.5}
                       style={{

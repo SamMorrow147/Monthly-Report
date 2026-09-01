@@ -18,7 +18,10 @@ export type StoryTheme = {
   bodyFont: string;
   fontsHref?: string;
   eyebrow: "display" | "label";
+  eyebrowColor?: string;
   button: "md" | "pill";
+  mapEmpty?: string;
+  mapStroke?: string;
 };
 
 const INHERIT = "inherit";
@@ -62,10 +65,37 @@ const HILLTOP_THEME: StoryTheme = {
     "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto+Slab:wght@400;600;700&display=swap",
   eyebrow: "label",
   button: "pill",
+  mapEmpty: "#d4cfa8",
+  mapStroke: "#c9c395",
+};
+
+/** Bayerkohler, Ltd. — white, navy + sky blue from the mark. */
+const BAYERKOHLER_THEME: StoryTheme = {
+  id: "bayerkohler",
+  mode: "light",
+  bg: "#ffffff",
+  fg: "#205080",
+  accent: "#205080",
+  muted: "rgba(32,80,128,0.72)",
+  soft: "rgba(32,80,128,0.62)",
+  faint: "rgba(32,80,128,0.45)",
+  surface: "rgba(104,168,216,0.16)",
+  surfaceHover: "rgba(104,168,216,0.26)",
+  border: "rgba(104,168,216,0.55)",
+  headingFont: '"Libre Baskerville", ui-serif, Georgia, serif',
+  bodyFont: '"Source Sans 3", ui-sans-serif, system-ui, sans-serif',
+  fontsHref:
+    "https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;500;600;700&display=swap",
+  eyebrow: "label",
+  eyebrowColor: "#68A8D8",
+  button: "md",
+  mapEmpty: "#e7f2fa",
+  mapStroke: "#c5dced",
 };
 
 const STORY_THEMES: Record<string, StoryTheme> = {
   "hilltop-hanover": HILLTOP_THEME,
+  bayerkohler: BAYERKOHLER_THEME,
 };
 
 export function storyThemeFor(report: {

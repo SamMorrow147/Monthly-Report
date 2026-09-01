@@ -635,7 +635,7 @@ function Eyebrow({
     return (
       <p
         className={`text-sm sm:text-base font-normal tracking-[0.28em] uppercase mybiz-heading ${className}`}
-        style={{ color: theme.fg }}
+        style={{ color: theme.eyebrowColor || theme.fg }}
       >
         {children}
       </p>
@@ -1760,6 +1760,8 @@ function GeographyChapter({
             isDark={theme.mode === "dark"}
             flush
             defaultView="us"
+            emptyFill={theme.mapEmpty}
+            emptyStroke={theme.mapStroke}
           />
         </div>
       </Reveal>
